@@ -156,6 +156,7 @@ footer .inner{padding-block:28px;display:flex;flex-wrap:wrap;justify-content:spa
 .top3 li span:first-child{min-width:0}
 #searches .card{grid-template-columns:minmax(0,1fr)}
 .lk b{font:800 20px var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+.vol{display:block;font-size:13px;font-weight:700;color:var(--rose-deep);margin:-2px 0 8px}
 </style><style>
 @page{size:Letter;margin:0}
 @media print{
@@ -217,7 +218,7 @@ footer .inner{padding-block:28px;display:flex;flex-wrap:wrap;justify-content:spa
 </div></section>
 
 <section class="band" style="--c:var(--rose)"><div class="inner">
- <div class="shead"><div><span class="eyebrow">Be Seen</span><h2>Who shows up instead of you</h2><p class="muted">The first three results on Google Maps, not counting ads. Fact Finders didn't appear in any of these searches.</p></div><div class="pts"><b>1<small> / 40</small></b><div class="bar"><span style="width:3%"></span></div></div></div>
+ <div class="shead"><div><span class="eyebrow">Be Seen</span><h2>Who shows up instead of you</h2><p class="muted">The first three results on Google Maps, not counting ads. Fact Finders didn't appear in any of these searches. Under each search: how many people across Greater Miami search for that service every month (Google search counts, October 2025 to September 2026).</p></div><div class="pts"><b>1<small> / 40</small></b><div class="bar"><span style="width:3%"></span></div></div></div>
  <div class="cards" id="searches"></div>
  <ul class="checks">
   <li class="fail"><span class="ic">✕</span><div><h3>Top-3 map spots on key searches</h3><p>0 of 8 searches. Not in the top 10 on any of them.</p></div><span class="p">0 / 20</span></li>
@@ -318,6 +319,6 @@ footer .inner{padding-block:28px;display:flex;flex-wrap:wrap;justify-content:spa
 <footer class="band"><div class="inner"><span>© 2026 Phyllena Management LLC · Concord, North Carolina</span><span>Be Seen + Be Trusted + Be Chosen = Booked Jobs</span></div></footer>
 
 <script>
-const S=[["security guard company Miami FL", [["Prestige Guard", 34], ["Nightlight Security", 198], ["Nightlight Security (Brickell)", 216]]], ["security company Brickell Miami", [["Nightlight Security (Brickell)", 216], ["A6 Security", 21], ["USPA Nationwide Security", 78]]], ["security guard company Doral FL", [["Doral Security Patrol", 4], ["S1Security Group", 66], ["Security Alliance", 68]]], ["private investigator Miami FL", [["Miami Private Investigations", 91], ["PI Fast", 24], ["Grey Ghost Private Investigator", 79]]], ["private investigator Coral Gables FL", [["Miami Private Investigations", 91], ["Super Sleuths PI", 0], ["Universal Investigations Agency", 22]]], ["process server Miami FL", [["Magic City Process Service", 89], ["Judicial Process & Support", 53], ["Same Day Florida Process Servers", 9]]], ["process server Fort Lauderdale FL", [["SFL Process Servers", 2], ["Legal Services Solutions", 94], ["Professional Process Servers", 16]]], ["Fact Finders Group Miami FL", [["Miami Fact Finders PI Firm (not you)", 1]]]];
-document.getElementById("searches").innerHTML=S.map(([q,t])=>`<div class="card"><span class="q">${q}</span><ul class="top3">${t.map(([n,r],i)=>`<li><span>${i+1}. ${n}</span><span>${r.toLocaleString()} reviews</span></li>`).join("")}</ul><span class="flag">You: not shown</span></div>`).join("");
+const S=[["security guard company Miami FL", [["Prestige Guard", 34], ["Nightlight Security", 198], ["Nightlight Security (Brickell)", 216]], "1,500 searches a month across Greater Miami"], ["security company Brickell Miami", [["Nightlight Security (Brickell)", 216], ["A6 Security", 21], ["USPA Nationwide Security", 78]], "1,500 searches a month across Greater Miami"], ["security guard company Doral FL", [["Doral Security Patrol", 4], ["S1Security Group", 66], ["Security Alliance", 68]], "1,500 searches a month across Greater Miami"], ["private investigator Miami FL", [["Miami Private Investigations", 91], ["PI Fast", 24], ["Grey Ghost Private Investigator", 79]], "710 searches a month across Greater Miami"], ["private investigator Coral Gables FL", [["Miami Private Investigations", 91], ["Super Sleuths PI", 0], ["Universal Investigations Agency", 22]], "710 searches a month across Greater Miami"], ["process server Miami FL", [["Magic City Process Service", 89], ["Judicial Process & Support", 53], ["Same Day Florida Process Servers", 9]], "690 searches a month across Greater Miami"], ["process server Fort Lauderdale FL", [["SFL Process Servers", 2], ["Legal Services Solutions", 94], ["Professional Process Servers", 16]], "690 searches a month across Greater Miami"], ["Fact Finders Group Miami FL", [["Miami Fact Finders PI Firm (not you)", 1]], ""]];
+document.getElementById("searches").innerHTML=S.map(([q,t,v])=>`<div class="card"><span class="q">${q}</span>${v?`<span class="vol">${v}</span>`:""}<ul class="top3">${t.map(([n,r],i)=>`<li><span>${i+1}. ${n}</span><span>${r.toLocaleString()} reviews</span></li>`).join("")}</ul><span class="flag">You: not shown</span></div>`).join("");
 </script>

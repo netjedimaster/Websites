@@ -156,6 +156,7 @@ footer .inner{padding-block:28px;display:flex;flex-wrap:wrap;justify-content:spa
 .top3 li span:first-child{min-width:0}
 #searches .card{grid-template-columns:minmax(0,1fr)}
 .lk b{font:800 20px var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+.vol{display:block;font-size:13px;font-weight:700;color:var(--rose-deep);margin:-2px 0 8px}
 </style><style>
 @page{size:Letter;margin:0}
 @media print{
@@ -217,7 +218,7 @@ footer .inner{padding-block:28px;display:flex;flex-wrap:wrap;justify-content:spa
 </div></section>
 
 <section class="band" style="--c:var(--rose)"><div class="inner">
- <div class="shead"><div><span class="eyebrow">Be Seen</span><h2>Who shows up instead of you</h2><p class="muted">The first three results on Google Maps, not counting ads. Fact Finders didn't appear in any of these searches.</p></div><div class="pts"><b>1<small> / 40</small></b><div class="bar"><span style="width:3%"></span></div></div></div>
+ <div class="shead"><div><span class="eyebrow">Be Seen</span><h2>Who shows up instead of you</h2><p class="muted">The first three results on Google Maps, not counting ads. Fact Finders didn't appear in any of these searches. Under each search: how many people across Metro Detroit search for that service every month (Google search counts, October 2025 to September 2026).</p></div><div class="pts"><b>1<small> / 40</small></b><div class="bar"><span style="width:3%"></span></div></div></div>
  <div class="cards" id="searches"></div>
  <ul class="checks">
   <li class="fail"><span class="ic">✕</span><div><h3>Top-3 map spots on key searches</h3><p>0 of 8 searches. Not in the top 10 on any of them.</p></div><span class="p">0 / 20</span></li>
@@ -318,6 +319,6 @@ footer .inner{padding-block:28px;display:flex;flex-wrap:wrap;justify-content:spa
 <footer class="band"><div class="inner"><span>© 2026 Phyllena Management LLC · Concord, North Carolina</span><span>Be Seen + Be Trusted + Be Chosen = Booked Jobs</span></div></footer>
 
 <script>
-const S=[["security guard company Southfield MI", [["Sterling Security", 66], ["NAIAS Security / Berry Investigations", 228], ["Metro One Security", 25]]], ["security company Detroit MI", [["Black Diamond Security Services", 100], ["Code 3 Security", 67], ["City Shield Security", 53]]], ["security guard company Farmington Hills MI", [["Securatech", 231], ["MIProTechs", 85], ["Sterling Security", 66]]], ["private investigator Southfield MI", [["ICU Investigations", 10], ["Metro Detective Agency", 98], ["Stealth Private Investigations", 86]]], ["private investigator Detroit MI", [["Eastern District Investigations", 13], ["Metro Detective Agency", 98], ["Stealth Private Investigations", 86]]], ["process server Southfield MI", [["PDB Process Servers", 109], ["PDB Process Servers (Royal Oak)", 14], ["Goble Process Servers", 204]]], ["process server Detroit MI", [["Motor City Legal Process Servers", 447], ["H&R Process Serving", 28], ["PDB Process Servers", 109]]], ["Fact Finders Detroit MI", [["Fact Finders Polygraph Services", 25]]]];
-document.getElementById("searches").innerHTML=S.map(([q,t])=>`<div class="card"><span class="q">${q}</span><ul class="top3">${t.map(([n,r],i)=>`<li><span>${i+1}. ${n}</span><span>${r.toLocaleString()} reviews</span></li>`).join("")}</ul><span class="flag">You: not shown</span></div>`).join("");
+const S=[["security guard company Southfield MI", [["Sterling Security", 66], ["NAIAS Security / Berry Investigations", 228], ["Metro One Security", 25]], "570 searches a month across Metro Detroit"], ["security company Detroit MI", [["Black Diamond Security Services", 100], ["Code 3 Security", 67], ["City Shield Security", 53]], "570 searches a month across Metro Detroit"], ["security guard company Farmington Hills MI", [["Securatech", 231], ["MIProTechs", 85], ["Sterling Security", 66]], "570 searches a month across Metro Detroit"], ["private investigator Southfield MI", [["ICU Investigations", 10], ["Metro Detective Agency", 98], ["Stealth Private Investigations", 86]], "620 searches a month across Metro Detroit"], ["private investigator Detroit MI", [["Eastern District Investigations", 13], ["Metro Detective Agency", 98], ["Stealth Private Investigations", 86]], "620 searches a month across Metro Detroit"], ["process server Southfield MI", [["PDB Process Servers", 109], ["PDB Process Servers (Royal Oak)", 14], ["Goble Process Servers", 204]], "550 searches a month across Metro Detroit"], ["process server Detroit MI", [["Motor City Legal Process Servers", 447], ["H&R Process Serving", 28], ["PDB Process Servers", 109]], "550 searches a month across Metro Detroit"], ["Fact Finders Detroit MI", [["Fact Finders Polygraph Services", 25]], ""]];
+document.getElementById("searches").innerHTML=S.map(([q,t,v])=>`<div class="card"><span class="q">${q}</span>${v?`<span class="vol">${v}</span>`:""}<ul class="top3">${t.map(([n,r],i)=>`<li><span>${i+1}. ${n}</span><span>${r.toLocaleString()} reviews</span></li>`).join("")}</ul><span class="flag">You: not shown</span></div>`).join("");
 </script>

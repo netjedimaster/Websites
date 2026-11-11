@@ -156,6 +156,7 @@ footer .inner{padding-block:28px;display:flex;flex-wrap:wrap;justify-content:spa
 .top3 li span:first-child{min-width:0}
 #searches .card{grid-template-columns:minmax(0,1fr)}
 .lk b{font:800 20px var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+.vol{display:block;font-size:13px;font-weight:700;color:var(--rose-deep);margin:-2px 0 8px}
 </style><style>
 @page{size:Letter;margin:0}
 @media print{
@@ -219,7 +220,7 @@ footer .inner{padding-block:28px;display:flex;flex-wrap:wrap;justify-content:spa
 </div></section>
 
 <section class="band" style="--c:var(--rose)"><div class="inner">
- <div class="shead"><div><span class="eyebrow">Be Seen</span><h2>Do you show up when people search?</h2><p class="muted">Searched on Google Maps around Matteson and the towns next door, plus Chicago for drones and executive protection. These are the first three results a customer sees, not counting ads.</p></div><div class="pts"><b>19<small> / 40</small></b><div class="bar"><span style="width:48%"></span></div></div></div>
+ <div class="shead"><div><span class="eyebrow">Be Seen</span><h2>Do you show up when people search?</h2><p class="muted">Searched on Google Maps around Matteson and the towns next door, plus Chicago for drones and executive protection. These are the first three results a customer sees, not counting ads. Under each search: how many people across Chicagoland search for that service every month (Google search counts, October 2025 to September 2026). Most people just type the service or "near me," and Google shows them the businesses closest to where they are, which is what these town searches show.</p></div><div class="pts"><b>19<small> / 40</small></b><div class="bar"><span style="width:48%"></span></div></div></div>
  <div class="cards" id="searches"></div>
  <ul class="checks">
   <li class="fail"><span class="ic">✕</span><div><h3>Top-3 map spots on key searches</h3><p>Top 3 on 2 of 14 searches: #1 for "private investigator Matteson IL" and #3 for "security guard company Matteson IL." On "fingerprinting Matteson IL" and "live scan fingerprinting Matteson IL," Google doesn't show you at all, even though you're in Matteson. 123 Finger Print Me, also in Matteson, gets those searches.</p></div><span class="p">3 / 20</span></li>
@@ -416,21 +417,21 @@ footer .inner{padding-block:28px;display:flex;flex-wrap:wrap;justify-content:spa
 
 <script>
 const S=[
-["private investigator Matteson IL",[["Fact Finders Group (you)",28,1],["Albany and Washburne PI",41],["A P Private Detective",60]],"You: #1","win"],
-["security guard company Matteson IL",[["Universal Protection Service",5],["Special Operations & Protection",4],["Fact Finders Group (you)",28,1]],"You: #3","win"],
-["fingerprinting Matteson IL",[["123 Finger Print Me",97]],"You: not shown"],
-["live scan fingerprinting Matteson IL",[["123 Finger Print Me",97],["Distinct Biometrics",71]],"You: not shown"],
-["live scan fingerprinting Tinley Park IL",[["Concealed Carry Training Ctr",522],["Live Scan Illinois",16],["1st Choice Livescan",26]],"You: not in top 10"],
-["fingerprinting Chicago Heights IL",[["Trace Identity Services",40]],"You: not shown"],
-["fingerprinting Park Forest IL",[["Distinct Biometrics",71],["Trace Identity Services",40],["123 Finger Print Me",97]],"You: #5"],
-["background check fingerprinting Olympia Fields IL",[["Trace Identity Services",40],["Distinct Biometrics",71],["Accurate Biometrics",3324]],"You: #4"],
-["private investigator Tinley Park IL",[["Quality Professional Detective",6],["Albany and Washburne PI",41],["A P Private Detective",60]],"You: #8"],
-["private investigator Chicago Heights IL",[["Albany and Washburne PI",41],["A P Private Detective",60],["RA Private Investigation",35]],"You: #9"],
-["process server Matteson IL",[["Albany and Washburne PI",41],["Suddenly Served!",8],["Prism CourtServe",2]],"You: not in top 10"],
-["security company Tinley Park IL",[["Allied Universal",69],["Blue Line Security Solutions",29],["On Guard Inc",37]],"You: not shown"],
-["drone services Chicago IL",[["Drone Media Chicago",19],["Chicago SkyCam",12],["Aerial Vision Chicago",19]],"You: not in top 10"],
-["executive protection Chicago IL",[["Chicago Executive Protection",6],["Global Executive Protection",3],["Head of Security",11]],"You: not in top 10"]];
-document.getElementById("searches").innerHTML=S.map(([q,t,f,w])=>`<div class="card"><span class="q">${q}</span><ul class="top3">${t.map(([n,r,me],i)=>`<li${me?' class="me"':""}><span>${i+1}. ${n}</span><span>${r.toLocaleString()} reviews</span></li>`).join("")}</ul><span class="flag${w?" win":""}">${f}</span></div>`).join("");
+["private investigator Matteson IL",[["Fact Finders Group (you)",28,1],["Albany and Washburne PI",41],["A P Private Detective",60]],"You: #1","win","1,410 searches a month across Chicagoland"],
+["security guard company Matteson IL",[["Universal Protection Service",5],["Special Operations & Protection",4],["Fact Finders Group (you)",28,1]],"You: #3","win","2,200 searches a month across Chicagoland"],
+["fingerprinting Matteson IL",[["123 Finger Print Me",97]],"You: not shown","","5,770 searches a month across Chicagoland"],
+["live scan fingerprinting Matteson IL",[["123 Finger Print Me",97],["Distinct Biometrics",71]],"You: not shown","","5,770 searches a month across Chicagoland"],
+["live scan fingerprinting Tinley Park IL",[["Concealed Carry Training Ctr",522],["Live Scan Illinois",16],["1st Choice Livescan",26]],"You: not in top 10","","5,770 searches a month across Chicagoland"],
+["fingerprinting Chicago Heights IL",[["Trace Identity Services",40]],"You: not shown","","5,770 searches a month across Chicagoland"],
+["fingerprinting Park Forest IL",[["Distinct Biometrics",71],["Trace Identity Services",40],["123 Finger Print Me",97]],"You: #5","","5,770 searches a month across Chicagoland"],
+["background check fingerprinting Olympia Fields IL",[["Trace Identity Services",40],["Distinct Biometrics",71],["Accurate Biometrics",3324]],"You: #4","","5,770 searches a month across Chicagoland"],
+["private investigator Tinley Park IL",[["Quality Professional Detective",6],["Albany and Washburne PI",41],["A P Private Detective",60]],"You: #8","","1,410 searches a month across Chicagoland"],
+["private investigator Chicago Heights IL",[["Albany and Washburne PI",41],["A P Private Detective",60],["RA Private Investigation",35]],"You: #9","","1,410 searches a month across Chicagoland"],
+["process server Matteson IL",[["Albany and Washburne PI",41],["Suddenly Served!",8],["Prism CourtServe",2]],"You: not in top 10","","1,040 searches a month across Chicagoland"],
+["security company Tinley Park IL",[["Allied Universal",69],["Blue Line Security Solutions",29],["On Guard Inc",37]],"You: not shown","","2,200 searches a month across Chicagoland"],
+["drone services Chicago IL",[["Drone Media Chicago",19],["Chicago SkyCam",12],["Aerial Vision Chicago",19]],"You: not in top 10","","Only about 10 searches a month across Chicagoland"],
+["executive protection Chicago IL",[["Chicago Executive Protection",6],["Global Executive Protection",3],["Head of Security",11]],"You: not in top 10","","Only about 30 searches a month across Chicagoland"]];
+document.getElementById("searches").innerHTML=S.map(([q,t,f,w,v])=>`<div class="card"><span class="q">${q}</span><span class="vol">${v}</span><ul class="top3">${t.map(([n,r,me],i)=>`<li${me?' class="me"':""}><span>${i+1}. ${n}</span><span>${r.toLocaleString()} reviews</span></li>`).join("")}</ul><span class="flag${w?" win":""}">${f}</span></div>`).join("");
 const C=[["123 Finger Print Me",97],["Distinct Biometrics",71],["A P Private Detective",60],["Albany and Washburne PI",41],["Trace Identity Services",40],["Fact Finders Group",28,1]];
 const m=Math.max(...C.map(c=>c[1]));
 document.getElementById("bars").innerHTML=C.map(([n,v,me])=>`<div class="rb${me?" me":""}"><span class="n" title="${n}">${n}</span><span class="t"><span style="width:${Math.max(2,v/m*100)}%"></span></span><span class="v">${v}</span></div>`).join("");
