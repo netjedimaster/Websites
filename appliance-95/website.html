@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Appliance 95 Website Option A</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&family=Manrope:wght@700&display=swap">
+<style>
+/* Option A: neighborhood pro. Clean white, deep navy and safety orange, friendly family-shop feel. */
+:root{
+ --navy:#0F2A4A; --navy2:#16395F; --orange:#F26A1B; --orange-d:#D9550B; --sky:#EAF2FB; --paper:#FFFFFF; --bg:#F5F7FA; --ink:#0D1B2A; --muted:#566273; --line:#DFE5EC; --gold:#F5B42A;
+ --display:"Archivo","Arial Narrow",system-ui,sans-serif; --body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+ color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body)}
+a{color:inherit} img{max-width:100%;height:auto;display:block}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.05;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0}
+.w{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.ph{background:#FFF1B8;color:#5a4300;padding:1px 6px;border-radius:4px;font-weight:600;font-size:.88em}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+/* agency tabs + option switch */
+.pmtabs{background:#fff;border-bottom:1px solid #E4E6EE;font-family:"Manrope","Segoe UI",system-ui,sans-serif;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.pmtabs .inner{max-width:1180px;margin:0 auto;display:flex;gap:6px;padding-block:10px;overflow-x:auto}
+.pmtabs a{flex:0 0 auto;padding:9px 16px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none;color:#0E1B38;background:#EEF2FA}
+.pmtabs a.on{background:#C63F68;color:#fff}.pmtabs a.pr{margin-left:auto}
+.opt{background:#F7F7FA;border-bottom:1px solid #E4E6EE;font-family:"Manrope","Segoe UI",system-ui,sans-serif;font-size:14px;color:#111A2E;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.opt .inner{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;padding-block:9px}
+.opt b{font-weight:700}
+.opt a{padding:6px 14px;border-radius:999px;border:1px solid #C9CEDB;text-decoration:none;font-weight:700;color:#1F3A8A;background:#fff}
+.opt a.on{background:#1F3A8A;border-color:#1F3A8A;color:#fff}
+.mock{background:var(--navy);color:#CFE0F5;font-size:12.5px;text-align:center}
+.mock .w{padding-block:7px}
+/* header */
+.hd{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+.hd .w{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand i{width:44px;height:44px;border-radius:12px;background:var(--navy);color:#fff;display:grid;place-content:center;font:900 20px/1 var(--display);font-style:normal;letter-spacing:-.02em}
+.brand i span{color:var(--orange)}
+.brand b{font:800 20px/1.05 var(--display);display:block}
+.brand small{font-size:12px;color:var(--muted);font-weight:500}
+.hd nav{display:flex;gap:22px;font-weight:600;font-size:15px}
+.hd nav a{text-decoration:none;color:var(--muted)} .hd nav a:hover{color:var(--ink)}
+.call{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;text-decoration:none;font:700 15px var(--body);padding:12px 18px;border-radius:12px;white-space:nowrap}
+.call:hover{background:var(--orange-d)}
+@media (max-width:960px){.hd nav{display:none}}
+@media (max-width:420px){.brand small{display:none}.call{padding:11px 14px;font-size:14px}}
+/* hero */
+.hero{background:linear-gradient(180deg,var(--sky),#fff)}
+.hero .w{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px;align-items:center;padding-block:56px 64px}
+@media (max-width:900px){.hero .w{grid-template-columns:1fr;gap:32px;padding-block:36px 48px}}
+.kick{display:inline-flex;gap:8px;align-items:center;font-weight:700;font-size:14px;color:var(--navy2);background:#fff;border:1px solid var(--line);padding:6px 14px;border-radius:99px}
+.kick span{color:var(--gold);letter-spacing:1px}
+.hero h1{font-size:clamp(40px,6vw,68px);font-weight:900;margin:18px 0 16px}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero p.s{font-size:19px;color:var(--muted);max-width:46ch}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.b2{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:12px;border:2px solid var(--navy);color:var(--navy)}
+.b2:hover{background:var(--navy);color:#fff}
+.call.big{padding:16px 24px;font-size:17px}
+.trust{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:26px;font-size:14px;font-weight:600;color:var(--navy2)}
+.trust span::before{content:"✓";color:var(--orange);margin-right:7px;font-weight:800}
+.heroImg{position:relative}
+.heroImg img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:24px;box-shadow:0 24px 60px rgba(15,42,74,.22)}
+.rcard{position:absolute;left:-18px;bottom:-22px;background:#fff;border-radius:16px;padding:14px 18px;box-shadow:0 12px 30px rgba(15,42,74,.18);display:grid;gap:2px}
+.rcard b{font:900 26px/1 var(--display)} .rcard b span{color:var(--gold);font-size:20px;margin-left:6px}
+.rcard small{color:var(--muted);font-size:13px}
+@media (max-width:900px){.rcard{left:12px;bottom:-18px}}
+/* sections */
+section{padding-block:clamp(60px,8vw,96px)}
+.sh{display:grid;gap:12px;margin-bottom:36px;max-width:680px}
+.sh .k{font:800 13px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--orange)}
+.sh h2{font-size:clamp(32px,4.4vw,48px);font-weight:900}
+.sh p{color:var(--muted);font-size:18px}
+.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:900px){.svc{grid-template-columns:1fr}}
+.svc article{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:grid;grid-template-rows:auto 1fr;box-shadow:0 2px 6px rgba(15,42,74,.05)}
+.svc img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.svc .t{padding:22px;display:grid;gap:10px;align-content:start}
+.svc h3{font-size:24px;font-weight:800}
+.svc ul{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:15px;color:var(--muted)}
+.svc li::before{content:"•";color:var(--orange);font-weight:900;margin-right:8px}
+.svc .who{font-size:14px;font-weight:600;color:var(--navy2)}
+.svc a.more{justify-self:start;margin-top:6px;font-weight:700;color:var(--orange-d);text-decoration:none}
+/* owners */
+.own{background:var(--bg)}
+.own .g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media (max-width:760px){.own .g{grid-template-columns:1fr}}
+.pc{background:#fff;border-radius:20px;border:1px solid var(--line);padding:26px;display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:start}
+.av{width:76px;height:76px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-content:center;font:900 30px var(--display)}
+.av.o{background:var(--orange)}
+.pc h3{font-size:24px} .pc .r{font-weight:600;color:var(--orange-d);font-size:14px;margin:4px 0 8px}
+.pc p{color:var(--muted);font-size:16px}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:s}
+@media (max-width:760px){.steps{grid-template-columns:1fr}}
+.steps div{counter-increment:s;border-top:4px solid var(--navy);padding-top:18px;display:grid;gap:8px}
+.steps div::before{content:counter(s);font:900 44px/1 var(--display);color:var(--orange)}
+.steps h3{font-size:22px} .steps p{color:var(--muted);font-size:16px}
+/* reviews */
+.rev{background:var(--navy);color:#fff}
+.rev .sh h2{color:#fff} .rev .sh p{color:#BFD2EA}
+.rgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:900px){.rgrid{grid-template-columns:1fr}}
+.rgrid figure{margin:0;background:var(--navy2);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:22px;display:grid;gap:12px}
+.rgrid .st{color:var(--gold);letter-spacing:2px}
+.rgrid blockquote{margin:0;font-size:16px;color:#E3ECF7}
+.rgrid figcaption{font-size:14px;color:#9DB4D1;font-weight:600}
+.gbtn{display:inline-flex;margin-top:28px;background:#fff;color:var(--navy);text-decoration:none;font-weight:700;padding:13px 20px;border-radius:12px}
+/* areas + club */
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:860px){.two{grid-template-columns:1fr}}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{background:var(--sky);color:var(--navy);font-weight:600;font-size:15px;padding:9px 16px;border-radius:99px}
+.chips span.main{background:var(--navy);color:#fff}
+.club{background:linear-gradient(135deg,#FFF4EC,#fff);border:2px solid #FFD8BF;border-radius:24px;padding:28px;display:grid;gap:14px}
+.club h3{font-size:28px;font-weight:900}
+.club p{color:var(--muted)}
+form{display:grid;gap:10px}
+label{font-size:14px;font-weight:600}
+input,select{width:100%;font:500 16px var(--body);padding:13px 14px;border:1px solid #C9D3DF;border-radius:10px;background:#fff;color:var(--ink)}
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:13px;font-weight:500;color:var(--muted)}
+.chk input{width:18px;height:18px;margin-top:2px;flex:none}
+button{font:700 16px var(--body);background:var(--orange);color:#fff;border:0;border-radius:12px;padding:15px;cursor:pointer}
+button:hover{background:var(--orange-d)}
+/* final cta */
+.fin{background:var(--orange);color:#fff;text-align:center}
+.fin .w{display:grid;gap:16px;justify-items:center}
+.fin h2{font-size:clamp(34px,5vw,56px);font-weight:900}
+.fin p{font-size:18px;color:#FFE6D6}
+.fin a{background:#fff;color:var(--orange-d);text-decoration:none;font:900 clamp(24px,4vw,36px) var(--display);padding:16px 30px;border-radius:16px}
+footer{background:#0A1E36;color:#AFC3DA;font-size:15px}
+footer .w{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:28px;padding-block:48px}
+@media (max-width:760px){footer .w{grid-template-columns:1fr}}
+footer b{color:#fff;font-family:var(--display);font-size:18px;display:block;margin-bottom:8px}
+footer a{color:#fff}
+.fine{border-top:1px solid rgba(255,255,255,.1);font-size:13px;padding-block:16px!important;display:block!important}
+/* sticky mobile call bar */
+.mbar{display:none}
+@media (max-width:700px){.mbar{display:flex;position:sticky;bottom:0;z-index:45;gap:8px;padding:10px max(12px,env(safe-area-inset-left,0px)) calc(10px + env(safe-area-inset-bottom,0px));background:#fff;border-top:1px solid var(--line)}.mbar a{flex:1;text-align:center;text-decoration:none;font-weight:700;padding:13px;border-radius:12px;background:var(--orange);color:#fff}.mbar a.t{background:var(--navy)}}
+</style>
+</head><body>
+<nav class="pmtabs" aria-label="Appliance 95 reports"><div class="inner"><a href="/appliance-95/scorecard.html">Scorecard</a><a href="/appliance-95/website.html" class="on" aria-current="page">Website mock-up</a><a href="/appliance-95/faq.html" class="pr">FAQ</a><a href="/appliance-95/proposal.html">Proposal</a></div></nav>
+<div class="opt"><div class="inner"><b>Which one do you want?</b><span>Two looks for your website:</span><a href="/appliance-95/website.html" class="on" aria-current="page">Option A · Neighborhood pro</a><a href="/appliance-95/website-b.html">Option B · No heat tonight</a></div></div>
+<div class="mock"><div class="w">MOCK-UP · Sample website prepared for Appliance 95 by Phyllena Management · Not live · Sample photos, to be replaced with real ones of Maurice and Craig · Yellow items need your OK</div></div>
+
+<header class="hd"><div class="w">
+ <a class="brand" href="#top"><i>9<span>5</span></i><span><b>Appliance 95</b><small>Heating · Cooling · Appliance Repair</small></span></a>
+ <nav aria-label="Site"><a href="#services">Services</a><a href="#owners">About us</a><a href="#reviews">Reviews</a><a href="#areas">Areas we serve</a><a href="#club">Tune-up list</a></nav>
+ <a class="call" href="tel:+13129254026">📞 (312) 925-4026</a>
+</div></header>
+
+<main id="top">
+<section class="hero" style="padding:0"><div class="w">
+ <div>
+  <span class="kick"><span>★★★★★</span> 5.0 on Google · Family owned on 95th Street</span>
+  <h1>Furnace out? Fridge warm? <em>Call the family on 95th.</em></h1>
+  <p class="s">Heating, cooling and appliance repair for Chicago's South Side and the south suburbs. Maurice fixes your furnace and AC. Craig fixes your fridge, washer and dryer. One call does it all.</p>
+  <div class="btns"><a class="call big" href="tel:+13129254026">Call (312) 925-4026</a><a class="b2" href="#request">Request service online</a></div>
+  <div class="trust"><span>BBB A+ rating</span><span>Shop at 319 W 95th St</span><span>Licensed and insured <span class="ph">[CONFIRM license #]</span></span></div>
+ </div>
+ <div class="heroImg"><img src="/appliance-95/images/furnace.jpg" alt="Appliance 95 technician testing a gas furnace in a Chicago basement" width="1600" height="1073"><div class="rcard"><b>5.0<span>★★★★★</span></b><small>from 11 Google reviews</small></div></div>
+</div></section>
+
+<section id="services"><div class="w">
+ <div class="sh"><span class="k">What we fix</span><h2>Three trades, one phone number</h2><p>Most homeowners need a different company for the furnace and the fridge. You only need us.</p></div>
+ <div class="svc">
+  <article><img src="/appliance-95/images/furnace.jpg" alt="Technician repairing a furnace" loading="lazy" width="1600" height="1073"><div class="t"><h3>Heating</h3><span class="who">Led by Maurice</span><ul><li>Furnace repair and no-heat calls</li><li>Furnace blowing cold air</li><li>Thermostat problems</li><li>Furnace tune-ups and replacement</li></ul><a class="more" href="#request">Request heating service →</a></div></article>
+  <article><img src="/appliance-95/images/ac.jpg" alt="Technician checking an air conditioner condenser beside a brick bungalow" loading="lazy" width="1600" height="1073"><div class="t"><h3>Cooling</h3><span class="who">Led by Maurice</span><ul><li>AC not cooling or won't turn on</li><li>Short cycling and strange noises</li><li>Spring AC checks</li><li>AC installation and replacement</li></ul><a class="more" href="#request">Request AC service →</a></div></article>
+  <article><img src="/appliance-95/images/fridge.jpg" alt="Appliance technician repairing a refrigerator in a family kitchen" loading="lazy" width="1600" height="1073"><div class="t"><h3>Appliance repair</h3><span class="who">Led by Craig</span><ul><li>Refrigerators and ice makers</li><li>Washers and dryers</li><li>Dishwashers</li><li>Ovens, ranges and microwaves</li></ul><a class="more" href="#request">Request appliance repair →</a></div></article>
+ </div>
+</div></section>
+
+<section class="own" id="owners"><div class="w">
+ <div class="sh"><span class="k">Who shows up at your door</span><h2>A father and son, not a call center</h2><p>When you call Appliance 95, you get the people who do the work.</p></div>
+ <div class="g">
+  <div class="pc"><span class="av">M</span><div><h3>Maurice</h3><div class="r">Heating and cooling</div><p>Maurice handles every furnace, AC and thermostat call. <span class="ph">[CONFIRM: years of experience, certifications]</span></p></div></div>
+  <div class="pc"><span class="av o">C</span><div><h3>Craig</h3><div class="r">Appliance repair</div><p>Craig has kept South Side kitchens and laundry rooms running. <span class="ph">[CONFIRM: years of experience, brands serviced]</span></p></div></div>
+ </div>
+</div></section>
+
+<section><div class="w">
+ <div class="sh"><span class="k">How it works</span><h2>Fixed without the runaround</h2></div>
+ <div class="steps">
+  <div><h3>Call or book online</h3><p>Tell us what's wrong. A real person answers <span class="ph">[CONFIRM hours]</span>.</p></div>
+  <div><h3>We come to you</h3><p>We find the problem and explain it in plain words before we start.</p></div>
+  <div><h3>Fixed, and we follow up</h3><p>After the job you get a quick thank-you text, and a reminder when your tune-up is due.</p></div>
+ </div>
+</div></section>
+
+<section class="rev" id="reviews"><div class="w">
+ <div class="sh"><span class="k" style="color:var(--gold)">Reviews</span><h2>5.0 stars from every Google review</h2><p>11 Google reviews and counting. Here's what South Side homeowners say.</p></div>
+ <div class="rgrid">
+  <figure><span class="st">★★★★★</span><blockquote><span class="ph">[PASTE REAL REVIEW]</span></blockquote><figcaption>Michele H. · HomeAdvisor</figcaption></figure>
+  <figure><span class="st">★★★★★</span><blockquote><span class="ph">[PASTE REAL REVIEW]</span></blockquote><figcaption>Stacy W. · HomeAdvisor</figcaption></figure>
+  <figure><span class="st">★★★★★</span><blockquote><span class="ph">[PASTE REAL REVIEW]</span></blockquote><figcaption>Trent J. · HomeAdvisor</figcaption></figure>
+ </div>
+ <a class="gbtn" href="https://maps.google.com/?cid=17293308815563696364" target="_blank" rel="noopener">Read all our reviews on Google →</a>
+</div></section>
+
+<section id="areas"><div class="w two">
+ <div style="display:grid;gap:18px">
+  <div class="sh" style="margin:0"><span class="k">Areas we serve</span><h2>The South Side and the south suburbs</h2><p>Our shop is at 319 W 95th St. If you're nearby, we're nearby.</p></div>
+  <div class="chips"><span class="main">Chicago South Side</span><span>Markham</span><span>Calumet City</span><span>South Holland</span><span>Lansing</span><span>Homewood</span><span>Dolton</span><span>Harvey</span></div>
+  <img src="/appliance-95/images/thermostat.jpg" alt="Homeowner setting a thermostat to 70 degrees" loading="lazy" style="border-radius:20px;aspect-ratio:16/9;object-fit:cover" width="1600" height="1195">
+ </div>
+ <div style="display:grid;gap:20px">
+  <div class="club" id="club"><h3>Join our tune-up list</h3><p>Get a text when it's time for your furnace tune-up in the fall and your AC check in the spring, plus members-only specials. About 1 or 2 texts a month.</p>
+   <form onsubmit="event.preventDefault();this.innerHTML='<p><b>You\'re on the list.</b> We\'ll text you before tune-up season.</p>'"><label for="cn">First name</label><input id="cn" autocomplete="given-name" required><label for="cp">Cell number</label><input id="cp" type="tel" autocomplete="tel" required><label class="chk"><input type="checkbox" required> Yes, text me tune-up reminders and specials from Appliance 95. Msg and data rates may apply. Reply STOP to opt out.</label><button>Join the list</button></form></div>
+  <div class="club" id="request" style="background:#fff;border-color:var(--line)"><h3>Request service</h3>
+   <form onsubmit="event.preventDefault();this.innerHTML='<p><b>Thanks, we got it.</b> We\'ll call you to set up a time. Urgent? Call (312) 925-4026.</p>'"><label for="rn">Name</label><input id="rn" autocomplete="name" required><label for="rp">Phone</label><input id="rp" type="tel" autocomplete="tel" required><label for="rs">What needs fixing?</label><select id="rs"><option>Furnace not heating</option><option>AC not cooling</option><option>Refrigerator not cooling</option><option>Washer or dryer</option><option>Dishwasher, oven or range</option><option>Tune-up</option><option>Something else</option></select><label for="rz">ZIP code</label><input id="rz" inputmode="numeric" autocomplete="postal-code"><button>Request service</button></form></div>
+ </div>
+</div></section>
+
+<section class="fin"><div class="w"><h2>Something stopped working?</h2><p>Call the family on 95th Street.</p><a href="tel:+13129254026">(312) 925-4026</a></div></section>
+</main>
+
+<footer><div class="w">
+ <div><b>Appliance 95, Inc.</b>319 W 95th St, Chicago, IL 60628<br><a href="tel:+13129254026">(312) 925-4026</a><br>Mon–Fri 9 AM–6 PM, Sat 9 AM–2 PM <span class="ph">[CONFIRM hours]</span></div>
+ <div><b>Services</b>Heating · Cooling · Appliance repair · Tune-ups</div>
+ <div><b>Areas</b>Chicago South Side, Markham, Calumet City, South Holland, Lansing, Homewood, Dolton, Harvey</div>
+</div><div class="w fine">© 2026 Appliance 95, Inc. · BBB A+ rating</div></footer>
+<div class="mbar"><a href="tel:+13129254026">Call now</a><a class="t" href="#request">Request service</a></div>
+</body></html>
