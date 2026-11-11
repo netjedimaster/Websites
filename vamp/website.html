@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Vamp Website Option A</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=Manrope:wght@700&display=swap">
+<style>
+/* Option A: Charlotte's one-call facility team. White and navy with the blue from the Vamp drop logo. Proof first, every service visible. */
+:root{
+ --navy:#0F2245; --navy2:#1B3A70; --blue:#1E63C4; --sky:#E8F1FC; --paper:#FFFFFF; --bg:#F5F7FA; --ink:#0D1626; --muted:#566176; --line:#DDE3EC; --gold:#F5B42A; --green:#1F8A55;
+ --display:"Archivo",system-ui,sans-serif; --body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+ color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body)}
+a{color:inherit} img{max-width:100%;height:auto;display:block}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.05;text-wrap:balance;letter-spacing:-.015em}
+p{margin:0}
+.w{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.pmtabs{background:#fff;border-bottom:1px solid #E4E6EE;font-family:"Manrope","Segoe UI",system-ui,sans-serif;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.pmtabs .inner{max-width:1180px;margin:0 auto;display:flex;gap:6px;padding-block:10px;overflow-x:auto}
+.pmtabs a{flex:0 0 auto;padding:9px 16px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none;color:#0E1B38;background:#EEF2FA}
+.pmtabs a.on{background:#C63F68;color:#fff}.pmtabs a.pr{margin-left:auto}
+.opt{background:#F7F7FA;border-bottom:1px solid #E4E6EE;font-family:"Manrope","Segoe UI",system-ui,sans-serif;font-size:14px;color:#111A2E;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.opt .inner{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;padding-block:9px}
+.opt a{padding:6px 14px;border-radius:999px;border:1px solid #C9CEDB;text-decoration:none;font-weight:700;color:#1F3A8A;background:#fff}
+.opt a.on{background:#1F3A8A;border-color:#1F3A8A;color:#fff}
+.mock{background:var(--navy);color:#C9D6EE;font-size:12.5px;text-align:center}
+.mock .w{padding-block:7px}
+.hd{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+.hd .w{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
+.hd img{width:160px}
+.hd nav{display:flex;gap:22px;font-weight:600;font-size:15px}
+.hd nav a{text-decoration:none;color:var(--muted)} .hd nav a:hover{color:var(--ink)}
+.hdr{display:flex;gap:10px;align-items:center}
+.call{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;text-decoration:none;font:700 15px var(--body);padding:12px 18px;border-radius:10px;white-space:nowrap}
+.call:hover{background:#174F9E}
+.txt{display:inline-flex;align-items:center;gap:8px;background:var(--sky);color:var(--navy);text-decoration:none;font:700 15px var(--body);padding:12px 16px;border-radius:10px;white-space:nowrap;border:1px solid #C6DAF3}
+@media (max-width:1040px){.hd nav{display:none}}
+@media (max-width:560px){.hd img{width:120px}.txt{display:none}.call{padding:11px 14px;font-size:14px}}
+.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden}
+.hero .bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,22,46,.95) 0%,rgba(10,22,46,.78) 50%,rgba(10,22,46,.2) 100%)}
+.hero .w{position:relative;z-index:1;padding-block:80px 88px;display:grid;gap:22px}
+.pill{justify-self:start;display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--navy);font-weight:800;font-size:14px;padding:8px 16px;border-radius:99px}
+.stars{color:var(--gold);letter-spacing:2px}
+.hero h1{font-size:clamp(38px,6.2vw,72px);font-weight:900;max-width:14ch}
+.hero h1 em{font-style:normal;color:#8DBBF5}
+.hero p.s{font-size:19px;color:#DCE6F7;max-width:52ch}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.big{font-size:17px;padding:15px 22px}
+.b2{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;padding:15px 22px;border-radius:10px;background:#fff;color:var(--navy)}
+.proof{display:flex;flex-wrap:wrap;align-items:center;gap:10px 26px;font-size:15px;color:#DCE6F7}
+.proof b{color:#fff}
+.proof img{height:40px;width:auto;background:#fff;border-radius:6px;padding:3px 6px}
+.strip{background:#fff;border-bottom:1px solid var(--line)}
+.strip .w{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding-block:24px}
+.strip div{text-align:center}
+.strip b{display:block;font:900 30px/1.1 var(--display);color:var(--navy)}
+.strip span{font-size:14px;color:var(--muted)}
+@media (max-width:700px){.strip .w{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.logos{background:#fff;border-bottom:1px solid var(--line)}
+.logos .w{display:grid;gap:14px;padding-block:26px}
+.logos p{font:700 13px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:center}
+.logos .row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:22px 40px}
+.logos img{height:46px;width:auto;object-fit:contain;filter:grayscale(1);opacity:.8}
+section{padding-block:72px}
+.sh{display:grid;gap:12px;margin-bottom:32px;max-width:760px}
+.k{font:700 13px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.sh h2{font-size:clamp(30px,4.2vw,46px);font-weight:900}
+.sh p{color:var(--muted);font-size:18px}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:18px}
+.svc article{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid;grid-template-rows:auto 1fr}
+.svc img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.svc .t{padding:20px;display:grid;gap:8px;align-content:start}
+.svc h3{font-size:22px;font-weight:800}
+.svc p{color:var(--muted);font-size:15px}
+.more{font-weight:700;color:var(--blue);text-decoration:none;font-size:15px}
+.also{margin-top:22px;background:var(--sky);border:1px solid #C6DAF3;border-radius:16px;padding:22px;display:grid;gap:12px}
+.also h3{font-size:20px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:#fff;border:1px solid #C6DAF3;color:var(--navy);font-weight:600;font-size:14px;padding:7px 12px;border-radius:99px}
+.ba .w{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;align-items:center}
+@media (max-width:860px){.ba .w{grid-template-columns:1fr}}
+.ba img{border-radius:20px;width:100%;max-width:460px;justify-self:center;box-shadow:0 20px 40px rgba(10,22,46,.15)}
+.ind{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:12px}
+.ind div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;gap:6px}
+.ind b{font:800 17px var(--display)}
+.ind span{font-size:14px;color:var(--muted)}
+.rev{background:#fff}
+.rhead{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;margin-bottom:26px}
+.gbadge{display:flex;align-items:center;gap:14px;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:14px 20px}
+.gbadge b{font:900 40px/1 var(--display);color:var(--navy)}
+.gbadge span{display:block;font-size:14px;color:var(--muted)}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px}
+.rgrid blockquote{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:22px;display:grid;gap:10px;align-content:start}
+.rgrid cite{font-style:normal;font-weight:700;font-size:14px;color:var(--navy2)}
+.own .w{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+@media (max-width:860px){.own .w{grid-template-columns:1fr}}
+.own img{border-radius:20px;aspect-ratio:3/2;object-fit:cover;width:100%}
+.own ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.own li{display:flex;gap:10px;align-items:flex-start}
+.own li::before{content:"✓";color:var(--green);font-weight:800}
+.wall{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.wall span{background:var(--navy);color:#fff;font:700 13px var(--body);padding:6px 12px;border-radius:99px}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;counter-reset:s}
+@media (max-width:860px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+.steps div{counter-increment:s;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;display:grid;gap:8px;align-content:start}
+.steps div::before{content:counter(s);width:36px;height:36px;border-radius:10px;background:var(--blue);color:#fff;display:grid;place-content:center;font:800 16px var(--body)}
+.steps p{font-size:15px;color:var(--muted)}
+.areas{background:var(--navy);color:#fff}
+.areas .sh p{color:#C9D6EE}.areas .k{color:#8DBBF5}
+.town{display:flex;flex-wrap:wrap;gap:10px}
+.town a{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff;text-decoration:none;padding:10px 16px;border-radius:12px;font-weight:600}
+.offices{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:12px;margin-top:28px}
+.offices div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:16px;display:grid;gap:4px;font-size:14px;color:#C9D6EE}
+.offices b{color:#fff;font:800 17px var(--display)}
+.offices a{color:#fff;font-weight:700;text-decoration:none}
+.req .w{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:start}
+@media (max-width:860px){.req .w{grid-template-columns:1fr}}
+form{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;display:grid;gap:14px}
+label{display:grid;gap:6px;font-weight:600;font-size:14px}
+input,select,textarea{font:inherit;font-size:16px;padding:12px 14px;border:1px solid #C9D5E3;border-radius:10px;background:#fff;color:var(--ink);width:100%}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:520px){.row{grid-template-columns:1fr}}
+.chk{display:flex;gap:10px;align-items:flex-start;font-weight:500;font-size:13.5px;color:var(--muted)}
+.chk input{margin-top:3px;width:auto}
+form button{font:700 17px var(--body);background:var(--blue);color:#fff;border:0;border-radius:10px;padding:15px;cursor:pointer}
+footer{background:#08142B;color:#B9C6DE;font-size:15px}
+footer .w{padding-block:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+footer b{color:#fff}
+footer img.bbb{height:44px;width:auto;background:#fff;border-radius:6px;padding:3px 6px;margin-top:10px}
+.fine{border-top:1px solid rgba(255,255,255,.1);font-size:13px;padding-block:16px!important;display:block!important}
+.mbar{display:none}
+@media (max-width:700px){.mbar{display:flex;position:sticky;bottom:0;z-index:45;gap:8px;padding:10px max(12px,env(safe-area-inset-left,0px)) calc(10px + env(safe-area-inset-bottom,0px));background:#fff;border-top:1px solid var(--line)}.mbar a{flex:1;text-align:center;text-decoration:none;font-weight:700;padding:13px;border-radius:10px;background:var(--blue);color:#fff}.mbar a.t{background:var(--sky);color:var(--navy)}}
+</style>
+</head><body>
+<nav class="pmtabs" aria-label="Vamp Building Maintenance reports"><div class="inner"><a href="/vamp/scorecard.html">Scorecard</a><a href="/vamp/website.html" class="on" aria-current="page">Website mock-ups</a><a href="/vamp/faq.html" class="pr">FAQ</a><a href="/vamp/proposal.html">Proposal</a></div></nav>
+<div class="opt"><div class="inner"><b>Which one do you want?</b><span>Two looks for your new website:</span><a href="/vamp/website.html" class="on" aria-current="page">Option A · Charlotte's one-call facility team</a><a href="/vamp/website-b.html">Option B · Clean by morning</a></div></div>
+<div class="mock"><div class="w">MOCK-UP · Sample website prepared for Vamp Building Maintenance by Phyllena Management · Not live · Photos, logos and details taken from your current website and Google profile</div></div>
+
+<header class="hd"><div class="w">
+ <a href="#top"><img src="/vamp/images/logo.webp" alt="Vamp Building Maintenance" width="360" height="131"></a>
+ <nav aria-label="Site"><a href="#services">Services</a><a href="#industries">Industries</a><a href="#reviews">Reviews</a><a href="#team">Our team</a><a href="#areas">Locations</a></nav>
+ <div class="hdr"><a class="txt" href="sms:+19803724194">💬 Text us</a><a class="call" href="tel:+19803724194">📞 980-372-4194</a></div>
+</div></header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+ <img class="bgimg" src="/vamp/images/team-hero.webp" alt="" width="1300" height="872">
+ <div class="w">
+  <span class="pill"><span class="stars">★★★★★</span> 5.0 from 107 Google reviews</span>
+  <h1>One call for the whole building. <em>Cleaned, kept up, done right.</em></h1>
+  <p class="s">Janitorial, floor care, construction cleanup, epoxy, painting, junk removal and repairs from one Charlotte team, so you stop juggling five contractors. Serving Charlotte, Atlanta and the Carolinas since 2014.</p>
+  <div class="btns"><a class="call big" href="#quote">Get my free quote</a><a class="b2" href="tel:+19803724194">Call 980-372-4194</a></div>
+  <div class="proof"><span><b>1,075</b> customers</span><span><b>Licensed, insured</b> and bonded</span><span><b>Since 2014</b> in Charlotte</span><img src="/vamp/images/bbb.png" alt="BBB Accredited Business, A+ rating" width="149" height="56"></div>
+ </div>
+</section>
+
+<div class="strip"><div class="w">
+ <div><b>5.0 ★</b><span>107 Google reviews</span></div>
+ <div><b>1,075</b><span>customers served</span></div>
+ <div><b>6.7M+</b><span>sq ft cleaned every night</span></div>
+ <div><b>A+</b><span>BBB accredited</span></div>
+</div></div>
+
+<div class="logos"><div class="w">
+ <p>Trusted by Charlotte businesses like</p>
+ <div class="row">
+  <img src="/vamp/images/c-fedex.png" alt="FedEx" width="240" height="118" loading="lazy">
+  <img src="/vamp/images/c-harley.png" alt="Independence Harley-Davidson Charlotte" width="240" height="146" loading="lazy">
+  <img src="/vamp/images/c-medic.png" alt="MEDIC" width="240" height="139" loading="lazy">
+  <img src="/vamp/images/c-morehouse.png" alt="Morehouse Healthcare" width="240" height="112" loading="lazy">
+  <img src="/vamp/images/c-dt.png" alt="Distribution Technology" width="240" height="102" loading="lazy">
+  <img src="/vamp/images/c-therapyland.png" alt="Therapyland" width="160" height="169" loading="lazy">
+  <img src="/vamp/images/c-dst.png" alt="Dr. Betty Shabazz Delta Academy" width="240" height="240" loading="lazy">
+ </div>
+</div></div>
+
+<section id="services"><div class="w">
+ <div class="sh"><span class="k">What we do</span><h2>Everything your building needs, one team</h2><p>Nightly cleaning is where most clients start. Then they find out we strip the floors, coat the warehouse, paint the lobby and haul out the old furniture too.</p></div>
+ <div class="svc">
+  <article><img src="/vamp/images/backpack.webp" alt="Vamp team member vacuuming an office hallway with a backpack vacuum" loading="lazy" width="800" height="537"><div class="t"><h3>Janitorial and office cleaning</h3><p>Nightly, weekly or custom schedules built around your hours, traffic and floor plan. Restrooms, break rooms, trash, dusting and floors, done the same way every time.</p><a class="more" href="#quote">Quote my building →</a></div></article>
+  <article><img src="/vamp/images/epoxy.webp" alt="Before and after: a dull gray concrete floor coated into a glossy epoxy floor" loading="lazy" width="700" height="700"><div class="t"><h3>Floor care and epoxy coating</h3><p>Stripping, waxing, restoration and deep floor cleaning, plus epoxy coatings in anti-slip, anti-static and fire-resistant finishes for warehouses, shops and showrooms.</p><a class="more" href="#quote">Quote my floors →</a></div></article>
+  <article><img src="/vamp/images/floor.webp" alt="Before and after: a construction-site room cleaned into a move-in ready space" loading="lazy" width="800" height="800"><div class="t"><h3>Construction cleaning</h3><p>Post-construction cleanups for contractors, property managers and owners: debris out, glass and windows cleaned, high dusting and floors finished, move-in ready on deadline.</p><a class="more" href="#quote">Quote my project →</a></div></article>
+  <article><img src="/vamp/images/maint.webp" alt="Technician servicing a ceiling fixture in an office" loading="lazy" width="800" height="533"><div class="t"><h3>Building maintenance and repairs</h3><p>Preventative maintenance, ceiling cleaning, painting, concrete installation and repair, and disaster and fire or smoke restoration, scheduled during your downtime.</p><a class="more" href="#quote">Quote my maintenance →</a></div></article>
+  <article><img src="/vamp/images/pic28.webp" alt="Vamp team member disinfecting a conference table" loading="lazy" width="800" height="537"><div class="t"><h3>Disinfection and day porters</h3><p>Disinfection for medical, school and high-traffic spaces, and day porters who keep lobbies, restrooms and common areas fresh while you're open.</p><a class="more" href="#quote">Quote my service →</a></div></article>
+  <article><img src="/vamp/images/junk.webp" alt="Pile of cardboard and old materials ready for removal" loading="lazy" width="800" height="533"><div class="t"><h3>Junk removal</h3><p>Office cleanouts, old furniture, construction leftovers and whole-building haul-outs, commercial and residential, no job too big or small.</p><a class="more" href="#quote">Quote my haul-out →</a></div></article>
+ </div>
+ <div class="also"><h3>Also on the list, just ask</h3><div class="chips"><span>Custodial services</span><span>Restroom sanitization</span><span>Commercial painting</span><span>Concrete repair</span><span>Fire and smoke restoration</span><span>Ceiling cleaning</span><span>Preventative maintenance</span></div></div>
+</div></section>
+
+<section class="ba" id="results" style="background:var(--sky)"><div class="w">
+ <img src="/vamp/images/epoxy.webp" alt="Before and after: a warehouse floor transformed with a glossy epoxy coating" loading="lazy" width="700" height="700">
+ <div style="display:grid;gap:18px">
+  <span class="k">Before and after</span>
+  <h2 style="font-size:clamp(30px,4.2vw,46px);font-weight:900">Same floor. Brand new finish.</h2>
+  <p style="color:var(--muted);font-size:18px">One of our own epoxy jobs. Every service page on the new site gets real before-and-after photos like this, so a facility manager can see the work before they ever call.</p>
+  <div class="btns"><a class="call big" href="#quote">Get my free quote</a></div>
+ </div>
+</div></section>
+
+<section id="industries"><div class="w">
+ <div class="sh"><span class="k">Who we clean for</span><h2>Built around how your building runs</h2></div>
+ <div class="ind">
+  <div><b>Corporate offices</b><span>Nightly cleaning and day porters for multi-floor offices</span></div>
+  <div><b>Medical facilities</b><span>Disinfection and detail work for clinics and medical buildings</span></div>
+  <div><b>Schools and daycares</b><span>K-12, universities and daycares, with deep cleans on breaks</span></div>
+  <div><b>Multifamily properties</b><span>Common areas, turnovers and cleanouts for property managers</span></div>
+  <div><b>Financial and government</b><span>Banks and public buildings that need it right, every night</span></div>
+  <div><b>Auto dealerships</b><span>Showroom floors, service bays and glass that sells cars</span></div>
+  <div><b>Religious facilities</b><span>Sanctuaries, fellowship halls and classrooms, ready for Sunday</span></div>
+  <div><b>Warehouses</b><span>Epoxy floors, high dusting and junk removal for big spaces</span></div>
+ </div>
+</div></section>
+
+<section class="rev" id="reviews"><div class="w">
+ <div class="rhead"><div class="sh" style="margin:0"><span class="k">What our clients say</span><h2>107 five-star reviews. Not one under five stars.</h2></div>
+ <div class="gbadge"><b>5.0</b><div><span class="stars">★★★★★</span><span>Google · 107 reviews</span></div></div></div>
+ <div class="rgrid">
+  <blockquote><p>"Vamp took a floor that I was unsure was ever gonna have any white to it again and made it look almost brand new... Great communication from the start."</p><cite>Ryan S. · Google review</cite></blockquote>
+  <blockquote><p>"Vamp Building Maintenance provides excellent service while maintaining your investment... We will continue to use them and I highly recommend them."</p><cite>Andre A. · Google review</cite></blockquote>
+  <blockquote><p>"He was extremely quick to respond in our communication and his team on-site was great. The floors look fantastic."</p><cite>Rick S. · Google review</cite></blockquote>
+  <blockquote><p>"Vamp did a great job on our office interior and roof. Strongly recommended!"</p><cite>Thamsanqa N. · Google review</cite></blockquote>
+  <blockquote><p>"Isaiah's team were very friendly and did an amazing job. I highly recommend them."</p><cite>Lupe T. · Google review</cite></blockquote>
+  <blockquote><p>"Received a quick response, very competitive price and great service."</p><cite>Google review</cite></blockquote>
+ </div>
+ <p style="margin-top:18px;color:var(--muted);font-size:14px">Live from Google: the newest reviews show here automatically.</p>
+</div></section>
+
+<section class="own" id="team"><div class="w">
+ <img src="/vamp/images/office.webp" alt="The Vamp Building Maintenance team in uniform outside their office" loading="lazy" width="800" height="537">
+ <div style="display:grid;gap:18px">
+  <span class="k">Our team</span>
+  <h2 style="font-size:clamp(30px,4.2vw,46px);font-weight:900">A Charlotte company since 2014</h2>
+  <p style="color:var(--muted)">Vamp Building Maintenance started in Charlotte in 2014 with one idea: treat every building like it's ours. Today our trained, uniformed crews clean more than 6.7 million square feet every night across the Carolinas and Atlanta.</p>
+  <ul><li>Custom cleaning programs built around your schedule</li><li>Quality checks backed by technology, with real-time issue fixes</li><li>Professionally trained, uniformed crews</li><li>Licensed, insured and bonded</li></ul>
+  <div class="wall"><span>5.0 on Google</span><span>107 reviews</span><span>BBB A+</span><span>Since 2014</span><span>5 offices</span></div>
+ </div>
+</div></section>
+
+<section id="how"><div class="w">
+ <div class="sh"><span class="k">How it works</span><h2>From first call to spotless in four steps</h2></div>
+ <div class="steps">
+  <div><h3>Call, text or tap</h3><p>Tell us about your building. Smaller jobs can often be quoted over the phone.</p></div>
+  <div><h3>Free quote</h3><p>We learn your space, traffic and floors, and build a plan around your hours.</p></div>
+  <div><h3>Clear proposal</h3><p>One price, one contact, every service you need in one place.</p></div>
+  <div><h3>We keep it right</h3><p>Quality checks, fast fixes and a heads-up when floors or paint are due.</p></div>
+ </div>
+</div></section>
+
+<section class="areas" id="areas"><div class="w">
+ <div class="sh"><span class="k">Where we work</span><h2>Charlotte and the towns around it</h2><p>Each town has its own page with the buildings we keep and reviews from your neighbors.</p></div>
+ <div class="town"><a href="#quote">Charlotte</a><a href="#quote">Pineville</a><a href="#quote">Ballantyne</a><a href="#quote">Matthews</a><a href="#quote">Indian Trail</a><a href="#quote">Concord</a><a href="#quote">Kannapolis</a><a href="#quote">Huntersville</a><a href="#quote">Cornelius</a><a href="#quote">Davidson</a><a href="#quote">Mooresville</a><a href="#quote">Troutman</a><a href="#quote">Salisbury</a><a href="#quote">Gastonia</a><a href="#quote">Fort Mill</a><a href="#quote">Rock Hill</a></div>
+ <div class="offices">
+  <div><b>Charlotte</b>2015 Ayrsley Town Blvd #202<a href="tel:+19803724194">(980) 372-4194</a></div>
+  <div><b>Atlanta</b>1000 Parkwood Cir. SE #900<a href="tel:+16785806360">(678) 580-6360</a></div>
+  <div><b>Greensboro</b>717 Green Valley Rd<a href="tel:+13368722818">(336) 872-2818</a></div>
+  <div><b>Columbia</b>1320 Main St. Suite 300<a href="tel:+18038665922">(803) 866-5922</a></div>
+  <div><b>Greenville</b>128 Millport Cir. Suite 200<a href="tel:+18644326232">(864) 432-6232</a></div>
+ </div>
+</div></section>
+
+<section class="req" id="quote"><div class="w">
+ <div class="sh"><span class="k">Free quote</span><h2>Tell us about your building</h2><p>We respond fast with a clear price or a time to see your space. Prefer to talk now? Call or text <a href="tel:+19803724194"><b>980-372-4194</b></a>, Monday to Friday, 9 to 5.</p></div>
+ <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Thanks! This is a mock-up, so nothing was sent.'">
+  <div class="row"><label>Your name<input name="n" autocomplete="name" required></label><label>Business name<input name="b" autocomplete="organization" required></label></div>
+  <div class="row"><label>Mobile phone<input name="p" type="tel" autocomplete="tel" required></label><label>Email<input name="e" type="email" autocomplete="email"></label></div>
+  <div class="row"><label>What do you need?<select name="s"><option>Janitorial or office cleaning</option><option>Floor cleaning or waxing</option><option>Epoxy floor coating</option><option>Construction cleaning</option><option>Building maintenance</option><option>Disinfection</option><option>Day porter</option><option>Painting</option><option>Junk removal</option><option>Concrete repair</option><option>Something else</option></select></label><label>Square footage<input name="sq" inputmode="numeric" placeholder="About how big?"></label></div>
+  <label>Anything we should know?<textarea name="m" rows="3"></textarea></label>
+  <label class="chk"><input type="checkbox" name="optin"><span>Yes, send me seasonal offers on floor care, deep cleans and other building services from Vamp. About 1 a month. Reply STOP anytime.</span></label>
+  <button type="submit">Get my free quote</button>
+ </form>
+</div></section>
+</main>
+
+<footer><div class="w">
+ <div><b>Vamp Building Maintenance</b><br>Commercial cleaning and facility services<br>Charlotte, North Carolina · since 2014<br><img class="bbb" src="/vamp/images/bbb.png" alt="BBB Accredited Business, A+ rating" width="149" height="56"></div>
+ <div><b>Call or text</b><br><a href="tel:+19803724194">980-372-4194</a><br>Monday to Friday, 9 AM to 5 PM</div>
+ <div><b>Services</b><br>Janitorial · Office · Floors · Epoxy<br>Construction · Maintenance · Painting<br>Disinfection · Day porters · Junk removal</div>
+ <div class="fine" style="grid-column:1/-1">© 2026 Vamp Building Maintenance · <a href="#">Privacy</a></div>
+</div></footer>
+<div class="mbar"><a href="tel:+19803724194">📞 Call</a><a class="t" href="sms:+19803724194">💬 Text</a><a href="#quote">Quote</a></div>
+</body></html>
