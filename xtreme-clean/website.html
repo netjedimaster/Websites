@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Xtreme Clean Website Option A</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=Manrope:wght@700&display=swap">
+<style>
+/* Option A: Charlotte's 5-star power washer. Bright white, the navy, red and splash blue from the Xtreme Clean logo, proof-first neighborhood feel. */
+:root{
+ --navy:#16295E; --navy2:#22397E; --red:#B4232F; --splash:#9FD3F0; --splash-soft:#EAF6FD; --paper:#FFFFFF; --bg:#F6F9FC; --ink:#0F1A33; --muted:#56627A; --line:#DCE5EF; --gold:#F5B42A; --green:#22865A;
+ --display:"Archivo",system-ui,sans-serif; --body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+ color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body)}
+a{color:inherit} img{max-width:100%;height:auto;display:block}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.05;text-wrap:balance;letter-spacing:-.015em}
+p{margin:0}
+.w{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+/* agency tabs + option switch */
+.pmtabs{background:#fff;border-bottom:1px solid #E4E6EE;font-family:"Manrope","Segoe UI",system-ui,sans-serif;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.pmtabs .inner{max-width:1180px;margin:0 auto;display:flex;gap:6px;padding-block:10px;overflow-x:auto}
+.pmtabs a{flex:0 0 auto;padding:9px 16px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none;color:#0E1B38;background:#EEF2FA}
+.pmtabs a.on{background:#C63F68;color:#fff}.pmtabs a.pr{margin-left:auto}
+.opt{background:#F7F7FA;border-bottom:1px solid #E4E6EE;font-family:"Manrope","Segoe UI",system-ui,sans-serif;font-size:14px;color:#111A2E;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.opt .inner{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;padding-block:9px}
+.opt a{padding:6px 14px;border-radius:999px;border:1px solid #C9CEDB;text-decoration:none;font-weight:700;color:#1F3A8A;background:#fff}
+.opt a.on{background:#1F3A8A;border-color:#1F3A8A;color:#fff}
+.mock{background:var(--navy);color:#C9D6EE;font-size:12.5px;text-align:center}
+.mock .w{padding-block:7px}
+/* header */
+.hd{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+.hd .w{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:8px}
+.hd img{width:150px}
+.hd nav{display:flex;gap:22px;font-weight:600;font-size:15px}
+.hd nav a{text-decoration:none;color:var(--muted)} .hd nav a:hover{color:var(--ink)}
+.hdr{display:flex;gap:10px;align-items:center}
+.call{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;text-decoration:none;font:700 15px var(--body);padding:12px 18px;border-radius:12px;white-space:nowrap}
+.call:hover{background:#971C27}
+.txt{display:inline-flex;align-items:center;gap:8px;background:var(--splash-soft);color:var(--navy);text-decoration:none;font:700 15px var(--body);padding:12px 16px;border-radius:12px;white-space:nowrap;border:1px solid #C3E3F5}
+@media (max-width:1000px){.hd nav{display:none}}
+@media (max-width:560px){.hd img{width:110px}.txt{display:none}.call{padding:11px 14px;font-size:14px}}
+/* hero */
+.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden}
+.hero .bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,26,60,.94) 0%,rgba(14,26,60,.72) 52%,rgba(14,26,60,.1) 100%)}
+.hero .w{position:relative;z-index:1;padding-block:76px 84px;display:grid;gap:22px}
+.pill{justify-self:start;display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--navy);font-weight:800;font-size:14px;padding:8px 16px;border-radius:99px}
+.pill .stars{color:var(--gold)}
+.hero h1{font-size:clamp(40px,6.6vw,76px);font-weight:900;max-width:13ch;text-transform:none}
+.hero h1 em{font-style:normal;color:var(--splash)}
+.hero p.s{font-size:19px;color:#DCE6F7;max-width:50ch}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.big{font-size:17px;padding:15px 22px}
+.b2{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;padding:15px 22px;border-radius:12px;background:#fff;color:var(--navy)}
+.proof{display:flex;flex-wrap:wrap;gap:10px 26px;font-size:15px;color:#DCE6F7}
+.proof b{color:#fff}
+.stars{color:var(--gold);letter-spacing:2px}
+/* stat strip */
+.strip{background:#fff;border-bottom:1px solid var(--line)}
+.strip .w{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding-block:22px}
+.strip div{text-align:center}
+.strip b{display:block;font:900 30px/1.1 var(--display);color:var(--navy)}
+.strip span{font-size:14px;color:var(--muted)}
+@media (max-width:700px){.strip .w{grid-template-columns:repeat(2,minmax(0,1fr))}}
+section{padding-block:72px}
+.sh{display:grid;gap:12px;margin-bottom:32px;max-width:720px}
+.k{font:700 13px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.sh h2{font-size:clamp(30px,4.2vw,46px);font-weight:900}
+.sh p{color:var(--muted);font-size:18px}
+/* services */
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:18px}
+.svc article{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:grid;grid-template-rows:auto 1fr}
+.svc img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.svc .t{padding:20px;display:grid;gap:8px;align-content:start}
+.svc h3{font-size:22px;font-weight:800}
+.svc p{color:var(--muted);font-size:15px}
+.more{font-weight:700;color:var(--red);text-decoration:none;font-size:15px}
+.svc article.noimg{background:var(--splash-soft);border-color:#C3E3F5}
+.svc article.noimg ul{margin:0;padding-left:18px;color:var(--muted);font-size:15px}
+/* before after */
+.ba .w{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;align-items:center}
+@media (max-width:860px){.ba .w{grid-template-columns:1fr}}
+.ba img{border-radius:22px;width:100%;max-width:440px;justify-self:center;box-shadow:0 20px 40px rgba(14,26,60,.15)}
+/* reviews */
+.rev{background:#fff}
+.rhead{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;margin-bottom:26px}
+.gbadge{display:flex;align-items:center;gap:14px;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:14px 20px}
+.gbadge b{font:900 40px/1 var(--display);color:var(--navy)}
+.gbadge span{display:block;font-size:14px;color:var(--muted)}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px}
+.rgrid blockquote{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:22px;display:grid;gap:10px;align-content:start}
+.rgrid blockquote p{font-size:16px}
+.rgrid cite{font-style:normal;font-weight:700;font-size:14px;color:var(--navy2)}
+/* owner */
+.own .w{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+@media (max-width:860px){.own .w{grid-template-columns:1fr}}
+.own img{border-radius:22px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.own ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.own li{display:flex;gap:10px;align-items:flex-start}
+.own li::before{content:"✓";color:var(--green);font-weight:800}
+.wall{display:flex;flex-wrap:wrap;gap:8px}
+.wall span{background:var(--navy);color:#fff;font:700 13px var(--body);padding:6px 12px;border-radius:99px}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;counter-reset:s}
+@media (max-width:860px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+.steps div{counter-increment:s;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;display:grid;gap:8px;align-content:start}
+.steps div::before{content:counter(s);width:36px;height:36px;border-radius:10px;background:var(--red);color:#fff;display:grid;place-content:center;font:800 16px var(--body)}
+.steps p{font-size:15px;color:var(--muted)}
+/* areas */
+.areas{background:var(--navy);color:#fff}
+.areas .sh p{color:#C9D6EE}.areas .k{color:var(--splash)}
+.town{display:flex;flex-wrap:wrap;gap:10px}
+.town a{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff;text-decoration:none;padding:10px 16px;border-radius:12px;font-weight:600}
+.town a:hover{background:rgba(255,255,255,.16)}
+/* form */
+.req .w{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:start}
+@media (max-width:860px){.req .w{grid-template-columns:1fr}}
+form{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;display:grid;gap:14px}
+label{display:grid;gap:6px;font-weight:600;font-size:14px}
+input,select,textarea{font:inherit;font-size:16px;padding:12px 14px;border:1px solid #C9D5E3;border-radius:10px;background:#fff;color:var(--ink);width:100%}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:520px){.row{grid-template-columns:1fr}}
+.chk{display:flex;gap:10px;align-items:flex-start;font-weight:500;font-size:13.5px;color:var(--muted)}
+.chk input{margin-top:3px;width:auto}
+form button{font:700 17px var(--body);background:var(--red);color:#fff;border:0;border-radius:12px;padding:15px;cursor:pointer}
+footer{background:#0C1734;color:#B9C6DE;font-size:15px}
+footer .w{padding-block:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+footer b{color:#fff}
+.fine{border-top:1px solid rgba(255,255,255,.1);font-size:13px;padding-block:16px!important;display:block!important}
+.mbar{display:none}
+@media (max-width:700px){.mbar{display:flex;position:sticky;bottom:0;z-index:45;gap:8px;padding:10px max(12px,env(safe-area-inset-left,0px)) calc(10px + env(safe-area-inset-bottom,0px));background:#fff;border-top:1px solid var(--line)}.mbar a{flex:1;text-align:center;text-decoration:none;font-weight:700;padding:13px;border-radius:12px;background:var(--red);color:#fff}.mbar a.t{background:var(--splash);color:var(--navy)}}
+</style>
+</head><body>
+<nav class="pmtabs" aria-label="Xtreme Clean reports"><div class="inner"><a href="/xtreme-clean/scorecard.html">Scorecard</a><a href="/xtreme-clean/website.html" class="on" aria-current="page">Website mock-ups</a><a href="/xtreme-clean/faq.html" class="pr">FAQ</a><a href="/xtreme-clean/proposal.html">Proposal</a></div></nav>
+<div class="opt"><div class="inner"><b>Which one do you want?</b><span>Two looks for your new website:</span><a href="/xtreme-clean/website.html" class="on" aria-current="page">Option A · Charlotte's 5-star power washer</a><a href="/xtreme-clean/website-b.html">Option B · Fast quote, every surface</a></div></div>
+<div class="mock"><div class="w">MOCK-UP · Sample website prepared for Xtreme Clean by Phyllena Management · Not live · Sample photos, to be replaced with your real jobs · Details taken from your current website and Google profile</div></div>
+
+<header class="hd"><div class="w">
+ <a href="#top"><img src="/xtreme-clean/images/logo.png" alt="Xtreme Clean Power Washing LLC" width="491" height="271"></a>
+ <nav aria-label="Site"><a href="#services">Services</a><a href="#results">Before &amp; after</a><a href="#reviews">Reviews</a><a href="#derek">Meet Derek</a><a href="#areas">Areas</a></nav>
+ <div class="hdr"><a class="txt" href="sms:+17042976289">💬 Text us</a><a class="call" href="tel:+17042976289">📞 704-297-6289</a></div>
+</div></header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+ <img class="bgimg" src="/xtreme-clean/images/house.jpg" alt="" width="1376" height="768">
+ <div class="w">
+  <span class="pill"><span class="stars">★★★★★</span> 5.0 from 123 Google reviews</span>
+  <h1>Charlotte's 5-star power washer. <em>Your house, brand new again.</em></h1>
+  <p class="s">House washing, driveways, roofs, gutters, decks, fences and commercial buildings, cleaned with eco-friendly methods that are safe for your siding and your yard. Washing Charlotte since 2016.</p>
+  <div class="btns"><a class="call big" href="#quote">Get my free quote</a><a class="b2" href="tel:+17042976289">Call 704-297-6289</a></div>
+  <div class="proof"><span><b>Since 2016</b> in Charlotte</span><span><b>Homes and businesses</b></span><span><b>Eco-friendly</b> cleaning methods</span><span><b>Free</b> estimates</span></div>
+ </div>
+</section>
+
+<div class="strip"><div class="w">
+ <div><b>5.0 ★</b><span>123 Google reviews</span></div>
+ <div><b>2016</b><span>washing Charlotte since</span></div>
+ <div><b>7</b><span>services, one call</span></div>
+ <div><b>Free</b><span>estimates, fast quotes</span></div>
+</div></div>
+
+<section id="services"><div class="w">
+ <div class="sh"><span class="k">What we clean</span><h2>The whole outside of your home or business</h2><p>One company for every surface: soft washing for the delicate stuff, real pressure where it belongs, and a crew that treats every job the same, big or small.</p></div>
+ <div class="svc">
+  <article><img src="/xtreme-clean/images/house.jpg" alt="Technician soft washing white vinyl siding on a brick home" loading="lazy" width="1376" height="768"><div class="t"><h3>House washing</h3><p>Low-pressure soft washing that removes dirt, pollen, mold and mildew from siding, brick and trim without damaging it.</p><a class="more" href="#quote">Quote my house →</a></div></article>
+  <article><img src="/xtreme-clean/images/driveway.jpg" alt="Surface cleaner leaving a clean stripe through a dirty concrete driveway" loading="lazy" width="1200" height="896"><div class="t"><h3>Driveways and concrete</h3><p>Driveways, walkways, sidewalks and patios. Dirt, stains and black mildew out, curb appeal back.</p><a class="more" href="#quote">Quote my driveway →</a></div></article>
+  <article><img src="/xtreme-clean/images/roof.jpg" alt="Roof being soft washed, half clean and half streaked with algae" loading="lazy" width="1200" height="896"><div class="t"><h3>Roof and gutter cleaning</h3><p>Black streaks and debris removed the safe way, so your roof and gutters last longer and protect your investment.</p><a class="more" href="#quote">Quote my roof →</a></div></article>
+  <article><img src="/xtreme-clean/images/patio.jpg" alt="Freshly cleaned wood fence and stone patio" loading="lazy" width="1200" height="896"><div class="t"><h3>Decks, fences and patios</h3><p>Gray, weathered wood brought back to its real color, and pavers that look new again.</p><a class="more" href="#quote">Quote my deck →</a></div></article>
+  <article><img src="/xtreme-clean/images/commercial.jpg" alt="Worker cleaning the sidewalk in front of a strip of shops" loading="lazy" width="1200" height="896"><div class="t"><h3>Commercial buildings</h3><p>Storefronts, sidewalks and building walls for Charlotte businesses, so customers see a clean place before they walk in.</p><a class="more" href="#quote">Quote my property →</a></div></article>
+  <article class="noimg"><div class="t"><h3>Not sure what you need?</h3><p>Text us a photo. Derek will tell you what it needs and what it costs, usually the same day.</p><ul><li>Mailboxes, carports and porches</li><li>Second-story balconies</li><li>Walkways and front steps</li></ul><a class="more" href="sms:+17042976289">Text a photo →</a></div></article>
+ </div>
+</div></section>
+
+<section class="ba" id="results" style="background:var(--splash-soft)"><div class="w">
+ <img src="/xtreme-clean/images/deck-before-after.jpg" alt="Before and after: a gray, dirty wood deck washed back to bright new wood" loading="lazy" width="680" height="900">
+ <div style="display:grid;gap:18px">
+  <span class="k">Before and after</span>
+  <h2 style="font-size:clamp(30px,4.2vw,46px);font-weight:900">Same deck. Same afternoon.</h2>
+  <p style="color:var(--muted);font-size:18px">This is one of our own jobs. Every job page on the new site gets photos like this, by service and by neighborhood, so you can see the work before you ever call.</p>
+  <div class="btns"><a class="call big" href="#quote">Get my free quote</a></div>
+ </div>
+</div></section>
+
+<section class="rev" id="reviews"><div class="w">
+ <div class="rhead"><div class="sh" style="margin:0"><span class="k">What your neighbors say</span><h2>123 five-star reviews, and we answer every one</h2></div>
+ <div class="gbadge"><b>5.0</b><div><span class="stars">★★★★★</span><span>Google · 123 reviews</span></div></div></div>
+ <div class="rgrid">
+  <blockquote><p>"They were the only company that gave me a quote immediately and their prices were very reasonable. The work they did was excellent, and my house looks brand new."</p><cite>Travis T. · Google review</cite></blockquote>
+  <blockquote><p>"Amazing job on my house, driveway, walkway, and gutters! Arrived on time and got the job done in a timely manner."</p><cite>Aisha B. · Google review</cite></blockquote>
+  <blockquote><p>"Derek was a solid choice. He answered the first time I called, set the appt, followed up, and arrived on time."</p><cite>Marty S. · Google review</cite></blockquote>
+  <blockquote><p>"They did an absolutely amazing job on my house, fence, and driveway."</p><cite>Jamie M. · Google review</cite></blockquote>
+  <blockquote><p>"Derek Howell did an outstanding job pressure washing my second-story balcony."</p><cite>Kelly J. · Google review</cite></blockquote>
+  <blockquote><p>"You were incredibly responsive and were able to come out the very same day."</p><cite>Darlene · Google review</cite></blockquote>
+ </div>
+ <p style="margin-top:18px;color:var(--muted);font-size:14px">Live from Google: the newest reviews show here automatically.</p>
+</div></section>
+
+<section class="own" id="derek"><div class="w">
+ <img src="/xtreme-clean/images/trailer.jpg" alt="Pressure washing truck and trailer parked in front of a clean suburban home" loading="lazy" width="1200" height="896">
+ <div style="display:grid;gap:18px">
+  <span class="k">Meet the owner</span>
+  <h2 style="font-size:clamp(30px,4.2vw,46px);font-weight:900">Derek Howell, owner and operator since 2016</h2>
+  <p style="color:var(--muted)">Xtreme Clean is built on customer service first. When you call, Derek answers. You get a quote fast, a set time, a follow-up, and a crew that shows up when it said it would. Every customer and every job gets the same care, whether it's a mailbox or a shopping center.</p>
+  <ul><li>Free estimates, usually quoted the same day</li><li>Soft washing for siding and roofs, pressure only where it's safe</li><li>Eco-friendly cleaning methods</li><li>Residential and commercial</li></ul>
+  <div class="wall"><span>5.0 on Google</span><span>123 reviews</span><span>In business since 2016</span><span>Charlotte based</span></div>
+ </div>
+</div></section>
+
+<section id="how"><div class="w">
+ <div class="sh"><span class="k">How it works</span><h2>Quote to clean in four steps</h2></div>
+ <div class="steps">
+  <div><h3>Call, text or tap</h3><p>Send a photo or a few details. No pressure, no obligation.</p></div>
+  <div><h3>Fast, honest quote</h3><p>A clear price, usually the same day. What you see is what you pay.</p></div>
+  <div><h3>We wash it right</h3><p>On time, the right method for each surface, and we clean up before we leave.</p></div>
+  <div><h3>See the difference</h3><p>Before-and-after photos of your job, and a reminder when it's time again.</p></div>
+ </div>
+</div></section>
+
+<section class="areas" id="areas"><div class="w">
+ <div class="sh"><span class="k">Where we work</span><h2>Charlotte and the towns around it</h2><p>Each town has its own page with jobs we've done there and reviews from your neighbors.</p></div>
+ <div class="town"><a href="#quote">Charlotte</a><a href="#quote">University City</a><a href="#quote">Huntersville</a><a href="#quote">Concord</a><a href="#quote">Matthews</a></div>
+</div></section>
+
+<section class="req" id="quote"><div class="w">
+ <div class="sh"><span class="k">Free quote</span><h2>Tell us what needs cleaning</h2><p>We'll get back to you fast with a clear price. Prefer to talk now? Call or text <a href="tel:+17042976289"><b>704-297-6289</b></a>.</p></div>
+ <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Thanks! This is a mock-up, so nothing was sent.'">
+  <div class="row"><label>Your name<input name="n" autocomplete="name" required></label><label>Mobile phone<input name="p" type="tel" autocomplete="tel" required></label></div>
+  <div class="row"><label>Town<select name="t"><option>Charlotte</option><option>University City</option><option>Huntersville</option><option>Concord</option><option>Matthews</option><option>Other</option></select></label><label>What do you need?<select name="s"><option>House washing</option><option>Driveway or concrete</option><option>Roof cleaning</option><option>Gutter cleaning</option><option>Deck, fence or patio</option><option>Commercial property</option><option>Something else</option></select></label></div>
+  <label>Anything we should know?<textarea name="m" rows="3"></textarea></label>
+  <label class="chk"><input type="checkbox" name="optin"><span>Yes, text me spring and fall cleaning reminders and specials from Xtreme Clean. About 2 a month. Reply STOP anytime.</span></label>
+  <button type="submit">Get my free quote</button>
+ </form>
+</div></section>
+</main>
+
+<footer><div class="w">
+ <div><b>Xtreme Clean Power Washing LLC</b><br>Power washing and soft washing<br>Charlotte, North Carolina · since 2016</div>
+ <div><b>Call or text</b><br><a href="tel:+17042976289">704-297-6289</a><br><a href="mailto:xtremecleanpowerwashingllc@gmail.com">xtremecleanpowerwashingllc@gmail.com</a></div>
+ <div><b>Services</b><br>House · Driveway · Roof · Gutters<br>Decks · Fences · Commercial</div>
+ <div class="fine" style="grid-column:1/-1">© 2026 Xtreme Clean Power Washing LLC · <a href="#">Privacy</a></div>
+</div></footer>
+<div class="mbar"><a href="tel:+17042976289">📞 Call</a><a class="t" href="sms:+17042976289">💬 Text</a><a href="#quote">Quote</a></div>
+</body></html>
