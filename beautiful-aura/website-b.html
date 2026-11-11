@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Beautiful Aura Website Option B</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Outfit:wght@300;400;500;600;700&family=Manrope:wght@700&display=swap">
+<style>
+/* Option B: Book your look. Bright cream and blush with the Beautiful Aura lavender, menu-first, built to get a client from Google to a booked chair fast. */
+:root{
+ --ink:#1E1626; --plum:#4B2A62; --lav:#C9A2E2; --lav-soft:#F4ECFA; --blush:#FBEFF1; --cream:#FFFCF8; --paper:#FFFFFF; --muted:#6F6577; --line:#EDE3EE; --gold:#E2A93B; --green:#2F8A5B;
+ --display:"Cormorant Garamond",Georgia,serif; --body:"Outfit",system-ui,-apple-system,"Segoe UI",sans-serif;
+ color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 16.5px/1.65 var(--body)}
+a{color:inherit} img{max-width:100%;height:auto;display:block}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.05;text-wrap:balance;font-weight:700}
+p{margin:0}
+.w{max-width:1160px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+:focus-visible{outline:3px solid var(--plum);outline-offset:3px}
+/* agency tabs + option switch */
+.pmtabs{background:#fff;border-bottom:1px solid #E4E6EE;font-family:"Manrope","Segoe UI",system-ui,sans-serif;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.pmtabs .inner{max-width:1180px;margin:0 auto;display:flex;gap:6px;padding-block:10px;overflow-x:auto}
+.pmtabs a{flex:0 0 auto;padding:9px 16px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none;color:#0E1B38;background:#EEF2FA}
+.pmtabs a.on{background:#C63F68;color:#fff}.pmtabs a.pr{margin-left:auto}
+.opt{background:#F7F7FA;border-bottom:1px solid #E4E6EE;font-family:"Manrope","Segoe UI",system-ui,sans-serif;font-size:14px;color:#111A2E;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.opt .inner{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;padding-block:9px}
+.opt a{padding:6px 14px;border-radius:999px;border:1px solid #C9CEDB;text-decoration:none;font-weight:700;color:#1F3A8A;background:#fff}
+.opt a.on{background:#1F3A8A;border-color:#1F3A8A;color:#fff}
+.mock{background:var(--plum);color:#E7D9F1;font-size:12.5px;text-align:center}
+.mock .w{padding-block:7px}
+.ann{background:var(--ink);color:#fff;font-size:14px;text-align:center}
+.ann .w{padding-block:9px}
+.ann a{color:var(--lav);font-weight:600}
+/* header */
+.hd{position:sticky;top:0;z-index:40;background:rgba(255,252,248,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+.hd .w{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
+.hd img{width:160px}
+.hd nav{display:flex;gap:24px;font-size:15px;font-weight:500}
+.hd nav a{text-decoration:none;color:var(--muted)} .hd nav a:hover{color:var(--ink)}
+.hdr{display:flex;gap:10px;align-items:center}
+.book{display:inline-flex;align-items:center;gap:8px;background:var(--plum);color:#fff;text-decoration:none;font:600 15px var(--body);padding:12px 22px;border-radius:14px;white-space:nowrap}
+.book:hover{background:#3B2050}
+.call{display:inline-flex;align-items:center;gap:8px;background:var(--lav-soft);color:var(--plum);text-decoration:none;font:600 15px var(--body);padding:12px 16px;border-radius:14px;white-space:nowrap;border:1px solid #E3D2F0}
+@media (max-width:1000px){.hd nav{display:none}}
+@media (max-width:560px){.hd img{width:118px}.call{display:none}.book{padding:10px 16px;font-size:14px}}
+/* hero */
+.hero{background:linear-gradient(180deg,var(--blush),var(--cream))}
+.hero .w{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:center;padding-block:56px 64px}
+@media (max-width:880px){.hero .w{grid-template-columns:1fr;padding-block:40px 48px}}
+.pill{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);font-weight:600;font-size:14px;padding:8px 16px;border-radius:99px}
+.stars{color:var(--gold);letter-spacing:2px}
+.hero h1{font-size:clamp(44px,6.6vw,82px);margin-top:18px;color:var(--ink)}
+.hero h1 em{color:var(--plum);font-style:italic}
+.hero p.s{font-size:18px;color:var(--muted);max-width:46ch;margin-top:16px}
+.pick{margin-top:26px;display:grid;gap:10px}
+.pick b{font-size:14px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--plum)}
+.pick div{display:flex;flex-wrap:wrap;gap:8px}
+.pick a{text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-weight:500;font-size:15px;box-shadow:0 2px 6px rgba(75,42,98,.06)}
+.pick a:hover{border-color:var(--lav)}
+.coll{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.coll img{border-radius:20px;aspect-ratio:3/4;object-fit:cover;width:100%}
+.coll img:nth-child(2){margin-top:40px}
+.trust{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:14px;color:var(--muted)}
+.trust span::before{content:"✓";color:var(--green);font-weight:700;margin-right:6px}
+section{padding-block:76px}
+.sh{display:grid;gap:10px;margin-bottom:30px;max-width:720px}
+.k{font:600 13px var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--plum)}
+.sh h2{font-size:clamp(36px,4.8vw,56px)}
+.sh p{color:var(--muted);font-size:17px}
+/* menu tabs */
+.tabsm{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:18px}
+.tabsm button{flex:0 0 auto;font:500 15px var(--body);border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 18px;cursor:pointer;color:var(--ink)}
+.tabsm button[aria-selected="true"]{background:var(--plum);color:#fff;border-color:var(--plum)}
+.panel{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:24px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px}
+@media (max-width:760px){.panel{grid-template-columns:1fr}}
+.panel[hidden]{display:none}
+.panel img{border-radius:18px;aspect-ratio:1;object-fit:cover;width:100%}
+.rows{list-style:none;margin:0;padding:0;display:grid}
+.rows li{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:14px;align-items:center;padding:13px 0;border-bottom:1px solid var(--line)}
+.rows li:last-child{border-bottom:0}
+.rows small{display:block;color:var(--muted);font-size:13px}
+.rows .pr{font-weight:600;white-space:nowrap}
+.rows a{font-size:13px;font-weight:600;text-decoration:none;color:var(--plum);background:var(--lav-soft);padding:6px 12px;border-radius:999px;white-space:nowrap}
+@media (max-width:480px){.rows li{grid-template-columns:minmax(0,1fr) auto}.rows a{display:none}}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:16px;counter-reset:s}
+.steps div{counter-increment:s;background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;display:grid;gap:8px}
+.steps div::before{content:counter(s);width:40px;height:40px;border-radius:12px;display:grid;place-content:center;background:var(--lav-soft);color:var(--plum);font:700 18px var(--body)}
+.steps h3{font-size:24px}
+.steps p{color:var(--muted);font-size:15px}
+/* holiday */
+.hol{background:var(--plum);color:#fff;border-radius:28px;padding:40px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:32px;align-items:center}
+@media (max-width:800px){.hol{grid-template-columns:1fr;padding:28px}}
+.hol h2{font-size:clamp(34px,4.6vw,54px)}
+.hol p{color:#E7D9F1;font-size:17px;margin-top:10px}
+.hol img{border-radius:20px;aspect-ratio:1;object-fit:cover}
+.hol .book{background:#fff;color:var(--plum);margin-top:20px}
+/* reviews */
+.rev{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:18px}
+.rev figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;display:grid;gap:12px}
+.rev blockquote{margin:0;font-size:17px}
+.rev figcaption{font-size:14px;color:var(--muted)}
+.score{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-bottom:24px}
+.score b{font:700 64px/1 var(--display);color:var(--plum)}
+.score span{color:var(--muted)}
+.own{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.own span{font-size:14px;font-weight:500;background:var(--lav-soft);border:1px solid #E3D2F0;color:var(--plum);padding:8px 14px;border-radius:999px}
+/* duo */
+.duo{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:18px}
+.duo article{background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;display:grid}
+.duo img{aspect-ratio:16/9;object-fit:cover;width:100%}
+.duo .b{padding:24px;display:grid;gap:10px}
+.duo h3{font-size:30px}
+.duo p{color:var(--muted)}
+.duo ul{margin:0;padding-left:18px;color:var(--muted)}
+/* visit */
+.visit .w{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
+@media (max-width:860px){.visit .w{grid-template-columns:1fr}}
+.info{display:grid;gap:14px}
+.info div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px}
+.info b{display:block;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--plum)}
+form{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;display:grid;gap:14px;box-shadow:0 18px 40px rgba(75,42,98,.08)}
+form h3{font-size:30px}
+label{display:grid;gap:6px;font-size:14px;font-weight:500}
+input,select{font:inherit;padding:12px 14px;border:1px solid #E0D5E6;border-radius:12px;background:#fff;width:100%}
+.chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;color:var(--muted);font-size:13px}
+.chk input{width:auto;margin-top:4px}
+form button{font:600 16px var(--body);background:var(--plum);color:#fff;border:0;border-radius:14px;padding:15px;cursor:pointer}
+.fine{font-size:13px;color:var(--muted)}
+footer{background:var(--ink);color:#BFB3C9;font-size:14px}
+footer .w{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:24px;padding-block:44px}
+footer b{color:#fff}
+footer img{width:150px;margin-bottom:10px}
+.mbar{display:none}
+@media (max-width:700px){.mbar{display:flex;position:sticky;bottom:0;z-index:45;gap:8px;padding:10px max(12px,env(safe-area-inset-left,0px)) calc(10px + env(safe-area-inset-bottom,0px));background:#fff;border-top:1px solid var(--line)}.mbar a{flex:1;text-align:center;text-decoration:none;font-weight:600;padding:13px;border-radius:14px;background:var(--plum);color:#fff}.mbar a.t{background:var(--lav-soft);color:var(--plum)}}
+</style>
+</head><body>
+<nav class="pmtabs" aria-label="Beautiful Aura reports"><div class="inner"><a href="/beautiful-aura/scorecard.html">Scorecard</a><a href="/beautiful-aura/website.html" class="on" aria-current="page">Website mock-ups</a><a href="/beautiful-aura/faq.html" class="pr">FAQ</a><a href="/beautiful-aura/proposal.html">Proposal</a></div></nav>
+<div class="opt"><div class="inner"><b>Which one do you want?</b><span>Two looks for your new website:</span><a href="/beautiful-aura/website.html">Option A · The luxury experience</a><a href="/beautiful-aura/website-b.html" class="on" aria-current="page">Option B · Book your look</a></div></div>
+<div class="mock"><div class="w">MOCK-UP · Sample website prepared for Beautiful Aura Hair by Phyllena Management · Not live · Photos, services, prices and reviews taken from your current website, booking page and Google profile</div></div>
+<div class="ann"><div class="w">Holiday appointments are booking now. <a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Grab your spot</a></div></div>
+
+<header class="hd"><div class="w">
+ <a href="#top"><img src="/beautiful-aura/images/logo-dark.png" alt="Beautiful Aura Hair, Luxury Experience" width="700" height="263"></a>
+ <nav aria-label="Site"><a href="#menu">Menu &amp; prices</a><a href="#how">How booking works</a><a href="#reviews">Reviews</a><a href="#more">Bridal &amp; Classes</a><a href="#visit">Visit</a></nav>
+ <div class="hdr"><a class="call" href="tel:+19103397019">(910) 339-7019</a><a class="book" href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book now</a></div>
+</div></header>
+
+<main id="top">
+<section class="hero" style="padding:0"><div class="w">
+ <div>
+  <span class="pill"><span class="stars">★★★★★</span> 4.8 from 118 Google reviews</span>
+  <h1>Book your look in <em>downtown Fayetteville</em></h1>
+  <p class="s">Sew-ins, tape-ins, microlinks, silk presses, color and the head spa. Clear prices, real photos and online booking, at our new studio at 907 Hay St.</p>
+  <div class="pick"><b>What are you booking?</b><div>
+   <a href="#menu" data-t="0">Sew-in</a><a href="#menu" data-t="1">Extensions</a><a href="#menu" data-t="2">Silk press</a><a href="#menu" data-t="3">Head spa</a><a href="#menu" data-t="4">Color</a><a href="#menu" data-t="5">Natural hair</a>
+  </div></div>
+  <div class="trust"><span>Black-owned</span><span>Women-owned</span><span>LGBTQ+ friendly</span><span>Raw Indian hair available</span></div>
+ </div>
+ <div class="coll"><img src="/beautiful-aura/images/side-swept.jpg" alt="Side-swept install" width="1100" height="1100"><img src="/beautiful-aura/images/smile-balayage.jpg" alt="Client with balayage" width="1100" height="1100"></div>
+</div></section>
+
+<section id="menu"><div class="w">
+ <div class="sh"><span class="k">Menu &amp; prices</span><h2>Know the price before you book</h2><p>Starting prices from our booking menu. Hair can be added at booking, by length.</p></div>
+ <div class="tabsm" role="tablist" aria-label="Service categories">
+  <button role="tab" aria-selected="true" aria-controls="p0" id="t0">Sew-ins</button><button role="tab" aria-selected="false" aria-controls="p1" id="t1">Extensions</button><button role="tab" aria-selected="false" aria-controls="p2" id="t2">Silk press &amp; smoothing</button><button role="tab" aria-selected="false" aria-controls="p3" id="t3">Head spa</button><button role="tab" aria-selected="false" aria-controls="p4" id="t4">Color</button><button role="tab" aria-selected="false" aria-controls="p5" id="t5">Natural hair</button>
+ </div>
+ <div class="panel" role="tabpanel" id="p0" aria-labelledby="t0"><ul class="rows">
+  <li><span>Traditional sew-in<small>Braided base, head spa shampoo, trim and style</small></span><span class="pr">from $320</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>Closure sew-in<small>Lace closure, minimal leave-out</small></span><span class="pr">from $330</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>Seamless sew-in<small>Full perimeter leave-out, high-ponytail ready</small></span><span class="pr">from $345</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>Flip-over sew-in</span><span class="pr">from $345</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>Partial sew-in</span><span class="pr">from $250</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>Quickweave</span><span class="pr">from $185</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+ </ul><img src="/beautiful-aura/images/curly-sewin.jpg" alt="Curly sew-in" loading="lazy" width="1100" height="1100"></div>
+ <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1" hidden><ul class="rows">
+  <li><span>Tape-in extensions<small>12" to 26"</small></span><span class="pr">from $650</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>Microlink extensions<small>Weft or individual</small></span><span class="pr">from $550</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>Weft microlink hybrid sew-in</span><span class="pr">from $375</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>Extension maintenance</span><span class="pr">from $130</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>Extensions take down</span><span class="pr">$110</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>Wig install</span><span class="pr">$150</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+ </ul><img src="/beautiful-aura/images/ktip.jpg" alt="Extensions in progress" loading="lazy" width="1100" height="1100"></div>
+ <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden><ul class="rows">
+  <li><span>Silk press</span><span class="pr">$150</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>Relaxer</span><span class="pr">$150</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>Keratin smoothing treatment</span><span class="pr">$275</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>Brazilian blowout</span><span class="pr">$350</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>Blow dry</span><span class="pr">$45</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+ </ul><img src="/beautiful-aura/images/sleek-long.jpg" alt="Silk press" loading="lazy" width="1100" height="1100"></div>
+ <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden><ul class="rows">
+  <li><span>Head Spa Experience<small>Scalp cleanse, treatment and massage on a full-body massage bed</small></span><span class="pr">$150</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>Treatments</span><span class="pr">$45</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>Shampoo and style</span><span class="pr">$85</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+ </ul><img src="/beautiful-aura/images/body-wave.jpg" alt="Client after head spa" loading="lazy" width="1100" height="1100"></div>
+ <div class="panel" role="tabpanel" id="p4" aria-labelledby="t4" hidden><ul class="rows">
+  <li><span>Balayage</span><span class="pr">from $235</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>All-over lightener</span><span class="pr">from $255</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>Highlights</span><span class="pr">from $275</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>All-over color</span><span class="pr">from $300</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>Color extensions</span><span class="pr">$85</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>Color gloss add-on</span><span class="pr">$50</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+ </ul><img src="/beautiful-aura/images/balayage.jpg" alt="Balayage" loading="lazy" width="1100" height="1100"></div>
+ <div class="panel" role="tabpanel" id="p5" aria-labelledby="t5" hidden><ul class="rows">
+  <li><span>Natural hair coils</span><span class="pr">$105</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>Two-strand twist</span><span class="pr">$95</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>Rods or rollers</span><span class="pr">$85</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>Wig braids</span><span class="pr">$70</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+  <li><span>Trim or haircut add-on</span><span class="pr">$35</span><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book</a></li>
+ </ul><img src="/beautiful-aura/images/pixie.jpg" alt="Short natural style" loading="lazy" width="1100" height="1100"></div>
+ <p class="fine" style="margin-top:14px">Not sure what to book? A $20 consultation (basic, color or extensions) gets you a plan and a price.</p>
+</div></section>
+
+<section id="how" style="background:#fff"><div class="w">
+ <div class="sh"><span class="k">How booking works</span><h2>Three steps to your chair</h2></div>
+ <div class="steps">
+  <div><h3>Pick your service</h3><p>Choose from the menu, add hair and length if you want it, and see your price up front.</p></div>
+  <div><h3>Book online</h3><p>Pick a time that works. Buy now, pay later is available on bookings from $50 to $4,000.</p></div>
+  <div><h3>Relax</h3><p>Start on the head spa bed and leave with hair you love. Need to move it? Just give us 24 hours.</p></div>
+ </div>
+</div></section>
+
+<section><div class="w">
+ <div class="hol">
+  <div>
+   <span class="k" style="color:var(--lav)">Holiday season</span>
+   <h2>Party, photos, New Year's Eve. Get on the books.</h2>
+   <p>Book your silk press, install or head spa now, and join the VIP list to hear the minute a holiday spot opens.</p>
+   <a class="book" href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book a holiday appointment</a>
+  </div>
+  <img src="/beautiful-aura/images/hero-waves.jpg" alt="Glossy body-wave install" loading="lazy" width="1100" height="1100">
+ </div>
+</div></section>
+
+<section id="reviews" style="background:var(--blush)"><div class="w">
+ <div class="score"><b>4.8</b><div><span class="stars">★★★★★</span><br><span>from 118 Google reviews</span></div></div>
+ <div class="rev">
+  <figure><blockquote>"As someone who has been natural for years, it has been hard to find a good stylist. After a long search, I can honestly say that I'm so glad that I went to Beautiful Aura Hair."</blockquote><figcaption>Natasha R. · Google review</figcaption></figure>
+  <figure><blockquote>"Love love love Queen. Not only have I been satisfied with every service she has provided, she makes me feel welcomed and at ease."</blockquote><figcaption>Norisha J. · Google review</figcaption></figure>
+  <figure><blockquote>"I got the Queen's silk press service, which was with the owner."</blockquote><figcaption>From a Google review</figcaption></figure>
+ </div>
+ <div class="own"><span>Friendly staff · 32 mentions</span><span>Welcoming atmosphere · 19</span><span>Silk press · 18</span><span>Healthy hair · 9</span><span>Natural hair · 9</span></div>
+</div></section>
+
+<section id="more"><div class="w">
+ <div class="duo">
+  <article><img src="/beautiful-aura/images/sleek-long.jpg" alt="Bridal-ready sleek style" loading="lazy" width="1100" height="1100"><div class="b"><span class="k">Weddings</span><h3>Your bridal party, done right</h3><p>Packages for any size wedding, in the salon or on site. Send your date and party size and we'll come back with a plan.</p></div></article>
+  <article><img src="/beautiful-aura/images/microlink.jpg" alt="Microlink technique" loading="lazy" width="1100" height="1100"><div class="b"><span class="k">Classes with Queen</span><h3>For stylists ready to grow</h3><ul><li>Microlink (weft and I-tip)</li><li>Sew-ins</li><li>Tape-ins</li><li>Silk press</li></ul></div></article>
+ </div>
+</div></section>
+
+<section class="visit" id="visit" style="background:#fff"><div class="w">
+ <div>
+  <div class="sh"><span class="k">Visit</span><h2>We moved downtown</h2></div>
+  <div class="info">
+   <div><b>Address</b>907 Hay St, Suite 203 (Studio 6), Fayetteville, NC 28305</div>
+   <div><b>Call</b><a href="tel:+19103397019">(910) 339-7019</a> · <a href="mailto:info@beautifulaura.net">info@beautifulaura.net</a></div>
+   <div><b>Hours</b>Tuesday to Saturday, by appointment</div>
+   <div><b>Shop</b>The Hair Elixir, Aura Control, heat protectant, bonnets and raw Indian hair. <a href="https://beautifulaura.net/collections/all" target="_blank" rel="noopener">Shop online</a></div>
+  </div>
+ </div>
+ <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Thanks! This is a mock-up, so nothing was sent.'">
+  <h3>Get first dibs on open spots</h3>
+  <label>First name<input name="n" autocomplete="given-name" required></label>
+  <label>Mobile phone<input name="p" type="tel" autocomplete="tel" required></label>
+  <label>What do you usually book?<select name="s"><option>Sew-in</option><option>Extensions</option><option>Silk press</option><option>Head spa</option><option>Color</option><option>Natural hair</option><option>Wedding party</option><option>Classes</option></select></label>
+  <label class="chk"><input type="checkbox" name="optin" required><span>Yes, text me open spots and specials from Beautiful Aura Hair. About 2 a month. Msg and data rates may apply. Reply STOP anytime.</span></label>
+  <button type="submit">Join the VIP list</button>
+ </form>
+</div></section>
+</main>
+
+<footer><div class="w">
+ <div><img src="/beautiful-aura/images/logo.png" alt="Beautiful Aura" width="700" height="263">Luxury hair studio in downtown Fayetteville</div>
+ <div><b>Visit</b><br>907 Hay St, Suite 203 (Studio 6)<br>Fayetteville, NC 28305</div>
+ <div><b>Call or book</b><br><a href="tel:+19103397019">(910) 339-7019</a><br><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book online</a></div>
+ <div><b>Follow</b><br><a href="https://www.instagram.com/beautifulaura.le/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/beautifulaura.LE" target="_blank" rel="noopener">Facebook</a><br>© 2026 Beautiful Aura Hair</div>
+</div></footer>
+<div class="mbar"><a class="t" href="tel:+19103397019">Call</a><a href="https://beautifulaura.glossgenius.com" target="_blank" rel="noopener">Book now</a></div>
+<script>
+const tabs=[...document.querySelectorAll('.tabsm [role=tab]')];
+function show(i){tabs.forEach((t,j)=>{t.setAttribute('aria-selected',j===i);document.getElementById('p'+j).hidden=j!==i;});}
+tabs.forEach((t,i)=>t.addEventListener('click',()=>show(i)));
+document.querySelectorAll('.pick a').forEach(a=>a.addEventListener('click',()=>show(+a.dataset.t)));
+</script>
+</body></html>
