@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>G Menswear Website Option C</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Outfit:wght@300;400;500;600&family=Manrope:wght@700&display=swap">
+<style>
+/* Option C: one-stop, tonight. Bright white + stone, deep navy ink, cognac accent. Split hero, a 20-minute fitting clock as the signature device. */
+:root{
+  --white:#FFFFFF; --stone:#F2EEE8; --navy:#13233F; --navy-2:#1E3560; --cognac:#B5652A; --cognac-soft:#F4E3D3; --ink:#15192A; --muted:#5D6373; --line:#E4DED5;
+  --display:"Fraunces", Georgia, serif; --body:"Outfit", "Helvetica Neue", Arial, sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--white);color:var(--ink);font:400 17px/1.65 var(--body)}
+a{color:inherit}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-.015em}
+p{margin:0}
+.w{max-width:1200px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.k{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--cognac)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 26px;border-radius:999px;font:600 15px/1 var(--body);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background .2s,color .2s}
+.b-navy{background:var(--navy);color:#fff}.b-navy:hover{background:var(--navy-2)}
+.b-cog{background:var(--cognac);color:#fff}.b-cog:hover{background:#9C5420}
+.b-line{border-color:var(--navy);color:var(--navy)}.b-line:hover{background:var(--navy);color:#fff}
+:focus-visible{outline:2px solid var(--cognac);outline-offset:3px}
+.ph{background:#FFF1B8;color:#5a4300;padding:1px 6px;border-radius:3px;font-weight:500;font-size:.9em;white-space:nowrap}
+
+.pmtabs{background:#fff;border-bottom:1px solid #E4E6EE;font-family:"Manrope","Segoe UI",system-ui,sans-serif;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.pmtabs .inner{max-width:1180px;margin:0 auto;display:flex;gap:6px;padding-block:10px;overflow-x:auto}
+.pmtabs a{flex:0 0 auto;padding:9px 16px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none;color:#0E1B38;background:#EEF2FA}
+.pmtabs a.on{background:#C63F68;color:#fff}.pmtabs a.pr{margin-left:auto}
+.opt{background:#F7F7FA;border-bottom:1px solid #E4E6EE;font-family:"Manrope","Segoe UI",system-ui,sans-serif;font-size:14px;color:#111A2E;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.opt .inner{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;padding-block:9px}
+.opt b{font-weight:700}
+.opt a{padding:6px 14px;border-radius:999px;border:1px solid #C9CEDB;text-decoration:none;font-weight:700;color:#1F3A8A;background:#fff}
+.opt a.on{background:#1F3A8A;border-color:#1F3A8A;color:#fff}
+.mock{background:var(--navy);color:#fff;font-size:12.5px;text-align:center}
+.mock .w{padding-block:7px}
+
+header.hd{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+.hd .w{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-block:14px}
+.mark{text-decoration:none;display:flex;align-items:center;gap:10px}
+.mark i{width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-content:center;font:700 20px/1 var(--display);font-style:normal}
+.mark b{font:600 21px/1 var(--display);color:var(--navy)}
+.hd nav{display:flex;gap:24px}
+.hd nav a{text-decoration:none;font-size:15px;font-weight:500;color:var(--muted)}
+.hd nav a:hover{color:var(--navy)}
+.hd .tel{font-weight:600;text-decoration:none;color:var(--navy);white-space:nowrap}
+.hd .r{display:flex;align-items:center;gap:14px}
+.hd .btn{padding:11px 18px;font-size:14px}
+@media (max-width:980px){.hd nav{display:none}}
+@media (max-width:560px){.hd .tel{display:none}.hd .btn{padding:10px 14px;font-size:13px}}
+
+/* hero */
+.hero{background:var(--stone)}
+.hero .w{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center;padding-block:clamp(40px,6vw,80px)}
+.hero .t{display:grid;gap:22px}
+.hero .pill{justify-self:start;display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:500;color:var(--navy)}
+.hero .pill i{width:8px;height:8px;border-radius:50%;background:#2E9E5B;box-shadow:0 0 0 4px #D9F0E2}
+.hero h1{font-size:clamp(46px,6.6vw,86px);color:var(--navy)}
+.hero h1 em{font-style:italic;color:var(--cognac);font-weight:500}
+.hero p.one{font:600 clamp(20px,2.2vw,26px)/1.3 var(--display);color:var(--navy)}.hero p.one strong{color:var(--cognac)}
+.hero p.s{font-size:19px;color:var(--muted);max-width:44ch}
+.hero .row{display:flex;flex-wrap:wrap;gap:12px}
+.hero .stars{font-size:15px;color:var(--muted)}
+.hero .stars b{color:var(--cognac);letter-spacing:2px}
+.hero .ph-wrap{position:relative}
+.hero .ph-wrap img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:28px}
+.hero .badge{position:absolute;left:-18px;bottom:28px;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:0 18px 40px -18px rgba(19,35,63,.4);display:grid;gap:2px}
+.hero .badge b{font:700 28px/1 var(--display);color:var(--navy)}
+.hero .badge span{font-size:13px;color:var(--muted)}
+@media (max-width:860px){.hero .w{grid-template-columns:1fr}.hero .ph-wrap{order:-1}.hero .ph-wrap img{aspect-ratio:4/3.6}.hero .badge{left:14px;bottom:14px}}
+
+/* checklist band */
+.check{background:var(--navy);color:#fff}
+.check .w{display:grid;gap:22px;padding-block:clamp(30px,4vw,44px)}.check h2{font-size:clamp(28px,3.6vw,42px);color:#fff}.check h2 em{color:#F0B98D;font-weight:500}.check .items{display:grid;grid-template-columns:repeat(9,auto);justify-content:start;gap:12px 26px}
+.check .items div{display:flex;align-items:center;gap:10px;font-size:16px;font-weight:500;white-space:nowrap}
+.check .items div::before{content:"✓";flex:none;width:24px;height:24px;border-radius:50%;background:var(--cognac);display:grid;place-content:center;font-size:13px}
+@media (max-width:1100px){.check .items{grid-template-columns:repeat(5,auto)}}
+@media (max-width:640px){.check .items{grid-template-columns:repeat(2,1fr)}}
+
+section{padding-block:clamp(64px,8vw,104px)}
+.sh{display:grid;gap:14px;margin-bottom:40px;max-width:680px}
+.sh h2{font-size:clamp(34px,4.8vw,56px);color:var(--navy)}
+.sh h2 em{font-style:italic;color:var(--cognac);font-weight:500}
+.sh p{font-size:18px;color:var(--muted)}
+
+/* 20 minute clock */
+.clock{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative}
+.clock::before{content:"";position:absolute;left:10%;right:10%;top:34px;height:2px;background:repeating-linear-gradient(90deg,var(--cognac) 0 8px,transparent 8px 14px)}
+.clock div{position:relative;display:grid;gap:10px;justify-items:center;text-align:center;padding:0 10px}
+.clock b{width:68px;height:68px;border-radius:50%;background:#fff;border:2px solid var(--cognac);display:grid;place-content:center;font:700 20px/1 var(--display);color:var(--navy);font-variant-numeric:tabular-nums}
+.clock div:last-child b{background:var(--navy);border-color:var(--navy);color:#fff}
+.clock h3{font-size:20px;color:var(--navy)}
+.clock p{font-size:15px;color:var(--muted)}
+@media (max-width:820px){.clock{grid-template-columns:1fr;gap:18px}.clock::before{left:33px;right:auto;top:10px;bottom:10px;width:2px;height:auto;background:repeating-linear-gradient(180deg,var(--cognac) 0 8px,transparent 8px 14px)}.clock div{grid-template-columns:68px 1fr;justify-items:start;text-align:left;align-items:center;padding:0;column-gap:16px}.clock div b{grid-row:span 2}}
+
+/* shop grid */
+.shop{background:var(--stone)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.grid a{background:#fff;border-radius:22px;overflow:hidden;text-decoration:none;display:grid;transition:transform .25s,box-shadow .25s}
+.grid a:hover{transform:translateY(-3px);box-shadow:0 18px 40px -22px rgba(19,35,63,.45)}
+.grid img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.grid .t{padding:16px 18px 20px;display:grid;gap:4px}
+.grid h3{font-size:22px;color:var(--navy)}
+.grid span{font-size:14px;color:var(--muted)}
+@media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:440px){.grid{grid-template-columns:1fr}}
+
+/* tonight CTA + VIP */
+.vip .g{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{border-radius:26px;padding:clamp(26px,4vw,44px);display:grid;gap:16px;align-content:start}
+.c-cog{background:var(--cognac-soft)}
+.c-navy{background:var(--navy);color:#fff}
+.c-navy h3{color:#fff}
+.card h3{font-size:clamp(28px,3.2vw,38px);color:var(--navy)}
+.card .big{font:700 clamp(64px,8vw,96px)/.9 var(--display);color:var(--cognac)}
+.card ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.card li{padding-left:28px;position:relative}
+.card li::before{content:"✓";position:absolute;left:0;color:var(--cognac);font-weight:700}
+.card form{display:grid;gap:12px;margin:0}
+.card label{display:grid;gap:6px;font-size:14px;font-weight:500;color:#C9D2E6}
+.card input[type=text],.card input[type=tel]{font:inherit;padding:13px 16px;border-radius:12px;border:0;background:#fff;color:var(--ink)}
+.card .chk{grid-template-columns:22px 1fr;font-weight:400;font-size:13px;line-height:1.5;color:#B9C3D9}
+.card .chk input{width:18px;height:18px;margin-top:2px;accent-color:var(--cognac)}
+.card .fine{font-size:12.5px;color:#9FAAC3}
+.done{background:rgba(255,255,255,.1);border:1px dashed var(--cognac);border-radius:14px;padding:14px;text-align:center}
+.done b{display:block;font:700 24px var(--display);color:#fff}
+@media (max-width:860px){.vip .g{grid-template-columns:1fr}}
+
+.prog{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.prog div{border:1px solid var(--line);border-radius:22px;padding:26px;display:grid;gap:10px;align-content:start}
+.prog h3{font-size:24px;color:var(--navy)}
+.prog p{color:var(--muted);font-size:16px}
+@media (max-width:860px){.prog{grid-template-columns:1fr}}
+
+.rv{background:var(--stone)}
+.rv .g{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rv figure{margin:0;background:#fff;border-radius:22px;padding:28px;display:grid;gap:14px;align-content:start}
+.rv .s{color:var(--cognac);letter-spacing:3px}
+.rv blockquote{margin:0;font:500 19px/1.5 var(--display);color:var(--navy)}
+.rv figcaption{font-size:14px;color:var(--muted)}
+.rv .cta{margin-top:30px}
+@media (max-width:860px){.rv .g{grid-template-columns:1fr}}
+
+.visit .g{display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center;background:var(--navy);color:#fff;border-radius:28px;padding:clamp(28px,5vw,56px)}
+.visit h2{font-size:clamp(34px,4.6vw,52px);color:#fff}
+.visit h2 em{font-style:italic;color:#F0B98D;font-weight:500}
+.visit dl{margin:0;display:grid;gap:14px}
+.visit dt{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#F0B98D;font-weight:600}
+.visit dd{margin:2px 0 0}
+.visit .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.visit .b-line{border-color:#fff;color:#fff}.visit .b-line:hover{background:#fff;color:var(--navy)}
+@media (max-width:860px){.visit .g{grid-template-columns:1fr}}
+
+footer{font-size:14px;color:var(--muted);border-top:1px solid var(--line)}
+footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:28px}
+footer i{font-family:var(--display);color:var(--cognac)}
+
+.mbar{display:none}
+@media (max-width:760px){.mbar{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:45;background:#fff;border-top:1px solid var(--line);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}.mbar a{text-align:center;text-decoration:none;padding:12px 4px;border-radius:999px;font-weight:600;font-size:14px;background:var(--stone);color:var(--navy)}.mbar a.g{background:var(--cognac);color:#fff}body{padding-bottom:72px}}
+</style>
+</head><body>
+<nav class="pmtabs" aria-label="G Menswear reports"><div class="inner"><a href="/g-menswear/scorecard.html">Scorecard</a><a href="/g-menswear/website.html" class="on" aria-current="page">Website mock-up</a><a href="/g-menswear/faq.html" class="pr">FAQ</a><a href="/g-menswear/proposal.html">Proposal</a></div></nav>
+<div class="opt"><div class="inner"><b>Which one do you want?</b><span>Three looks for your website:</span><a href="/g-menswear/website.html">Option A · Classic boutique</a><a href="/g-menswear/website-b.html">Option B · Black tie</a><a href="/g-menswear/website-c.html" class="on" aria-current="page">Option C · Ready tonight</a></div></div>
+<div class="mock"><div class="w">MOCK-UP · Sample website prepared for G Menswear by Phyllena Management · Not live</div></div>
+
+<header class="hd"><div class="w">
+  <a class="mark" href="#top"><i>G</i><b>G Menswear</b></a>
+  <nav><a href="#how">How it works</a><a href="#shop">Shop</a><a href="#vip">VIP 15% off</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a></nav>
+  <div class="r"><a class="tel" href="tel:+17046470001">(704) 647-0001</a><a class="btn b-cog" href="#vip">Get 15% off</a></div>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="w">
+  <div class="t">
+    <span class="pill"><i></i>Open today until 8 PM · Carolina Mall</span>
+    <h1>Look your best <em>tonight.</em></h1>
+    <p class="one">Suit, tailoring, shoes, belt, tie. <strong>The whole look, one stop.</strong></p>
+    <p class="s">Walk in with an event tonight, walk out dressed for it, with all the fixings, in about 20 minutes.</p>
+    <div class="row"><a class="btn b-navy" href="https://www.google.com/maps/search/?api=1&amp;query=G+Mens+Wear+Carolina+Mall+Concord+NC" target="_blank" rel="noopener">Get directions</a><a class="btn b-line" href="tel:+17046470001">Call (704) 647-0001</a></div>
+    <p class="stars"><b>★★★★★</b> 4.9 stars from 177 Google reviews</p>
+  </div>
+  <div class="ph-wrap">
+    <img src="images/c-hero-tonight.jpg" alt="Man in a navy suit buttoning his jacket in front of a mirror">
+    <div class="badge"><b>~20 min</b><span>from walk-in to ready</span></div>
+  </div>
+</div></div>
+
+<div class="check"><div class="w"><h2>The whole look. <em>All the fixings.</em> One stop.</h2><div class="items"><div>Suit</div><div>Tailoring</div><div>Shirt</div><div>Tie</div><div>Belt</div><div>Shoes</div><div>Socks</div><div>Pocket square</div><div>Hat</div></div></div></div>
+
+<section id="how"><div class="w">
+  <div class="sh"><span class="k">How it works</span><h2>Your 20-minute <em>fitting</em></h2><p>Customers tell us they walk out with the whole look in 10 to 20 minutes. Here's how.</p></div>
+  <div class="clock">
+    <div><b>0:00</b><h3>Walk in</h3><p>Tell us the event and your size, or we'll measure you.</p></div>
+    <div><b>0:05</b><h3>The suit</h3><p>Black, navy, gray or a bold color. Every size, big &amp; tall too.</p></div>
+    <div><b>0:10</b><h3>Shirt &amp; tie</h3><p>Matched for you, with a pocket square.</p></div>
+    <div><b>0:15</b><h3>Shoes &amp; hat</h3><p>Dress shoes and hats to finish the look.</p></div>
+    <div><b>0:20</b><h3>Fitted</h3><p>Tailored in the store, with belt and socks to match.</p></div>
+  </div>
+</div></section>
+
+<section class="shop" id="shop"><div class="w">
+  <div class="sh"><span class="k">Shop the store</span><h2>Whatever <em>tonight</em> is</h2></div>
+  <div class="grid">
+    <a href="#visit"><img src="images/navy-walk.jpg" alt="Man in a navy suit"><div class="t"><h3>Suits</h3><span>Business, everyday, big &amp; tall</span></div></a>
+    <a href="#visit"><img src="images/groomsmen.jpg" alt="Groom and groomsmen"><div class="t"><h3>Weddings</h3><span>The whole party, matched</span></div></a>
+    <a href="#visit"><img src="images/prom.jpg" alt="Young man in a prom tuxedo"><div class="t"><h3>Prom</h3><span>Tuxedos and bold colors</span></div></a>
+    <a href="#visit"><img src="images/accessories.jpg" alt="Ties, shoes, hat and cufflinks"><div class="t"><h3>Shoes &amp; ties</h3><span>The finishing details</span></div></a>
+  </div>
+</div></section>
+
+<section class="vip" id="vip"><div class="w g">
+  <div class="card c-cog">
+    <span class="k">VIP Text Club</span>
+    <div class="big">15% off</div>
+    <h3>your next visit, just for joining</h3>
+    <ul><li>Welcome coupon texted right away</li><li>VIP-only sale days before the public</li><li>A birthday surprise</li><li>Senior Day and prom reminders</li></ul>
+    <span style="font-size:13px;color:var(--muted)">Coupon amount is a sample: <span class="ph">[CONFIRM]</span></span>
+  </div>
+  <div class="card c-navy">
+    <h3>Join in 20 seconds</h3>
+    <form id="vipc" novalidate>
+      <label for="cn">First name<input id="cn" type="text" autocomplete="given-name" placeholder="Jake"></label>
+      <label for="cp">Mobile number<input id="cp" type="tel" autocomplete="tel" placeholder="(704) 555-0123"></label>
+      <label class="chk" for="cc"><input id="cc" type="checkbox"><span>Yes, text me coupons, sale-day alerts and offers from G Menswear. Up to 4 msgs/month. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. Consent is not a condition of purchase.</span></label>
+      <button class="btn b-cog" type="submit">Text me my coupon</button>
+      <p class="fine">Your number is never sold or shared. Privacy Policy · SMS Terms</p>
+      <div id="vipcok" hidden></div>
+    </form>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="w">
+  <div class="prog">
+    <div><span class="k">Every week</span><h3>Senior Day</h3><p>Seniors save every <span class="ph">[CONFIRM: Tue or Wed]</span>. Ask at the register for <span class="ph">[CONFIRM: discount]</span>.</p></div>
+    <div><span class="k">Loyalty</span><h3>G Rewards</h3><p>Purchases add up. Reach <span class="ph">[CONFIRM: amount]</span> and we text you a thank-you reward.</p></div>
+    <div><span class="k">All year</span><h3>Sale days</h3><p>Valentine's, Easter, prom, Father's Day, Black Friday and Christmas. VIP members hear first.</p></div>
+  </div>
+</div></section>
+
+<section class="rv" id="reviews"><div class="w">
+  <div class="sh"><span class="k">4.9 ★ on Google · 177 reviews</span><h2>Ready in <em>minutes</em>, in their words</h2></div>
+  <div class="g">
+    <figure><span class="s">★★★★★</span><blockquote>"Within 10 minutes he had a complete suit and shoes that fit."</blockquote><figcaption>Jennifer W. · Google review</figcaption></figure>
+    <figure><span class="s">★★★★★</span><blockquote>"In and out in about 20 minutes with suit and all accessories. Will be back soon!"</blockquote><figcaption>Levi P. · Google review</figcaption></figure>
+    <figure><span class="s">★★★★★</span><blockquote>"They took the time to check what they had on the floor and also in the back room. Definitely recommend 10/10."</blockquote><figcaption>Elizabeth S. · Google review</figcaption></figure>
+  </div>
+  <div class="cta"><a class="btn b-line" href="https://www.google.com/maps/place/?q=place_id:ChIJIVz8BJ4PVIgRru4hTV8vl_k" target="_blank" rel="noopener">Read all 177 reviews</a></div>
+</div></section>
+
+<section class="visit" id="visit"><div class="w">
+  <div class="g">
+    <div style="display:grid;gap:16px"><span class="k" style="color:#F0B98D">Come in today</span><h2>Carolina Mall, <em>Suite 145</em></h2><div class="row"><a class="btn b-cog" href="https://www.google.com/maps/search/?api=1&amp;query=G+Mens+Wear+Carolina+Mall+Concord+NC" target="_blank" rel="noopener">Get directions</a><a class="btn b-line" href="tel:+17046470001">Call (704) 647-0001</a></div></div>
+    <dl>
+      <div><dt>Address</dt><dd>1480 Concord Pkwy N, Suite 145, Concord, NC 28025</dd></div>
+      <div><dt>Hours</dt><dd>Open until 8 PM · <span class="ph">[CONFIRM: hours by day]</span></dd></div>
+      <div><dt>Phone</dt><dd><a href="tel:+17046470001">(704) 647-0001</a></dd></div>
+    </dl>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="w"><span>© 2026 G Menswear · Privacy Policy · SMS Terms</span><i>From your outer to your under, we gotcha covered!</i><span>Website by Phyllena Management</span></div></footer>
+<nav class="mbar" aria-label="Quick actions"><a href="tel:+17046470001">Call</a><a href="https://www.google.com/maps/search/?api=1&amp;query=G+Mens+Wear+Carolina+Mall+Concord+NC" target="_blank" rel="noopener">Directions</a><a class="g" href="#vip">15% off</a></nav>
+<script>
+document.getElementById('vipc').addEventListener('submit',function(e){
+  e.preventDefault();
+  var box=document.getElementById('vipcok'),n=document.getElementById('cn').value.trim(),p=document.getElementById('cp').value.replace(/\D/g,''),c=document.getElementById('cc').checked;
+  box.hidden=false;
+  if(!n||p.length<10||!c){box.className='fine';box.textContent='Enter your first name, a 10-digit mobile number, and check the box to get your coupon.';return;}
+  box.className='done';box.innerHTML='<b>Your coupon is on its way</b><span class="fine">Welcome to the VIP Text Club, '+n.replace(/[<>&]/g,'')+'. Mock-up: no text is sent.</span>';
+});
+</script>
+</body></html>
