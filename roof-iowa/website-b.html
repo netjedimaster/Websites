@@ -4,232 +4,216 @@
 <title>Roof Iowa Website Option B</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=Manrope:wght@700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700&display=swap">
 <style>
-/* Option B: Storm ready. Dark slate, hail white and a sky-blue signal color, built for the week after a storm. */
+/* Option B: Whole-home exteriors. Modern and premium: crisp white, charcoal and Roof Iowa sky blue. Every service gets equal billing. */
 :root{
- --slate:#0F1720; --slate2:#18232F; --slate3:#223040; --sky:#7CC4EA; --sky2:#A9DAF3; --amber:#FFB547; --white:#FFFFFF; --mist:#C9D4DE; --muted:#93A3B3; --line:#2B3A4A; --paper:#F4F6F8; --ink:#0F1720;
- --display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif; --body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
- color-scheme:dark;
+ --char:#151A21; --char2:#232A33; --sky:#5FB4E0; --sky-d:#2E8BC0; --sky-soft:#EAF5FB; --paper:#FFFFFF; --bg:#F5F7F9; --ink:#151A21; --muted:#5C6773; --line:#E2E7EC; --gold:#F2B33D;
+ --display:"Sora",system-ui,sans-serif; --body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+ color-scheme:light;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--slate);color:var(--white);font:400 18px/1.55 var(--body)}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body)}
 a{color:inherit} img{max-width:100%;height:auto;display:block}
-h1,h2,h3{font-family:var(--display);margin:0;line-height:1;text-wrap:balance;text-transform:uppercase;letter-spacing:.01em}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.1;text-wrap:balance;letter-spacing:-.02em}
 p{margin:0}
-.w{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
-.ph{background:#FFF1B8;color:#5a4300;padding:1px 6px;border-radius:4px;font-weight:600;font-size:.84em;text-transform:none;font-family:var(--body);letter-spacing:0}
-:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
-/* agency tabs + option switch (light, same as other pages) */
+.w{max-width:1200px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
 .pmtabs{background:#fff;border-bottom:1px solid #E4E6EE;font-family:"Manrope","Segoe UI",system-ui,sans-serif;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.pmtabs .inner{max-width:1180px;margin:0 auto;display:flex;gap:6px;padding-block:10px;overflow-x:auto}
+.pmtabs .inner{max-width:1200px;margin:0 auto;display:flex;gap:6px;padding-block:10px;overflow-x:auto}
 .pmtabs a{flex:0 0 auto;padding:9px 16px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none;color:#0E1B38;background:#EEF2FA}
 .pmtabs a.on{background:#C63F68;color:#fff}.pmtabs a.pr{margin-left:auto}
 .opt{background:#F7F7FA;border-bottom:1px solid #E4E6EE;font-family:"Manrope","Segoe UI",system-ui,sans-serif;font-size:14px;color:#111A2E;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.opt .inner{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;padding-block:9px}
+.opt .inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;padding-block:9px}
 .opt a{padding:6px 14px;border-radius:999px;border:1px solid #C9CEDB;text-decoration:none;font-weight:700;color:#1F3A8A;background:#fff}
 .opt a.on{background:#1F3A8A;border-color:#1F3A8A;color:#fff}
-.mock{background:#000;color:var(--mist);font-size:12.5px;text-align:center}
+.mock{background:var(--char);color:#B9C2CC;font-size:12.5px;text-align:center}
 .mock .w{padding-block:7px}
-/* alert bar */
-.alert{background:var(--amber);color:var(--ink);font-weight:700;font-size:15px}
-.alert .w{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;padding-block:9px;text-align:center}
-.alert a{text-decoration:underline}
-/* header */
-.hd{position:sticky;top:0;z-index:40;background:rgba(15,23,32,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+.hd{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
 .hd .w{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand img{width:170px;background:#fff;border-radius:10px;padding:6px 10px}
-.hd nav{display:flex;gap:24px;font-weight:600;font-size:16px}
-.hd nav a{text-decoration:none;color:var(--mist)} .hd nav a:hover{color:#fff}
-.call{display:inline-flex;align-items:center;gap:8px;background:var(--sky);color:var(--ink);text-decoration:none;font:700 16px var(--body);padding:12px 18px;border-radius:10px;white-space:nowrap}
-.call:hover{background:var(--sky2)}
+.hd .logo{width:180px}
+.hd nav{display:flex;gap:26px;font-weight:600;font-size:15px}
+.hd nav a{text-decoration:none;color:var(--muted)} .hd nav a:hover{color:var(--ink)}
+.call{display:inline-flex;align-items:center;gap:8px;background:var(--char);color:#fff;text-decoration:none;font:700 15px var(--body);padding:12px 18px;border-radius:999px;white-space:nowrap}
+.call:hover{background:var(--char2)}
 @media (max-width:1000px){.hd nav{display:none}}
-@media (max-width:480px){.brand img{width:128px}.call{padding:11px 13px;font-size:15px}}
-/* hero */
-.hero{position:relative;overflow:hidden;background:var(--slate)}
-.hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,23,32,.35) 0%,rgba(15,23,32,.85) 70%,var(--slate) 100%)}
-.hero .w{position:relative;z-index:1;padding-block:88px 72px;display:grid;gap:22px}
-.tag{justify-self:start;font:700 14px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--amber);border:1px solid rgba(255,181,71,.5);padding:6px 14px;border-radius:99px}
-.hero h1{font-size:clamp(52px,9vw,112px);font-weight:800;max-width:12ch}
-.hero h1 span{color:var(--sky)}
-.hero p.s{font-size:20px;color:var(--mist);max-width:52ch}
-.btns{display:flex;flex-wrap:wrap;gap:12px}
-.cta1{display:inline-flex;align-items:center;gap:10px;background:var(--amber);color:var(--ink);text-decoration:none;font:700 18px var(--body);padding:16px 24px;border-radius:10px}
-.cta2{display:inline-flex;align-items:center;gap:10px;border:2px solid var(--mist);color:#fff;text-decoration:none;font:700 18px var(--body);padding:14px 22px;border-radius:10px}
-.trust{display:flex;flex-wrap:wrap;gap:10px}
-.trust span{background:rgba(255,255,255,.08);border:1px solid var(--line);padding:8px 14px;border-radius:8px;font-size:15px;color:var(--mist)}
-.trust b{color:#fff}
-.stars{color:var(--amber);letter-spacing:2px}
+@media (max-width:480px){.hd .logo{width:130px}.call{padding:11px 14px;font-size:14px}}
+.hero{background:var(--bg)}
+.hero .w{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:44px;align-items:center;padding-block:56px}
+@media (max-width:900px){.hero .w{grid-template-columns:1fr;gap:28px;padding-block:32px 44px}}
+.pill{justify-self:start;display:inline-flex;gap:8px;align-items:center;font-weight:600;font-size:14px;background:#fff;border:1px solid var(--line);padding:7px 14px;border-radius:99px}
+.stars{color:var(--gold);letter-spacing:1px}
+.hero h1{font-size:clamp(38px,5.4vw,64px);font-weight:800;margin:18px 0 16px}
+.hero h1 span{color:var(--sky-d)}
+.hero p.s{font-size:19px;color:var(--muted);max-width:46ch}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.c1{display:inline-flex;align-items:center;text-decoration:none;font:700 17px var(--body);padding:15px 24px;border-radius:999px;background:var(--sky-d);color:#fff}
+.c1:hover{background:#23739F}
+.c2{display:inline-flex;align-items:center;text-decoration:none;font:700 17px var(--body);padding:14px 22px;border-radius:999px;border:2px solid var(--char);color:var(--char)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chips span{font-size:14px;font-weight:600;background:#fff;border:1px solid var(--line);border-radius:8px;padding:6px 12px}
+.heroImg{position:relative}
+.heroImg img{border-radius:24px;aspect-ratio:4/3.1;object-fit:cover;width:100%}
+.float{position:absolute;left:-18px;bottom:22px;background:#fff;border-radius:16px;padding:14px 18px;box-shadow:0 14px 34px rgba(21,26,33,.18);display:grid;gap:2px}
+.float b{font:800 26px var(--display)}
+.float small{color:var(--muted);font-size:13px}
+@media (max-width:900px){.float{left:12px}}
+.badgeband{background:#fff;border-bottom:1px solid var(--line)}.badgeband .w{padding-block:24px}
+.badges{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:18px 34px}.badges img{height:64px;width:auto;object-fit:contain}@media (max-width:560px){.badges img{height:48px}}
 section{padding-block:76px}
-.sh{display:grid;gap:12px;margin-bottom:34px;max-width:760px}
-.k{font:700 14px var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--sky)}
-.sh h2{font-size:clamp(40px,5.5vw,64px)}
-.sh p{color:var(--mist);font-size:19px}
-/* signs */
-.signs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px;align-items:center}
-@media (max-width:860px){.signs{grid-template-columns:1fr}}
-.signs img{border-radius:16px;aspect-ratio:4/3;object-fit:cover;width:100%}
-.list{margin:0;padding:0;list-style:none;display:grid;gap:12px}
-.list li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;align-items:start;background:var(--slate2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-.list li i{width:34px;height:34px;border-radius:8px;background:rgba(124,196,234,.15);color:var(--sky);display:grid;place-content:center;font-style:normal;font-weight:800}
-.list b{display:block;font-size:17px}
-.list span{color:var(--muted);font-size:16px}
-/* claim timeline */
-.claim{background:var(--slate2)}
-.tl{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;counter-reset:c;border-radius:16px;overflow:hidden}
-@media (max-width:900px){.tl{grid-template-columns:1fr}}
-.tl div{counter-increment:c;background:var(--slate3);padding:24px 20px;display:grid;gap:8px;align-content:start}
-.tl div::before{content:"0" counter(c);font:800 44px/1 var(--display);color:var(--sky)}
-.tl h3{font-size:24px}
-.tl p{color:var(--mist);font-size:16px}
-.tl div.you{background:var(--amber);color:var(--ink)}
-.tl div.you::before{color:var(--ink)}
-.tl div.you p{color:var(--ink)}
-/* services */
-.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));gap:14px}
-.svc article{background:var(--slate2);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-.svc img{aspect-ratio:16/10;object-fit:cover;width:100%}
-.svc .t{padding:18px;display:grid;gap:6px}
-.svc h3{font-size:26px}
-.svc p{color:var(--muted);font-size:16px}
-/* proof */
-.proofw{background:var(--paper);color:var(--ink)}
-.proofw .sh p{color:#4A5866}.proofw .k{color:#1F6E9A}
-.pgrid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:24px;align-items:start}
-@media (max-width:860px){.pgrid{grid-template-columns:1fr}}
-.big5{background:var(--slate);color:#fff;border-radius:18px;padding:28px;display:grid;gap:10px}
-.big5 b{font:800 96px/0.9 var(--display)}
-.big5 span{color:var(--mist)}
-.big5 .award{margin-top:10px;background:var(--amber);color:var(--ink);font-weight:800;padding:10px 14px;border-radius:10px}
-.qs{display:grid;gap:12px}
-.qs blockquote{margin:0;background:#fff;border:1px solid #DCE3EA;border-radius:14px;padding:18px 20px;display:grid;gap:8px}
-.qs cite{font-style:normal;font-weight:700;font-size:15px;color:#1F6E9A}
-/* hoa */
-.hoa .w{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:36px;align-items:center}
-@media (max-width:860px){.hoa .w{grid-template-columns:1fr}}
-.hoa img{border-radius:16px;aspect-ratio:4/3;object-fit:cover;width:100%}
-/* form */
-.req{background:linear-gradient(180deg,var(--slate2),var(--slate))}
+.sh{display:grid;gap:12px;margin-bottom:34px;max-width:740px}
+.k{font:700 13px var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--sky-d)}
+.sh h2{font-size:clamp(30px,4.2vw,46px)}
+.sh p{color:var(--muted);font-size:18px}
+.grid6{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:900px){.grid6{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.grid6{grid-template-columns:1fr}}
+.tile{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:grid;grid-template-rows:auto 1fr;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.tile:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(21,26,33,.1)}
+@media (prefers-reduced-motion:reduce){.tile{transition:none}.tile:hover{transform:none}}
+.tile img{aspect-ratio:16/10;object-fit:cover;width:100%}
+.tile .t{padding:20px;display:grid;gap:6px;align-content:start}
+.tile h3{font-size:21px}
+.tile p{color:var(--muted);font-size:15px}
+.tile .go{font-weight:700;color:var(--sky-d);font-size:15px;margin-top:4px}
+.tile .icon{aspect-ratio:16/10;display:grid;place-content:center;background:var(--sky-soft);font-size:56px}
+.why{background:var(--char);color:#fff}
+.why h2{color:#fff}.why .sh p{color:#B9C2CC}.why .k{color:var(--sky)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media (max-width:860px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stats div{background:var(--char2);border:1px solid #333C47;border-radius:18px;padding:22px;display:grid;gap:6px;align-content:start}
+.stats b{font:800 30px/1.05 var(--display);color:var(--sky)}
+.stats span{color:#CBD3DC;font-size:15px}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;counter-reset:s}
+@media (max-width:860px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+.steps div{counter-increment:s;background:var(--bg);border-radius:18px;padding:22px;display:grid;gap:8px;align-content:start}
+.steps div::before{content:counter(s);width:38px;height:38px;border-radius:50%;background:var(--sky-d);color:#fff;display:grid;place-content:center;font:800 16px var(--body)}
+.steps p{font-size:15px;color:var(--muted)}
+.war{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:860px){.war{grid-template-columns:1fr}}
+.war div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;gap:8px;align-content:start}
+.war div.best{border:2px solid var(--sky-d);background:var(--sky-soft)}
+.war b{font:800 20px var(--display)}
+.war span{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sky-d)}
+.war p{color:var(--muted);font-size:15px}
+.rgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:860px){.rgrid{grid-template-columns:1fr}}
+.rgrid blockquote{margin:0;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;gap:10px}
+.rgrid blockquote .stars{letter-spacing:2px}
+.rgrid cite{font-style:normal;font-weight:700;font-size:14px;color:var(--muted)}
 .req .w{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:start}
 @media (max-width:860px){.req .w{grid-template-columns:1fr}}
-form{background:var(--slate3);border:1px solid var(--line);border-radius:18px;padding:26px;display:grid;gap:14px}
-label{display:grid;gap:6px;font-weight:600;font-size:15px;color:var(--mist)}
-input,select,textarea{font:inherit;font-size:16px;padding:12px 14px;border:1px solid #3A4B5D;border-radius:10px;background:var(--slate);color:#fff}
+.towns{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.towns span{border:1px solid var(--line);background:#fff;padding:7px 13px;border-radius:999px;font-size:15px;font-weight:600}
+form{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px;display:grid;gap:14px;box-shadow:0 12px 32px rgba(21,26,33,.06)}
+label{display:grid;gap:6px;font-weight:600;font-size:14px}
+input,select,textarea{font:inherit;font-size:16px;padding:12px 14px;border:1px solid #CFD7DF;border-radius:12px;background:#fff;color:var(--ink)}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media (max-width:520px){.row{grid-template-columns:1fr}}
-.chk{display:flex;gap:10px;align-items:flex-start;font-weight:500;font-size:14px;color:var(--muted)}
-.chk input{margin-top:4px}
-form button{font:700 18px var(--body);background:var(--amber);color:var(--ink);border:0;border-radius:10px;padding:16px;cursor:pointer}
-.towns{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
-.towns span{border:1px solid var(--line);padding:6px 12px;border-radius:8px;font-size:15px;color:var(--mist)}
-footer{background:#0A1016;color:var(--muted);font-size:15px}
-footer .w{padding-block:36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.chk{display:flex;gap:10px;align-items:flex-start;font-weight:500;font-size:13.5px;color:var(--muted)}
+.chk input{margin-top:3px}
+form button{font:700 17px var(--body);background:var(--sky-d);color:#fff;border:0;border-radius:999px;padding:15px;cursor:pointer}
+footer{background:var(--char);color:#B9C2CC;font-size:15px}
+footer .w{padding-block:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
 footer b{color:#fff}
 .mbar{display:none}
-@media (max-width:700px){.mbar{display:flex;position:sticky;bottom:0;z-index:45;gap:8px;padding:10px max(12px,env(safe-area-inset-left,0px)) calc(10px + env(safe-area-inset-bottom,0px));background:var(--slate);border-top:1px solid var(--line)}.mbar a{flex:1;text-align:center;text-decoration:none;font-weight:700;padding:13px;border-radius:10px;background:var(--amber);color:var(--ink)}.mbar a.t{background:var(--sky)}}
-.badgeband{background:#fff}.badgeband .w{padding-block:24px}.badges{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:18px 34px}.badges img{height:64px;width:auto;object-fit:contain}@media (max-width:560px){.badges img{height:48px}}
+@media (max-width:700px){.mbar{display:flex;position:sticky;bottom:0;z-index:45;gap:8px;padding:10px max(12px,env(safe-area-inset-left,0px)) calc(10px + env(safe-area-inset-bottom,0px));background:#fff;border-top:1px solid var(--line)}.mbar a{flex:1;text-align:center;text-decoration:none;font-weight:700;padding:13px;border-radius:999px;background:var(--char);color:#fff}.mbar a.t{background:var(--sky-d)}}
 </style>
 </head><body>
 <nav class="pmtabs" aria-label="Roof Iowa reports"><div class="inner"><a href="/roof-iowa/scorecard.html">Scorecard</a><a href="/roof-iowa/website.html" class="on">Website mock-ups</a><a href="/roof-iowa/faq.html" class="pr">FAQ</a><a href="/roof-iowa/proposal.html">Proposal</a></div></nav>
-<div class="opt"><div class="inner"><b>Which one do you want?</b><span>Two looks for your new website:</span><a href="/roof-iowa/website.html">Option A · Ankeny's Best</a><a href="/roof-iowa/website-b.html" class="on" aria-current="page">Option B · Storm ready</a></div></div>
+<div class="opt"><div class="inner"><b>Which one do you want?</b><span>Two looks for your new website:</span><a href="/roof-iowa/website.html">Option A · Ankeny's Best</a><a href="/roof-iowa/website-b.html" class="on" aria-current="page">Option B · Whole-home exteriors</a></div></div>
 <div class="mock"><div class="w">MOCK-UP · Sample website prepared for Roof Iowa by Phyllena Management · Not live · Sample photos, to be replaced with your real jobs and crew · Details taken from roofiowa.com</div></div>
-<div class="alert"><div class="w"><span>⚡ Hail in Central Iowa this week?</span><a href="#check">Book a free storm check</a></div></div>
 
 <header class="hd"><div class="w">
- <a class="brand" href="#top"><img src="/roof-iowa/images/roof-iowa-logo.png" alt="Roof Iowa: Roofing, Gutters, Siding" width="520" height="139"></a>
- <nav aria-label="Site"><a href="#signs">Storm damage</a><a href="#claim">Insurance claims</a><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#hoa">HOAs</a></nav>
+ <a href="#top"><img class="logo" src="/roof-iowa/images/roof-iowa-logo.png" alt="Roof Iowa: Roofing, Gutters, Siding" width="520" height="139"></a>
+ <nav aria-label="Site"><a href="#services">Services</a><a href="#why">Why Roof Iowa</a><a href="#warranty">Warranties</a><a href="#reviews">Reviews</a><a href="#estimate">Areas</a></nav>
  <a class="call" href="tel:+15156123889">📞 515-612-3889</a>
 </div></header>
 
 <main id="top">
-<section class="hero" style="padding:0">
- <img class="bg" src="/roof-iowa/images/storm.jpg" alt="" width="1376" height="768">
- <div class="w">
-  <span class="tag">Ankeny · Des Moines · Central Iowa</span>
-  <h1>Storm hit your roof? <span>We'll tell you the truth.</span></h1>
-  <p class="s">A free storm check from the family company voted Ankeny's Best Roofer 11 years running. Photos of every hit, an honest answer on whether to file a claim, and help with your insurance from first call to final shingle.</p>
-  <div class="btns"><a class="cta1" href="#check">Book my free storm check</a><a class="cta2" href="sms:+15156123889">💬 Text a photo of the damage</a></div>
-  <div class="trust"><span><span class="stars">★★★★★</span> <b>5.0</b> · 175 Google reviews</span><span><b>11×</b> Ankeny's Best</span><span><b>Local</b> family, not storm chasers</span><span><b>GAF Master Elite®</b> · top 3%</span></div>
+<section class="hero" style="padding:0"><div class="w">
+ <div>
+  <span class="pill"><span class="stars">★★★★★</span> 5.0 from 175 Google reviews</span>
+  <h1>Roofing, gutters and siding, <span>done right the first time.</span></h1>
+  <p class="s">One family company for the whole outside of your home or property, from a small repair to a full new roof. GAF Master Elite® installs, honest prices and warranties up to 50 years, across Ankeny, Des Moines and Central Iowa.</p>
+  <div class="btns"><a class="c1" href="#estimate">Get a free estimate</a><a class="c2" href="sms:+15156123889">Text us</a></div>
+  <div class="chips"><span>🏆 Ankeny's Best since 2015</span><span>GAF Master Elite®</span><span>BBB A+</span><span>Low-rate financing</span></div>
  </div>
-</section>
+ <div class="heroImg"><img src="/roof-iowa/images/home.jpg" alt="Two-story Central Iowa home with a new charcoal shingle roof and white gutters" width="1376" height="768"><div class="float"><b>Top 3%</b><small>of roofers are GAF Master Elite®</small></div></div>
+</div></section>
 
 <div class="badgeband"><div class="w"><div class="badges"><img src="/roof-iowa/images/badges/gaf-master-elite.png" alt="GAF Master Elite certified roofing contractor" width="360" height="131" loading="lazy"><img src="/roof-iowa/images/badges/ankenys-best.png" alt="Des Moines Register Ankeny's Best" width="360" height="166" loading="lazy"><img src="/roof-iowa/images/badges/bbb-a-plus.png" alt="BBB accredited business, A+ rating" width="287" height="200" loading="lazy"><img src="/roof-iowa/images/badges/homeadvisor-elite.png" alt="HomeAdvisor Elite Service" width="217" height="200" loading="lazy"><img src="/roof-iowa/images/badges/angi-super-service.png" alt="Angie's List Super Service Award" width="242" height="200" loading="lazy"><img src="/roof-iowa/images/badges/gaf-green-roofer.png" alt="GAF Certified Green Roofer" width="360" height="120" loading="lazy"></div></div></div>
 
-<section id="signs"><div class="w signs">
- <img src="/roof-iowa/images/hail.jpg" alt="Hail hits on shingles circled in chalk during a storm inspection" loading="lazy" width="1200" height="896">
- <div>
-  <div class="sh"><span class="k">Is it damaged?</span><h2>Five signs you need a storm check</h2></div>
-  <ul class="list">
-   <li><i>1</i><div><b>Dents on gutters, vents or the AC unit</b><span>If hail marked the metal, it likely hit the shingles too.</span></div></li>
-   <li><i>2</i><div><b>Granules piling up at the downspouts</b><span>Shingles shed their protective grit after a hard hit.</span></div></li>
-   <li><i>3</i><div><b>Missing, lifted or creased shingles</b><span>Wind breaks the seal and lets water in at the next rain.</span></div></li>
-   <li><i>4</i><div><b>Water stains on the ceiling</b><span>A leak shows inside long after it started on the roof.</span></div></li>
-   <li><i>5</i><div><b>Neighbors getting new roofs</b><span>If the street got hit, your roof probably did too.</span></div></li>
-  </ul>
- </div>
-</div></section>
-
-<section class="claim" id="claim"><div class="w">
- <div class="sh"><span class="k">Insurance claims</span><h2>From hail to a new roof in five steps</h2><p>We manage insurance claims for Central Iowa homeowners every storm season. You make one call; we handle the rest with you.</p></div>
- <div class="tl">
-  <div class="you"><h3>You call or text</h3><p>We call back quickly. Text us a photo if you have one.</p></div>
-  <div><h3>Free storm check</h3><p>We go up, photograph every hit, and tell you straight if it's worth a claim.</p></div>
-  <div><h3>We handle the claim</h3><p>We work the claim with your insurance company, step by step, so nothing gets missed.</p></div>
-  <div><h3>You choose</h3><p>Shingle color, warranty and gutters, with clear prices for anything beyond the claim.</p></div>
-  <div><h3>New roof, clean yard</h3><p>One crew, one install, and a nail sweep before we leave.</p></div>
- </div>
-</div></section>
-
 <section id="services"><div class="w">
- <div class="sh"><span class="k">What we do</span><h2>Roofing, gutters and siding</h2></div>
- <div class="svc">
-  <article><img src="/roof-iowa/images/crew.jpg" alt="Roofing crew installing new shingles" loading="lazy" width="1200" height="896"><div class="t"><h3>Roof replacement</h3><p>GAF Master Elite® installs with warranties up to 50 years. Low-interest financing available.</p></div></article>
-  <article><img src="/roof-iowa/images/estimate.jpg" alt="Estimator reviewing roof photos with homeowners" loading="lazy" width="1200" height="896"><div class="t"><h3>Repairs and leaks</h3><p>Leaks, wind damage, flashing and vents, on any roof, no matter who installed it.</p></div></article>
-  <article><img src="/roof-iowa/images/home.jpg" alt="Home with a new roof and white gutters" loading="lazy" width="1376" height="768"><div class="t"><h3>Gutters and siding</h3><p>Seamless gutters, guards, soffit, fascia and siding to match your new roof.</p></div></article>
+ <div class="sh"><span class="k">What we do</span><h2>Everything on the outside of your home</h2><p>Pick what you need. Each service gets its own page with photos and reviews from customers who hired us for it.</p></div>
+ <div class="grid6">
+  <a class="tile" href="#estimate"><img src="/roof-iowa/images/crew.jpg" alt="Crew installing new shingles" loading="lazy" width="1200" height="896"><div class="t"><h3>Roof replacement</h3><p>Asphalt shingle, slate, cedar, metal, flat and tile, with GAF upgraded warranties.</p><span class="go">Roof replacement →</span></div></a>
+  <a class="tile" href="#estimate"><img src="/roof-iowa/images/hail.jpg" alt="Inspector marking roof damage" loading="lazy" width="1200" height="896"><div class="t"><h3>Roof repairs</h3><p>Leaks, missing shingles, flashing and vents, on any roof, no matter who installed it.</p><span class="go">Roof repairs →</span></div></a>
+  <a class="tile" href="#estimate"><img src="/roof-iowa/images/home.jpg" alt="Home with new white seamless gutters" loading="lazy" width="1376" height="768"><div class="t"><h3>Gutters</h3><p>Seamless gutters, guards, soffit and fascia, matched to your roof. Voted first in Ankeny for gutters too.</p><span class="go">Gutters →</span></div></a>
+  <a class="tile" href="#estimate"><img src="/roof-iowa/images/estimate.jpg" alt="Estimator reviewing options with homeowners" loading="lazy" width="1200" height="896"><div class="t"><h3>Siding</h3><p>New siding and repairs that finish the look of your home. Voted first in Ankeny for siding.</p><span class="go">Siding →</span></div></a>
+  <a class="tile" href="#estimate"><img src="/roof-iowa/images/townhomes.jpg" alt="Townhome community with new roofs" loading="lazy" width="1200" height="896"><div class="t"><h3>HOAs and property managers</h3><p>Condos, townhomes and apartments: roof reports, budgets for the board, maintenance plans and full replacements.</p><span class="go">Associations →</span></div></a>
+  <a class="tile" href="#estimate"><span class="icon" aria-hidden="true">⛈️</span><div class="t"><h3>Storm and insurance claims</h3><p>Hail or wind damage? We inspect, photograph and manage the claim with you, start to finish.</p><span class="go">Storm damage →</span></div></a>
  </div>
 </div></section>
 
-<section class="proofw" id="reviews"><div class="w">
- <div class="sh"><span class="k">Proof, not promises</span><h2>Why Central Iowa calls us after the storm</h2><p>Door knockers show up after every hail storm and are gone by fall. We've been here every year, and our reviews say so.</p></div>
- <div class="pgrid">
-  <div class="big5"><b>5.0</b><span class="stars">★★★★★</span><span>175 Google reviews, every one answered by the owners</span><div class="award">🏆 Voted Ankeny's Best Roofer, 2015 to 2026</div><span>GAF Master Elite® since 2017 · BBB A+ accredited · ABC Supply Platinum Award · HomeAdvisor Elite · Angi Super Service Award</span></div>
-  <div class="qs">
-   <blockquote><p>"We are very happy and satisfied with roof and siding trim replacement job that Roof Iowa completed."</p><cite>Thomas S. · Google review</cite></blockquote>
-   <blockquote><p>"I called the day after a very heavy rain day and was called back very quickly."</p><cite>Stephanie S. · Google review</cite></blockquote>
-   <blockquote><p>"We had a lot of damage from the Derecho and Roof Iowa has us fixed right away with a new roof, gutters, and soffit."</p><cite>Matt T. · roofiowa.com</cite></blockquote>
-  </div>
+<section class="why" id="why"><div class="w">
+ <div class="sh"><span class="k">Why Roof Iowa</span><h2>Proof you can check, not promises</h2><p>We're a locally and family owned company. We live, work and play in the same neighborhoods you do, and we bid at an honest price.</p></div>
+ <div class="stats">
+  <div><b>5.0 ★</b><span>from 175 Google reviews, every one answered by the owners</span></div>
+  <div><b>Since 2015</b><span>voted Ankeny's Best Roofer, first place every year</span></div>
+  <div><b>Top 3%</b><span>of roofers nationwide are GAF Master Elite®. We've been one since 2017</span></div>
+  <div><b>Top 3</b><span>Des Moines Metro's Best Roofer, and voted best in Ames</span></div>
  </div>
 </div></section>
 
-<section class="hoa" id="hoa"><div class="w">
- <div>
-  <div class="sh"><span class="k">HOAs and property managers</span><h2>One roofer for the whole community</h2><p>Roof condition reports for the board, budgets you can plan around, yearly maintenance plans, and full replacements that keep every owner informed. After a storm, your community gets checked first.</p></div>
-  <div class="btns"><a class="cta1" href="#check">Request a community roof report</a></div>
+<section><div class="w">
+ <div class="sh"><span class="k">How it works</span><h2>Four steps, no surprises</h2></div>
+ <div class="steps">
+  <div><h3>Free inspection</h3><p>We look at the roof, gutters and siding and explain what we found.</p></div>
+  <div><h3>Clear options</h3><p>Different price points explained in plain English. You pick what fits your home and budget.</p></div>
+  <div><h3>Quality install</h3><p>Trained installers, project management start to finish, quality control and a final inspection.</p></div>
+  <div><h3>Warranty in writing</h3><p>GAF-backed coverage up to 50 years, with workmanship coverage on the upgraded plans.</p></div>
  </div>
- <img src="/roof-iowa/images/townhomes.jpg" alt="Townhome community with new matching roofs" loading="lazy" width="1200" height="896">
 </div></section>
 
-<section class="req" id="check"><div class="w">
- <div class="sh"><span class="k">Free storm check</span><h2>Tell us what happened</h2><p>We'll call you back to set a time. Faster: call or text <a href="tel:+15156123889"><b>515-612-3889</b></a>.</p>
-  <div class="towns"><span>Ankeny</span><span>Des Moines</span><span>West Des Moines</span><span>Johnston</span><span>Urbandale</span><span>Waukee</span><span>Altoona</span><span>Grimes</span><span>Bondurant</span><span>Ames</span></div></div>
+<section style="background:var(--bg)" id="warranty"><div class="w">
+ <div class="sh"><span class="k">Warranties</span><h2>The best warranties in the industry</h2><p>As a GAF Master Elite® contractor we can offer GAF's upgraded warranties that most roofers can't.</p></div>
+ <div class="war">
+  <div><span>Good</span><b>System Plus</b><p>Lifetime shingle coverage, 50 years non-prorated, with 2 years of workmanship coverage. Transferable once.</p></div>
+  <div><span>Better</span><b>Silver Pledge</b><p>50 years non-prorated on materials and 10 years on workmanship, including tear-off and disposal. Transferable once.</p></div>
+  <div class="best"><span>Best</span><b>Golden Pledge</b><p>The most complete warranty available, covering materials and workmanship, backed by Good Housekeeping. Transferable once.</p></div>
+ </div>
+</div></section>
+
+<section id="reviews"><div class="w">
+ <div class="sh"><span class="k">Reviews</span><h2>What Central Iowa homeowners say</h2></div>
+ <div class="rgrid">
+  <blockquote><span class="stars">★★★★★</span><p>"We are very happy and satisfied with roof and siding trim replacement job that Roof Iowa completed."</p><cite>Thomas S. · Google</cite></blockquote>
+  <blockquote><span class="stars">★★★★★</span><p>"I tend to be critical when it comes to this kind of work. Roof Iowa went above and beyond my expectations in every way."</p><cite>Ryan M. · roofiowa.com</cite></blockquote>
+  <blockquote><span class="stars">★★★★★</span><p>"Huge hearted, family owned, experienced, detail oriented, responsive and just overall amazing company."</p><cite>Janel D. · roofiowa.com</cite></blockquote>
+ </div>
+</div></section>
+
+<section class="req" id="estimate" style="background:var(--bg)"><div class="w">
+ <div class="sh"><span class="k">Free estimate</span><h2>Let's look at your project</h2><p>Tell us what you need and we'll call to set a time. Or call or text <a href="tel:+15156123889"><b>515-612-3889</b></a>.</p>
+  <div class="towns"><span>Ankeny</span><span>Des Moines</span><span>West Des Moines</span><span>Johnston</span><span>Urbandale</span><span>Waukee</span><span>Altoona</span><span>Grimes</span><span>Bondurant</span><span>Ames</span><span>All of Iowa</span></div></div>
  <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Thanks! This is a mock-up, so nothing was sent.'">
   <div class="row"><label>Your name<input name="n" autocomplete="name" required></label><label>Mobile phone<input name="p" type="tel" autocomplete="tel" required></label></div>
-  <div class="row"><label>Town<select name="t"><option>Ankeny</option><option>Des Moines</option><option>West Des Moines</option><option>Johnston</option><option>Urbandale</option><option>Waukee</option><option>Altoona</option><option>Other</option></select></label><label>What happened?<select name="s"><option>Hail</option><option>Wind</option><option>Leak</option><option>Just want a check</option><option>HOA or property</option></select></label></div>
-  <label>Have you called your insurance yet?<select name="i"><option>Not yet</option><option>Yes, claim opened</option><option>Not sure if I should</option></select></label>
-  <label class="chk"><input type="checkbox" name="optin"><span>Yes, text me storm alerts and seasonal specials from Roof Iowa. About 2 a month. Reply STOP anytime.</span></label>
-  <button type="submit">Book my free storm check</button>
+  <div class="row"><label>Town<select name="t"><option>Ankeny</option><option>Des Moines</option><option>West Des Moines</option><option>Johnston</option><option>Urbandale</option><option>Waukee</option><option>Altoona</option><option>Other</option></select></label><label>Service<select name="s"><option>Roof replacement</option><option>Roof repair</option><option>Gutters</option><option>Siding</option><option>HOA or property</option><option>Storm or insurance claim</option></select></label></div>
+  <label>Tell us about the project<textarea name="m" rows="3"></textarea></label>
+  <label class="chk"><input type="checkbox" name="optin"><span>Yes, text me seasonal specials and storm alerts from Roof Iowa. About 2 a month. Reply STOP anytime.</span></label>
+  <button type="submit">Request my free estimate</button>
  </form>
 </div></section>
 </main>
 
 <footer><div class="w">
- <div><b>Roof Iowa</b><br>Roofing · Gutters · Siding<br>Family owned in Ankeny, Iowa</div>
+ <div><b>Roof Iowa</b><br>Roofing · Gutters · Siding<br>Locally and family owned in Ankeny, Iowa</div>
  <div><b>Call or text</b><br><a href="tel:+15156123889">515-612-3889</a><br><a href="mailto:emily@roofiowa.com">emily@roofiowa.com</a></div>
  <div><b>Licensed and insured</b><br>Iowa contractor license #C122768<br>GAF Master Elite® · BBB A+ accredited</div>
 </div></footer>
-<div class="mbar"><a href="tel:+15156123889">📞 Call</a><a class="t" href="sms:+15156123889">💬 Text</a><a href="#check">Storm check</a></div>
+<div class="mbar"><a href="tel:+15156123889">📞 Call</a><a class="t" href="sms:+15156123889">💬 Text</a><a href="#estimate">Estimate</a></div>
 </body></html>
