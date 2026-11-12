@@ -136,13 +136,38 @@ details p{margin-top:10px;color:var(--muted)}
 .ft a{display:block;text-decoration:none;opacity:.85;margin:3px 0}
 .ft .fine{grid-column:1/-1;font-size:13px;opacity:.7;border-top:1px solid rgba(255,255,255,.15);padding-top:18px}
 .tint{background:var(--tint)}
+.vids{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+@media (max-width:760px){.vids{grid-template-columns:1fr}}
+.vid{background:var(--card);border:1px solid var(--line);border-radius:var(--cardr);overflow:hidden}
+.vid .fr{position:relative;aspect-ratio:16/9;background:#000;display:block;width:100%;border:0;padding:0;cursor:pointer}
+.vid .fr img{width:100%;height:100%;object-fit:cover;opacity:.88}
+.vid .fr span{position:absolute;inset:0;display:grid;place-content:center}
+.vid .fr span::before{content:"";width:68px;height:68px;border-radius:50%;background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E") center/30px no-repeat;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid div{padding:16px 18px}.vid p{color:var(--muted);font-size:15px;margin-top:4px}
+.funnel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:34px}
+@media (max-width:900px){.funnel{grid-template-columns:1fr}}
+.fs{background:var(--card);border:1px solid var(--line);border-radius:var(--cardr);padding:22px;display:grid;gap:10px;align-content:start}
+.fs .n{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent2)}
+.addon{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;border:1px dashed var(--line);border-radius:12px;padding:10px 12px;font-size:15px}
+.addon input{width:18px;height:18px;accent-color:var(--accent)}
+.addon b{font-size:15px}.addon s{color:var(--muted);font-size:13px;margin-left:4px}
+.fs ul{margin:0;padding-left:18px;color:var(--muted);font-size:15px;display:grid;gap:6px}
+.pk table{width:100%;border-collapse:collapse;margin-top:18px;background:var(--card);border-radius:var(--cardr);overflow:hidden;font-size:15px}
+.pk th,.pk td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.pk thead th{background:var(--chip);font-size:13px;text-transform:uppercase;letter-spacing:.05em}
+.pk td:last-child{font-weight:700}
+.tips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}
+@media (max-width:760px){.tips{grid-template-columns:1fr 1fr}}@media (max-width:480px){.tips{grid-template-columns:1fr}}
+.tips div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}.tips p{color:var(--muted);font-size:14px;margin-top:4px}
+.src{font-size:14px;color:var(--muted);margin-top:16px}.src a{color:inherit}
 </style></head><body>
 <nav class="pmtabs" aria-label="CurvaPen reports"><div class="inner"><a href="/curvapen/scorecard.html">Scorecard</a><a href="/curvapen/website.html" class="on" aria-current="page">Website mock-ups</a><a href="/curvapen/faq.html" class="pr">FAQ</a><a href="/curvapen/proposal.html">Proposal</a></div></nav>
 <div class="opt"><div class="inner"><b>Which one do you want?</b><span>Two looks for the new curvapen.com:</span><a href="/curvapen/website.html">Option A · Write again</a><a href="/curvapen/website-b.html" class="on" aria-current="page">Option B · The better way to write</a></div></div>
 <div class="mock"><div class="w">MOCK-UP · Sample website prepared for CurvaPen by Phyllena Management · Not live · Photos, prices, reviews and facts taken from curvapen.com and your checkout</div></div>
 <header class="hd"><div class="w">
  <a class="brand" href="#top"><img src="/curvapen/images/curvapen-logo.png" alt="CurvaPen, the better way to write" width="1200" height="400"></a>
- <nav aria-label="Site"><a href="#who">Who it's for</a><a href="#how">How it works</a><a href="#reviews">Reviews</a><a href="#clinics">Clinics</a><a href="#faq">FAQ</a></nav>
+ <nav aria-label="Site"><a href="#who">Who it's for</a><a href="#video">Watch</a><a href="#parkinsons">Parkinson's</a><a href="#reviews">Reviews</a><a href="#clinics">Clinics</a><a href="#faq">FAQ</a></nav>
  <a class="buy" href="#shop">Shop pens</a>
 </div></header>
 <main id="top">
@@ -162,6 +187,13 @@ details p{margin-top:10px;color:var(--muted)}
  <div><b>Atrium Health</b><span>authorized vendor</span></div>
  <div><b>30 days</b><span>refund if it isn't right</span></div>
 </div></div>
+<section id="video"><div class="w">
+ <div class="sh c"><span class="k">See it work</span><h2>Watch it before you buy it.</h2><p>Both videos from today's site, played right on the page instead of sending people off to YouTube.</p></div>
+ <div class="vids">
+  <div class="vid"><button class="fr" type="button" aria-label="Play video: The CurvaPen demo" onclick="this.innerHTML='<iframe src=&quot;https://www.youtube-nocookie.com/embed/H5x8t1BjxDM?autoplay=1&amp;rel=0&amp;playsinline=1&quot; title=&quot;The CurvaPen demo&quot; allow=&quot;autoplay; encrypted-media; picture-in-picture&quot; allowfullscreen></iframe>'"><img src="https://i.ytimg.com/vi/H5x8t1BjxDM/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span></span></button><div><h3>The CurvaPen demo</h3><p>How the curved nib works and why you can see every letter.</p></div></div>
+  <div class="vid"><button class="fr" type="button" aria-label="Play video: There's no wrong way to hold it" onclick="this.innerHTML='<iframe src=&quot;https://www.youtube-nocookie.com/embed/ENOmntAvp0M?autoplay=1&amp;rel=0&amp;playsinline=1&quot; title=&quot;There's no wrong way to hold it&quot; allow=&quot;autoplay; encrypted-media; picture-in-picture&quot; allowfullscreen></iframe>'"><img src="https://i.ytimg.com/vi/ENOmntAvp0M/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span></span></button><div><h3>There's no wrong way to hold it</h3><p>Overhand, underhand, resting hand. 30 seconds.</p></div></div>
+ </div>
+</div></section>
 <section id="shop"><div class="w">
  <div class="sh c"><span class="k">Shop</span><h2>Pick a pack. Pick a color. Done.</h2><p>Ships from the U.S., usually same day. Delivery in about 4 business days.</p></div>
  <div class="bund">
@@ -170,6 +202,17 @@ details p{margin-top:10px;color:var(--muted)}
   <div class="bc"><h3>OT Clinical Bundle</h3><div class="pr">$69.99<s>$99.90</s></div><ul><li>20 pens, $3.50 each, save 30%</li><li>For a clinic, classroom or whole family</li></ul><label>Color<select><option>Black pen, black ink</option><option>Black pen, blue ink</option><option>White pen, black ink</option><option>White pen, blue ink</option></select></label><a class="buy" href="https://curvapen.mysamcart.com/checkout/1018126" target="_blank" rel="noopener">Buy Clinical Bundle</a></div>
  </div>
  <div class="guar"><span>30-day refund</span><span>HSA/FSA eligible</span><span>Wide gripper add-on at checkout</span><span>Questions? 1-877-685-0448</span></div>
+ <div class="funnel" aria-label="How an order grows">
+  <div class="fs"><span class="n">Step 1 · Pick a pack</span><h3>Starter, Recovery or Clinical</h3><p style="color:var(--muted);font-size:15px">Same SamCart checkout you have now, opening in a slide-out so buyers never leave the page.</p></div>
+  <div class="fs"><span class="n">Step 2 · One tap add-ons</span><h3>Add to your order</h3>
+   <label class="addon"><input type="checkbox" checked><span><b>Fat Gripper</b> black or white</span><span>$5<s>$10</s></span></label>
+   <label class="addon"><input type="checkbox"><span><b>Extra pen</b> bonus 50% off, 4 colors</span><span>$5<s>$24.99</s></span></label>
+   <label class="addon"><input type="checkbox"><span><b>Lettering Guide</b></span><span>$5<s>$10</s></span></label>
+   <label class="addon"><input type="checkbox"><span><b>Drawing Mandalas guide</b></span><span>$5<s>$10</s></span></label>
+  </div>
+  <div class="fs"><span class="n">Step 3 · After delivery (new)</span><h3>The part that's missing today</h3><ul><li>Day 7: "How's the pen?" text with a one-tap review link</li><li>Day 10: a short grip tips video for their hand</li><li>Day 45: refill reminder with their last pack and color pre-filled</li><li>November: gift-season text to past buyers (Linda L. bought for her whole sorority)</li></ul></div>
+ </div>
+
 </div></section>
 <section class="tint"><div class="w how">
  <div>
@@ -188,7 +231,7 @@ details p{margin-top:10px;color:var(--muted)}
  <div class="sh c"><span class="k">Who it's for</span><h2>Every hand is different. Start with yours.</h2><p>Each page shows how other people with hands like yours hold it, what they say, and the pack most of them start with.</p></div>
  <div class="who">
   <a href="#shop"><img src="/curvapen/images/white-pen-hand.jpg" alt="Hand writing with a white CurvaPen using the wide gripper" loading="lazy" width="600" height="448"><div><h3>Stroke recovery</h3><p>For relearning a signature, a grocery list, a birthday card. Works with the hand you have now.</p><em>Most start with the Recovery Bundle →</em></div></a>
-  <a href="#shop"><img src="/curvapen/images/senior-hand.jpg" alt="Older hand writing with CurvaPen" loading="lazy" width="600" height="400"><div><h3>Parkinson's and tremor</h3><p>Rest your hand on the page and still see the tip. It won't stop a tremor; many people find the page easier to manage.</p><em>See the Parkinson's guide →</em></div></a>
+  <a href="#parkinsons"><img src="/curvapen/images/senior-hand.jpg" alt="Older hand writing with CurvaPen" loading="lazy" width="600" height="400"><div><h3>Parkinson's and tremor</h3><p>Rest your hand on the page and still see the tip. It won't stop a tremor; many people find the page easier to manage.</p><em>See the Parkinson's guide →</em></div></a>
   <a href="#shop"><img src="/curvapen/images/yellow-pad.jpg" alt="Hand writing on a yellow pad with CurvaPen" loading="lazy" width="600" height="448"><div><h3>Arthritis and hand pain</h3><p>Hold it loosely, overhand or underhand. No forcing your fingers into one "proper" grip.</p><em>Most start with the Starter Pack →</em></div></a>
   <a href="#shop"><img src="/curvapen/images/overhand.jpg" alt="Overhand writer using CurvaPen" loading="lazy" width="580" height="655"><div><h3>Left-handed and overhand writers</h3><p>See every letter as you write it, with quick-drying ink that doesn't drag across your hand.</p><em>Most start with the Starter Pack →</em></div></a>
   <a href="#shop"><img src="/curvapen/images/lettering.jpg" alt="Hand lettering practice with CurvaPen" loading="lazy" width="507" height="808"><div><h3>Artists, journalers, everyday writers</h3><p>Lettering, sketching, journaling. Plenty of buyers never had a hand problem; they just like the view.</p><em>Add the Lettering Guide at checkout →</em></div></a>
@@ -199,6 +242,20 @@ details p{margin-top:10px;color:var(--muted)}
  <div class="revtop"><div class="sh" style="margin:0"><span class="k">Reviews</span><h2>1,047 people wrote back.</h2></div><div class="big5"><span class="stars" style="font-size:30px">★★★★★</span><div><b style="font-size:20px">1,047 verified reviews</b><br><small>Live text Google can read</small></div></div></div>
  <div class="revs"><div class="rv"><span class="stars" aria-label="5 stars">★★★★★</span><p>"I have had Fibromyalgia for 14 years, and arthritis showed up a few years ago. But for the past year, Parkinson's Disease has invited themselves to the party. Still not fun, but life is precious. Thank you."</p><span class="who2">Julie F. <small>· Fibromyalgia, arthritis and Parkinson's · Verified buyer</small></span></div><div class="rv"><span class="stars" aria-label="5 stars">★★★★★</span><p>"I love this pen. I'm a journal writer with MS. This pen allows me to write without issue. My handwriting is better and it doesn't cause pain."</p><span class="who2">Crystal B. <small>· Journal writer with MS · Verified buyer</small></span></div><div class="rv"><span class="stars" aria-label="5 stars">★★★★★</span><p>"I love the way the ink flows and I don't have to press down hard to write. My hand doesn't cramp up when I am writing for a long time. I've received several inquiries about my pens."</p><span class="who2">Wanishea W. <small>· Writes for long stretches · Verified buyer</small></span></div><div class="rv"><span class="stars" aria-label="5 stars">★★★★★</span><p>"It took a few tries to figure out the best way for me to hold to write well. I suffer from tremors. But I found a way to hold it and now my handwriting has improved so much."</p><span class="who2">Patricia M. <small>· Lives with tremors · Verified buyer</small></span></div><div class="rv"><span class="stars" aria-label="5 stars">★★★★★</span><p>"I'm left-handed and I find this special pen very helpful without smearing or anything like that that usually happens. The ink is nice and I'm very pleased with it."</p><span class="who2">Edward C. <small>· Left-handed · Verified buyer</small></span></div><div class="rv"><span class="stars" aria-label="5 stars">★★★★★</span><p>"They make writing all of the notes and cards that I send throughout the year far more comfortable and fun. Our grandkids are enamored with the pens and love using them when they visit."</p><span class="who2">Judy M. <small>· Cards, notes and grandkids · Verified buyer</small></span></div><div class="rv"><span class="stars" aria-label="5 stars">★★★★★</span><p>"Been a customer three times for a reason. Try it."</p><span class="who2">Houston H. <small>· Third order · Verified buyer</small></span></div><div class="rv"><span class="stars" aria-label="5 stars">★★★★★</span><p>"I'm left handed and this pen is amazing. Ingenious!"</p><span class="who2">Christopher B. <small>· Left-handed · Verified buyer</small></span></div><div class="rv"><span class="stars" aria-label="5 stars">★★★★★</span><p>"It makes writing a lot easier for me. I don't have to press as hard to write, which significantly reduces hand fatigue. I would definitely recommend CurvaPen, especially for those who struggle with carpal tunnel."</p><span class="who2">Walmart buyer <small>· Carpal tunnel · Verified buyer</small></span></div></div>
  <p style="color:var(--muted);font-size:14px;margin-top:6px">In the live site, every review shows as text with stars, filters by condition (stroke, tremor, arthritis, left-handed), and new reviews arrive each week from buyers we ask after delivery. Your real average rating appears once we import them.</p>
+</div></section>
+<section id="parkinsons" class="pk"><div class="w" style="max-width:1000px">
+ <div class="sh"><span class="k">For Parkinson's and tremor</span><h2>Still in your own hand.</h2><p>Your Parkinson's page, kept and given its own place on the menu. A birthday card to a grandchild. A note on the fridge. Your own name on your own check.</p></div>
+ <h3>Tried a weighted pen?</h3>
+ <table><thead><tr><th></th><th>Weighted pen</th><th>CurvaPen</th></tr></thead><tbody>
+  <tr><th>How it steadies</th><td>Adds weight to the pen</td><td>Anchors on your resting hand</td></tr>
+  <tr><th>Seeing the tip</th><td>Hand often blocks it</td><td>Curve keeps it in view</td></tr>
+  <tr><th>Hand position</th><td>One standard grip</td><td>Several comfortable positions</td></tr>
+  <tr><th>Over a long note</th><td>Heavier to hold</td><td>Light and balanced</td></tr>
+ </tbody></table>
+ <h3 style="margin-top:30px">Simple ways to make writing easier</h3>
+ <div class="tips"><div><b>Write during your "on" time</b><p>Save cards and forms for when medication works best.</p></div><div><b>Think big</b><p>Aim for larger letters. Wide-ruled paper gives you a target.</p></div><div><b>Support your arm</b><p>Forearm on the table. A steady base means a steadier hand.</p></div><div><b>Keep the paper still</b><p>A clipboard, a non-slip mat, or a little tape.</p></div><div><b>Go short and rest</b><p>A few lines, then a break.</p></div><div><b>Print if it's easier</b><p>Clear block letters are just as much yours.</p></div></div>
+ <div class="btns" style="margin-top:22px"><a class="buy" href="#shop">Get CurvaPen</a><a class="ghost" href="#join">Get the free Parkinson's writing booklet</a><a class="ghost" href="#clinics">OTs: request a sample kit</a></div>
+ <p class="src">Further reading: <a href="https://www.parkinson.org/" target="_blank" rel="noopener">Parkinson's Foundation</a> · <a href="https://www.apdaparkinson.org/" target="_blank" rel="noopener">APDA</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/31506240/" target="_blank" rel="noopener">micrographia research</a>. CurvaPen is not a medical device.</p>
 </div></section>
 <section id="clinics"><div class="w">
  <div class="clinic">
@@ -227,7 +284,7 @@ details p{margin-top:10px;color:var(--muted)}
   <blockquote>Our mission is simple: to help every hand reclaim its independence through the power of handwriting.</blockquote>
  </div>
 </div></section>
-<section style="padding-top:0"><div class="w">
+<section id="join" style="padding-top:0"><div class="w">
  <div class="join">
   <div><h3>Not ready yet? Get the free writing guide.</h3><p style="color:var(--muted);margin-top:8px">Grip tips for stroke, tremor, arthritis and left-handed writers, plus a reminder before your pens run low. For caregivers too.</p></div>
   <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Check your inbox'"><input type="email" placeholder="Your email" aria-label="Email" autocomplete="email"><input type="tel" placeholder="Mobile (optional, for text reminders)" aria-label="Mobile" autocomplete="tel"><button class="buy" type="submit">Send me the guide</button><small>Texts only if you give your number. Reply STOP anytime.</small></form>
@@ -245,7 +302,7 @@ details p{margin-top:10px;color:var(--muted)}
 <footer class="ft"><div class="w">
  <div><b>CurvaPen Inc.</b><span>Charlotte, NC</span><a href="tel:+18776850448">1-877-685-0448</a><a href="mailto:info@curvapen.com">info@curvapen.com</a></div>
  <div><b>Shop</b><a href="#shop">Starter Pack</a><a href="#shop">Recovery Bundle</a><a href="#shop">OT Clinical Bundle</a></div>
- <div><b>Who it's for</b><a href="#who">Stroke recovery</a><a href="#who">Parkinson's and tremor</a><a href="#who">Arthritis and hand pain</a><a href="#who">Left-handed writers</a></div>
+ <div><b>Who it's for</b><a href="#who">Stroke recovery</a><a href="#parkinsons">Parkinson's and tremor</a><a href="#who">Arthritis and hand pain</a><a href="#who">Left-handed writers</a></div>
  <div><b>Company</b><a href="#">About</a><a href="#">Contact</a><a href="#">Shipping and refunds</a><a href="#">Privacy</a></div>
  <p class="fine">U.S. patented. CurvaPen is not a medical device and does not diagnose, treat or cure medical conditions. © 2026 CurvaPen Inc.</p>
 </div></footer>
