@@ -209,13 +209,18 @@ ul.three p{color:var(--muted);font-size:15px}
 .pillars>div{background:var(--card);border:1px solid var(--line);border-radius:var(--cardr);padding:20px;display:grid;gap:8px;align-content:start}
 .pillars b{font:700 20px/1.2 var(--display)}.pillars p{color:var(--muted);font-size:15px}
 .pn{width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--onaccent);display:grid;place-content:center;font-weight:800}
+.who4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:1000px){.who4{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:520px){.who4{grid-template-columns:1fr}}
+.also{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;font-size:14px;color:var(--muted)}
+.also span{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:5px 12px}
+.who a{grid-template-rows:auto 1fr}.who a>div{align-content:start}.who a>div em{align-self:end}
 </style></head><body>
 <nav class="pmtabs" aria-label="CurvaPen reports"><div class="inner"><a href="/curvapen/scorecard.html">Scorecard</a><a href="/curvapen/website.html" class="on" aria-current="page">Website mock-ups</a><a href="/curvapen/faq.html" class="pr">FAQ</a><a href="/curvapen/proposal.html">Proposal</a></div></nav>
 <div class="opt"><div class="inner"><b>Which one do you want?</b><span>Same plan, two looks:</span><a href="/curvapen/hand-left-handed.html">Option A · Warm</a><a href="/curvapen/hand-left-handed-b.html" class="on" aria-current="page">Option B · Bold</a></div></div>
 <div class="mock"><div class="w">MOCK-UP · Sample website prepared for CurvaPen by Phyllena Management · Not live · Photos, prices and reviews from curvapen.com, your checkout and your Loox reviews</div></div>
 <header class="hd"><div class="w">
  <a class="brand" href="/curvapen/website-b.html#top"><img src="/curvapen/images/curvapen-logo.png" alt="CurvaPen, the better way to write" width="1200" height="400"></a>
- <nav aria-label="Site"><details class="dd"><summary>Shop by hand</summary><div><a href="/curvapen/hand-everyday-b.html">Everyday writers</a><a href="/curvapen/hand-left-handed-b.html">Left-handed</a><a href="/curvapen/hand-artists-b.html">Artists and lettering</a><a href="/curvapen/hand-arthritis-b.html">Arthritis and hand pain</a><a href="/curvapen/hand-stroke-b.html">Stroke recovery</a><a href="/curvapen/hand-parkinsons-b.html">Parkinson's and tremor</a><a href="/curvapen/website-b.html#clinics">Clinics and schools</a></div></details><a href="/curvapen/website-b.html#gifts">Gifts</a><a href="/curvapen/website-b.html#reviews">Reviews</a><a href="/curvapen/website-b.html#video">Watch</a><a href="/curvapen/website-b.html#partners">Wholesale</a></nav>
+ <nav aria-label="Site"><details class="dd"><summary>Shop by hand</summary><div><a href="/curvapen/hand-everyday-b.html">Everyday pen lovers</a><a href="/curvapen/hand-left-handed-b.html">Left-handed</a><a href="/curvapen/hand-artists-b.html">Artists and lettering</a><a href="/curvapen/hand-students-b.html">Students and kids</a><a href="/curvapen/hand-arthritis-b.html">Arthritis and hand pain</a><a href="/curvapen/hand-mobility-b.html">Limited grip and mobility</a><a href="/curvapen/hand-stroke-b.html">Stroke recovery</a><a href="/curvapen/hand-parkinsons-b.html">Parkinson's and tremor</a><a href="/curvapen/website-b.html#clinics">Clinics and schools</a></div></details><a href="/curvapen/website-b.html#gifts">Gifts</a><a href="/curvapen/website-b.html#reviews">Reviews</a><a href="/curvapen/website-b.html#video">Watch</a><a href="/curvapen/website-b.html#partners">Wholesale</a></nav>
  <button class="cartbtn" type="button" onclick="cpCart.open()" aria-label="Open cart">Cart <span class="cc">0</span></button>
 </div></header>
 <main id="top">
@@ -259,7 +264,7 @@ ul.three p{color:var(--muted);font-size:15px}
 </div></section>
 <footer class="ft"><div class="w">
  <div><b>CurvaPen Inc.</b><span>Charlotte, NC</span><a href="tel:+18776850448">1-877-685-0448</a><a href="mailto:info@curvapen.com">info@curvapen.com</a></div>
- <div><b>Shop by hand</b><a href="/curvapen/hand-everyday-b.html">Everyday writers</a><a href="/curvapen/hand-left-handed-b.html">Left-handed</a><a href="/curvapen/hand-artists-b.html">Artists and lettering</a><a href="/curvapen/hand-arthritis-b.html">Arthritis and hand pain</a><a href="/curvapen/hand-stroke-b.html">Stroke recovery</a><a href="/curvapen/hand-parkinsons-b.html">Parkinson's and tremor</a></div>
+ <div><b>Shop by hand</b><a href="/curvapen/hand-everyday-b.html">Everyday pen lovers</a><a href="/curvapen/hand-left-handed-b.html">Left-handed</a><a href="/curvapen/hand-artists-b.html">Artists and lettering</a><a href="/curvapen/hand-students-b.html">Students and kids</a><a href="/curvapen/hand-arthritis-b.html">Arthritis and hand pain</a><a href="/curvapen/hand-mobility-b.html">Limited grip and mobility</a><a href="/curvapen/hand-stroke-b.html">Stroke recovery</a><a href="/curvapen/hand-parkinsons-b.html">Parkinson's and tremor</a></div>
  <div><b>Shop</b><a href="/curvapen/website-b.html#shop">Pens and bundles</a><a href="/curvapen/website-b.html#gifts">Gifts</a><a href="/curvapen/website-b.html#clinics">Clinics and schools</a><a href="/curvapen/website-b.html#partners">Wholesale and partners</a></div>
  <div><b>Company</b><a href="/curvapen/website-b.html#top">Home</a><a href="#">Contact</a><a href="#">Shipping and refunds</a><a href="#">Privacy</a></div>
  <p class="fine">U.S. patented. CurvaPen is not a medical device and does not diagnose, treat or cure medical conditions. © 2026 CurvaPen Inc.</p>
