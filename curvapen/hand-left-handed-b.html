@@ -237,6 +237,7 @@ ul.three p{color:var(--muted);font-size:15px}
 .mr b{text-align:center}
 .mx{color:var(--accent2);font-weight:600}.mx.warn{color:#B4541A}
 .bc button.buy:disabled{opacity:.45;cursor:not-allowed}
+.shopmore{width:100%;background:none;color:var(--ink);cursor:pointer;font-family:var(--body)}
 </style></head><body>
 <nav class="pmtabs" aria-label="CurvaPen reports"><div class="inner"><a href="/curvapen/scorecard.html">Scorecard</a><a href="/curvapen/website.html" class="on" aria-current="page">Website mock-ups</a><a href="/curvapen/faq.html" class="pr">FAQ</a><a href="/curvapen/proposal.html">Proposal</a></div></nav>
 <div class="opt"><div class="inner"><b>Which one do you want?</b><span>Same plan, two looks:</span><a href="/curvapen/hand-left-handed.html">Option A · Warm</a><a href="/curvapen/hand-left-handed-b.html" class="on" aria-current="page">Option B · Bold</a></div></div>
@@ -298,6 +299,7 @@ ul.three p{color:var(--muted);font-size:15px}
  <div class="bumps"><b>Add to your order</b><label class="addon"><input type="checkbox" data-bump="Fat Gripper" data-p="5" onchange="cpCart.draw()"><span><b>Fat Gripper</b> black or white, more to hold</span><span>$5<s>$10</s></span></label><label class="addon"><input type="checkbox" data-bump="Extra pen" data-p="5" onchange="cpCart.draw()"><span><b>Extra pen</b> bonus 50% off, 4 colors</span><span>$5<s>$24.99</s></span></label><label class="addon"><input type="checkbox" data-bump="Lettering Guide" data-p="5" onchange="cpCart.draw()"><span><b>Lettering Guide</b> practice pages</span><span>$5<s>$10</s></span></label><label class="addon"><input type="checkbox" data-bump="Drawing Mandalas guide" data-p="5" onchange="cpCart.draw()"><span><b>Drawing Mandalas guide</b> relaxing patterns</span><span>$5<s>$10</s></span></label></div>
  <div class="tot"><span>Total</span><b id="carttot">$0.00</b></div>
  <button class="buy big" type="button" style="width:100%" onclick="cpCart.pay()">Checkout</button>
+ <button class="ghost big shopmore" type="button" onclick="cpCart.close();document.getElementById('shop').scrollIntoView({behavior:'smooth'})">← Keep shopping</button>
  <small class="cs">Cards and PayPal. Your checkout stays on curvapen.com.</small>
  <div class="ups" id="ups" hidden><span class="k">One more thing, no card needed</span><h3>Add a Starter Pack to give?</h3><p>Two more pens for a friend, a sister, a lefty in the family. Ships in the same box.</p><button class="buy" type="button" onclick="cpCart.up(true)">Yes, add it for $9.99</button><button class="lnk" type="button" onclick="cpCart.up(false)">No thanks</button></div>
  <div class="ups" id="done" hidden><h3>Order placed (mock-up)</h3><p>Next: a thank-you text, a grip tips video on day 3, a "How's the pen?" review request on day 7, and a refill reminder before they run out.</p></div>
