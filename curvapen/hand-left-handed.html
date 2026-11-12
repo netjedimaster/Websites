@@ -220,6 +220,10 @@ ul.three p{color:var(--muted);font-size:15px}
 .nibby .fr span{position:absolute;inset:0;display:grid;place-content:center}
 .nibby .fr span::before{content:"";width:72px;height:72px;border-radius:50%;background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E") center/32px no-repeat;box-shadow:0 8px 24px rgba(0,0,0,.35)}
 .nibby p{font-size:16px;color:var(--muted);text-align:center}.nibby b{color:var(--ink)}
+.nibhero{position:relative;display:grid;justify-items:center;gap:14px;background:#fff;border-radius:var(--imgr);padding:28px 20px;box-shadow:0 20px 50px rgba(0,0,0,.08)}
+.nibhero img{height:min(460px,70vw);width:auto}
+.bubble{position:relative;background:var(--accent);color:var(--onaccent);font:700 17px/1.35 var(--display);padding:12px 18px;border-radius:18px;max-width:300px;text-align:center}
+.bubble::after{content:"";position:absolute;left:50%;bottom:-10px;margin-left:-10px;border:10px solid transparent;border-bottom:0;border-top-color:var(--accent)}
 </style></head><body>
 <nav class="pmtabs" aria-label="CurvaPen reports"><div class="inner"><a href="/curvapen/scorecard.html">Scorecard</a><a href="/curvapen/website.html" class="on" aria-current="page">Website mock-ups</a><a href="/curvapen/faq.html" class="pr">FAQ</a><a href="/curvapen/proposal.html">Proposal</a></div></nav>
 <div class="opt"><div class="inner"><b>Which one do you want?</b><span>Same plan, two looks:</span><a href="/curvapen/hand-left-handed.html" class="on" aria-current="page">Option A · Warm</a><a href="/curvapen/hand-left-handed-b.html">Option B · Bold</a></div></div>
