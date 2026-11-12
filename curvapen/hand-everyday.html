@@ -244,13 +244,42 @@ ul.three p{color:var(--muted);font-size:15px}
 .shopmore{width:100%;background:none;color:var(--ink);cursor:pointer;font-family:var(--body)}
 .paym{display:flex;flex-wrap:wrap;gap:6px}.paym span{font:700 12px var(--body);border:1px solid var(--line);background:var(--card);border-radius:6px;padding:4px 8px}
 .fg{font-size:18px;margin:26px 0 10px;color:var(--accent2)}.fg:first-of-type{margin-top:0}
+/* guides */
+.gcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.gcard{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--cardr);overflow:hidden;color:var(--ink);text-decoration:none;transition:transform .15s}
+.gcard:hover{transform:translateY(-2px)}
+.gcard img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
+.gcard>div{padding:18px 20px 20px;display:grid;gap:8px;align-content:start;flex:1}
+.gcard h3{font:700 20px/1.25 var(--display)}
+.gcard p{color:var(--muted);font-size:15px}
+.gwho{font:700 12px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--accent2)}
+.gread{font-weight:800;color:var(--accent2)}
+.gsoon{font-weight:700;color:var(--muted);font-size:14px}
+.gcard.soon{cursor:default}.gcard.soon img{filter:grayscale(.4);opacity:.85}
+.gvol,.gplan{border:1.5px dashed #9AA0A8;background:#F1F2F4;color:#4A4F57;border-radius:10px;font:600 12.5px/1.45 system-ui,sans-serif;padding:6px 10px;justify-self:start}
+.gplan{font-size:14px;padding:12px 16px;margin-top:20px;max-width:820px}
+.art .w{max-width:760px}
+.arthd{padding-block:28px 22px}.arthd h1{font:700 clamp(32px,5vw,48px)/1.1 var(--display);margin:6px 0 14px}
+.arthd .s{font-size:20px;color:var(--muted)}.byl{margin-top:14px;font-size:14px;color:var(--muted)}
+.artimg{width:100%;border-radius:var(--imgr);aspect-ratio:3/2;object-fit:cover;margin-bottom:28px}
+.art h2{font:700 28px/1.2 var(--display);margin:40px 0 12px}
+.art p{font-size:18px;line-height:1.7;margin-bottom:14px}
+.art .aside{font-size:15.5px;color:var(--muted);border-left:3px solid var(--line);padding-left:14px}
+.tldr{background:var(--tint);border-radius:var(--cardr);padding:20px 24px}.tldr b{display:block;margin-bottom:6px}.tldr p{margin:0;font-size:17px}
+.steps{padding-left:24px;display:grid;gap:12px;font-size:18px;line-height:1.65}.steps b{color:var(--ink)}
+.drill{margin:36px 0;border:2px solid var(--accent);border-radius:var(--cardr);padding:22px 24px}.drill h3{font:700 22px var(--display);margin-bottom:10px}.drill p{margin-bottom:6px;font-size:17px}
+.artvid{margin:22px 0}.artvid .vid{max-width:420px}
+.artcta{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--clinicbg);color:var(--clinicink);border-radius:var(--cardr);padding:22px 24px;margin:26px 0}
+.artcta p{margin:4px 0 0;font-size:15px;opacity:.85}
+.art .faq details p{font-size:16px}
+.art .src{font-size:14px;color:var(--muted);margin-top:28px}
 </style></head><body>
 <nav class="pmtabs" aria-label="CurvaPen reports"><div class="inner"><a href="/curvapen/scorecard.html">Scorecard</a><a href="/curvapen/website.html" class="on" aria-current="page">Website mock-ups</a><a href="/curvapen/faq.html" class="pr">FAQ</a><a href="/curvapen/proposal.html">Proposal</a></div></nav>
 <div class="opt"><div class="inner"><b>Which one do you want?</b><span>Same plan, two looks:</span><a href="/curvapen/hand-everyday.html" class="on" aria-current="page">Option A · Warm</a><a href="/curvapen/hand-everyday-b.html">Option B · Bold</a></div></div>
 <div class="mock"><div class="w">MOCK-UP · Sample website prepared for CurvaPen by Phyllena Management · Not live · Photos, prices and reviews from curvapen.com, your checkout and your Loox reviews</div></div>
 <header class="hd"><div class="w">
  <a class="brand" href="/curvapen/website.html#top"><img src="/curvapen/images/curvapen-logo.png" alt="CurvaPen, the better way to write" width="1200" height="400"></a>
- <nav aria-label="Site"><details class="dd"><summary>Shop by hand</summary><div><a href="/curvapen/hand-everyday.html">Everyday pen lovers</a><a href="/curvapen/hand-left-handed.html">Left-handed</a><a href="/curvapen/hand-artists.html">Artists and lettering</a><a href="/curvapen/hand-students.html">Students and kids</a><a href="/curvapen/hand-arthritis.html">Arthritis and hand pain</a><a href="/curvapen/hand-mobility.html">Limited grip and mobility</a><a href="/curvapen/hand-stroke.html">Stroke recovery</a><a href="/curvapen/hand-parkinsons.html">Parkinson's and tremor</a><a href="/curvapen/website.html#clinics">Clinics and schools</a></div></details><a href="/curvapen/website.html#gifts">Gifts</a><a href="/curvapen/website.html#reviews">Reviews</a><a href="/curvapen/website.html#video">Watch</a><a href="/curvapen/website.html#partners">Wholesale</a></nav>
+ <nav aria-label="Site"><details class="dd"><summary>Shop by hand</summary><div><a href="/curvapen/hand-everyday.html">Everyday pen lovers</a><a href="/curvapen/hand-left-handed.html">Left-handed</a><a href="/curvapen/hand-artists.html">Artists and lettering</a><a href="/curvapen/hand-students.html">Students and kids</a><a href="/curvapen/hand-arthritis.html">Arthritis and hand pain</a><a href="/curvapen/hand-mobility.html">Limited grip and mobility</a><a href="/curvapen/hand-stroke.html">Stroke recovery</a><a href="/curvapen/hand-parkinsons.html">Parkinson's and tremor</a><a href="/curvapen/website.html#clinics">Clinics and schools</a></div></details><a href="/curvapen/website.html#gifts">Gifts</a><a href="/curvapen/website.html#reviews">Reviews</a><a href="/curvapen/website.html#video">Watch</a><a href="/curvapen/guides.html">Guides</a><a href="/curvapen/website.html#partners">Wholesale</a></nav>
  <button class="cartbtn" type="button" onclick="cpCart.open()" aria-label="Open cart">Cart <span class="cc">0</span></button>
 </div></header>
 <main id="top">
@@ -291,6 +320,7 @@ ul.three p{color:var(--muted);font-size:15px}
  <div><b>CurvaPen Inc.</b><span>Charlotte, NC</span><a href="tel:+18776850448">1-877-685-0448</a><a href="mailto:info@curvapen.com">info@curvapen.com</a></div>
  <div><b>Shop by hand</b><a href="/curvapen/hand-everyday.html">Everyday pen lovers</a><a href="/curvapen/hand-left-handed.html">Left-handed</a><a href="/curvapen/hand-artists.html">Artists and lettering</a><a href="/curvapen/hand-students.html">Students and kids</a><a href="/curvapen/hand-arthritis.html">Arthritis and hand pain</a><a href="/curvapen/hand-mobility.html">Limited grip and mobility</a><a href="/curvapen/hand-stroke.html">Stroke recovery</a><a href="/curvapen/hand-parkinsons.html">Parkinson's and tremor</a></div>
  <div><b>Shop</b><a href="/curvapen/website.html#shop">Pens and bundles</a><a href="/curvapen/website.html#gifts">Gifts</a><a href="/curvapen/website.html#clinics">Clinics and schools</a><a href="/curvapen/website.html#partners">Wholesale and partners</a></div>
+ <div><b>Guides</b><a href="/curvapen/guide-micrographia.html">Micrographia</a><a href="/curvapen/guides.html">Writer's cramp</a><a href="/curvapen/guides.html">Left-handed smudging</a><a href="/curvapen/guides.html">All guides</a></div>
  <div><b>Company</b><a href="/curvapen/website.html#top">Home</a><a href="#">Contact</a><a href="#">Shipping and refunds</a><a href="#">Privacy</a></div>
  <p class="fine">U.S. patented. CurvaPen is not a medical device and does not diagnose, treat or cure medical conditions. © 2026 CurvaPen Inc.</p>
 </div></footer>
