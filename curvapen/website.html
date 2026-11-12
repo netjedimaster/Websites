@@ -214,6 +214,12 @@ ul.three p{color:var(--muted);font-size:15px}
 .also{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;font-size:14px;color:var(--muted)}
 .also span{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:5px 12px}
 .who a{grid-template-rows:auto 1fr}.who a>div{align-content:start}.who a>div em{align-self:end}
+.nibby{display:grid;gap:12px;justify-items:center}
+.nibby .fr,.nibby iframe{position:relative;display:block;width:min(340px,100%);aspect-ratio:9/16;border:0;padding:0;border-radius:var(--imgr);overflow:hidden;background:#000;cursor:pointer;box-shadow:0 20px 50px rgba(0,0,0,.15)}
+.nibby .fr img{width:100%;height:100%;object-fit:cover}
+.nibby .fr span{position:absolute;inset:0;display:grid;place-content:center}
+.nibby .fr span::before{content:"";width:72px;height:72px;border-radius:50%;background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E") center/32px no-repeat;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.nibby p{font-size:16px;color:var(--muted);text-align:center}.nibby b{color:var(--ink)}
 </style></head><body>
 <nav class="pmtabs" aria-label="CurvaPen reports"><div class="inner"><a href="/curvapen/scorecard.html">Scorecard</a><a href="/curvapen/website.html" class="on" aria-current="page">Website mock-ups</a><a href="/curvapen/faq.html" class="pr">FAQ</a><a href="/curvapen/proposal.html">Proposal</a></div></nav>
 <div class="opt"><div class="inner"><b>Which one do you want?</b><span>Same plan, two looks:</span><a href="/curvapen/website.html" class="on" aria-current="page">Option A · Warm</a><a href="/curvapen/website-b.html">Option B · Bold</a></div></div>
@@ -241,7 +247,7 @@ ul.three p{color:var(--muted);font-size:15px}
  <div><b>30 days</b><span>refund if it isn't right</span></div>
 </div></div>
 <section id="how"><div class="w how">
- <div class="pic"><img src="/curvapen/images/nib.jpg" alt="Close-up of the curved CurvaPen nib" loading="lazy" width="600" height="680"></div>
+ <div class="nibby"><button class="fr" type="button" aria-label="Play video: Meet Nibby" onclick="this.outerHTML='<iframe src=&quot;https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FCurvaPen%2Fvideos%2F1549754383614399%2F&amp;show_text=false&amp;autoplay=true&amp;width=360&quot; title=&quot;Meet Nibby&quot; allow=&quot;autoplay; encrypted-media; picture-in-picture; web-share&quot; allowfullscreen></iframe>'"><img src="/curvapen/images/nibby.jpg" alt="Nibby, the CurvaPen mascot" loading="lazy" width="565" height="1005"><span></span></button><p><b>Meet Nibby.</b> "My secret is in the curved nib."</p></div>
  <div>
   <span class="k">The secret is in the nib</span>
   <h2>Everyone fixed the body. Nobody touched the tip.</h2>
@@ -269,7 +275,7 @@ ul.three p{color:var(--muted);font-size:15px}
 </div></section>
 <section id="video"><div class="w">
  <div class="sh c"><span class="k">See it work</span><h2>Watch it before you buy it.</h2><p>Plays right here. Nobody gets sent off to YouTube and lost.</p></div>
- <div class="vids"><div class="vid"><button class="fr" type="button" aria-label="Play video: The CurvaPen demo" onclick="this.innerHTML='<iframe src=&quot;https://www.youtube-nocookie.com/embed/H5x8t1BjxDM?autoplay=1&amp;rel=0&amp;playsinline=1&quot; title=&quot;CurvaPen video&quot; allow=&quot;autoplay; encrypted-media; picture-in-picture&quot; allowfullscreen></iframe>'"><img src="https://i.ytimg.com/vi/H5x8t1BjxDM/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span></span></button><div><h3>The CurvaPen demo</h3><p>How the curved nib works and why you can see every letter.</p></div></div><div class="vid"><button class="fr" type="button" aria-label="Play video: There&#x27;s no wrong way to hold it" onclick="this.innerHTML='<iframe src=&quot;https://www.youtube-nocookie.com/embed/ENOmntAvp0M?autoplay=1&amp;rel=0&amp;playsinline=1&quot; title=&quot;CurvaPen video&quot; allow=&quot;autoplay; encrypted-media; picture-in-picture&quot; allowfullscreen></iframe>'"><img src="https://i.ytimg.com/vi/ENOmntAvp0M/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span></span></button><div><h3>There's no wrong way to hold it</h3><p>Overhand, underhand, resting hand. 30 seconds.</p></div></div></div>
+ <div class="vids"><div class="vid"><button class="fr" type="button" aria-label="Play video: The CurvaPen demo" onclick="this.innerHTML='<iframe src=&quot;https://www.youtube-nocookie.com/embed/H5x8t1BjxDM?autoplay=1&amp;rel=0&amp;playsinline=1&quot; title=&quot;CurvaPen video&quot; allow=&quot;autoplay; encrypted-media; picture-in-picture&quot; allowfullscreen></iframe>'"><img src="https://i.ytimg.com/vi/H5x8t1BjxDM/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span></span></button><div><h3>The CurvaPen demo</h3><p>How the curved nib works and why you can see every letter.</p></div></div><div class="vid"><button class="fr" type="button" aria-label="Play video: The problem with pens" onclick="this.innerHTML='<iframe src=&quot;https://www.youtube-nocookie.com/embed/TfWt2ANcIzs?autoplay=1&amp;rel=0&amp;playsinline=1&quot; title=&quot;CurvaPen video&quot; allow=&quot;autoplay; encrypted-media; picture-in-picture&quot; allowfullscreen></iframe>'"><img src="https://i.ytimg.com/vi/TfWt2ANcIzs/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span></span></button><div><h3>The problem with pens</h3><p>Why every "fix" went after the body, and missed the tip.</p></div></div></div>
 </div></section>
 <section id="first"><div class="w">
  <div class="sh c"><span class="k">The first thing I wrote</span><h2>The pen is the reason. This is the point.</h2><p>A birthday card. A journal page. Your own name. Handwriting carries a person in a way a text never will.</p></div>
