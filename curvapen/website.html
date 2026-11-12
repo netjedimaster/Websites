@@ -225,6 +225,11 @@ ul.three p{color:var(--muted);font-size:15px}
 .bubble{position:relative;background:var(--accent);color:var(--onaccent);font:700 17px/1.35 var(--display);padding:12px 18px;border-radius:18px;max-width:300px;text-align:center}
 .bubble::after{content:"";position:absolute;left:50%;bottom:-10px;margin-left:-10px;border:10px solid transparent;border-bottom:0;border-top-color:var(--accent)}
 .vids{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.hv .fr{display:block;position:relative;width:100%;border:0;padding:0;background:#000;cursor:pointer}
+.hv .fr img{width:100%;aspect-ratio:1.2;object-fit:cover}
+.hv .fr span{position:absolute;inset:0;display:grid;place-content:center}
+.hv .fr span::before{content:"";width:78px;height:78px;border-radius:50%;background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E") center/34px no-repeat;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.hv iframe{display:block;width:100%;aspect-ratio:1.2;border:0;background:#000}
 </style></head><body>
 <nav class="pmtabs" aria-label="CurvaPen reports"><div class="inner"><a href="/curvapen/scorecard.html">Scorecard</a><a href="/curvapen/website.html" class="on" aria-current="page">Website mock-ups</a><a href="/curvapen/faq.html" class="pr">FAQ</a><a href="/curvapen/proposal.html">Proposal</a></div></nav>
 <div class="opt"><div class="inner"><b>Which one do you want?</b><span>Same plan, two looks:</span><a href="/curvapen/website.html" class="on" aria-current="page">Option A · Warm</a><a href="/curvapen/website-b.html">Option B · Bold</a></div></div>
@@ -243,7 +248,7 @@ ul.three p{color:var(--muted);font-size:15px}
   <div class="btns"><a class="buy big" href="#shop">Try 2 pens for $9.99</a><a class="ghost big" href="#who">Shop by hand</a></div>
   <div class="proof"><span><span class="stars">★★★★★</span> 1,047 reviews</span><span>$1M+ sold</span><span>Used by occupational therapists</span><span>30-day refund</span></div>
  </div>
- <div class="photo"><img src="/curvapen/images/hope.jpg" alt="Hand writing the word hope with a CurvaPen" width="1200" height="810"><div class="rate"><b>★ 1,047 reviews</b><small>"What kind of sorcery is this?" Angela B.</small></div></div>
+ <div class="photo hv"><button class="fr" type="button" aria-label="Play video: writing with CurvaPen" onclick="var r=this.parentNode.querySelector('.rate');if(r)r.remove();this.outerHTML='<iframe src=&quot;https://www.youtube-nocookie.com/embed/LE_ngGCFuNc?autoplay=1&amp;rel=0&amp;playsinline=1&quot; title=&quot;Writing with CurvaPen&quot; allow=&quot;autoplay; encrypted-media; picture-in-picture&quot; allowfullscreen></iframe>'"><img src="/curvapen/images/hope.jpg" alt="Hand writing the word hope with a CurvaPen" width="1200" height="810"><span></span></button><div class="rate"><b>▶ Watch it write</b><small>"What kind of sorcery is this?" Angela B.</small></div></div>
 </div></section>
 </main><div class="strip"><div class="w">
  <div><b>★ 1,047</b><span>verified reviews</span></div>
