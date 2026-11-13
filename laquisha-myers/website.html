@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>LaQuisha Myers Website Option A</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&family=Manrope:wght@700&display=swap">
+<style>
+/* Option A: Your neighbor in real estate. Warm ivory, Century 21 black and gold, LaQuisha front and center. */
+:root{
+ --black:#1A1A1A; --gold:#BEAF87; --gold-deep:#8A7A4E; --gold-soft:#F4EFE3; --ivory:#FBF8F2; --paper:#FFFFFF; --ink:#1E1B16; --muted:#6B645A; --line:#E7E0D2; --green:#2F7D4F;
+ --display:"Fraunces",Georgia,serif; --body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+ color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--ink);font:17px/1.65 var(--body);padding-bottom:64px}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.1;text-wrap:balance}
+h1{font-size:clamp(38px,6vw,66px);font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(28px,4vw,42px);font-weight:700;letter-spacing:-.015em}
+h3{font-size:20px;font-weight:700}
+p{margin:0}
+.w{max-width:1180px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px))}
+section{padding:80px 0}
+.k{font:700 13px var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep)}
+.sh{display:grid;gap:12px;margin-bottom:36px;max-width:720px}
+.sh p{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;background:var(--black);color:#fff;font-weight:700;text-decoration:none;border:0;font-size:16px;cursor:pointer}
+.btn.gold{background:var(--gold);color:var(--black)}
+.btn.ghost{background:transparent;border:2px solid currentColor}
+/* agency tabs */
+.pmtabs{background:#fff;border-bottom:1px solid #E4E6EE;font-family:"Manrope","Segoe UI",system-ui,sans-serif;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.pmtabs .inner{max-width:1180px;margin:0 auto;display:flex;gap:6px;padding-block:10px;overflow-x:auto}
+.pmtabs a{flex:0 0 auto;padding:9px 16px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none;color:#0E1B38;background:#EEF2FA}
+.pmtabs a.on{background:#C63F68;color:#fff}
+.pmtabs a.pr{margin-left:auto}
+.opt{background:#F7F7FA;border-bottom:1px solid #E4E6EE;font-family:"Manrope","Segoe UI",system-ui,sans-serif;font-size:14px;color:#111A2E;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.opt .inner{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;padding-block:9px}
+.opt a{padding:6px 14px;border-radius:999px;border:1px solid #C9CEDB;text-decoration:none;font-weight:700;color:#1F3A8A;background:#fff}
+.opt a.on{background:#1F3A8A;border-color:#1F3A8A;color:#fff}
+/* site header */
+.hd{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.hd .w{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{display:grid;line-height:1.15;text-decoration:none}
+.brand b{font:800 22px var(--display)}
+.brand span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);font-weight:700}
+.hd nav{display:flex;gap:22px;font-size:15px;font-weight:600}
+.hd nav a{text-decoration:none}
+.hd .btn{padding:10px 18px;font-size:15px}
+@media (max-width:900px){.hd nav{display:none}}
+/* hero */
+.hero{padding:0;position:relative;color:#fff;background:var(--black)}
+.hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.hero .w{position:relative;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:40px;align-items:end;padding-block:96px 64px}
+@media (max-width:860px){.hero .w{grid-template-columns:1fr;padding-block:64px 40px}}
+.hero p.lede{font-size:20px;color:#F1ECE1;max-width:56ch;margin-top:18px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero .ctas .ghost{color:#fff}
+.me{background:var(--paper);color:var(--ink);border-radius:22px;padding:14px;box-shadow:0 24px 60px rgba(0,0,0,.35);display:grid;gap:12px;max-width:340px;justify-self:end}
+@media (max-width:860px){.me{justify-self:start}}
+.me img{border-radius:14px;aspect-ratio:4/5;object-fit:cover;object-position:top;width:100%}
+.me b{font:700 20px var(--display)}
+.me span{font-size:14px;color:var(--muted)}
+/* trust strip */
+.trust{background:var(--paper);border-bottom:1px solid var(--line);padding:22px 0}
+.trust .w{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:center;font-size:15px;font-weight:600;color:var(--muted)}
+.trust span::before{content:"★";color:var(--gold);margin-right:8px}
+/* help cards */
+.help{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));gap:18px}
+.help article{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:26px;display:grid;gap:10px;align-content:start}
+.help .ic{width:44px;height:44px;border-radius:12px;background:var(--gold-soft);display:grid;place-content:center;font-size:22px}
+.help p{color:var(--muted);font-size:15px}
+.help a{font-weight:700;color:var(--gold-deep);text-decoration:none;font-size:15px}
+/* story */
+.story .w{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+@media (max-width:860px){.story .w{grid-template-columns:1fr}}
+.story img{border-radius:24px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.story ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.story li::before{content:"✓";color:var(--green);font-weight:800;margin-right:10px}
+.quote{font:600 22px/1.4 var(--display);border-left:4px solid var(--gold);padding-left:18px}
+/* sold */
+.sold{background:var(--black);color:#fff}
+.sold .sh p{color:#CFC8B8}
+.sold .k{color:var(--gold)}
+.solds{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:18px}
+.solds article{background:#262626;border-radius:20px;overflow:hidden}
+.solds img{aspect-ratio:3/2;object-fit:cover;width:100%}
+.solds .t{padding:20px;display:grid;gap:6px}
+.solds .tag{justify-self:start;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;background:var(--gold);color:var(--black);padding:4px 10px;border-radius:99px}
+.solds p{color:#CFC8B8;font-size:15px}
+/* reviews */
+.rgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:18px}
+.rgrid div{background:var(--paper);border:2px dashed var(--line);border-radius:20px;padding:24px;display:grid;gap:10px;color:var(--muted)}
+.rgrid .stars{color:var(--gold);letter-spacing:2px;font-size:18px}
+/* areas */
+.town{display:flex;flex-wrap:wrap;gap:10px}
+.town a{padding:10px 18px;border-radius:999px;background:var(--paper);border:1px solid var(--line);text-decoration:none;font-weight:600}
+.town a:hover{border-color:var(--gold-deep)}
+/* value + form */
+.req{background:var(--gold-soft)}
+.req .w{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px}
+@media (max-width:860px){.req .w{grid-template-columns:1fr}}
+form{background:var(--paper);border-radius:22px;padding:28px;display:grid;gap:16px;border:1px solid var(--line)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:560px){.row{grid-template-columns:1fr}}
+label{display:grid;gap:6px;font-size:14px;font-weight:600}
+input,select,textarea{font:16px var(--body);padding:12px 14px;border-radius:12px;border:1px solid #D8D0BF;background:#fff;width:100%}
+.chk{display:flex;gap:10px;align-items:flex-start;font-weight:500;color:var(--muted)}
+.chk input{width:20px;height:20px;margin-top:2px;flex:none}
+footer{background:var(--black);color:#CFC8B8;padding:48px 0;font-size:15px}
+footer .w{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+footer b{color:#fff}
+footer .fine{font-size:13px;color:#9A9384}
+.mbar{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(3,1fr);background:var(--black);z-index:30;padding-bottom:env(safe-area-inset-bottom,0px)}
+.mbar a{color:#fff;text-align:center;padding:16px 6px;font-weight:700;text-decoration:none;font-size:15px}
+.mbar a.t{background:var(--gold);color:var(--black)}
+@media (min-width:901px){.mbar{display:none}body{padding-bottom:0}}
+</style></head><body>
+<nav class="pmtabs" aria-label="LaQuisha Myers reports"><div class="inner"><a href="/laquisha-myers/scorecard.html">Scorecard</a><a href="/laquisha-myers/website.html" class="on" aria-current="page">Website mock-ups</a><a href="/laquisha-myers/faq.html" class="pr">FAQ</a><a href="/laquisha-myers/proposal.html">Proposal</a></div></nav>
+<div class="opt"><div class="inner"><b>Which one do you want?</b><span>Two looks for your new website:</span><a href="/laquisha-myers/website.html" class="on" aria-current="page">Option A · Your neighbor in real estate</a><a href="/laquisha-myers/website-b.html">Option B · Search-first, full service</a></div></div>
+
+<header class="hd"><div class="w">
+ <a class="brand" href="#top"><b>LaQuisha Myers</b><span>REALTOR® · CENTURY 21 Rucker</span></a>
+ <nav aria-label="Site"><a href="#help">Buy &amp; sell</a><a href="#story">About me</a><a href="#reviews">Reviews</a><a href="#areas">Areas</a><a href="https://laquishamyers.sites.c21.homes/search/#!/defaultsearch:true" target="_blank" rel="noopener">Search homes</a></nav>
+ <a class="btn" href="sms:+13148092884">Text me</a>
+</div></header>
+
+<main id="top">
+<section class="hero">
+ <img class="bg" src="/laquisha-myers/images/home.jpg" alt="" width="1800" height="1005">
+ <div class="w">
+  <div>
+   <span class="k" style="color:var(--gold)">Concord · Kannapolis · Harrisburg · Charlotte</span>
+   <h1 style="margin-top:14px">Buying, selling or renting? Let's get you home.</h1>
+   <p class="lede">I spent years in healthcare helping people every day. Now I bring that same care to the biggest move of your life, with patience, straight answers and a text back when you need one.</p>
+   <div class="ctas"><a class="btn gold" href="#value">What's my home worth?</a><a class="btn ghost" href="#call">Book a 15-minute call</a></div>
+  </div>
+  <div class="me">
+   <img src="/laquisha-myers/images/headshot.jpg" alt="LaQuisha Myers, REALTOR®" width="840" height="1267">
+   <div style="display:grid;gap:2px;padding:0 6px 6px"><b>LaQuisha Myers</b><span>REALTOR® · CENTURY 21 Rucker Real Estate</span><span>Call or text <a href="tel:+13148092884"><b style="font:700 15px var(--body)">(314) 809-2884</b></a></span></div>
+  </div>
+ </div>
+</section>
+
+<div class="trust"><div class="w"><span>REALTOR®, National Association of REALTORS®</span><span>Licensed in North Carolina</span><span>CENTURY 21 Rucker Real Estate</span><span>4 years helping buyers and sellers</span><span>Buy · Sell · Lease</span></div></div>
+
+<section id="help"><div class="w">
+ <div class="sh"><span class="k">How I can help</span><h2>Whatever your next move is, I've got you</h2><p>From your first home to your next one, and everything in between.</p></div>
+ <div class="help">
+  <article><span class="ic" aria-hidden="true">🔑</span><h3>First-time buyers</h3><p>We start with a 15-minute call, get you pre-approved with a lender you trust, and walk every step together. No question is too small.</p><a href="#call">Start here →</a></article>
+  <article><span class="ic" aria-hidden="true">🏡</span><h3>Selling your home</h3><p>A real price based on recent sales near you, a plan to get it ready, and marketing through the CENTURY 21 network.</p><a href="#value">Get your home value →</a></article>
+  <article><span class="ic" aria-hidden="true">📦</span><h3>Moving up or downsizing</h3><p>Sell and buy at the same time without the stress. I line up both sides so you're never stuck between homes.</p><a href="#call">Plan your move →</a></article>
+  <article><span class="ic" aria-hidden="true">🏢</span><h3>Renting and leasing</h3><p>Need a rental while you get ready to buy, or want to lease out a home you own? I help with both.</p><a href="#call">Talk it through →</a></article>
+  <article><span class="ic" aria-hidden="true">🩺</span><h3>Healthcare workers</h3><p>I know hospital schedules because I've worked them. Evening and weekend showings, and I answer texts between your shifts.</p><a href="#call">Let's find a time →</a></article>
+  <article><span class="ic" aria-hidden="true">🚚</span><h3>Moving to the Charlotte area</h3><p>New job at the hospital, the speedway or uptown? I'll show you Concord, Kannapolis, Harrisburg and University City so you pick the right fit.</p><a href="#areas">See the areas →</a></article>
+ </div>
+</div></section>
+
+<section class="story" id="story" style="background:var(--paper)"><div class="w">
+ <img src="/laquisha-myers/images/healthcare.jpg" alt="A nurse in scrubs and her partner carrying moving boxes into their new townhome" loading="lazy" width="1400" height="939">
+ <div style="display:grid;gap:18px">
+  <span class="k">About me</span>
+  <h2>From the x-ray room to your front door</h2>
+  <p class="quote">"I love what I do! I get satisfaction from helping people. My end goal is to bring joy to the clients that I serve."</p>
+  <p style="color:var(--muted)">My background is in the medical field as an x-ray technologist, so I'm in the trenches helping people each and every day. That's how I work in real estate too: I listen, I explain things plainly, and I stay with you until you have the keys.</p>
+  <ul><li>A personal call or text back the same day</li><li>Evening and weekend showings</li><li>Honest advice, never pressure</li><li>The CENTURY 21 network behind every sale</li></ul>
+  <div><a class="btn" href="#call">Book a 15-minute call</a></div>
+ </div>
+</div></section>
+
+<section class="sold"><div class="w">
+ <div class="sh"><span class="k">Recent activity</span><h2>Helping families get home</h2><p>Every closing gets a "just closed" post here and on Google.</p></div>
+ <div class="solds">
+  <article><img src="/laquisha-myers/images/keys.jpg" alt="Happy couple receiving the keys to their new brick home" loading="lazy" width="896" height="939" style="aspect-ratio:3/2"><div class="t"><span class="tag">Just closed</span><h3>806 Applewood St, Kannapolis</h3><p>3 bed · 1 bath · Represented the buyer · November 2026</p></div></article>
+  <article><img src="/laquisha-myers/images/living.jpg" alt="Bright living room with oak floors and an open kitchen" loading="lazy" width="1400" height="939"><div class="t"><span class="tag">Your listing here</span><h3>Thinking of selling?</h3><p>Your home, photographed and marketed like this, to buyers across the Charlotte area.</p></div></article>
+ </div>
+</div></section>
+
+<section id="reviews"><div class="w">
+ <div class="sh"><span class="k">What my clients say</span><h2>Reviews from Google, shown here automatically</h2><p>Every client gets a quick thank-you text after closing with a link to share their experience.</p></div>
+ <div class="rgrid">
+  <div><span class="stars">★★★★★</span><p>Your newest Google review appears here.</p><span style="font-size:14px">Google review</span></div>
+  <div><span class="stars">★★★★★</span><p>Reviews update on their own as they come in, no copying and pasting.</p><span style="font-size:14px">Google review</span></div>
+  <div><span class="stars">★★★★★</span><p>Your Applewood St buyer could be the first one here this week.</p><span style="font-size:14px">Google review</span></div>
+ </div>
+</div></section>
+
+<section id="areas" style="background:var(--paper)"><div class="w">
+ <div class="sh"><span class="k">Where I work</span><h2>Concord, Kannapolis and the Charlotte area</h2><p>Each town gets its own page with homes, schools, commute times and what I love about living there.</p></div>
+ <img src="/laquisha-myers/images/downtown.jpg" alt="A historic downtown main street in the North Carolina Piedmont in autumn" loading="lazy" width="1400" height="939" style="border-radius:24px;margin-bottom:24px;aspect-ratio:21/8;object-fit:cover;width:100%">
+ <div class="town"><a href="#call">Concord</a><a href="#call">Kannapolis</a><a href="#call">Harrisburg</a><a href="#call">University City</a><a href="#call">Charlotte</a><a href="#call">Midland</a><a href="#call">Mount Pleasant</a><a href="#call">Huntersville</a><a href="#call">Matthews</a><a href="#call">Mint Hill</a></div>
+</div></section>
+
+<section class="req" id="value"><div class="w">
+ <div class="sh" id="call"><span class="k">Let's talk</span><h2>Get your home value or book a 15-minute call</h2><p>Tell me what you're thinking about. I'll text you back the same day. Prefer to talk now? Call or text <a href="tel:+13148092884"><b>(314) 809-2884</b></a>.</p>
+  <p style="font-size:15px;color:var(--muted)">CENTURY 21 Rucker Real Estate<br>8305 University Executive Park Dr, Ste 335<br>Charlotte, NC 28262 · Office (980) 237-2902</p></div>
+ <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Thanks! This is a mock-up, so nothing was sent.'">
+  <div class="row"><label>Your name<input name="n" autocomplete="name" required></label><label>Mobile phone<input name="p" type="tel" autocomplete="tel" required></label></div>
+  <div class="row"><label>I want to<select name="s"><option>Buy my first home</option><option>Sell my home</option><option>Sell and buy</option><option>Rent or lease</option><option>Know what my home is worth</option></select></label><label>Town<select name="t"><option>Concord</option><option>Kannapolis</option><option>Harrisburg</option><option>Charlotte</option><option>Other</option></select></label></div>
+  <label>Home address (for a home value)<input name="a" autocomplete="street-address"></label>
+  <label>Anything I should know?<textarea name="m" rows="3"></textarea></label>
+  <label class="chk"><input type="checkbox" name="optin"><span>Yes, text me market updates and new listings from LaQuisha Myers. About 2 a month. Reply STOP anytime.</span></label>
+  <button class="btn" type="submit">Send to LaQuisha</button>
+ </form>
+</div></section>
+</main>
+
+<footer><div class="w">
+ <div><b>LaQuisha Myers, REALTOR®</b><br>CENTURY 21 Rucker Real Estate<br>Buy · Sell · Lease</div>
+ <div><b>Call or text</b><br><a href="tel:+13148092884">(314) 809-2884</a><br>Office <a href="tel:+19802372902">(980) 237-2902</a><br><a href="mailto:laquisha@c21ruckerrealestate.com">laquisha@c21ruckerrealestate.com</a></div>
+ <div><b>Office</b><br>8305 University Executive Park Dr, Ste 335<br>Charlotte, NC 28262</div>
+ <div class="fine" style="grid-column:1/-1">© 2026 LaQuisha Myers · Each CENTURY 21® office is independently owned and operated · Equal Housing Opportunity · <a href="#">Privacy</a></div>
+</div></footer>
+<div class="mbar"><a href="tel:+13148092884">📞 Call</a><a class="t" href="sms:+13148092884">💬 Text</a><a href="#value">Home value</a></div>
+</body></html>
