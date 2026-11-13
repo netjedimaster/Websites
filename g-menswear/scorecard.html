@@ -90,6 +90,7 @@ p{margin:0;max-width:62ch}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:24px;display:grid;gap:10px;align-content:start;min-width:0}
 .q{font:700 16px var(--display)}
+.vol{font-size:13px;font-weight:700;color:var(--navy);background:#EEF2FA;border-radius:999px;padding:3px 10px;justify-self:start}
 .q::before{content:"🔍︎";margin-right:6px;filter:grayscale(1);opacity:.5}
 .top3{display:grid;gap:4px;margin:0;padding:0;list-style:none;font-size:14px;color:var(--muted)}
 .top3 li{display:flex;justify-content:space-between;gap:8px}
@@ -177,7 +178,7 @@ footer .inner{padding-block:28px;display:flex;flex-wrap:wrap;justify-content:spa
  <div class="heroText">
   <span class="badge"><i></i>Prepared for G Menswear · Carolina Mall, Concord, NC</span>
   <h1>About $12,800 a month <span class="grad">walks out your door.</span></h1>
-  <p class="lede">Customers love you: 4.9 stars, the best of any suit store near you. You're #1 on Google Maps for suits in Concord. But you don't show up for tuxedo rental, Harrisburg or Charlotte, you have no website to send shoppers to, and every happy customer leaves with no way for you to reach them again.</p>
+  <p class="lede">Customers love you: 4.9 stars, the best of any suit store near you. You're #1 on Google Maps for suits in Concord. But you don't show up for men's hats, alterations, Harrisburg or Charlotte, you have no website to send shoppers to, and every happy customer leaves with no way for you to reach them again.</p>
   <div class="alarm">
    <div><b>0</b><span>customers you can text about a sale. Men's Wearhouse texts its rewards members every week.</span></div>
    <div><b>177 vs. 601</b><span>your Google reviews vs. Men's Wearhouse, the store shown above you on almost every search.</span></div>
@@ -239,9 +240,9 @@ footer .inner{padding-block:28px;display:flex;flex-wrap:wrap;justify-content:spa
  </div>
  <div class="cards" id="searches"></div>
  <ul class="checks">
-  <li class="part"><span class="ic">!</span><div><h3>Top-3 map spots on key searches</h3><p>Top 3 on 6 of 10 searches, and #1 on five of them. You're missing from "tuxedo rental," from nearby towns like Harrisburg, and from Charlotte-wide searches.</p></div><span class="p">12 / 20</span></li>
+  <li class="part"><span class="ic">!</span><div><h3>Top-3 map spots on key searches</h3><p>Top 3 on 6 of 10 searches, and #1 on five of them. You're missing from "men's hats," from nearby towns like Harrisburg, and from Charlotte-wide searches.</p></div><span class="p">12 / 20</span></li>
   <li class="pass"><span class="ic">✓</span><div><h3>Map pin location</h3><p>Correct. The pin sits on your store inside Carolina Mall.</p></div><span class="p">6 / 6</span></li>
-  <li class="part"><span class="ic">!</span><div><h3>Categories match what you sell</h3><p>Your profile reads "Clothing store," the same as a teen fashion shop. You don't show at all for "tuxedo rental" because there's no tuxedo or formal wear category.</p></div><span class="p">3 / 6</span></li>
+  <li class="part"><span class="ic">!</span><div><h3>Categories match what you sell</h3><p>Your profile reads "Clothing store," the same as a teen fashion shop. There's no tuxedo or formal wear category, so Mr. Tuxedo, with 55 reviews, outranks you for "tuxedo" even though you sell them.</p></div><span class="p">3 / 6</span></li>
   <li class="fail"><span class="ic">✕</span><div><h3>Website linked on your profile</h3><p>Google shows "Add website" where yours should be.</p></div><span class="p">0 / 4</span></li>
   <li class="part"><span class="ic">!</span><div><h3>Listed on other directories</h3><p>Found on Yelp, Bing, Facebook and MallsCenters. But Yelp and Bing show you at 4 stars from just 5 reviews, and Apple Maps uses that Yelp data. iPhone users see a weaker store than Google does.</p></div><span class="p">3 / 4</span></li>
  </ul>
@@ -284,12 +285,25 @@ footer .inner{padding-block:28px;display:flex;flex-wrap:wrap;justify-content:spa
 </div></section>
 
 <section class="band"><div class="inner">
- <div class="shead"><div><span class="eyebrow">Leak #1: searches you're missing</span><h2>About $4,400 a month goes to stores that show up instead</h2><p class="muted">Tuxedo rental, prom, Harrisburg and Charlotte shoppers never see you.</p></div></div>
+ <div class="shead"><div><span class="eyebrow">Leak #1: searches you're missing</span><h2>About $4,400 a month goes to stores that show up instead</h2><p class="muted">Charlotte, Harrisburg, men's hats and alterations shoppers never see you.</p></div></div>
  <div class="money">
-  <div class="card"><b>1,500</b><span>estimated monthly searches you're missing: tuxedo rental, prom, nearby towns and Charlotte</span></div>
+  <div class="card"><b>1,500</b><span>monthly searches we count, out of about 3,100 a month you're missing (see the table below)</span></div>
   <div class="card"><b>22</b><span>sales a month you could win at a 10% share</span></div>
   <div class="card hot"><b>$4,400</b><span>a month, or $52,800 a year</span></div>
  </div>
+ <div class="tw"><table>
+  <thead><tr><th>Search</th><th>Where</th><th>Searches a month</th><th>You today</th></tr></thead>
+  <tbody>
+   <tr><td>men's suits, suits near me, suit store near me</td><td>Charlotte</td><td class="sc">1,080</td><td>Not in top 3 (Hive &amp; Colony, Suit City, Suits Forever)</td></tr>
+   <tr><td>tuxedo, tuxedo near me, tuxedo Charlotte</td><td>Charlotte</td><td class="sc">1,100</td><td>Not in top 3</td></tr>
+   <tr><td>men's dress shoes</td><td>Charlotte</td><td class="sc">480</td><td>Not in top 3</td></tr>
+   <tr><td>men's hats</td><td>Charlotte</td><td class="sc">260</td><td>Not in top 3</td></tr>
+   <tr><td>tailor near me, suit alterations</td><td>Concord</td><td class="sc">100</td><td>Not in top 3 (alteration shops)</td></tr>
+   <tr><td>men's hats, fedora hats</td><td>Concord</td><td class="sc">70</td><td>Not listed</td></tr>
+   <tr><td>church suits</td><td>Charlotte</td><td class="sc">20</td><td>Not in top 10</td></tr>
+   <tr><td><b>Total you're missing</b></td><td></td><td class="sc"><b>About 3,110</b></td><td></td></tr>
+  </tbody></table></div>
+ <p class="note">Monthly searches are Google's own 12-month averages (Google Ads data, checked November 13, 2026). Good news: you're already #2 for "tuxedo" in Concord (about 130 searches a month). To stay conservative, we count only 1,500 of the 3,110 missed searches in the math below.</p>
  <p class="chain">1,500 searches × 10% share won × 30% visit × 50% buy ≈ 22 sales × $200 average sale = $4,400.</p>
 </div></section>
 
@@ -348,7 +362,7 @@ footer .inner{padding-block:28px;display:flex;flex-wrap:wrap;justify-content:spa
  <ol class="fixes">
   <li><div><h3>Launch a phone-first catalog website and link it on Google</h3><p>Pages for suits, wedding, prom, church, big and tall and tailoring, with your live reviews and directions.</p></div><span class="tag" style="--c:var(--gold-ink);--cs:var(--gold-soft)">Chosen +16 · Seen +4</span></li>
   <li><div><h3>Text every buyer: a review request and a sale-day invite</h3><p>Staff enter a first name and cell after each sale (about 10 seconds). A thank-you text asks for a Google review and invites them to join your sale-day list. Senior Day, blowouts and seasonal sales then go out by text. This is the fix that brings people back.</p></div><span class="tag" style="--c:var(--gold-ink);--cs:var(--gold-soft)">Chosen +4</span></li>
-  <li><div><h3>Fix your Google categories and product list</h3><p>Make "Men's clothing store" primary and add tuxedo and formal wear, so you show up for tuxedo and prom searches.</p></div><span class="tag" style="--c:var(--rose-deep);--cs:var(--rose-soft)">Seen +3</span></li>
+  <li><div><h3>Fix your Google categories and product list</h3><p>Make "Men's clothing store" primary and add tuxedo and formal wear, so you move past Mr. Tuxedo on tuxedo and prom searches.</p></div><span class="tag" style="--c:var(--rose-deep);--cs:var(--rose-soft)">Seen +3</span></li>
   <li><div><h3>Add 30+ photos and reply to every review</h3><p>Show the racks, the hats and real customers in their suits. Thank every reviewer by name.</p></div><span class="tag" style="--c:var(--navy);--cs:#DDE5F7">Trusted +8</span></li>
   <li><div><h3>Claim Yelp and Apple Maps, and post weekly</h3><p>Lifts the 4-star picture iPhone users see, and keeps Google, Facebook and Instagram active.</p></div><span class="tag" style="--c:var(--navy);--cs:#DDE5F7">Seen +1 · Trusted +2</span></li>
  </ol>
@@ -378,17 +392,17 @@ footer .inner{padding-block:28px;display:flex;flex-wrap:wrap;justify-content:spa
 
 <script>
 const S=[
-["men's suits Concord",[["G Menswear",177,1],["Men's Wearhouse",601],["Brooks Brothers",41]],"You: #1"],
-["men's clothing store Concord",[["G Menswear",177,1],["Men's Wearhouse",601],["Just Casual",35]],"You: #1"],
-["wedding suits Concord",[["G Menswear",177,1],["Mr. Tuxedo",55],["Men's Wearhouse",601]],"You: #1"],
-["big and tall suits Concord",[["G Menswear",177,1],["Men's Wearhouse",601],["Brooks Brothers",41]],"You: #1"],
-["men's suits Kannapolis",[["G Menswear",177,1],["Real Fashions",31],["Lee Clothing Warehouse",313]],"You: #1"],
-["prom suits Concord",[["Men's Wearhouse",601],["Mr. Tuxedo",55],["G Menswear",177,1]],"You: #3"],
-["dress shoes Concord",[["DSW",278],["Shoe Dept. Encore",91],["Men's Wearhouse",601]],"You: #5"],
-["tuxedo rental Concord",[["Mr. Tuxedo",55],["Men's Wearhouse",601]],"You: not listed"],
-["men's suits Harrisburg",[["Men's Wearhouse",601],["Why Not Fashion",31],["Haven",4]],"You: not in top 10"],
-["church suits Charlotte",[["Suits Forever",878],["Rikky's Fashions",38],["OMJ Clothing",256]],"You: not in top 10"]];
-document.getElementById("searches").innerHTML=S.map(([q,t,f])=>`<div class="card"><span class="q">${q}</span><ul class="top3">${t.map(([n,r,me],i)=>`<li${me?' class="me"':''}><span>${i+1}. ${n}</span><span>${r.toLocaleString()} reviews</span></li>`).join("")}</ul><span class="flag${f.includes("#1")||f.includes("#3")?" win":""}">${f}</span></div>`).join("");
+["men's suits Concord",[["G Menswear",177,1],["Men's Wearhouse",601],["Brooks Brothers",41]],"You: #1","About 120"],
+["men's clothing store Concord",[["G Menswear",177,1],["Men's Wearhouse",601],["Just Casual",35]],"You: #1","About 20"],
+["wedding suits Concord",[["G Menswear",177,1],["Mr. Tuxedo",55],["Men's Wearhouse",601]],"You: #1","About 10"],
+["big and tall suits Concord",[["G Menswear",177,1],["Men's Wearhouse",601],["Brooks Brothers",41]],"You: #1","About 20"],
+["men's suits Kannapolis",[["G Menswear",177,1],["Real Fashions",31],["Lee Clothing Warehouse",313]],"You: #1","Under 10"],
+["prom suits Concord",[["Men's Wearhouse",601],["Mr. Tuxedo",55],["G Menswear",177,1]],"You: #3","About 10 (70 in April)"],
+["dress shoes Concord",[["DSW",278],["Shoe Dept. Encore",91],["Men's Wearhouse",601]],"You: #5","About 50"],
+["men's hats Concord",[["Academy Sports + Outdoors",2200],["Half-Moon Outfitters",22]],"You: not listed","About 70"],
+["men's suits Harrisburg",[["Men's Wearhouse",601],["Why Not Fashion",31],["Haven",4]],"You: not in top 10","Under 10"],
+["church suits Charlotte",[["Suits Forever",878],["Rikky's Fashions",38],["OMJ Clothing",256]],"You: not in top 10","About 20"]];
+document.getElementById("searches").innerHTML=S.map(([q,t,f,v])=>`<div class="card"><span class="q">${q}</span><span class="vol">${v} searches a month</span><ul class="top3">${t.map(([n,r,me],i)=>`<li${me?' class="me"':''}><span>${i+1}. ${n}</span><span>${r.toLocaleString()} reviews</span></li>`).join("")}</ul><span class="flag${f.includes("#1")||f.includes("#3")?" win":""}">${f}</span></div>`).join("");
 const C=[["Suits Forever (Charlotte)",878],["Men's Wearhouse",601],["Hive & Colony (Charlotte)",301],["OMJ Clothing (Charlotte)",256],["G Menswear",177,1],["Mr. Tuxedo",55],["Brooks Brothers",41],["Real Fashions",31]];
 const m=Math.max(...C.map(c=>c[1]));
 document.getElementById("bars").innerHTML=C.map(([n,v,me])=>`<div class="rb${me?" me":""}"><span class="n" title="${n}">${n}</span><span class="t"><span style="width:${Math.max(2,v/m*100)}%"></span></span><span class="v">${v}</span></div>`).join("");
