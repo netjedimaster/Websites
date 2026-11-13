@@ -273,6 +273,17 @@ ul.three p{color:var(--muted);font-size:15px}
 .artcta p{margin:4px 0 0;font-size:15px;opacity:.85}
 .art .faq details p{font-size:16px}
 .art .src{font-size:14px;color:var(--muted);margin-top:28px}
+/* discount pop-up */
+.pop{position:fixed;inset:0;z-index:90;display:grid;place-items:center;padding:16px}.pop[hidden]{display:none}
+.popbg{position:absolute;inset:0;background:rgba(10,12,14,.55)}
+.popc{position:relative;background:var(--card);color:var(--ink);border-radius:var(--cardr);max-width:440px;width:100%;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.3);max-height:calc(100dvh - 32px);overflow-y:auto}
+.popc>img{width:100%;aspect-ratio:2/1;object-fit:cover;display:block}
+.popb{padding:22px 24px 18px}.popb h3{font:700 26px/1.15 var(--display);margin:2px 0 8px}.popb p{color:var(--muted);margin-bottom:14px}
+.popb form{display:grid;gap:10px}.popb input[type=email],.popb input[type=tel]{font:inherit;padding:13px 14px;border:1px solid var(--line);border-radius:12px;width:100%}
+.popb .lnk{display:block;margin:12px auto 0;background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;font:inherit;font-size:14px}
+.consent{display:flex;gap:8px;align-items:flex-start;font-size:12px;line-height:1.4;color:var(--muted)}.consent input{margin-top:2px}
+.popx{position:absolute;top:10px;right:10px;width:36px;height:36px;border-radius:50%;border:0;background:rgba(255,255,255,.9);font-size:22px;cursor:pointer;z-index:1}
+.popn{display:block;margin-top:14px;font-size:11.5px;color:#7a7f87;border-top:1px dashed var(--line);padding-top:8px}
 </style></head><body>
 <nav class="pmtabs" aria-label="CurvaPen reports"><div class="inner"><a href="/curvapen/scorecard.html">Scorecard</a><a href="/curvapen/website.html" class="on" aria-current="page">Website mock-ups</a><a href="/curvapen/faq.html" class="pr">FAQ</a><a href="/curvapen/proposal.html">Proposal</a></div></nav>
 <div class="opt"><div class="inner"><b>Which one do you want?</b><span>Same plan, two looks:</span><a href="/curvapen/guides.html" class="on" aria-current="page">Option A · Warm</a><a href="/curvapen/guides-b.html">Option B · Bold</a></div></div>
@@ -325,5 +336,29 @@ var cpCart={items:[],
  draw:function(){var h='';this.items.forEach(function(i){h+='<div class="ci"><span>'+i[0]+'</span><b>$'+i[1].toFixed(2)+'</b></div>'});document.getElementById('cartitems').innerHTML=h||'<p class="cs">Your cart is empty. Pick a pack to start.</p>';document.getElementById('carttot').textContent='$'+this.total().toFixed(2);document.querySelectorAll('.cc').forEach(function(e){e.textContent=cpCart.items.length})},
  pay:function(){if(!this.items.length)return;document.getElementById('ups').hidden=false},
  up:function(y){if(y)this.items.push(['Starter Pack to give',9.99]);this.draw();document.getElementById('ups').hidden=true;document.getElementById('done').hidden=false}};
+</script>
+<div class="pop" id="pop" hidden><div class="popbg" onclick="cpPop.x()"></div><div class="popc" role="dialog" aria-modal="true" aria-labelledby="poph">
+ <button class="popx" type="button" aria-label="Close" onclick="cpPop.x()">×</button>
+ <img src="/curvapen/images/grip-close.jpg" alt="" width="1200" height="793">
+ <div class="popb">
+  <div id="pop1"><span class="k">First order</span><h3 id="poph">Get 10% off your first CurvaPen.</h3><p>Plus grip tips for your hand type. No spam.</p>
+   <form onsubmit="event.preventDefault();cpPop.s2()"><input type="email" required placeholder="Your email" aria-label="Email" autocomplete="email"><button class="buy big" type="submit">Get my 10% code</button></form>
+   <button class="lnk" type="button" onclick="cpPop.x()">No thanks</button></div>
+  <div id="pop2" hidden><span class="k">Your code: CURVA10</span><h3>Want 15% instead?</h3><p>Add your mobile and we'll text you a 15% code right now. You'll also get a heads-up before your pens run low.</p>
+   <form onsubmit="event.preventDefault();cpPop.s3()"><input type="tel" required placeholder="Mobile number" aria-label="Mobile number" autocomplete="tel">
+   <label class="consent"><input type="checkbox" required> Yes, text me offers and reminders from CurvaPen. Msg frequency varies, msg and data rates may apply. Reply STOP to opt out, HELP for help. Consent isn't required to buy.</label>
+   <button class="buy big" type="submit">Text me 15% off</button></form>
+   <button class="lnk" type="button" onclick="cpPop.x()">Keep 10%, start shopping</button></div>
+  <div id="pop3" hidden><span class="k">Check your phone</span><h3>Code CURVA15 is on its way.</h3><p>15% off your first order, one use.</p><button class="buy big" type="button" onclick="cpPop.x();document.getElementById('shop').scrollIntoView({behavior:'smooth'})">Shop now</button></div>
+  <small class="popn">Mock-up: shows once per visit, after 8 seconds or when they move to leave.</small>
+ </div></div></div>
+<script>
+var cpPop={seen:function(){try{return sessionStorage.getItem('cpPop')}catch(e){return 0}},
+ show:function(){if(this.seen()||!document.getElementById('cart').hidden)return;try{sessionStorage.setItem('cpPop',1)}catch(e){}document.getElementById('pop').hidden=false},
+ x:function(){document.getElementById('pop').hidden=true},
+ s2:function(){document.getElementById('pop1').hidden=true;document.getElementById('pop2').hidden=false},
+ s3:function(){document.getElementById('pop2').hidden=true;document.getElementById('pop3').hidden=false}};
+setTimeout(function(){cpPop.show()},8000);
+document.addEventListener('mouseout',function(e){if(!e.relatedTarget&&e.clientY<5)cpPop.show()});
 </script>
 </body></html>
