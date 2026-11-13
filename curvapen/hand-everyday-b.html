@@ -319,6 +319,8 @@ details>p,details>div{padding:0 20px 18px 48px;margin-top:0}
 .tips p{font-size:16px}.pk td,.pk th{font-size:16px}.src{font-size:15px}
 .ci .rm{display:block;margin-top:2px;background:none;border:0;padding:8px 0;color:var(--muted);text-decoration:underline;font:inherit;font-size:14px;cursor:pointer;min-height:36px}
 .ups .buy s{margin-left:8px;font-weight:500}
+.mbar span{display:grid;gap:0;line-height:1.2}
+.mdeal{background:none;border:0;padding:6px 0 0;font:700 15px var(--body);color:var(--accent2);text-decoration:underline;cursor:pointer;text-align:left;min-height:32px}
 </style></head><body>
 <nav class="pmtabs" aria-label="CurvaPen reports"><div class="inner"><a href="/curvapen/scorecard.html">Scorecard</a><a href="/curvapen/website.html" class="on" aria-current="page">Website mock-ups</a><a href="/curvapen/faq.html" class="pr">FAQ</a><a href="/curvapen/proposal.html">Proposal</a></div></nav>
 <div class="opt"><div class="inner"><b>Which one do you want?</b><span>Same plan, two looks:</span><a href="/curvapen/hand-everyday.html">Option A · Warm</a><a href="/curvapen/hand-everyday-b.html" class="on" aria-current="page">Option B · Bold</a></div></div>
@@ -329,7 +331,7 @@ details>p,details>div{padding:0 20px 18px 48px;margin-top:0}
  <button class="cartbtn" type="button" onclick="cpCart.open()" aria-label="Open cart">Cart <span class="cc">0</span></button>
  <details class="mnav"><summary aria-label="Menu"><svg width="26" height="20" viewBox="0 0 26 20" aria-hidden="true"><path d="M1 2h24M1 10h24M1 18h24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></summary><div><b>Shop by hand</b><a href="/curvapen/hand-everyday-b.html">Everyday pen lovers</a><a href="/curvapen/hand-left-handed-b.html">Left-handed</a><a href="/curvapen/hand-artists-b.html">Artists and lettering</a><a href="/curvapen/hand-students-b.html">Students and kids</a><a href="/curvapen/hand-arthritis-b.html">Arthritis and hand pain</a><a href="/curvapen/hand-mobility-b.html">Limited grip and mobility</a><a href="/curvapen/hand-stroke-b.html">Stroke recovery</a><a href="/curvapen/hand-parkinsons-b.html">Parkinson's and tremor</a><b>More</b><a href="/curvapen/website-b.html#shop">Pens and bundles</a><a href="/curvapen/website-b.html#gifts">Gifts</a><a href="/curvapen/website-b.html#reviews">Reviews</a><a href="/curvapen/website-b.html#video">Watch it work</a><a href="/curvapen/guides-b.html">Guides</a><a href="/curvapen/website-b.html#partners">Clinics and wholesale</a><a href="tel:+18776850448">Call 1-877-685-0448</a></div></details>
 </div></header>
-<div class="mbar" id="mbar"><span><b>From $14.99</b> · 30-day refund</span><a class="buy" href="#shop">Shop pens</a></div>
+<div class="mbar" id="mbar"><span><b>From $14.99</b><button class="mdeal" type="button" onclick="cpPop.open()">Get 10% off →</button></span><a class="buy" href="#shop">Shop pens</a></div>
 <main id="top">
 <div class="crumb"><div class="w"><a href="/curvapen/website-b.html">Home</a> › <a href="/curvapen/website-b.html#who">Shop by hand</a> › Everyday pen lovers</div></div>
 <section class="hero" style="padding-block:48px 64px"><div class="w">
@@ -408,11 +410,12 @@ var cpCart={items:[],
    <button class="buy big" type="submit">Text me 15% off</button></form>
    <button class="lnk" type="button" onclick="cpPop.x()">Keep 10%, start shopping</button></div>
   <div id="pop3" hidden><span class="k">Check your phone</span><h3>Code CURVA15 is on its way.</h3><p>15% off your first order, one use.</p><button class="buy big" type="button" onclick="cpPop.x();document.getElementById('shop').scrollIntoView({behavior:'smooth'})">Shop now</button></div>
-  <small class="popn">Mock-up: shows once per visit, after 8 seconds or when they move to leave.</small>
+  <small class="popn">Mock-up: on computers it opens once per visit, after 8 seconds or when they move to leave. On phones it never covers the page; it opens only from the "Get 10% off" link in the bottom bar.</small>
  </div></div></div>
 <script>
 var cpPop={seen:function(){try{return sessionStorage.getItem('cpPop')}catch(e){return 0}},
- show:function(){if(this.seen()||!document.getElementById('cart').hidden)return;try{sessionStorage.setItem('cpPop',1)}catch(e){}document.getElementById('pop').hidden=false},
+ open:function(){try{sessionStorage.setItem('cpPop',1)}catch(e){}document.getElementById('pop').hidden=false},
+ show:function(){if(matchMedia('(max-width:820px)').matches||this.seen()||!document.getElementById('cart').hidden)return;try{sessionStorage.setItem('cpPop',1)}catch(e){}document.getElementById('pop').hidden=false},
  x:function(){document.getElementById('pop').hidden=true},
  s2:function(){document.getElementById('pop1').hidden=true;document.getElementById('pop2').hidden=false},
  s3:function(){document.getElementById('pop2').hidden=true;document.getElementById('pop3').hidden=false}};
