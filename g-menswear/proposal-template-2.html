@@ -186,6 +186,23 @@ footer .inner{padding-block:28px;display:flex;flex-wrap:wrap;justify-content:spa
 
 <div class="band sample"><div class="inner"><p><strong>Proposal Template 2 (internal preview for Bo and Phyllena).</strong> <strong>Prepared for G Menswear, Carolina Mall, Concord, NC.</strong> Proposal dated November 11, 2026, updated November 14, 2026. Built on your Local Authority Scorecard, run with our proprietary Local Authority Method, and on our conversation in your store.</p></div></div>
 
+<section class="band white" id="video"><div class="inner vidGrid">
+ <div class="vidText">
+  <span class="eyebrow">Watch first, 2 minutes</span>
+  <h2>One customer, start to finish. <span class="grad">This is how G Menswear wins him.</span></h2>
+  <p class="lede">Marcus needs a suit for Saturday. Watch him find you on Google, walk in, join G Rewards at the register, leave you five stars, and keep coming back with his family.</p>
+ </div>
+ <div class="vidFrame"><video controls playsinline preload="metadata" poster="/g-menswear/video/poster.jpg"><source src="/g-menswear/video/g-menswear-plan.mp4" type="video/mp4">Your browser can't play this video.</video></div>
+</div></section>
+<style>
+.vidGrid{grid-template-columns:minmax(0,1fr) minmax(0,360px);align-items:center;gap:48px}
+.vidText{display:grid;gap:18px}
+.vidFrame{background:#0E1B38;border-radius:28px;padding:10px;box-shadow:0 18px 50px rgba(14,27,56,.22)}
+.vidFrame video{display:block;width:100%;aspect-ratio:9/16;border-radius:20px;background:#000;object-fit:cover}
+@media (max-width:820px){.vidGrid{grid-template-columns:1fr;gap:24px}.vidFrame{max-width:340px;width:100%;margin:0 auto}}
+@media print{#video{display:none}}
+</style>
+
 <header class="band hero"><div class="inner heroGrid">
  <div class="heroText">
   <span class="badge"><i></i>Proposal for G Menswear</span>
