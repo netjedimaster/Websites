@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CurvaPen Case Study | Phyllena Management</title>
+<meta name="description" content="How we rebuilt CurvaPen's online store in 4 days with zero ad spend: new store, video proof, Google Shopping and reviews, email and text automations.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="CurvaPen: a store rebuilt in 4 days, $0 in ads">
+<meta property="og:description" content="From 'Coming Soon' pages to a store that sells, collects reviews and brings buyers back on its own.">
+<meta property="og:image" content="https://phyllenamanagement.vercel.app/case-studies/curvapen/after-home.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#111A2E;--muted:#4A5468;--line:#E3E6EE;--bg:#F7F7FA;--card:#FFFFFF;--blue:#1F3A8A;--rose:#C63F68;--teal:#1E6F68;--soft:#EEF1FA;--bad:#B4232A;--badbg:#FCEDEE;--good:#16794A;--goodbg:#E8F5EE}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.12;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(36px,6vw,60px)}
+h2{font-size:clamp(28px,4vw,40px)}
+h3{font-size:21px}
+p{margin:0 0 1em}
+.eyebrow{font:700 13px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);margin-bottom:14px}
+header.top{background:var(--card);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.brand{font-weight:700;color:var(--blue);text-decoration:none;letter-spacing:.01em}
+.btn{display:inline-block;background:var(--rose);color:#fff;text-decoration:none;font-weight:600;padding:14px 26px;border-radius:999px;min-height:48px}
+.btn.sm{padding:10px 18px;font-size:15px;min-height:44px;display:inline-flex;align-items:center}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+section{padding:72px 0}
+.hero{padding:64px 0 40px}
+.hero .lead{font-size:20px;color:var(--muted);max-width:640px}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.phone{background:#0D1322;border-radius:38px;padding:12px;box-shadow:0 30px 60px -20px rgba(17,26,46,.35);max-width:300px;margin:0 auto}
+.phone img{border-radius:28px;width:100%;height:auto}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.stat b{display:block;font:700 34px/1.1 Fraunces,serif;color:var(--blue)}
+.stat span{font-size:14px;color:var(--muted)}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.panel{border-radius:20px;padding:28px;border:1px solid var(--line);background:var(--card)}
+.panel.before{background:var(--badbg);border-color:#F2C9CC}
+.panel.after{background:var(--goodbg);border-color:#BFE3CF}
+.panel h3{display:flex;align-items:center;gap:12px}
+.tag{font:700 12px/1 Inter;letter-spacing:.12em;text-transform:uppercase;padding:6px 10px;border-radius:999px}
+.before .tag{background:var(--bad);color:#fff}
+.after .tag{background:var(--good);color:#fff}
+.panel ul{margin:0;padding-left:20px}
+.panel li{margin:8px 0}
+.score{display:flex;gap:20px;align-items:center;margin:4px 0 18px}
+.ring{width:92px;height:92px;flex:none}
+.leak{font:700 28px/1.1 Fraunces,serif;color:var(--bad)}
+.leaksub{font-size:14px;color:var(--muted)}
+.cs{display:inline-block;background:#fff;border:1px dashed var(--bad);color:var(--bad);font-weight:600;font-size:14px;padding:6px 12px;border-radius:8px;margin:2px 6px 2px 0}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+.card .ic{width:44px;height:44px;border-radius:12px;background:var(--soft);display:grid;place-items:center;margin-bottom:14px}
+.card .ic svg{width:24px;height:24px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card p{color:var(--muted);font-size:16px;margin:0}
+.split{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
+.checks{list-style:none;padding:0;margin:0}
+.checks li{position:relative;padding-left:32px;margin:12px 0}
+.checks li:before{content:"";position:absolute;left:0;top:4px;width:20px;height:20px;border-radius:50%;background:var(--goodbg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='%2316794A' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+.vids{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.vid{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:9/16;background:#000;cursor:pointer;border:0;padding:0}
+.vid img,.vid video{width:100%;height:100%;object-fit:cover}
+.vid .play{position:absolute;inset:auto 0 0 0;padding:28px 10px 10px;background:linear-gradient(transparent,rgba(0,0,0,.75));color:#fff;font:600 13px/1.3 Inter;text-align:left}
+.vid .play:before{content:"▶";display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--rose);font-size:11px;margin-right:6px;vertical-align:middle}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:d}
+.day{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--blue);border-radius:14px;padding:20px}
+.day b{display:block;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--rose);margin-bottom:6px}
+.day p{font-size:15px;color:var(--muted);margin:0}
+table{width:100%;border-collapse:collapse;background:var(--card);border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);font-size:16px;vertical-align:top}
+th{background:var(--soft);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+td:nth-child(2){color:var(--bad)}
+td:nth-child(3){color:var(--good);font-weight:600}
+tr:last-child td{border-bottom:0}
+.formula{font:600 clamp(20px,3vw,28px)/1.3 Fraunces,serif;color:var(--blue)}
+.cta{background:var(--ink);color:#fff;border-radius:28px;padding:56px 40px;text-align:center}
+.cta h2{color:#fff}
+.cta p{color:#C9CFDD;max-width:560px;margin:0 auto 24px}
+.cta .btn.ghost{color:#fff;border-color:#fff;margin-left:10px}
+footer{padding:32px 0 48px;color:var(--muted);font-size:14px;text-align:center}
+.note{font-size:14px;color:var(--muted)}
+@media (max-width:860px){
+ .hero-grid,.split,.ba{grid-template-columns:1fr}
+ .stats{grid-template-columns:repeat(2,1fr)}
+ .grid3{grid-template-columns:1fr}
+ .vids{grid-template-columns:repeat(3,1fr)}
+ .timeline{grid-template-columns:1fr 1fr}
+ section{padding:52px 0}
+ .split .phone{order:-1}
+}
+@media (max-width:520px){
+ .wrap{padding:0 16px}
+ .timeline{grid-template-columns:1fr}
+ .vids{grid-template-columns:repeat(2,1fr)}
+ th,td{padding:12px 10px;font-size:14px}
+ .cta{padding:40px 20px}
+ .cta .btn.ghost{margin:12px 0 0}
+ header.top .btn{display:none}
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+ <a class="brand" href="https://phyllenamanagement.com">Phyllena Management</a>
+ <a class="btn sm" href="#talk">Get this for your store</a>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap">
+ <div class="hero-grid">
+  <div>
+   <div class="eyebrow">Case study · Online store</div>
+   <h1>From "Coming Soon" to a store that sells while you sleep.</h1>
+   <p class="lead">CurvaPen had a patented product, over 1,000 customer reviews and nearly 30,000 past customers. The website was hiding all of it. We rebuilt the store and the systems behind it in four days, without spending a dollar on ads.</p>
+   <a class="btn" href="#talk">Get this for your store</a>
+  </div>
+  <div class="phone"><img src="after-home.webp" alt="The new CurvaPen home page on a phone" width="585" height="1266"></div>
+ </div>
+ <div class="stats">
+  <div class="stat"><b>4 days</b><span>audit to live store</span></div>
+  <div class="stat"><b>$0</b><span>spent on ads</span></div>
+  <div class="stat"><b>29,723</b><span>past contacts brought back in</span></div>
+  <div class="stat"><b>16</b><span>customer video stories on the site</span></div>
+ </div>
+</div></section>
+
+<section style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
+ <div class="eyebrow">The starting point</div>
+ <h2>A great product with a leaky store</h2>
+ <p class="note" style="max-width:640px">CurvaPen makes a pen with a patented curved nib (U.S. Pat. 10,744,813) for every kind of hand: lefties, artists, arthritis, stroke recovery and Parkinson's. Our audit scored the old store and added up what it was losing every month.</p>
+ <div class="ba" style="margin-top:28px">
+  <div class="panel before">
+   <h3><span class="tag">Before</span> Score 35 / 100</h3>
+   <div class="score">
+    <svg class="ring" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.9" fill="none" stroke="#F2C9CC" stroke-width="3.5"/><circle cx="18" cy="18" r="15.9" fill="none" stroke="#B4232A" stroke-width="3.5" stroke-dasharray="35 65" stroke-dashoffset="25" stroke-linecap="round"/><text x="18" y="21.5" text-anchor="middle" font-size="10" font-weight="700" fill="#B4232A" font-family="Inter">35</text></svg>
+    <div><div class="leak">$5,176 / mo</div><div class="leaksub">estimated sales leaking out of three holes</div></div>
+   </div>
+   <div style="margin-bottom:12px"><span class="cs">Coming Soon</span><span class="cs">Coming Soon</span><span class="cs">Coming Soon</span></div>
+   <ul>
+    <li>Every page but two said "Coming Soon"</li>
+    <li>Not in Google's top 30 for any of 11 buyer searches</li>
+    <li>1,000+ reviews stuck in screenshots Google couldn't read</li>
+    <li>Nothing asked buyers for a review</li>
+    <li>No email or text sign-up, no follow-up after a sale</li>
+    <li>The email list had gone quiet</li>
+   </ul>
+  </div>
+  <div class="panel after">
+   <h3><span class="tag">After</span> Live Nov 15, 2026</h3>
+   <ul>
+    <li>New store on curvapen.com: a home page plus a page for each type of buyer</li>
+    <li>Three simple packs, one tap from any page to checkout</li>
+    <li>Real customer videos on the page where that buyer lands</li>
+    <li>Products listed free in Google Shopping</li>
+    <li>Google sends every buyer a review survey after delivery</li>
+    <li>Sign-up offer, cart follow-up, after-purchase emails, review asks and win-back running on their own</li>
+    <li>Business texting registered with the carriers</li>
+    <li>A dedicated email address that lands in the inbox</li>
+   </ul>
+  </div>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <div class="eyebrow">What we built</div>
+ <h2>Six pieces, one system</h2>
+ <div class="grid3" style="margin-top:28px">
+  <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9M3 9h18v11H3zM9 20v-6h6v6"/></svg></div><h3>A store that's easy to buy from</h3><p>Home page for everyone, six "shop by hand" pages, and three packs instead of a confusing menu. Every buy button goes straight to the color picker. Free U.S. shipping over $20.</p></div>
+  <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M15 10l5-3v10l-5-3M3 6h12v12H3z"/></svg></div><h3>Proof people can see</h3><p>16 customer videos, branded with captions and names, plus 62 product photos and the founder's own story. Each video sits on the page of the buyer it speaks to.</p></div>
+  <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M20 12v9H4v-9M2 7h20v5H2zM12 21V7M12 7S10.5 3 8 3a2 2 0 000 4h4zm0 0s1.5-4 4-4a2 2 0 010 4h-4z"/></svg></div><h3>Gifts that grow the order</h3><p>A free guide with every order and three holiday workbooks with every bundle. A free handwriting guide on the Parkinson's page builds the email list.</p></div>
+  <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5.1 4.9 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.4l7-.9z"/></svg></div><h3>Reviews on autopilot</h3><p>Google sends every buyer a short survey after delivery. Day 7 and Day 13 emails remind them. Past buyers get a personal note from the founder asking for a Facebook review.</p></div>
+  <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v12H5.2L4 17.2zM8 9h8M8 12h5"/></svg></div><h3>Follow-up that sells</h3><p>Sign-up offer, abandoned cart, how-to video, reorder reminders, win-back for old customers and comment-to-DM on Facebook, Instagram and TikTok.</p></div>
+  <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 15l4-4 3 3 6-6"/></svg></div><h3>Google, Facebook and the inbox</h3><p>Google Shopping listings, sales tracking with real dollar values, old agency access removed from Facebook, carrier texting registration and a dedicated sending address.</p></div>
+ </div>
+</div></section>
+
+<section style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
+ <div class="split">
+  <div class="phone"><img src="after-order.webp" alt="CurvaPen pack picker with mix-your-colors steppers" width="585" height="1266" loading="lazy"></div>
+  <div>
+   <div class="eyebrow">Less friction, more orders</div>
+   <h2>One tap to the pack you want</h2>
+   <p class="note">Most of CurvaPen's buyers shop on a phone, and many are older or have hands that don't cooperate. So we made buying simple.</p>
+   <ul class="checks">
+    <li>Three packs named by what you get: Starter 2-Pack, Everyday 6-Pack, Classroom &amp; Clinic 20-Pack</li>
+    <li>Mix colors inside a bundle with big plus and minus buttons</li>
+    <li>Free gifts shown right on the pack, so the bundle is the easy choice</li>
+    <li>No pop-up in your face on phones. The offer waits in the bottom bar</li>
+    <li>Tested on a slowed-down phone so early taps never land on the wrong page</li>
+   </ul>
+  </div>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <div class="eyebrow">Real customers, real words</div>
+ <h2>Proof that sells better than any ad</h2>
+ <p class="note" style="max-width:640px">CurvaPen's customers had already filmed themselves. We branded the videos and put each one where the right buyer would see it. Tap to play.</p>
+ <div class="vids" style="margin-top:24px">
+  <button class="vid" data-v="jenni-christmas-letters"><img src="../../curvapen/videos/jenni-christmas-letters.jpg" alt="" loading="lazy"><span class="play">Christmas letters</span></button>
+  <button class="vid" data-v="linda-first-try"><img src="../../curvapen/videos/linda-first-try.jpg" alt="" loading="lazy"><span class="play">First try</span></button>
+  <button class="vid" data-v="lefty-retired-police"><img src="../../curvapen/videos/lefty-retired-police.jpg" alt="" loading="lazy"><span class="play">Lefty, retired police</span></button>
+  <button class="vid" data-v="jeff-retired-dentist"><img src="../../curvapen/videos/jeff-retired-dentist.jpg" alt="" loading="lazy"><span class="play">Retired dentist</span></button>
+  <button class="vid" data-v="alicia-grip"><img src="../../curvapen/videos/alicia-grip.jpg" alt="" loading="lazy"><span class="play">Sore hands</span></button>
+  <button class="vid" data-v="lion-illustrator"><img src="../../curvapen/videos/lion-illustrator.jpg" alt="" loading="lazy"><span class="play">Illustrator</span></button>
+ </div>
+</div></section>
+
+<section style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
+ <div class="eyebrow">How fast</div>
+ <h2>Four days, start to finish</h2>
+ <div class="timeline" style="margin-top:24px">
+  <div class="day"><b>Day 1</b><h3>Audit</h3><p>Scored the store, found the three leaks, showed two new designs.</p></div>
+  <div class="day"><b>Day 2</b><h3>Build</h3><p>Store, packs, pages, sign-up offer and the customer videos.</p></div>
+  <div class="day"><b>Day 3</b><h3>Bring them back</h3><p>Imported 29,723 contacts, sorted buyers from sign-ups, built every follow-up.</p></div>
+  <div class="day"><b>Day 4</b><h3>Go live</h3><p>Moved the domain, turned on tracking, Google Shopping, Google reviews, texting and email.</p></div>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <div class="eyebrow">Side by side</div>
+ <h2>Before and after</h2>
+ <div style="overflow-x:auto;margin-top:20px">
+ <table>
+  <thead><tr><th></th><th>Before</th><th>After</th></tr></thead>
+  <tbody>
+   <tr><td>Pages that work</td><td>2</td><td>Home, 6 buyer pages, order, thank-you, text sign-up, terms, privacy</td></tr>
+   <tr><td>Reviews Google can read</td><td>0</td><td>Google survey on every order, Facebook reviews on</td></tr>
+   <tr><td>Email sign-up</td><td>None</td><td>Pop-up, free guides, checkout</td></tr>
+   <tr><td>Text sign-up</td><td>None</td><td>Pop-up, checkout, sign-up page, carrier registered</td></tr>
+   <tr><td>Follow-up after a sale</td><td>None</td><td>How-to video, guides, review ask, reorder, win-back</td></tr>
+   <tr><td>Google Shopping</td><td>Broken old listings</td><td>3 packs listed, return policy verified</td></tr>
+   <tr><td>Sales tracking</td><td>Broken</td><td>Every sale tracked with its dollar value</td></tr>
+   <tr><td>Ad spend</td><td>n/a</td><td>$0</td></tr>
+  </tbody>
+ </table>
+ </div>
+ <p class="note" style="margin-top:14px">Store launched November 15, 2026. We'll add sales and review numbers here after the holiday season.</p>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+ <div class="cta" id="talk">
+  <div class="eyebrow" style="color:#F3A6BD">Your store next</div>
+  <h2>You don't need more traffic first.</h2>
+  <p>You need a store that turns the visitors and customers you already have into reviews and repeat orders. We'll score your store for free and show you exactly what it's leaking.</p>
+  <p class="formula" style="color:#fff;margin-bottom:28px">Be Seen + Be Trusted + Be Chosen = More Sales</p>
+  <a class="btn" href="mailto:pparker@phyllenamanagement.com?subject=Score%20my%20store">Score my store</a><a class="btn ghost" href="tel:+17047413167">Call 704-741-3167</a>
+ </div>
+</div></section>
+</main>
+
+<footer>Phyllena Management LLC · Concord, NC · <a href="https://phyllenamanagement.com" style="color:inherit">phyllenamanagement.com</a></footer>
+
+<script>
+document.querySelectorAll('.vid').forEach(function(b){
+ b.addEventListener('click',function(){
+  if(b.querySelector('video'))return;
+  var v=document.createElement('video');
+  v.src='../../curvapen/videos/'+b.dataset.v+'.mp4';
+  v.controls=true;v.playsInline=true;v.autoplay=true;
+  b.innerHTML='';b.appendChild(v);
+ });
+});
+</script>
+</body>
+</html>
