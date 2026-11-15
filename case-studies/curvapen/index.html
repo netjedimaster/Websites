@@ -86,6 +86,19 @@ tr:last-child td{border-bottom:0}
 .cta .btn.ghost{color:#fff;border-color:#fff;margin-left:10px}
 footer{padding:32px 0 48px;color:var(--muted);font-size:14px;text-align:center}
 .note{font-size:14px;color:var(--muted)}
+.tech{background:var(--ink);color:#fff}
+.tech h2{color:#fff}
+.tlead{color:#C9CFDD;max-width:680px;margin-bottom:28px}
+.tgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.t{background:#1B2540;border:1px solid #2A3557;border-radius:16px;padding:20px;display:flex;flex-direction:column}
+.t h3{font-size:18px;color:#fff;margin-bottom:8px}
+.t p{color:#C9CFDD;font-size:15px;margin:0 0 14px;flex:1}
+.t span{font-size:12px;font-weight:600;letter-spacing:.04em;color:#F3A6BD;border-top:1px solid #2A3557;padding-top:10px}
+.tfoot{margin-top:24px;background:linear-gradient(90deg,#C63F68,#1F3A8A);border-radius:16px;padding:22px 24px;display:flex;gap:18px;align-items:center}
+.tfoot b{font:700 22px/1.2 Fraunces,serif;white-space:nowrap}
+.tfoot span{color:#F2F4FA;font-size:15px}
+@media (max-width:860px){.tgrid{grid-template-columns:1fr 1fr}.tfoot{flex-direction:column;align-items:flex-start}.tfoot b{white-space:normal}}
+@media (max-width:520px){.tgrid{grid-template-columns:1fr}}
 @media (max-width:860px){
  .hero-grid,.split,.ba{grid-template-columns:1fr}
  .stats{grid-template-columns:repeat(2,1fr)}
@@ -170,7 +183,7 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:14px;text-align:center}
 
 <section><div class="wrap">
  <div class="eyebrow">What we built</div>
- <h2>Six pieces, one system</h2>
+ <h2>What it does for the business</h2>
  <div class="grid3" style="margin-top:28px">
   <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9M3 9h18v11H3zM9 20v-6h6v6"/></svg></div><h3>A store that's easy to buy from</h3><p>Home page for everyone, six "shop by hand" pages, and three packs instead of a confusing menu. Every buy button goes straight to the color picker. Free U.S. shipping over $20.</p></div>
   <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M15 10l5-3v10l-5-3M3 6h12v12H3z"/></svg></div><h3>Proof people can see</h3><p>16 customer videos, branded with captions and names, plus 62 product photos and the founder's own story. Each video sits on the page of the buyer it speaks to.</p></div>
@@ -179,6 +192,31 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:14px;text-align:center}
   <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v12H5.2L4 17.2zM8 9h8M8 12h5"/></svg></div><h3>Follow-up that sells</h3><p>Sign-up offer, abandoned cart, how-to video, reorder reminders, win-back for old customers and comment-to-DM on Facebook, Instagram and TikTok.</p></div>
   <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 15l4-4 3 3 6-6"/></svg></div><h3>Google, Facebook and the inbox</h3><p>Google Shopping listings, sales tracking with real dollar values, old agency access removed from Facebook, carrier texting registration and a dedicated sending address.</p></div>
  </div>
+</div></section>
+
+<section class="tech"><div class="wrap">
+ <div class="eyebrow" style="color:#F3A6BD">The tech behind it</div>
+ <h2>One system instead of a dozen apps</h2>
+ <p class="tlead">Most online stores stitch these together from separate apps, each with its own login and its own monthly bill, and half of them don't talk to each other. Here's everything we set up for CurvaPen, all in one place.</p>
+ <div class="tgrid">
+  <div class="t"><h3>Online store and checkout</h3><p>Store pages, cart, card and PayPal checkout, add-ons at checkout and a one-tap gift upsell.</p><span>Usually: a store platform plus checkout apps</span></div>
+  <div class="t"><h3>Email marketing</h3><p>Holiday campaigns and newsletters sent from CurvaPen's own address, built to land in the inbox.</p><span>Usually: an email marketing app</span></div>
+  <div class="t"><h3>Automated email flows</h3><p>Welcome, after-purchase how-to, free guide delivery, review asks and restock reminders that run every day.</p><span>Usually: a flows add-on or a pricier email plan</span></div>
+  <div class="t"><h3>Business texting</h3><p>Carrier-registered texting with proper sign-up consent, order updates and VIP-only deals.</p><span>Usually: a separate SMS app</span></div>
+  <div class="t"><h3>Abandoned cart recovery</h3><p>A friendly check-in after one hour, then a free gift offer the next day.</p><span>Usually: a cart recovery app</span></div>
+  <div class="t"><h3>Customer win-back</h3><p>Old buyers get a "we miss you" offer, and recent ones get a reorder reminder when they're running low.</p><span>Usually: a retention app</span></div>
+  <div class="t"><h3>Comment-to-DM for social</h3><p>Someone comments a keyword on Facebook, Instagram or TikTok and gets the link in their messages automatically.</p><span>Usually: a chat automation app</span></div>
+  <div class="t"><h3>Social media tune-up</h3><p>New Facebook cover, profile and bio, reviews turned on, Instagram bio and links, old agency access removed.</p><span>Usually: a freelancer or agency</span></div>
+  <div class="t"><h3>Social post calendar</h3><p>Holiday posts written and lined up for Facebook, Instagram, TikTok and LinkedIn from one calendar.</p><span>Usually: a social scheduling app</span></div>
+  <div class="t"><h3>Reviews engine</h3><p>Google's post-delivery survey on every order, timed reminders and a founder's note to past buyers.</p><span>Usually: a reviews app</span></div>
+  <div class="t"><h3>Pop-ups and sign-up forms</h3><p>10% for email, 15% for text, one-time codes, and a phone-friendly bar instead of a pop-up in your face.</p><span>Usually: a pop-up app</span></div>
+  <div class="t"><h3>Free guide downloads</h3><p>Workbooks and guides delivered automatically to grow the list and add value to every bundle.</p><span>Usually: a download delivery app</span></div>
+  <div class="t"><h3>Google Shopping feed</h3><p>Products listed free in Google Shopping, with the return policy verified.</p><span>Usually: a product feed app</span></div>
+  <div class="t"><h3>Sales tracking</h3><p>Google Analytics and the Facebook pixel record every sale with its real dollar value.</p><span>Usually: a tracking app or a developer</span></div>
+  <div class="t"><h3>Customer database</h3><p>29,723 contacts sorted into buyers and sign-ups, with text consent tracked person by person.</p><span>Usually: a CRM</span></div>
+  <div class="t"><h3>Shipping hand-off</h3><p>Orders flow to the warehouse with a packing note that flags any free gifts owed.</p><span>Usually: a connector app</span></div>
+ </div>
+ <div class="tfoot"><b>One system. One login. One bill.</b><span>Everything above talks to everything else, so a comment on Instagram can turn into a contact, a coupon, a sale and a review request without anyone lifting a finger.</span></div>
 </div></section>
 
 <section style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
