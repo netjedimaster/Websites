@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Charlotte Supplements Local Authority Scorecard</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: matches phyllenamanagement.com. Light only, white top bar with logo, soft gradient hero with a floating score card, alternating light bands, rounded white cards with soft shadows, one navy gradient panel for the slogan equation. */
+:root{
+ color-scheme:light;
+ --night:#0E1B38; --navy:#1F3A8A; --bg:#F7F7FA; --surface:#FFFFFF; --ink:#111A2E; --muted:#5B6479; --line:#E4E6EE;
+ --rose:#C63F68; --rose-deep:#A92E55; --rose-soft:#FCEAF0; --tint:#EEF2FA; --star:#F5B42A; --gold-ink:#9A6A06; --gold-soft:#FDF3DC;
+ --good:#1F8A55; --good-soft:#E3F4EA; --purple:#5A3F86;
+ --display:"Plus Jakarta Sans","Segoe UI",system-ui,sans-serif; --body:"Manrope","Segoe UI",system-ui,-apple-system,sans-serif;
+ --r-lg:24px; --r-md:16px;
+ --shadow:0 1px 2px rgba(14,27,56,.06),0 12px 32px rgba(14,27,56,.08);
+}
+body{background:var(--bg);color:var(--ink);font:17px/1.65 var(--body)}
+.band{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.inner{max-width:1080px;margin:0 auto;padding-block:72px;display:grid;gap:28px}
+.white{background:var(--surface)} .tint{background:var(--tint)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;color:var(--ink)}
+h1{font-size:clamp(36px,6vw,64px);line-height:1.02;font-weight:800;letter-spacing:-.035em}
+h2{font-size:clamp(28px,4.2vw,44px);line-height:1.08;font-weight:800;letter-spacing:-.03em}
+h3{font-size:18px;font-weight:700;letter-spacing:-.01em}
+p{margin:0;max-width:62ch}
+.muted{color:var(--muted)}
+.grad{background:linear-gradient(90deg,var(--rose),var(--purple) 55%,var(--navy));-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{display:flex;align-items:center;gap:10px;font:700 13px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--rose)}
+.eyebrow::before{content:"";width:18px;height:2px;background:currentColor}
+.lede{font-size:19px;color:var(--muted)}
+/* top bar */
+.top{background:var(--surface);border-bottom:1px solid var(--line)}
+.top .inner{padding-block:16px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px}
+.logo{width:180px;height:auto;display:block}
+.chip{font:600 14px var(--body);padding:8px 16px;border-radius:99px;background:var(--rose);color:#fff;white-space:nowrap}
+.sample{background:var(--gold-soft);color:var(--gold-ink);border-bottom:1px solid #F3E1B5}
+.sample .inner{padding-block:10px;font-size:14px}
+/* hero */
+.hero{background:radial-gradient(60% 80% at 85% 20%,rgba(198,63,104,.10),transparent 70%),radial-gradient(50% 70% at 70% 90%,rgba(31,58,138,.10),transparent 70%),linear-gradient(180deg,#FBFBFD,var(--bg))}
+.heroGrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center}
+@media (max-width:820px){.heroGrid{grid-template-columns:1fr}}
+.badge{justify-self:start;display:inline-flex;align-items:center;gap:10px;font-size:14px;padding:7px 16px 7px 10px;border-radius:99px;background:var(--surface);border:1px solid var(--line);box-shadow:0 1px 2px rgba(14,27,56,.05)}
+.badge i{width:14px;height:14px;border-radius:50%;background:var(--rose-soft);display:grid;place-content:center}
+.badge i::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--rose)}
+.heroText{display:grid;gap:22px}
+.ticks{display:flex;flex-wrap:wrap;gap:10px 22px;margin:0;padding:0;list-style:none;font-size:15px;color:var(--muted)}
+.ticks li::before{content:"✓";color:var(--rose);font-weight:700;margin-right:8px}
+/* score card */
+.scoreCard{background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow);border:1px solid var(--line);padding:28px;display:grid;gap:20px;min-width:0}
+.scHead{display:flex;justify-content:space-between;align-items:center;gap:10px;font:700 13px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.scHead span:last-child{letter-spacing:0;text-transform:none;font-weight:600;color:var(--rose);background:var(--rose-soft);padding:4px 12px;border-radius:99px}
+.dialRow{display:grid;grid-template-columns:150px minmax(0,1fr);gap:22px;align-items:center}
+@media (max-width:420px){.dialRow{grid-template-columns:1fr}}
+.dial{position:relative;width:150px;aspect-ratio:1;max-width:100%}
+.dial svg{width:100%;height:100%;display:block}
+.dial .num{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
+.dial .num b{font:800 48px/1 var(--display);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.dial .num small{font-size:13px;color:var(--muted)}
+.subs{display:grid;gap:12px}
+.sub{display:grid;gap:5px}
+.sub .l{display:flex;justify-content:space-between;font:700 15px var(--display)}
+.sub .l span{font:600 14px var(--body);color:var(--muted);font-variant-numeric:tabular-nums}
+.bar{height:8px;border-radius:99px;background:var(--tint);overflow:hidden}
+.bar span{display:block;height:100%;border-radius:99px;background:var(--c)}
+.lost{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;background:var(--rose-soft);border-radius:var(--r-md);padding:14px 18px}
+.lost b{font:800 28px var(--display);color:var(--rose-deep);letter-spacing:-.02em}
+.lost span{font-size:14px;color:var(--rose-deep)}
+.scale{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;font-size:12px;color:var(--muted)}
+.scale div{padding:7px 8px;border-radius:10px;background:var(--bg);text-align:center;line-height:1.3}
+.scale div.on{background:var(--rose);color:#fff}
+.scale b{display:block;font:700 12px var(--display)}
+/* equation panel */
+.eq{border-radius:var(--r-lg);background:linear-gradient(120deg,#1F3A8A 0%,#2C3F95 45%,#5A3F86 100%);padding:32px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px;color:#fff;box-shadow:var(--shadow)}
+.eqb{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);border-radius:14px;padding:12px 20px;text-align:center;min-width:140px}
+.eqb b{display:block;font:800 22px var(--display);letter-spacing:-.02em}
+.eqb span{font-size:13px;color:#D3DBEE}
+.eqb.hot{background:var(--rose);border-color:var(--rose)}
+.eqb.hot span{color:#FFE3EC}
+.op{font:800 22px var(--display);color:#FF9DB8}
+/* section head */
+.shead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:18px}
+.shead > div{display:grid;gap:12px}
+.pts{display:grid;justify-items:end;gap:6px}
+.pts b{font:800 48px/1 var(--display);letter-spacing:-.04em;color:var(--c);font-variant-numeric:tabular-nums}
+.pts b small{font-size:20px;color:var(--muted);letter-spacing:0}
+.pts .bar{width:180px;background:var(--line)}
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:24px;display:grid;gap:10px;align-content:start;min-width:0}
+.q{font:700 16px var(--display)}
+.vol{font-size:13px;font-weight:700;color:var(--navy);background:#EEF2FA;border-radius:999px;padding:3px 10px;justify-self:start}
+.q::before{content:"🔍︎";margin-right:6px;filter:grayscale(1);opacity:.5}
+.top3{display:grid;gap:4px;margin:0;padding:0;list-style:none;font-size:14px;color:var(--muted)}
+.top3 li{display:flex;justify-content:space-between;gap:8px}
+.top3 li span:last-child{font-variant-numeric:tabular-nums;white-space:nowrap}
+.top3 li span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.flag{justify-self:start;font:700 12px var(--body);padding:4px 12px;border-radius:99px;background:var(--rose-soft);color:var(--rose-deep)}
+/* checklist */
+.checks{display:grid;margin:0;padding:6px 24px;list-style:none;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow)}
+.checks li{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:14px;padding:18px 0;border-bottom:1px solid var(--line);align-items:start}
+.checks li:last-child{border-bottom:0}
+.ic{width:28px;height:28px;border-radius:50%;display:grid;place-content:center;font:800 13px var(--body)}
+.fail .ic{background:var(--rose-soft);color:var(--rose)} .part .ic{background:var(--gold-soft);color:var(--gold-ink)} .pass .ic{background:var(--good-soft);color:var(--good)}
+.checks h3{font-size:16px}
+.checks p{font-size:15px;color:var(--muted)}
+.checks .p{font:700 14px var(--display);font-variant-numeric:tabular-nums;white-space:nowrap;padding:3px 12px;border-radius:99px;background:var(--bg);color:var(--muted)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+@media (max-width:820px){.two{grid-template-columns:1fr}}
+/* review bars */
+.rbars{display:grid;gap:10px;font-size:14px}
+.rb{display:grid;grid-template-columns:minmax(100px,170px) minmax(0,1fr) 40px;gap:10px;align-items:center}
+.rb .n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rb .t{height:10px;border-radius:99px;background:var(--tint);overflow:hidden}
+.rb .t span{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#3B57B0,var(--navy))}
+.rb.me .n{font-weight:700;color:var(--rose)} .rb.me .t span{background:var(--rose)}
+.rb .v{text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+/* table */
+.tw{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px}
+th,td{padding:14px 20px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:700 12px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:var(--bg)}
+tr:last-child td{border-bottom:0}
+.sc{font:700 15px var(--display);white-space:nowrap;font-variant-numeric:tabular-nums}
+/* money */
+.money{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.money .card b{font:800 40px/1.1 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.money .card.hot{background:linear-gradient(135deg,var(--rose),var(--rose-deep));border-color:transparent;color:#fff}
+.money .card.hot span{color:#FFE3EC}
+.money .card span{font-size:15px;color:var(--muted)}
+.chain{font-size:15px;color:var(--muted);background:var(--surface);border:1px dashed var(--line);border-radius:var(--r-md);padding:14px 18px;overflow-wrap:anywhere}
+.note{font-size:14px;color:var(--muted)}
+/* fixes */
+.fixes{display:grid;gap:14px;margin:0;padding:0;list-style:none;counter-reset:f}
+.fixes li{counter-increment:f;display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:18px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);box-shadow:var(--shadow);padding:18px 22px}
+.fixes li::before{content:counter(f);width:44px;height:44px;border-radius:12px;display:grid;place-content:center;font:800 18px var(--display);color:var(--navy);background:var(--tint)}
+.fixes p{font-size:15px;color:var(--muted)}
+.tag{font:700 12px var(--body);padding:5px 12px;border-radius:99px;white-space:nowrap;color:var(--c);background:var(--cs)}
+@media (max-width:560px){.fixes li{grid-template-columns:44px minmax(0,1fr)}.fixes .tag{grid-column:2;justify-self:start}}
+/* location map */
+.mapCard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);overflow:hidden;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}
+@media (max-width:760px){.mapCard{grid-template-columns:1fr}}
+.mapCard svg{display:block;width:100%;height:auto}
+.mapSide{padding:26px;display:grid;gap:16px;align-content:center}
+.mapSide p{font-size:15px;color:var(--muted)}
+.legend{display:grid;gap:10px;margin:0;padding:0;list-style:none;font-size:15px}
+.legend li{display:flex;align-items:center;gap:10px}
+.legend i{width:26px;height:26px;border-radius:50%;flex:none;display:grid;place-content:center;font:800 13px var(--body);font-style:normal}
+.osm{font-size:12px;color:var(--muted)}
+/* cta */
+.cta{background:linear-gradient(120deg,#1F3A8A 0%,#2C3F95 45%,#5A3F86 100%);border-radius:var(--r-lg);padding:40px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center;color:#fff;box-shadow:var(--shadow)}
+@media (max-width:720px){.cta{grid-template-columns:1fr;padding:28px}}
+.cta h2{color:#fff} .cta p{color:#D3DBEE}
+.cta .eyebrow{color:#FF9DB8}
+.person{background:#fff;color:var(--ink);border-radius:var(--r-md);padding:20px 24px;display:grid;gap:4px;font-size:15px;min-width:0}
+.person b{font:800 19px var(--display)}
+.person span{color:var(--muted)}
+.btn{justify-self:start;margin-top:8px;font:700 15px var(--body);background:var(--rose);color:#fff;padding:12px 22px;border-radius:99px;text-decoration:none;box-shadow:0 8px 20px rgba(198,63,104,.3)}
+.btn:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.method{font-size:14px;color:var(--muted)}
+footer .inner{padding-block:28px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:14px;color:var(--muted)}
+.flag.win{background:var(--good-soft);color:var(--good)}
+.top3 li.me{color:var(--rose);font-weight:700}
+.leaks{display:grid;gap:8px}
+.lk{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 18px;border-radius:var(--r-md);background:var(--bg);font-size:14px;color:var(--muted)}
+.lk b{font:800 20px var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+</style><style>.alarm{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.alarm div{background:var(--surface);border:1px solid #F3C9D6;border-left:4px solid var(--rose);border-radius:var(--r-md);padding:12px 14px;display:grid;gap:4px;align-content:start}.alarm b{font:800 22px/1.1 var(--display);color:var(--rose-deep)}.alarm span{font-size:14px;line-height:1.45;color:var(--muted)}.urgent{background:var(--rose-soft);border-radius:var(--r-md);padding:12px 16px;font-size:15px;color:var(--ink)}.urgent strong{color:var(--rose-deep)}@media (max-width:640px){.alarm{grid-template-columns:1fr}}
+.tabs{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(14,27,56,.05)}.tabs .inner{display:flex;gap:6px;padding-block:10px;overflow-x:auto}.tabs a{flex:0 0 auto;padding:9px 16px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none;color:var(--night);background:#EEF2FA}.tabs a.on{background:var(--rose);color:#fff}.tabs a.pr{margin-left:auto}@media print{.tabs{display:none}}
+body{margin:0}.card{grid-template-columns:minmax(0,1fr)}.inner > *{min-width:0}.top3 li span:first-child{min-width:0}.q{overflow-wrap:anywhere}.cards > .card{min-width:0}
+</style>
+</head><body>
+<div class="band top"><div class="inner"><img class="logo" src="/charlotte-supplements/images/phyllena-logo.png" alt="Phyllena Management LLC"><span class="chip">Local Authority Scorecard</span></div></div>
+<nav class="tabs" aria-label="Charlotte Supplements reports"><div class="inner"><a href="/charlotte-supplements/scorecard.html" class="on" aria-current="page">Scorecard</a><a href="/charlotte-supplements/website.html">Website mock-up</a><a href="/charlotte-supplements/faq.html" class="pr">FAQ</a><a href="/charlotte-supplements/proposal.html">Proposal</a></div></nav>
+
+<div class="band sample"><div class="inner"><p><strong>Prepared for Charlotte Supplements.</strong> Built with the Local Authority Method, our proprietary 100-point audit of how Google sees your business, from our November 16, 2026 check. Every finding was observed that day; dollar figures are estimates.</p></div></div>
+
+<header class="band hero"><div class="inner heroGrid">
+ <div class="heroText">
+  <span class="badge"><i></i>Prepared for Charlotte Supplements · 4128 South Blvd, Charlotte, NC</span>
+  <h1>About $4,983.75 a month <span class="grad">walks out your door.</span></h1>
+  <p class="lede">Charlotte already loves you: 4.7 stars, 277 Google reviews, and #1 on Google Maps for "supplement store" in Charlotte. But drive ten minutes in any direction and you disappear. Pineville, Matthews, Huntersville, Concord: other stores get those shoppers. And the 2,400 people a month who search your name land on a two-page website that shows none of your 8,000 products.</p>
+  <div class="alarm">
+   <div><b>5 of 16</b><span>Google searches we ran where you show up. On the other 11, Planet Supplements, NutriShop and The Vitamin Shoppe get the shopper.</span></div>
+   <div><b>26 vs. 60</b><span>hours a week you're open vs. Planet Supplements. Your website is your only store the other 142 hours, and it sells nothing.</span></div>
+   <div><b>0</b><span>customers you can text when their bottle runs out. Supplements run out every 30 days. That's a reorder you're not asking for.</span></div>
+  </div>
+  <p class="urgent"><strong>Why now:</strong> January is the biggest month of the year for vitamins, protein and pre-workout, when New Year's resolutions start. Texting approval takes about two weeks and a customer list takes months to build. Every shopper between now and then is a customer you can't invite back.</p>
+ </div>
+ <div class="scoreCard">
+  <div class="scHead"><span>Local Authority Score</span><span>Nov 16, 2026</span></div>
+  <div class="dialRow">
+   <div class="dial" role="img" aria-label="Score 56 out of 100"><svg viewBox="0 0 200 200" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C63F68"/><stop offset="1" stop-color="#5A3F86"/></linearGradient></defs><circle cx="100" cy="100" r="84" fill="none" stroke="#EEF2FA" stroke-width="18"/><circle cx="100" cy="100" r="84" fill="none" stroke="url(#g)" stroke-width="18" stroke-linecap="round" stroke-dasharray="295.6 527.8" transform="rotate(-90 100 100)"/></svg><div class="num"><b>56</b><small>out of 100</small></div></div>
+   <div class="subs">
+    <div class="sub" style="--c:var(--rose)"><div class="l">Be Seen<span>22 / 40</span></div><div class="bar"><span style="width:55%"></span></div></div>
+    <div class="sub" style="--c:var(--navy)"><div class="l">Be Trusted<span>23 / 35</span></div><div class="bar"><span style="width:66%"></span></div></div>
+    <div class="sub" style="--c:var(--star)"><div class="l">Be Chosen<span>11 / 25</span></div><div class="bar"><span style="width:44%"></span></div></div>
+   </div>
+  </div>
+  <div class="scale"><div><b>Invisible</b>0–39</div><div class="on"><b>Overlooked</b>40–59</div><div><b>Competitive</b>60–79</div><div><b>Local Authority</b>80–100</div></div>
+  <div class="leaks">
+   <div class="lk"><span>Leak #1 · Searches you're missing</span><b>$1,087.50</b></div>
+   <div class="lk"><span>Leak #2 · No automated review system</span><b>$296.25</b></div>
+   <div class="lk"><span>Leak #3 · No repeat sales system</span><b>$3,600.00</b></div>
+   <div class="lost"><span>Left on the table each month</span><b>$4,983.75</b></div>
+  </div>
+ </div>
+</div></header>
+
+<section class="band white"><div class="inner">
+ <div class="eq" aria-label="Be Seen plus Be Trusted plus Be Chosen equals Sales">
+  <div class="eqb"><b>Be Seen</b><span>You scored 22 of 40</span></div><span class="op">+</span>
+  <div class="eqb"><b>Be Trusted</b><span>You scored 23 of 35</span></div><span class="op">+</span>
+  <div class="eqb"><b>Be Chosen</b><span>You scored 11 of 25</span></div><span class="op">=</span>
+  <div class="eqb hot"><b>Sales</b><span>Shoppers in your store</span></div>
+ </div>
+</div></section>
+
+<section class="band" style="--c:var(--rose)"><div class="inner">
+ <div class="shead"><div><span class="eyebrow">Be Seen</span><h2>Do you show up when people search?</h2><p class="muted">16 searches on Google, run from Charlotte and the towns around it, the way a shopper on a phone would. These are the first three stores on the map.</p></div><div class="pts"><b>22<small> / 40</small></b><div class="bar"><span style="width:55%"></span></div></div></div>
+ <div class="mapCard">
+  <svg viewBox="0 0 1136 1428" role="img" aria-label="Map of the Charlotte area. Charlotte Supplements on South Blvd ranks number 1 for Charlotte searches, and is not in the top 3 for Huntersville, Mooresville, Concord, Matthews, Pineville, Gastonia or Rock Hill searches.">
+   <image href="/charlotte-supplements/images/map.jpg" width="1136" height="1428"/>
+   <g transform="translate(830 690)"><rect x="-130" y="-26" width="260" height="52" rx="26" fill="#1F8A55" stroke="#fff" stroke-width="3"/><text x="0" y="10" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="28" fill="#fff">✓ Charlotte #1</text></g>
+   <g transform="translate(686 190)"><rect x="-130" y="-26" width="260" height="52" rx="26" fill="#C63F68" stroke="#fff" stroke-width="3"/><text x="0" y="10" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="28" fill="#fff">✕ Mooresville</text></g>
+   <g transform="translate(638 500)"><rect x="-140" y="-26" width="280" height="52" rx="26" fill="#C63F68" stroke="#fff" stroke-width="3"/><text x="0" y="10" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="28" fill="#fff">✕ Huntersville</text></g>
+   <g transform="translate(1000 400)"><rect x="-110" y="-26" width="220" height="52" rx="26" fill="#C63F68" stroke="#fff" stroke-width="3"/><text x="0" y="10" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="28" fill="#fff">✕ Concord</text></g>
+   <g transform="translate(150 640)"><rect x="-120" y="-26" width="240" height="52" rx="26" fill="#C63F68" stroke="#fff" stroke-width="3"/><text x="0" y="10" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="28" fill="#fff">✕ Gastonia</text></g>
+   <g transform="translate(860 920)"><rect x="-120" y="-26" width="240" height="52" rx="26" fill="#C63F68" stroke="#fff" stroke-width="3"/><text x="0" y="10" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="28" fill="#fff">✕ Matthews</text></g>
+   <g transform="translate(470 1085)"><rect x="-120" y="-26" width="240" height="52" rx="26" fill="#C63F68" stroke="#fff" stroke-width="3"/><text x="0" y="10" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="28" fill="#fff">✕ Pineville</text></g>
+   <g transform="translate(373 1370)"><rect x="-120" y="-26" width="240" height="52" rx="26" fill="#C63F68" stroke="#fff" stroke-width="3"/><text x="0" y="10" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="28" fill="#fff">✕ Rock Hill</text></g>
+   <circle cx="589" cy="847" r="70" fill="#1F3A8A" opacity=".14"/>
+   <g transform="translate(589 847)"><path d="M0 0 C-24 -32 -32 -48 -32 -62 A32 32 0 1 1 32 -62 C32 -48 24 -32 0 0Z" fill="#1F3A8A" stroke="#fff" stroke-width="4"/><circle cy="-62" r="12" fill="#fff"/></g>
+  </svg>
+  <div class="mapSide">
+   <h3>Where Google shows you today</h3>
+   <ul class="legend">
+    <li><i style="background:#1F3A8A;color:#fff">●</i><span><strong>Your store</strong> · 4128 South Blvd</span></li>
+    <li><i style="background:#E3F4EA;color:#1F8A55">✓</i><span><strong>Charlotte:</strong> #1 for "supplement store" and "vitamin store"</span></li>
+    <li><i style="background:#FCEAF0;color:#C63F68">✕</i><span><strong>Pineville, Matthews, Huntersville, Concord, Mooresville, Gastonia, Rock Hill:</strong> not in the top 3</span></li>
+   </ul>
+   <p>Pineville is about 10 minutes from your door, and NutriShop and a store in Fort Mill get those shoppers. Planet Supplements in University City shows up in Huntersville and Concord, so distance isn't what's holding you back. Google just hasn't been told you serve those towns.</p>
+   <span class="osm">Map data © OpenStreetMap contributors</span>
+  </div>
+ </div>
+ <div class="cards" id="searches"></div>
+ <ul class="checks">
+  <li class="part"><span class="ic">!</span><div><h3>Top-3 map spots on key searches</h3><p>You show up on 5 of 16 searches, and you're #1 on every Charlotte search for a supplement or vitamin store. You're missing from every nearby town, and from searches for what you sell: peptides, protein powder and health food.</p></div><span class="p">6 / 20</span></li>
+  <li class="pass"><span class="ic">✓</span><div><h3>Map pin location</h3><p>Correct. The pin sits on your store at 4128 South Blvd.</p></div><span class="p">6 / 6</span></li>
+  <li class="part"><span class="ic">!</span><div><h3>Categories match what you sell</h3><p>Google shows you as a "Vitamin &amp; supplements store." That's right, but it's the only category we could see. Health food, sports nutrition and alkaline water shoppers search for those words, and the stores that rank there list them.</p></div><span class="p">4 / 6</span></li>
+  <li class="pass"><span class="ic">✓</span><div><h3>Website linked on your profile</h3><p>charlottesupplements.com is linked and loads.</p></div><span class="p">4 / 4</span></li>
+  <li class="part"><span class="ic">!</span><div><h3>Listed on other directories</h3><p>Found on Yelp, Facebook and Instagram. But Yelp still lists you as "Charlotte wholesale supplements," and Apple Maps uses Yelp's data, so iPhone users see a different name than Google does.</p></div><span class="p">2 / 4</span></li>
+ </ul>
+</div></section>
+
+<section class="band tint" style="--c:var(--navy)"><div class="inner">
+ <div class="shead"><div><span class="eyebrow">Be Trusted</span><h2>Do you look like the safe choice?</h2><p class="muted">This is your strength. Customers rave about the staff, the prices and the selection. A couple of gaps keep it from showing.</p></div><div class="pts"><b>23<small> / 35</small></b><div class="bar"><span style="width:66%"></span></div></div></div>
+ <div class="two">
+  <div class="card"><h3>Google reviews: you vs. the supplement stores around you</h3><div class="rbars" id="bars"></div></div>
+  <ul class="checks">
+   <li class="part"><span class="ic">!</span><div><h3>Review count vs. top 3</h3><p>277 reviews, second only to Planet Supplements (297). Close enough to pass them in a month.</p></div><span class="p">8 / 10</span></li>
+   <li class="part"><span class="ic">!</span><div><h3>Star rating</h3><p>4.7 stars. Strong, but Planet Supplements and NutriShop show 4.9 right next to you.</p></div><span class="p">6 / 8</span></li>
+   <li class="part"><span class="ic">!</span><div><h3>New reviews, last 90 days</h3><p>About 10 in the last three months, roughly 3 a month. For a store this busy, that's a small slice of happy customers.</p></div><span class="p">5 / 8</span></li>
+   <li class="part"><span class="ic">!</span><div><h3>Photos</h3><p>You have your own photos on Google. More of the aisles, the water station and new products would help shoppers picture the store.</p></div><span class="p">4 / 5</span></li>
+   <li class="fail"><span class="ic">✕</span><div><h3>Owner replies</h3><p>No owner replies on the 10 newest reviews, including one from a customer who wished you had more cat supplements. Google rewards stores that answer.</p></div><span class="p">0 / 4</span></li>
+  </ul>
+ </div>
+ <div class="card"><h3>What your customers say, in their words</h3><p class="muted">Google groups your reviews by topic: knowledgeable staff (71 mentions), product selection (16), kind staff (11), alkaline water (9), health supplements (8), knowledgeable employees (5). Reviewers name Tom, Heidi, Julius and Juan, and say "the prices can't be beat." That's the story your website should tell.</p></div>
+</div></section>
+
+<section class="band" style="--c:var(--star)"><div class="inner">
+ <div class="shead"><div><span class="eyebrow">Be Chosen</span><h2>When they find you, is it easy to say yes, and to come back?</h2></div><div class="pts"><b>11<small> / 25</small></b><div class="bar"><span style="width:44%"></span></div></div></div>
+ <ul class="checks">
+  <li class="part"><span class="ic">!</span><div><h3>A website that works on a phone</h3><p>It loads on a phone, but it's two pages: an address, a photo and "8,000+ products." No brands, no categories, no prices, nothing to tell a shopper you carry what they need before they drive over.</p></div><span class="p">5 / 8</span></li>
+  <li class="part"><span class="ic">!</span><div><h3>Phone and hours on Google</h3><p>Listed and correct. But you're open 26 hours a week (Tuesday to Saturday, 11 to 4, Thursday to 5). Anyone searching on a Sunday, a Monday or after work sees "Closed" and nothing else to do.</p></div><span class="p">3 / 5</span></li>
+  <li class="part"><span class="ic">!</span><div><h3>Reviews shown where customers decide</h3><p>Your homepage has a reviews section, but your 277 Google reviews and 4.7 stars aren't front and center.</p></div><span class="p">2 / 4</span></li>
+  <li class="fail"><span class="ic">✕</span><div><h3>Text, order-ahead or sign-up option</h3><p>Only a contact form. No way to text a question, hold a product for pickup, or join a list for deals and restock reminders.</p></div><span class="p">1 / 4</span></li>
+  <li class="fail"><span class="ic">✕</span><div><h3>Pages for what you sell and where</h3><p>Nothing tells Google about protein, peptides, sea moss, alkaline water, vitamins by need, or the towns you serve.</p></div><span class="p">0 / 4</span></li>
+ </ul>
+</div></section>
+
+<section class="band white"><div class="inner">
+ <div class="shead"><div><span class="eyebrow">The competition</span><h2>What they have that you don't</h2></div></div>
+ <div class="tw"><table>
+  <thead><tr><th>Store</th><th>Google reviews</th><th>What they have that you don't</th></tr></thead>
+  <tbody>
+   <tr><td>Planet Supplements (University City)</td><td class="sc">4.9 · 297</td><td>Top 3 in Huntersville and Concord, an online store with free local delivery over $40, open until 8 PM six days and on Sundays, and an email sign-up that gives 10% off the first order</td></tr>
+   <tr><td>NutriShop The Arboretum</td><td class="sc">4.9 · 260</td><td>#1 in Matthews and top 3 in Pineville, the towns just south and east of you</td></tr>
+   <tr><td>The Vitamin Shoppe (South Kings Dr)</td><td class="sc">4.5 · 204</td><td>A store in almost every suburb, and it shows up for "protein powder near me"</td></tr>
+   <tr><td>Charlotte Vitamins &amp; Health (Providence Rd)</td><td class="sc">4.6 · 58</td><td>Order online and pick up in store, a rewards program and an email list. With only 58 reviews, it still beats you in Matthews.</td></tr>
+  </tbody></table></div>
+ <p class="note">You have more reviews than three of these four and better prices than all of them. They win on reach and convenience, not love. Town pages, a website that shows what you carry, and a customer list close most of the gap.</p>
+</div></section>
+
+<section class="band" id="leak1"><div class="inner">
+ <div class="shead"><div><span class="eyebrow">Leak #1: searches you're missing</span><h2>About $1,087.50 a month goes to stores that show up instead</h2><p class="muted">Shoppers in the towns around Charlotte, and people searching for a product instead of a store, never see you.</p></div></div>
+ <div class="money">
+  <div class="card"><b>1,450</b><span>monthly searches you're missing, counted below</span></div>
+  <div class="card"><b>21.75</b><span>sales a month you could win at a 10% share</span></div>
+  <div class="card hot"><b>$1,087.50</b><span>a month, or $13,050 a year</span></div>
+ </div>
+ <div class="tw"><table>
+  <thead><tr><th>Search</th><th>Searches a month (Charlotte area)</th><th>You today</th><th>We count</th></tr></thead>
+  <tbody>
+   <tr><td>supplement store near me, supplement stores near me, vitamin store near me, supplements near me, vitamins near me, nutrition store near me</td><td class="sc">1,600</td><td>#1 inside Charlotte. Not in the top 3 in Pineville, Matthews, Huntersville, Concord, Mooresville, Gastonia or Rock Hill</td><td class="sc">960 (60%)</td></tr>
+   <tr><td>peptides near me</td><td class="sc">170</td><td>Not shown. Clinics take all three spots</td><td class="sc">170</td></tr>
+   <tr><td>creatine near me</td><td class="sc">140</td><td>Not shown</td><td class="sc">140</td></tr>
+   <tr><td>protein powder near me</td><td class="sc">90</td><td>Not shown. Harris Teeter and The Vitamin Shoppe</td><td class="sc">90</td></tr>
+   <tr><td>pre workout near me</td><td class="sc">90</td><td>Not shown</td><td class="sc">90</td></tr>
+   <tr class="tot"><td><b>Total we count</b></td><td class="sc">2,090</td><td></td><td class="sc"><b>1,450</b></td></tr>
+  </tbody></table></div>
+ <p class="note">Monthly searches are Google's own 12-month averages for the Charlotte market (Google Ads data, checked November 16, 2026). To stay conservative we leave out "health food store near me" (720 a month), and the 12,600 monthly searches for GNC and The Vitamin Shoppe by name. We count 60% of the "near me" store searches, our estimate of the share that comes from outside the Charlotte neighborhoods where you already rank #1.</p>
+ <p class="chain">1,450 searches × 10% share won × 30% visit × 50% buy = 21.75 sales × $50 average sale = $1,087.50 a month.</p>
+</div></section>
+
+<section class="band tint" id="leak2"><div class="inner">
+ <div class="shead"><div><span class="eyebrow">Leak #2: no automated review system</span><h2>277 great reviews, and no system to get more</h2><p class="muted">Your reviews come from customers who remember to leave one on their own. About 3 a month do. Shoppers comparing you to Planet Supplements see 297 reviews at 4.9 stars next to yours, and some pick the bigger number.</p></div></div>
+ <div class="money">
+  <div class="card"><b>277 vs. 297</b><span>your Google reviews vs. Planet Supplements, the store that shows up next to you</span></div>
+  <div class="card"><b>~3 → 40</b><span>reviews a month: what you get now vs. a thank-you text after every sale. At 40 a month you pass Planet Supplements in your first month, then pull away as the most-reviewed supplement store in Charlotte.</span></div>
+  <div class="card hot"><b>$296.25</b><span>a month from shoppers who see you on Google but choose a store with more or fresher reviews ($3,555 a year)</span></div>
+ </div>
+ <p class="chain">Reviews: 400 sales a month × 10% who leave a review after a text = 40 a month.<br>Sales: 790 monthly searches where you already show up × 5% more shoppers choosing you × 30% visit × 50% buy = 5.925 sales × $50 average sale = $296.25 a month.</p>
+ <p class="note">The 790: "supplement store charlotte nc" (110) + "vitamin store charlotte" (40) + the 40% of Charlotte-area "near me" store searches (640) that come from the neighborhoods where you already rank #1.</p>
+</div></section>
+
+<section class="band" id="leak3"><div class="inner">
+ <div class="shead"><div><span class="eyebrow">Leak #3: no repeat sales system</span><h2>About $3,600 a month walks out the door and never hears from you again</h2><p class="muted">Supplements run out. Every bottle you sell is empty in about 30 days, and right now that customer decides on their own where to buy the next one: you, Amazon, or the store that texted them first.</p></div></div>
+ <div class="money">
+  <div class="card"><b>0</b><span>customers you can text today. No list, no restock reminder, no sale-day alert.</span></div>
+  <div class="card"><b>2,400</b><span>customers on your own text list after one year, from half of your shoppers saying "yes, text me deals"</span></div>
+  <div class="card hot"><b>$3,600</b><span>a month in extra sales from restock reminders and deal texts ($43,200 a year)</span></div>
+ </div>
+ <p class="chain">400 sales a month × 50% opt in = 200 new members a month, 2,400 by year end, about 1,200 on average in year one.<br>1,200 members × 2 texts a month × 3% who come in = 72 extra sales × $50 average sale = $3,600 a month.</p>
+ <div class="two">
+  <div class="card"><h3>Restock reminders</h3><p class="muted">"Hi Maria, your D3 is probably running low. Want us to set one aside? Reply YES." Sent about 30 days after a purchase, only to customers who joined your list.</p></div>
+  <div class="card"><h3>Deal days that fill slow days</h3><p class="muted">New Year's protein sale, a Tuesday Senior Day, new brands in stock. One text, sent from your phone, to everyone on the list.</p></div>
+ </div>
+</div></section>
+
+<section class="band white"><div class="inner">
+ <div class="shead"><div><span class="eyebrow">The return on investment</span><h2>What it's worth against what it costs</h2></div></div>
+ <div class="money">
+  <div class="card"><b>$497</b><span>a month, your founder price. The Local Authority System is regularly $997 a month.</span></div>
+  <div class="card"><b>10 sales</b><span>a month pays for it ($497 ÷ $50 = 9.94, rounded up). About two a week.</span></div>
+  <div class="card hot"><b>About 7.8x</b><span>your money back from Leaks #2 and #3 alone: 77.925 extra sales, $3,896.25 a month ÷ $497</span></div>
+ </div>
+ <p class="note">Estimates, not promises. With all three leaks closed it's $4,983.75 ÷ $497, about 10 times your money back. Even if we close only a quarter of the three leaks, that's $1,245.94 a month in extra sales, about 2.5 times your $497.</p>
+ <div class="eq" aria-label="All three leaks together">
+  <div class="eqb"><b>$1,087.50</b><span>Leak #1 · searches</span></div><span class="op">+</span>
+  <div class="eqb"><b>$296.25</b><span>Leak #2 · reviews</span></div><span class="op">+</span>
+  <div class="eqb"><b>$3,600.00</b><span>Leak #3 · repeat sales</span></div><span class="op">=</span>
+  <div class="eqb hot"><b>$4,983.75</b><span>a month · $59,805 a year</span></div>
+ </div>
+</div></section>
+
+<section class="band tint"><div class="inner">
+ <div class="shead"><div><span class="eyebrow">Your fix plan</span><h2>The five fixes that move your score the most</h2></div></div>
+ <ol class="fixes">
+  <li><div><h3>A phone-first website that shows what you carry</h3><p>Pages for vitamins, protein and sports nutrition, peptides, herbs and teas, sea moss and alkaline water, with your reviews, your team and a "Text us to hold it" button so shoppers can reserve a product and pick it up.</p></div><span class="tag" style="--c:var(--gold-ink);--cs:var(--gold-soft)">Chosen +12</span></li>
+  <li><div><h3>Town pages and weekly Google posts</h3><p>Tell Google you serve Pineville, Matthews, Huntersville, Concord, Mooresville, Gastonia and Rock Hill, and that you carry protein, creatine, pre-workout and peptides.</p></div><span class="tag" style="--c:var(--rose-deep);--cs:var(--rose-soft)">Seen +8</span></li>
+  <li><div><h3>Text every buyer: a review request and a VIP invite</h3><p>Staff enter a first name and cell at checkout (about 10 seconds). A thank-you text asks for a Google review and invites them to join your deal and restock list, with its own yes.</p></div><span class="tag" style="--c:var(--navy);--cs:var(--tint)">Trusted +3</span></li>
+  <li><div><h3>Reply to every review and add photos</h3><p>Thank every reviewer by name, answer the cat-supplement shopper, and add photos of the aisles, the water station and new arrivals.</p></div><span class="tag" style="--c:var(--navy);--cs:var(--tint)">Trusted +5</span></li>
+  <li><div><h3>Fix your Yelp name and add Google categories</h3><p>One name everywhere, so Apple Maps matches Google. Add health food and sports nutrition categories.</p></div><span class="tag" style="--c:var(--rose-deep);--cs:var(--rose-soft)">Seen +4</span></li>
+ </ol>
+ <p class="note">All five together lift the score from 56 to about 88, into Local Authority. Rankings in nearby towns build over two to three months of steady reviews and posting, which we track and report every month.</p>
+</div></section>
+
+<section class="band"><div class="inner">
+ <div class="cta">
+  <div style="display:grid;gap:12px"><span class="eyebrow">Next step</span><h2>A 15-minute call before the New Year rush</h2><p>We'll show you these searches live, walk through the review and restock texts, and give you one simple price. January shoppers start searching the week after Christmas.</p></div>
+  <div class="person"><b>Phyllena Parker, MBA</b><span>Founder, Phyllena Management LLC</span><span>704-741-3167</span><span>phyllenamanagement.com</span><a class="btn" href="/charlotte-supplements/proposal.html">See the proposal</a></div>
+ </div>
+ <div class="card"><h3>Assumptions: estimates, not promises</h3><p class="muted">We assumed a $50 average sale and 400 sales a month (about 17 a day across your five open days). Search volumes are Google Ads 12-month averages. The 60% / 40% split of "near me" searches, the 10% share, 30% visit, 50% buy, 5% lift, 10% review rate, 50% opt-in and 3% response are our standard planning numbers. Warm customer lists typically respond at 4 to 10% to a good offer, so 3% is conservative. Swap in your real average sale and monthly sales and every number on this page updates.</p></div>
+ <div class="card method"><h3>The Local Authority Method</h3><p>Our proprietary scoring system. It measures the three things that decide who gets the call on Google, whether you're seen, trusted and chosen, and turns what we find into dollars you can check.</p>
+  <div class="tw"><table><thead><tr><th>Pillar</th><th>Points</th><th>What we check</th></tr></thead><tbody>
+   <tr><td>Be Seen</td><td class="sc">40</td><td>Top-3 map spots on key searches (20), map pin (6), categories (6), website linked (4), other directories (4)</td></tr>
+   <tr><td>Be Trusted</td><td class="sc">35</td><td>Review count vs. top 3 (10), star rating (8), reviews in last 90 days (8), photos (5), owner replies (4)</td></tr>
+   <tr><td>Be Chosen</td><td class="sc">25</td><td>Phone-friendly website (8), phone and hours (5), reviews on site (4), text/order/sign-up (4), product and town pages (4)</td></tr>
+  </tbody></table></div>
+  <p>Rankings were checked on Google from each town listed. Review counts and ratings come from public Google listings on November 16, 2026.</p></div>
+</div></section>
+
+<footer class="band"><div class="inner"><span>© 2026 Phyllena Management LLC · Concord, North Carolina</span><span>Be Seen + Be Trusted + Be Chosen = Booked Jobs</span></div></footer>
+<script>
+const S=[
+["supplement store charlotte nc",[["Charlotte Supplements",277,1],["Planet Supplements",297],["The Vitamin Shoppe",204]],"You: #1","About 110"],
+["vitamin store charlotte nc",[["Charlotte Supplements",277,1],["The Vitamin Shoppe",204],["Charlotte Vitamins & Health",58]],"You: #1","About 40"],
+["supplement store near me (Charlotte)",[["Charlotte Supplements",277,1],["Planet Supplements",297],["The Vitamin Shoppe",204]],"You: #1","Part of 1,600"],
+["discount supplements charlotte",[["Your profile and website",277,1]],"You: #1 (no map shown)","Under 20"],
+["charlotte supplements",[["Your own Google profile",277,1]],"You: #1","About 2,400"],
+["supplement store near me (Pineville)",[["Muscle Factory (Fort Mill)",114],["The Vitamin Shoppe",192],["NutriShop The Arboretum",260]],"You: not in top 3","Part of 1,600"],
+["supplement store near me (Matthews)",[["NutriShop The Arboretum",260],["The Vitamin Shoppe",117],["Charlotte Vitamins & Health",58]],"You: not in top 3","Part of 1,600"],
+["supplement store near me (Huntersville)",[["Planet Supplements",297],["The Vitamin Shoppe",21],["Mooresville Nutrition Corner",181]],"You: not in top 3","Part of 1,600"],
+["supplement store near me (Concord)",[["Planet Supplements",297],["VitaSmart",57],["GNC",45]],"You: not in top 3","Part of 1,600"],
+["vitamin store near me (Mooresville)",[["Mooresville Nutrition Corner",181],["The Vitamin Shoppe",105],["Grace Nutrition",35]],"You: not in top 3","Part of 1,600"],
+["supplement store near me (Gastonia)",[["The Vitamin Shoppe",240],["Gastonia Nutrition",9],["Muscle Factory (Fort Mill)",114]],"You: not in top 3","Part of 1,600"],
+["supplement store near me (Rock Hill)",[["Supreme Nutrition",166],["Rock Hill Nutrition",58],["Vitamin Depot",140]],"You: not in top 3","Part of 1,600"],
+["peptides near me (Charlotte)",[["VYVE Wellness",179],["Peptides Wholesale",0],["Nova Wellness",103]],"You: not listed","About 170"],
+["peptides charlotte nc",[["VYVE Wellness",179],["Peptides Wholesale",0],["Vitality Center of Charlotte",104]],"You: not listed","Part of 170"],
+["protein powder near me (Charlotte)",[["Harris Teeter",1600],["The Vitamin Shoppe",204]],"You: not listed","About 90"],
+["health food store near me (Charlotte)",[["Berrybrook Farm Natural Foods",114],["Clean Eatz",62],["Musa Moon",125]],"You: not listed","About 720"]];
+document.getElementById("searches").innerHTML=S.map(([q,t,f,v])=>`<div class="card"><span class="q">${q}</span><span class="vol">${v} searches a month</span><ul class="top3">${t.map(([n,r,me],i)=>`<li${me?' class="me"':''}><span>${t.length>1?(i+1)+". ":""}${n}</span><span>${r?r.toLocaleString()+" reviews":"no reviews"}</span></li>`).join("")}</ul><span class="flag${f.includes("#1")?" win":""}">${f}</span></div>`).join("");
+const C=[["Planet Supplements",297],["Charlotte Supplements",277,1],["NutriShop The Arboretum",260],["The Vitamin Shoppe (S Kings)",204],["Mooresville Nutrition Corner",181],["Supreme Nutrition (Rock Hill)",166],["Charlotte Vitamins & Health",58]];
+const m=Math.max(...C.map(c=>c[1]));
+document.getElementById("bars").innerHTML=C.map(([n,v,me])=>`<div class="rb${me?" me":""}"><span class="n" title="${n}">${n}</span><span class="t"><span style="width:${Math.max(2,v/m*100)}%"></span></span><span class="v">${v}</span></div>`).join("");
+</script>
+</body></html>

@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Charlotte Supplements Proposal</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: matches phyllenamanagement.com. Light only, white top bar with logo, soft gradient hero with a floating score card, alternating light bands, rounded white cards with soft shadows, one navy gradient panel for the slogan equation. */
+:root{
+ color-scheme:light;
+ --night:#0E1B38; --navy:#1F3A8A; --bg:#F7F7FA; --surface:#FFFFFF; --ink:#111A2E; --muted:#5B6479; --line:#E4E6EE;
+ --rose:#C63F68; --rose-deep:#A92E55; --rose-soft:#FCEAF0; --tint:#EEF2FA; --star:#F5B42A; --gold-ink:#9A6A06; --gold-soft:#FDF3DC;
+ --good:#1F8A55; --good-soft:#E3F4EA; --purple:#5A3F86;
+ --display:"Plus Jakarta Sans","Segoe UI",system-ui,sans-serif; --body:"Manrope","Segoe UI",system-ui,-apple-system,sans-serif;
+ --r-lg:24px; --r-md:16px;
+ --shadow:0 1px 2px rgba(14,27,56,.06),0 12px 32px rgba(14,27,56,.08);
+}
+body{background:var(--bg);color:var(--ink);font:17px/1.65 var(--body)}
+.band{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.inner{max-width:1080px;margin:0 auto;padding-block:72px;display:grid;gap:28px}
+.white{background:var(--surface)} .tint{background:var(--tint)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;color:var(--ink)}
+h1{font-size:clamp(36px,6vw,64px);line-height:1.02;font-weight:800;letter-spacing:-.035em}
+h2{font-size:clamp(28px,4.2vw,44px);line-height:1.08;font-weight:800;letter-spacing:-.03em}
+h3{font-size:18px;font-weight:700;letter-spacing:-.01em}
+p{margin:0;max-width:62ch}
+.muted{color:var(--muted)}
+.grad{background:linear-gradient(90deg,var(--rose),var(--purple) 55%,var(--navy));-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{display:flex;align-items:center;gap:10px;font:700 13px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--rose)}
+.eyebrow::before{content:"";width:18px;height:2px;background:currentColor}
+.lede{font-size:19px;color:var(--muted)}
+/* top bar */
+.top{background:var(--surface);border-bottom:1px solid var(--line)}
+.top .inner{padding-block:16px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px}
+.logo{width:180px;height:auto;display:block}
+.chip{font:600 14px var(--body);padding:8px 16px;border-radius:99px;background:var(--rose);color:#fff;white-space:nowrap}
+.sample{background:var(--gold-soft);color:var(--gold-ink);border-bottom:1px solid #F3E1B5}
+.sample .inner{padding-block:10px;font-size:14px}
+/* hero */
+.hero{background:radial-gradient(60% 80% at 85% 20%,rgba(198,63,104,.10),transparent 70%),radial-gradient(50% 70% at 70% 90%,rgba(31,58,138,.10),transparent 70%),linear-gradient(180deg,#FBFBFD,var(--bg))}
+.heroGrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center}
+@media (max-width:820px){.heroGrid{grid-template-columns:1fr}}
+.badge{justify-self:start;display:inline-flex;align-items:center;gap:10px;font-size:14px;padding:7px 16px 7px 10px;border-radius:99px;background:var(--surface);border:1px solid var(--line);box-shadow:0 1px 2px rgba(14,27,56,.05)}
+.badge i{width:14px;height:14px;border-radius:50%;background:var(--rose-soft);display:grid;place-content:center}
+.badge i::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--rose)}
+.heroText{display:grid;gap:22px}
+.ticks{display:flex;flex-wrap:wrap;gap:10px 22px;margin:0;padding:0;list-style:none;font-size:15px;color:var(--muted)}
+.ticks li::before{content:"✓";color:var(--rose);font-weight:700;margin-right:8px}
+/* score card */
+.scoreCard{background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow);border:1px solid var(--line);padding:28px;display:grid;gap:20px;min-width:0}
+.scHead{display:flex;justify-content:space-between;align-items:center;gap:10px;font:700 13px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.scHead span:last-child{letter-spacing:0;text-transform:none;font-weight:600;color:var(--rose);background:var(--rose-soft);padding:4px 12px;border-radius:99px}
+.dialRow{display:grid;grid-template-columns:150px minmax(0,1fr);gap:22px;align-items:center}
+@media (max-width:420px){.dialRow{grid-template-columns:1fr}}
+.dial{position:relative;width:150px;aspect-ratio:1;max-width:100%}
+.dial svg{width:100%;height:100%;display:block}
+.dial .num{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
+.dial .num b{font:800 48px/1 var(--display);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.dial .num small{font-size:13px;color:var(--muted)}
+.subs{display:grid;gap:12px}
+.sub{display:grid;gap:5px}
+.sub .l{display:flex;justify-content:space-between;font:700 15px var(--display)}
+.sub .l span{font:600 14px var(--body);color:var(--muted);font-variant-numeric:tabular-nums}
+.bar{height:8px;border-radius:99px;background:var(--tint);overflow:hidden}
+.bar span{display:block;height:100%;border-radius:99px;background:var(--c)}
+.lost{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;background:var(--rose-soft);border-radius:var(--r-md);padding:14px 18px}
+.lost b{font:800 28px var(--display);color:var(--rose-deep);letter-spacing:-.02em}
+.lost span{font-size:14px;color:var(--rose-deep)}
+.scale{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;font-size:12px;color:var(--muted)}
+.scale div{padding:7px 8px;border-radius:10px;background:var(--bg);text-align:center;line-height:1.3}
+.scale div.on{background:var(--rose);color:#fff}
+.scale b{display:block;font:700 12px var(--display)}
+/* equation panel */
+.eq{border-radius:var(--r-lg);background:linear-gradient(120deg,#1F3A8A 0%,#2C3F95 45%,#5A3F86 100%);padding:32px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px;color:#fff;box-shadow:var(--shadow)}
+.eqb{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);border-radius:14px;padding:12px 20px;text-align:center;min-width:140px}
+.eqb b{display:block;font:800 22px var(--display);letter-spacing:-.02em}
+.eqb span{font-size:13px;color:#D3DBEE}
+.eqb.hot{background:var(--rose);border-color:var(--rose)}
+.eqb.hot span{color:#FFE3EC}
+.op{font:800 22px var(--display);color:#FF9DB8}
+/* section head */
+.shead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:18px}
+.shead > div{display:grid;gap:12px}
+.pts{display:grid;justify-items:end;gap:6px}
+.pts b{font:800 48px/1 var(--display);letter-spacing:-.04em;color:var(--c);font-variant-numeric:tabular-nums}
+.pts b small{font-size:20px;color:var(--muted);letter-spacing:0}
+.pts .bar{width:180px;background:var(--line)}
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:24px;display:grid;gap:10px;align-content:start;min-width:0}
+.q{font:700 16px var(--display)}
+.q::before{content:"🔍︎";margin-right:6px;filter:grayscale(1);opacity:.5}
+.top3{display:grid;gap:4px;margin:0;padding:0;list-style:none;font-size:14px;color:var(--muted)}
+.top3 li{display:flex;justify-content:space-between;gap:8px}
+.top3 li span:last-child{font-variant-numeric:tabular-nums;white-space:nowrap}
+.top3 li span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.flag{justify-self:start;font:700 12px var(--body);padding:4px 12px;border-radius:99px;background:var(--rose-soft);color:var(--rose-deep)}
+/* checklist */
+.checks{display:grid;margin:0;padding:6px 24px;list-style:none;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow)}
+.checks li{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:14px;padding:18px 0;border-bottom:1px solid var(--line);align-items:start}
+.checks li:last-child{border-bottom:0}
+.ic{width:28px;height:28px;border-radius:50%;display:grid;place-content:center;font:800 13px var(--body)}
+.fail .ic{background:var(--rose-soft);color:var(--rose)} .part .ic{background:var(--gold-soft);color:var(--gold-ink)} .pass .ic{background:var(--good-soft);color:var(--good)}
+.checks h3{font-size:16px}
+.checks p{font-size:15px;color:var(--muted)}
+.checks .p{font:700 14px var(--display);font-variant-numeric:tabular-nums;white-space:nowrap;padding:3px 12px;border-radius:99px;background:var(--bg);color:var(--muted)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+@media (max-width:820px){.two{grid-template-columns:1fr}}
+/* review bars */
+.rbars{display:grid;gap:10px;font-size:14px}
+.rb{display:grid;grid-template-columns:minmax(100px,170px) minmax(0,1fr) 40px;gap:10px;align-items:center}
+.rb .n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rb .t{height:10px;border-radius:99px;background:var(--tint);overflow:hidden}
+.rb .t span{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#3B57B0,var(--navy))}
+.rb.me .n{font-weight:700;color:var(--rose)} .rb.me .t span{background:var(--rose)}
+.rb .v{text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+/* table */
+.tw{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px}
+th,td{padding:14px 20px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:700 12px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:var(--bg)}
+tr:last-child td{border-bottom:0}
+.sc{font:700 15px var(--display);white-space:nowrap;font-variant-numeric:tabular-nums}
+/* money */
+.money{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.money .card b{font:800 40px/1.1 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.money .card.hot{background:linear-gradient(135deg,var(--rose),var(--rose-deep));border-color:transparent;color:#fff}
+.money .card.hot span{color:#FFE3EC}
+.money .card span{font-size:15px;color:var(--muted)}
+.chain{font-size:15px;color:var(--muted);background:var(--surface);border:1px dashed var(--line);border-radius:var(--r-md);padding:14px 18px;overflow-wrap:anywhere}
+.note{font-size:14px;color:var(--muted)}
+/* fixes */
+.fixes{display:grid;gap:14px;margin:0;padding:0;list-style:none;counter-reset:f}
+.fixes li{counter-increment:f;display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:18px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);box-shadow:var(--shadow);padding:18px 22px}
+.fixes li::before{content:counter(f);width:44px;height:44px;border-radius:12px;display:grid;place-content:center;font:800 18px var(--display);color:var(--navy);background:var(--tint)}
+.fixes p{font-size:15px;color:var(--muted)}
+.tag{font:700 12px var(--body);padding:5px 12px;border-radius:99px;white-space:nowrap;color:var(--c);background:var(--cs)}
+@media (max-width:560px){.fixes li{grid-template-columns:44px minmax(0,1fr)}.fixes .tag{grid-column:2;justify-self:start}}
+/* cta */
+.cta{background:linear-gradient(120deg,#1F3A8A 0%,#2C3F95 45%,#5A3F86 100%);border-radius:var(--r-lg);padding:40px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center;color:#fff;box-shadow:var(--shadow)}
+@media (max-width:720px){.cta{grid-template-columns:1fr;padding:28px}}
+.cta h2{color:#fff} .cta p{color:#D3DBEE}
+.cta .eyebrow{color:#FF9DB8}
+.person{background:#fff;color:var(--ink);border-radius:var(--r-md);padding:20px 24px;display:grid;gap:4px;font-size:15px;min-width:0}
+.person b{font:800 19px var(--display)}
+.person span{color:var(--muted)}
+.btn{justify-self:start;margin-top:8px;font:700 15px var(--body);background:var(--rose);color:#fff;padding:12px 22px;border-radius:99px;text-decoration:none;box-shadow:0 8px 20px rgba(198,63,104,.3)}
+.btn:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.method{font-size:14px;color:var(--muted)}
+footer .inner{padding-block:28px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:14px;color:var(--muted)}
+.flag.win{background:var(--good-soft);color:var(--good)}
+.top3 li.me{color:var(--rose);font-weight:700}
+.leaks{display:grid;gap:8px}
+.lk{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 18px;border-radius:var(--r-md);background:var(--bg);font-size:14px;color:var(--muted)}
+.top3 li span:first-child{min-width:0}
+#searches .card{grid-template-columns:minmax(0,1fr)}
+.lk b{font:800 20px var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+.price{display:flex;align-items:baseline;gap:8px;margin:8px 0 16px}.price b{font-family:"Plus Jakarta Sans",sans-serif;font-size:56px;font-weight:800;color:var(--night);letter-spacing:-.02em}.price span{color:var(--muted, #5B6478);font-size:16px}
+.tabs{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(14,27,56,.05)}.tabs .inner{display:flex;gap:6px;padding-block:10px;overflow-x:auto}.tabs a{flex:0 0 auto;padding:9px 16px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none;color:var(--night);background:#EEF2FA}.tabs a.on{background:var(--rose);color:#fff}.tabs a.pr{margin-left:auto}@media print{.tabs{display:none}}
+.stack s,.was s{color:var(--muted);text-decoration-thickness:2px}.stack tr.tot td{border-top:2px solid var(--line);background:var(--bg)}.stack td:last-child{font-weight:700;color:var(--good,#1F8A55)}
+.pricebox{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;background:linear-gradient(135deg,#fff,var(--rose-soft));border:2px solid var(--rose);border-radius:var(--r-lg);padding:28px;box-shadow:var(--shadow);scroll-margin-top:80px}
+.pricebox .was{font-size:16px;color:var(--muted);margin:6px 0}.pricebox .now{margin:0;font-size:18px}.pricebox .now b{font:800 56px/1 var(--display);color:var(--night,#0E1B38);letter-spacing:-.02em;margin-right:6px}
+.pbside{display:grid;gap:4px;text-align:center;background:var(--surface);border-radius:var(--r-md);padding:18px 22px;max-width:240px}.pbside b{font:800 26px var(--display);color:var(--rose-deep)}.pbside span{font-size:14px;color:var(--muted)}
+@media (max-width:720px){.pricebox{grid-template-columns:1fr}.pbside{max-width:none}}
+body{margin:0}</style><style>
+@page{size:Letter;margin:0}
+@media print{
+ html,body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .inner{padding-block:40px}
+ .card,.checks li,.fixes li,.scoreCard,.eq,.cta,.tw,.chain,.money,.rb{break-inside:avoid}
+ .shead{break-after:avoid;break-inside:avoid} .method h3{break-after:avoid} .method{break-inside:avoid} .grad{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:var(--rose)}
+ .heroGrid{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}
+ .two{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+ .pb{break-before:page}
+}
+</style>
+<style>.plan{min-width:0}.plan td{vertical-align:middle;padding:14px 20px}.plan td b{display:block;font:700 16px/1.3 var(--display);color:var(--ink)}.plan td span{display:block;font-size:14px;line-height:1.5;color:var(--muted);margin-top:3px}.plan td.pv{white-space:nowrap;text-align:right;font:700 15px var(--display);color:var(--good,#1F8A55);width:1%}.plan td.pv s{color:var(--muted);font-weight:500;margin-right:10px;text-decoration-thickness:2px}.plan tr.step td{background:var(--night,#0E1B38);color:#fff;font:700 12px var(--body);letter-spacing:.12em;text-transform:uppercase;padding:12px 20px}@media(max-width:600px){.plan td{padding:12px 14px}.plan td.pv{font-size:14px}.plan td.pv s{display:block;margin:0}}</style>
+<style>.opp{display:grid;gap:12px}.orow{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;background:var(--bg);border-radius:14px;padding:14px 18px}.orow b{font:800 40px/1 var(--display);letter-spacing:-.03em;color:var(--night,#0E1B38);min-width:84px}.orow strong{display:block;font:700 16px/1.3 var(--display);color:var(--ink)}.orow span{display:block;font-size:13px;line-height:1.45;color:var(--muted);margin-top:2px}.orow.win{background:var(--rose-soft);}.orow.win b{color:var(--rose-deep)}.ominis{display:grid;grid-template-columns:1fr 1fr;gap:12px}.ominis div{background:var(--bg);border-radius:14px;padding:12px 16px}.ominis span{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.ominis strong{display:block;font:700 18px var(--display);color:var(--ink);margin-top:2px}.ototal{background:linear-gradient(135deg,var(--rose),var(--rose-deep));color:#fff;border-radius:14px;padding:16px 18px;display:grid;gap:2px}.ototal span{font-size:14px;color:#FFE3EC}.ototal b{font:800 30px/1.1 var(--display);letter-spacing:-.02em}</style>
+<style>.ototal.two2{grid-template-columns:1fr 1fr;gap:14px}.ototal.two2>div{display:grid;gap:2px}.ototal.two2>div+div{border-left:1px solid rgba(255,255,255,.35);padding-left:14px}.ototal.two2 b{font-size:26px;white-space:nowrap}@media(max-width:600px){.ototal.two2{grid-template-columns:1fr}.ototal.two2>div+div{border-left:0;padding-left:0;border-top:1px solid rgba(255,255,255,.35);padding-top:10px}}</style>
+<style>.pi{display:flex;gap:14px;align-items:center}.pi>div{min-width:0}.ic{flex:none;width:42px;height:42px;border-radius:12px;background:var(--rose-soft);color:var(--rose-deep);display:grid;place-items:center;font-style:normal}.ic svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}@media(max-width:600px){.ic{width:34px;height:34px;border-radius:10px}.ic svg{width:17px;height:17px}.pi{gap:10px}}</style>
+<style>.say{margin-top:10px;background:var(--tint);border-radius:14px 14px 14px 4px;padding:10px 14px;font-size:15px;color:var(--ink);max-width:56ch}.fixes li.star{border:2px solid var(--rose);background:linear-gradient(180deg,#fff,var(--rose-soft))}.rw{margin:8px 0;padding-left:18px;display:grid;gap:6px;font-size:15px;color:var(--ink);list-style:disc}.fixes .rw li{counter-increment:none;display:list-item;background:none;border:0;box-shadow:none;padding:0;border-radius:0}.fixes .rw li::before{content:none}.say b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}</style>
+<div class="band top"><div class="inner"><img class="logo" src="/charlotte-supplements/images/phyllena-logo.png" alt="Phyllena Management LLC"></div></div>
+<nav class="tabs" aria-label="Charlotte Supplements reports"><div class="inner"><a href="/charlotte-supplements/scorecard.html">Scorecard</a><a href="/charlotte-supplements/website.html">Website mock-up</a><a href="/charlotte-supplements/faq.html" class="pr">FAQ</a><a href="/charlotte-supplements/proposal.html" class="on" aria-current="page">Proposal</a></div></nav>
+
+<div class="band sample"><div class="inner"><p><strong>Prepared for Charlotte Supplements, 4128 South Blvd, Charlotte, NC.</strong> Proposal dated November 16, 2026. Built on your Local Authority Scorecard, run with our proprietary Local Authority Method.</p></div></div>
+
+<header class="band hero"><div class="inner heroGrid">
+ <div class="heroText">
+  <span class="badge"><i></i>Proposal for Charlotte Supplements</span>
+  <h1>About 115 people a day across the Charlotte area search Google <span class="grad">for what you sell.</span></h1>
+  <p class="lede">Inside Charlotte, they find you first. Everywhere else, they find someone else. Here's what's in the way, how we fix it, and what it's worth.</p>
+  <a class="btn" href="#problem" style="justify-self:start">See the problem and the fix</a>
+ </div>
+ <div class="scoreCard">
+  <div class="scHead"><span>Your opportunity</span><span>Google searches</span></div>
+  <div class="opp">
+   <div class="orow"><b>115</b><div><strong>a day across the Charlotte area</strong><span>search Google for a supplement store or what you sell (3,480 a month)</span></div></div>
+   <div class="orow win"><b>75</b><div><strong>a day you can realistically win</strong><span>2,240 a month, including the towns around Charlotte where you don't show up today</span></div></div>
+   <div class="ominis"><div><span>Each sale</span><strong>About $50</strong></div><div><span>Contract</span><strong>None</strong></div></div>
+   <div class="ototal two2"><div><span>Starting point: 1 new customer a day</span><b>$1,500/mo</b></div><div><span>Each one who reorders monthly</span><b>$600/yr</b></div></div>
+  </div>
+ </div>
+</div></header>
+
+<section class="band white" id="problem"><div class="inner">
+ <div class="shead"><div><span class="eyebrow">1. The problem and the fix</span><h2>What's costing you about $4,983.75 a month</h2><p class="muted">From your <a href="/charlotte-supplements/scorecard.html">scorecard</a>. Score: 56 out of 100.</p></div></div>
+ <div class="tw"><table>
+  <thead><tr><th>The problem</th><th>Our fix</th><th>Costing you</th></tr></thead>
+  <tbody>
+   <tr><td><b>Outside Charlotte, you disappear.</b> Not in the top 3 in Pineville, Matthews, Huntersville, Concord, Mooresville, Gastonia or Rock Hill, or for protein, creatine or peptides.</td><td>Town and product pages, plus your Google listing managed every week.</td><td class="sc" rowspan="2" style="vertical-align:middle;border-left:1px solid var(--line)">$1,087.50 a month</td></tr>
+   <tr><td><b>Your website sells nothing.</b> 2,400 people a month search your name and find two pages, no products, and a store that's closed 142 hours a week.</td><td>A phone-first website that shows what you carry, with "Text us to hold it" for pickup.</td></tr>
+   <tr><td><b>Reviews trickle in.</b> About 3 a month, and no replies.</td><td>A review text after every sale, and every review answered for you.</td><td class="sc">$296.25 a month</td></tr>
+   <tr><td><b>Bottles run out and customers don't hear from you.</b> 0 people on a text list.</td><td>A VIP text list at checkout. We send restock reminders and deal texts.</td><td class="sc">$3,600.00 a month</td></tr>
+   <tr class="tot"><td colspan="2"><b>Total</b></td><td class="sc">$4,983.75 a month</td></tr>
+  </tbody></table></div>
+ <div class="money" style="margin-top:20px">
+  <div class="card"><b>10 sec</b><span>Your cashier asks for a first name and cell at checkout. We train your team.</span></div>
+  <div class="card"><b>We do the rest</b><span>Review asks, replies, restock reminders and deal texts. You never log in.</span></div>
+  <div class="card"><b>You see it</b><span>More reviews, more reorders, and a report every month.</span></div>
+ </div>
+</div></section>
+
+<section class="band tint"><div class="inner">
+ <div class="shead"><div><span class="eyebrow">2. The opportunity</span><h2>Shoppers ready to buy, searching every day</h2><p class="muted">A supplement shopper isn't a one-time sale. Win them once and they're back every month.</p></div></div>
+ <div class="tw"><table>
+  <thead><tr><th>What they search for</th><th>Searches a month</th></tr></thead>
+  <tbody>
+   <tr><td>"Supplement store" and "vitamin store" near me</td><td class="sc">1,600</td></tr>
+   <tr><td>"Health food store near me"</td><td class="sc">720</td></tr>
+   <tr><td>Protein, creatine, pre-workout and peptides near me</td><td class="sc">490</td></tr>
+   <tr><td>"Supplement store" and "vitamin store" (no town)</td><td class="sc">470</td></tr>
+   <tr><td>Charlotte supplement and vitamin store searches, wholesale and discount supplements</td><td class="sc">200</td></tr>
+   <tr class="tot"><td><b>Searches a month</b></td><td class="sc">about 3,480 (115 a day)</td></tr>
+  </tbody></table></div>
+ <h3 style="margin-top:24px">What you can realistically win</h3>
+ <div class="tw"><table>
+  <thead><tr><th>Where</th><th>How</th><th>Searches a month</th></tr></thead>
+  <tbody>
+   <tr><td>Charlotte, where you're already #1</td><td>Keep the top spot and win more of the clicks with fresh reviews</td><td class="sc">about 790</td></tr>
+   <tr><td>Pineville, Matthews, Huntersville, Concord, Mooresville, Gastonia, Rock Hill</td><td>Town pages and weekly posts, so Google shows you there too</td><td class="sc">about 960</td></tr>
+   <tr><td>Product searches: peptides, creatine, protein, pre-workout</td><td>Product pages on your new website</td><td class="sc">about 490</td></tr>
+   <tr class="tot"><td colspan="2"><b>Total you can realistically win</b></td><td class="sc">about 2,240 (75 a day)</td></tr>
+  </tbody></table></div>
+ <div class="money" style="margin-top:20px">
+  <div class="card"><b>$50</b><span>an average sale, our estimate until we have your real number</span></div>
+  <div class="card hot"><b>$1,500 a month</b><span>from just 1 new customer a day (30 × $50), before a single reorder</span></div>
+  <div class="card"><b>2,400</b><span>people a month already search your name. Your new website turns them into shoppers.</span></div>
+ </div>
+ <p class="note">Google Ads data for the Charlotte market, 12-month averages, checked November 16, 2026. Searches for GNC and The Vitamin Shoppe by name (12,600 a month) are left out. "About 75 a day" uses the same math as your scorecard: 2,240 searches × 10% who pick you × 30% who visit × 50% who buy = 33.6 sales a month.</p>
+</div></section>
+
+<section class="band white"><div class="inner">
+ <div class="shead"><div><span class="eyebrow">3. Your plan</span><h2>Your Charlotte Supplements Local Authority Plan</h2><p class="muted">Built for your store from your scorecard.</p></div></div>
+ <div class="tw"><table class="plan">
+  <tbody>
+   <tr class="step"><td colspan="2">Step 1: We build it for you</td></tr>
+   <tr><td><div class="pi"><i class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></i><div><b>Website</b><span>A new phone-first site on charlottesupplements.com: what you carry, your team, your reviews, "Text us to hold it." We handle all the tech.</span></div></div></td><td class="pv"><s>$3,000</s>Included</td></tr>
+   <tr><td><div class="pi"><i class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></i><div><b>Setup</b><span>Google listing cleanup, Yelp name fixed, your texting number registered, checkout sign-up ready.</span></div></div></td><td class="pv"><s>$1,500</s>Waived</td></tr>
+   <tr><td><div class="pi"><i class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></i><div><b>Team training</b><span>A short session with a one-page cheat sheet. New hires trained too.</span></div></div></td><td class="pv">Included</td></tr>
+   <tr><td><div class="pi"><i class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></svg></i><div><b>Contract</b><span>Month to month. No long-term lock-in.</span></div></div></td><td class="pv">None</td></tr>
+   <tr class="step"><td colspan="2">Step 2: We run it for you every month</td></tr>
+   <tr><td><div class="pi"><i class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></i><div><b>Google listing and town pages</b><span>Photos, weekly posts, categories, and pages for the seven towns around you.</span></div></div></td><td class="pv">Included</td></tr>
+   <tr><td><div class="pi"><i class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></i><div><b>Review texts</b><span>A thank-you text after every sale, with a follow-up.</span></div></div></td><td class="pv">Included</td></tr>
+   <tr style="background:var(--rose-soft)"><td><div class="pi"><i class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></i><div><b>Every review watched and answered</b><span>Every Google review answered for you. Anything under 4 stars alerts you right away.</span></div></div></td><td class="pv">Included</td></tr>
+   <tr><td><div class="pi"><i class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></i><div><b>Restock reminders</b><span>"Your D3 is probably running low. Want us to set one aside? Reply YES." Sent about 30 days after a purchase.</span></div></div></td><td class="pv">Included</td></tr>
+   <tr><td><div class="pi"><i class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></i><div><b>Deal texts</b><span>New Year's sale, new brands, Senior Day. Written and sent for you.</span></div></div></td><td class="pv">Included</td></tr>
+   <tr><td><div class="pi"><i class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></i><div><b>Monthly report</b><span>Your rankings, reviews and text list, in plain numbers.</span></div></div></td><td class="pv">Included</td></tr>
+  </tbody></table></div>
+
+ <h3 style="margin-top:24px">Your first 90 days</h3>
+ <div class="tw"><table>
+  <thead><tr><th>When</th><th>What happens</th></tr></thead>
+  <tbody>
+   <tr><td class="sc">Week 1</td><td>Google categories and photos, replies to your recent reviews, Yelp name fixed, checkout sign-up live</td></tr>
+   <tr><td class="sc">Weeks 2 to 4</td><td>New website live, texting number approved, review and restock texts start</td></tr>
+   <tr><td class="sc">Month 2</td><td>Town pages and weekly posts working on Pineville, Matthews and Huntersville first; New Year's deal text goes out</td></tr>
+   <tr><td class="sc">Month 3</td><td>About 80 to 100 new reviews, about 600 customers on your list, first moves in the nearby towns</td></tr>
+  </tbody></table></div>
+
+ <div class="pricebox" id="price">
+  <div><span class="eyebrow">Your price</span><p class="was"><s>$997 a month regular price</s></p><p class="now"><b>$497</b> a month, founder price</p><p class="muted">About $16 a day. Setup ($1,500) waived.</p><p style="margin:10px 0 0;font-weight:700;color:var(--rose-deep)">No contract, no lock-in. Month to month, cancel with 30 days' notice.</p></div>
+  <div class="pbside"><b>10 sales a month</b><span>pays for it ($497 ÷ $50 = 9.94)</span></div>
+ </div>
+ <div class="tw" style="margin-top:20px"><table class="plan">
+  <tbody>
+   <tr class="step"><td colspan="2">What it should bring back</td></tr>
+   <tr><td><div class="pi"><i class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></i><div><b>Reviews and repeat sales</b><span>Leaks #2 and #3: $296.25 + $3,600 = $3,896.25 a month</span></div></div></td><td class="pv">About 7.8x</td></tr>
+   <tr><td><div class="pi"><i class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></i><div><b>If we close only a quarter of all three leaks</b><span>$4,983.75 × 25% = $1,245.94 a month</span></div></div></td><td class="pv">About 2.5x</td></tr>
+  </tbody></table></div>
+ <p class="note">Estimates, not promises. Why $497? We're building our first group of founding clients in the Charlotte area. We ask for a testimonial once you see results, and your price stays locked as long as you stay.</p>
+</div></section>
+
+<section class="band"><div class="inner">
+ <div class="cta">
+  <div style="display:grid;gap:12px"><span class="eyebrow">Next step</span><h2>Say yes and we start before the New Year rush</h2><p>Reply YES to Phyllena and pick your website: <a href="/charlotte-supplements/website.html" style="color:inherit">Option A</a>, <a href="/charlotte-supplements/website-b.html" style="color:inherit">B</a> or <a href="/charlotte-supplements/website-c.html" style="color:inherit">C</a>. To start we need manager access to your Google listing, your legal business name and EIN (for texting approval), and your average sale. Questions? See the <a href="/charlotte-supplements/faq.html" style="color:inherit">FAQ</a>.</p></div>
+  <div class="person"><b>Phyllena Parker, MBA</b><span>Founder, Phyllena Management LLC</span><span>704-741-3167</span><span>pparker@phyllenamanagement.com</span><a class="btn" href="https://phyllenamanagement.com" target="_blank" rel="noopener">phyllenamanagement.com</a></div>
+ </div>
+</div></section>
+
+<footer class="band"><div class="inner"><span>© 2026 Phyllena Management LLC · Concord, North Carolina</span><span>Be Seen + Be Trusted + Be Chosen = Booked Jobs</span></div></footer>
+</body></html>
