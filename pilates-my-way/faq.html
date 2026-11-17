@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Pilates My Way FAQ</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: matches phyllenamanagement.com. Light only, white top bar with logo, soft gradient hero with a floating score card, alternating light bands, rounded white cards with soft shadows, one navy gradient panel for the slogan equation. */
+:root{
+ color-scheme:light;
+ --night:#0E1B38; --navy:#1F3A8A; --bg:#F7F7FA; --surface:#FFFFFF; --ink:#111A2E; --muted:#5B6479; --line:#E4E6EE;
+ --rose:#C63F68; --rose-deep:#A92E55; --rose-soft:#FCEAF0; --tint:#EEF2FA; --star:#F5B42A; --gold-ink:#9A6A06; --gold-soft:#FDF3DC;
+ --good:#1F8A55; --good-soft:#E3F4EA; --purple:#5A3F86;
+ --display:"Plus Jakarta Sans","Segoe UI",system-ui,sans-serif; --body:"Manrope","Segoe UI",system-ui,-apple-system,sans-serif;
+ --r-lg:24px; --r-md:16px;
+ --shadow:0 1px 2px rgba(14,27,56,.06),0 12px 32px rgba(14,27,56,.08);
+}
+body{background:var(--bg);color:var(--ink);font:17px/1.65 var(--body)}
+.band{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.inner{max-width:1080px;margin:0 auto;padding-block:72px;display:grid;gap:28px}
+.white{background:var(--surface)} .tint{background:var(--tint)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;color:var(--ink)}
+h1{font-size:clamp(36px,6vw,64px);line-height:1.02;font-weight:800;letter-spacing:-.035em}
+h2{font-size:clamp(28px,4.2vw,44px);line-height:1.08;font-weight:800;letter-spacing:-.03em}
+h3{font-size:18px;font-weight:700;letter-spacing:-.01em}
+p{margin:0;max-width:62ch}
+.muted{color:var(--muted)}
+.grad{background:linear-gradient(90deg,var(--rose),var(--purple) 55%,var(--navy));-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{display:flex;align-items:center;gap:10px;font:700 13px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--rose)}
+.eyebrow::before{content:"";width:18px;height:2px;background:currentColor}
+.lede{font-size:19px;color:var(--muted)}
+/* top bar */
+.top{background:var(--surface);border-bottom:1px solid var(--line)}
+.top .inner{padding-block:16px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px}
+.logo{width:180px;height:auto;display:block}
+.chip{font:600 14px var(--body);padding:8px 16px;border-radius:99px;background:var(--rose);color:#fff;white-space:nowrap}
+.sample{background:var(--gold-soft);color:var(--gold-ink);border-bottom:1px solid #F3E1B5}
+.sample .inner{padding-block:10px;font-size:14px}
+/* hero */
+.hero{background:radial-gradient(60% 80% at 85% 20%,rgba(198,63,104,.10),transparent 70%),radial-gradient(50% 70% at 70% 90%,rgba(31,58,138,.10),transparent 70%),linear-gradient(180deg,#FBFBFD,var(--bg))}
+.heroGrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center}
+@media (max-width:820px){.heroGrid{grid-template-columns:1fr}}
+.badge{justify-self:start;display:inline-flex;align-items:center;gap:10px;font-size:14px;padding:7px 16px 7px 10px;border-radius:99px;background:var(--surface);border:1px solid var(--line);box-shadow:0 1px 2px rgba(14,27,56,.05)}
+.badge i{width:14px;height:14px;border-radius:50%;background:var(--rose-soft);display:grid;place-content:center}
+.badge i::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--rose)}
+.heroText{display:grid;gap:22px}
+.ticks{display:flex;flex-wrap:wrap;gap:10px 22px;margin:0;padding:0;list-style:none;font-size:15px;color:var(--muted)}
+.ticks li::before{content:"✓";color:var(--rose);font-weight:700;margin-right:8px}
+/* score card */
+.scoreCard{background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow);border:1px solid var(--line);padding:28px;display:grid;gap:20px;min-width:0}
+.scHead{display:flex;justify-content:space-between;align-items:center;gap:10px;font:700 13px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.scHead span:last-child{letter-spacing:0;text-transform:none;font-weight:600;color:var(--rose);background:var(--rose-soft);padding:4px 12px;border-radius:99px}
+.dialRow{display:grid;grid-template-columns:150px minmax(0,1fr);gap:22px;align-items:center}
+@media (max-width:420px){.dialRow{grid-template-columns:1fr}}
+.dial{position:relative;width:150px;aspect-ratio:1;max-width:100%}
+.dial svg{width:100%;height:100%;display:block}
+.dial .num{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
+.dial .num b{font:800 48px/1 var(--display);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.dial .num small{font-size:13px;color:var(--muted)}
+.subs{display:grid;gap:12px}
+.sub{display:grid;gap:5px}
+.sub .l{display:flex;justify-content:space-between;font:700 15px var(--display)}
+.sub .l span{font:600 14px var(--body);color:var(--muted);font-variant-numeric:tabular-nums}
+.bar{height:8px;border-radius:99px;background:var(--tint);overflow:hidden}
+.bar span{display:block;height:100%;border-radius:99px;background:var(--c)}
+.lost{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;background:var(--rose-soft);border-radius:var(--r-md);padding:14px 18px}
+.lost b{font:800 28px var(--display);color:var(--rose-deep);letter-spacing:-.02em}
+.lost span{font-size:14px;color:var(--rose-deep)}
+.scale{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;font-size:12px;color:var(--muted)}
+.scale div{padding:7px 8px;border-radius:10px;background:var(--bg);text-align:center;line-height:1.3}
+.scale div.on{background:var(--rose);color:#fff}
+.scale b{display:block;font:700 12px var(--display)}
+/* equation panel */
+.eq{border-radius:var(--r-lg);background:linear-gradient(120deg,#1F3A8A 0%,#2C3F95 45%,#5A3F86 100%);padding:32px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px;color:#fff;box-shadow:var(--shadow)}
+.eqb{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);border-radius:14px;padding:12px 20px;text-align:center;min-width:140px}
+.eqb b{display:block;font:800 22px var(--display);letter-spacing:-.02em}
+.eqb span{font-size:13px;color:#D3DBEE}
+.eqb.hot{background:var(--rose);border-color:var(--rose)}
+.eqb.hot span{color:#FFE3EC}
+.op{font:800 22px var(--display);color:#FF9DB8}
+/* section head */
+.shead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:18px}
+.shead > div{display:grid;gap:12px}
+.pts{display:grid;justify-items:end;gap:6px}
+.pts b{font:800 48px/1 var(--display);letter-spacing:-.04em;color:var(--c);font-variant-numeric:tabular-nums}
+.pts b small{font-size:20px;color:var(--muted);letter-spacing:0}
+.pts .bar{width:180px;background:var(--line)}
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:24px;display:grid;gap:10px;align-content:start;min-width:0}
+.q{font:700 16px var(--display)}
+.q::before{content:"🔍︎";margin-right:6px;filter:grayscale(1);opacity:.5}
+.top3{display:grid;gap:4px;margin:0;padding:0;list-style:none;font-size:14px;color:var(--muted)}
+.top3 li{display:flex;justify-content:space-between;gap:8px}
+.top3 li span:last-child{font-variant-numeric:tabular-nums;white-space:nowrap}
+.top3 li span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.flag{justify-self:start;font:700 12px var(--body);padding:4px 12px;border-radius:99px;background:var(--rose-soft);color:var(--rose-deep)}
+/* checklist */
+.checks{display:grid;margin:0;padding:6px 24px;list-style:none;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow)}
+.checks li{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:14px;padding:18px 0;border-bottom:1px solid var(--line);align-items:start}
+.checks li:last-child{border-bottom:0}
+.ic{width:28px;height:28px;border-radius:50%;display:grid;place-content:center;font:800 13px var(--body)}
+.fail .ic{background:var(--rose-soft);color:var(--rose)} .part .ic{background:var(--gold-soft);color:var(--gold-ink)} .pass .ic{background:var(--good-soft);color:var(--good)}
+.checks h3{font-size:16px}
+.checks p{font-size:15px;color:var(--muted)}
+.checks .p{font:700 14px var(--display);font-variant-numeric:tabular-nums;white-space:nowrap;padding:3px 12px;border-radius:99px;background:var(--bg);color:var(--muted)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+@media (max-width:820px){.two{grid-template-columns:1fr}}
+/* review bars */
+.rbars{display:grid;gap:10px;font-size:14px}
+.rb{display:grid;grid-template-columns:minmax(100px,170px) minmax(0,1fr) 40px;gap:10px;align-items:center}
+.rb .n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rb .t{height:10px;border-radius:99px;background:var(--tint);overflow:hidden}
+.rb .t span{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#3B57B0,var(--navy))}
+.rb.me .n{font-weight:700;color:var(--rose)} .rb.me .t span{background:var(--rose)}
+.rb .v{text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+/* table */
+.tw{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px}
+th,td{padding:14px 20px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:700 12px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:var(--bg)}
+tr:last-child td{border-bottom:0}
+.sc{font:700 15px var(--display);white-space:nowrap;font-variant-numeric:tabular-nums}
+/* money */
+.money{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.money .card b{font:800 40px/1.1 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.money .card.hot{background:linear-gradient(135deg,var(--rose),var(--rose-deep));border-color:transparent;color:#fff}
+.money .card.hot span{color:#FFE3EC}
+.money .card span{font-size:15px;color:var(--muted)}
+.chain{font-size:15px;color:var(--muted);background:var(--surface);border:1px dashed var(--line);border-radius:var(--r-md);padding:14px 18px;overflow-wrap:anywhere}
+.note{font-size:14px;color:var(--muted)}
+/* fixes */
+.fixes{display:grid;gap:14px;margin:0;padding:0;list-style:none;counter-reset:f}
+.fixes li{counter-increment:f;display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:18px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);box-shadow:var(--shadow);padding:18px 22px}
+.fixes li::before{content:counter(f);width:44px;height:44px;border-radius:12px;display:grid;place-content:center;font:800 18px var(--display);color:var(--navy);background:var(--tint)}
+.fixes p{font-size:15px;color:var(--muted)}
+.tag{font:700 12px var(--body);padding:5px 12px;border-radius:99px;white-space:nowrap;color:var(--c);background:var(--cs)}
+@media (max-width:560px){.fixes li{grid-template-columns:44px minmax(0,1fr)}.fixes .tag{grid-column:2;justify-self:start}}
+/* cta */
+.cta{background:linear-gradient(120deg,#1F3A8A 0%,#2C3F95 45%,#5A3F86 100%);border-radius:var(--r-lg);padding:40px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center;color:#fff;box-shadow:var(--shadow)}
+@media (max-width:720px){.cta{grid-template-columns:1fr;padding:28px}}
+.cta h2{color:#fff} .cta p{color:#D3DBEE}
+.cta .eyebrow{color:#FF9DB8}
+.person{background:#fff;color:var(--ink);border-radius:var(--r-md);padding:20px 24px;display:grid;gap:4px;font-size:15px;min-width:0}
+.person b{font:800 19px var(--display)}
+.person span{color:var(--muted)}
+.btn{justify-self:start;margin-top:8px;font:700 15px var(--body);background:var(--rose);color:#fff;padding:12px 22px;border-radius:99px;text-decoration:none;box-shadow:0 8px 20px rgba(198,63,104,.3)}
+.btn:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.method{font-size:14px;color:var(--muted)}
+footer .inner{padding-block:28px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:14px;color:var(--muted)}
+.flag.win{background:var(--good-soft);color:var(--good)}
+.top3 li.me{color:var(--rose);font-weight:700}
+.leaks{display:grid;gap:8px}
+.lk{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 18px;border-radius:var(--r-md);background:var(--bg);font-size:14px;color:var(--muted)}
+.top3 li span:first-child{min-width:0}
+#searches .card{grid-template-columns:minmax(0,1fr)}
+.lk b{font:800 20px var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+.price{display:flex;align-items:baseline;gap:8px;margin:8px 0 16px}.price b{font-family:"Plus Jakarta Sans",sans-serif;font-size:56px;font-weight:800;color:var(--night);letter-spacing:-.02em}.price span{color:var(--muted, #5B6478);font-size:16px}
+.tabs{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(14,27,56,.05)}.tabs .inner{display:flex;gap:6px;padding-block:10px;overflow-x:auto}.tabs a{flex:0 0 auto;padding:9px 16px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none;color:var(--night);background:#EEF2FA}.tabs a.on{background:var(--rose);color:#fff}.tabs a.pr{margin-left:auto}@media print{.tabs{display:none}}@media (max-width:480px){.tabs .inner{gap:4px}.tabs a{padding:8px 10px;font-size:13px}}
+.fixes li.feat{border:2px solid var(--rose);background:linear-gradient(180deg,#fff,var(--rose-soft))}.fixes li.feat p+p{margin-top:8px}
+.qa{background:var(--surface,#fff);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:0}.qa+.qa{margin-top:12px}.qa summary{cursor:pointer;list-style:none;padding:18px 52px 18px 20px;font-family:"Plus Jakarta Sans",sans-serif;font-weight:700;font-size:17px;color:var(--night);position:relative}.qa summary::-webkit-details-marker{display:none}.qa summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:24px;color:var(--rose)}.qa[open] summary::after{content:"–"}.qa p{margin:0;padding:0 20px 20px;color:var(--ink);line-height:1.6}
+body{margin:0}</style><style>
+@page{size:Letter;margin:0}
+@media print{
+ html,body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .inner{padding-block:40px}
+ .card,.checks li,.fixes li,.scoreCard,.eq,.cta,.tw,.chain,.money,.rb{break-inside:avoid}
+ .shead{break-after:avoid;break-inside:avoid} .method h3{break-after:avoid} .method{break-inside:avoid} .grad{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:var(--rose)}
+ .heroGrid{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}
+ .two{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+ .pb{break-before:page}
+}
+</style>
+<div class="band top"><div class="inner"><img class="logo" src="/pilates-my-way/images/phyllena-logo.png" alt="Phyllena Management LLC"></div></div>
+<nav class="tabs" aria-label="Pilates My Way reports"><div class="inner"><a href="/pilates-my-way/scorecard.html">Scorecard</a><a href="/pilates-my-way/website.html">Website mock-up</a><a href="/pilates-my-way/faq.html" class="on pr" aria-current="page">FAQ</a><a href="/pilates-my-way/proposal.html">Proposal</a></div></nav>
+
+<div class="band sample"><div class="inner"><p><strong>Prepared for Pilates My Way, 10827 Courthouse Rd, Fredericksburg, VA.</strong> Straight answers to the questions owners ask us most. Tap a question to open it.</p></div></div>
+<section class="band"><div class="inner">
+ <div class="shead"><div><span class="eyebrow">Questions and answers</span><h2>What you'll probably want to know</h2></div></div>
+ <div><details class="qa"><summary>What are the next steps if I say yes?</summary><p>Five steps, and most of them take minutes.<br><b>1. Say yes.</b> Reply YES to Phyllena by text or email.<br><b>2. Sign a one-page agreement.</b> We send it by email and you sign on your phone.<br><b>3. First month.</b> You pay the first month ($497) through a secure payment link. The setup fee is waived.<br><b>4. A 30-minute kickoff call.</b> You accept our Google invite, give us your legal business name and EIN (the phone carriers require those to approve your texting number), and tell us your real membership and class pack prices, your busiest and slowest classes, and the events you have coming up.<br><b>5. We start.</b> Week one begins the next business day: your Google name and categories, replies to your newest reviews, your Chamber ZIP fixed, and Yelp claimed.</p></details><details class="qa"><summary>How long does setup take?</summary><p>About 2 to 4 weeks for everything, with changes you can see in week one. Your new website goes live in weeks two to four. Review and class-alert texts start once the phone carriers approve your texting number, which takes about two weeks. Start now and it's all running before the New Year's rush.</p></details><details class="qa"><summary>How soon will I see results?</summary><p>Some right away, some over a few months. Reviews answered: week one. New reviews: starting in weeks two to four, about 15 a month after that instead of about 7. Clients join your text list from day one. Better spots in Stafford, King George and Caroline County usually build over two to three months. You'll see all of it in your monthly report.</p></details><details class="qa"><summary>Are there any outside costs?</summary><p>No. You already own pilatesmyway.com. Everything else is in the $497: the website and hosting, texting fees, the texting number registration, review replies, your Google listing, class and town pages, and your monthly report. We don't run ads, so there's no ad budget.</p></details><details class="qa"><summary>Do I have to leave Arketa or Squarespace?</summary><p>No. Arketa stays your booking and payment system, and every "Book" button on the new site goes straight to it. We can rebuild your site on our platform or work inside Squarespace, whichever you prefer.</p></details><details class="qa"><summary>What do my instructors have to do?</summary><p>Nothing new at the front desk. New clients come in through Arketa, and the thank-you texts go out automatically after their first class and every 10th class. When you want to fill an event or an open spot, tap "Send a text" on your phone and tell us what it is. We write it and send it the same day.</p></details><details class="qa"><summary>Who gets texted, and will clients get annoyed?</summary><p>Only clients who say yes to class alerts get them, about 2 to 4 a month, with their own checkbox or "Reply JOIN." Your current contact form bundles text consent into one line; we'd give marketing texts their own clear yes, which the rules require. Every text says "Reply STOP to opt out," and anyone who does is removed automatically. Your texting number is registered with the phone carriers, as the law requires.</p></details><details class="qa"><summary>What happens to my Google name?</summary><p>Today it reads "Pilates My Way | Reformer Pilates in Fredericksburg, VA." Google's rules say the name must match your sign, and profiles with extra words can be suspended if someone reports them. We change it to "Pilates My Way" and put "reformer pilates," "barre" and your towns into categories, services, posts and your website, where they help you rank without the risk.</p></details><details class="qa"><summary>Can I give a free class for leaving a review?</summary><p>No. Google and FTC rules don't allow rewards for reviews, and it can get reviews removed. Google does allow asking every client for a review, and that's what we do, the same way, every time. A perk for joining your class-alert list is fine, because it's earned by joining, never by reviewing.</p></details><details class="qa"><summary>Can you delete bad reviews?</summary><p>Nobody can delete a real review, and anyone who promises that is a risk to your listing. We can report reviews that break Google's rules, like fake or off-topic ones, and Google decides. What works is answering every review and getting enough fresh, real reviews that one bad day doesn't matter. Any review under 4 stars alerts you right away, and a real person writes the reply with you.</p></details><details class="qa"><summary>Do you guarantee rankings?</summary><p>No one can honestly guarantee where Google ranks you. We guarantee the work: thank-you texts after every first class and milestone, every review answered, your website and class and town pages built and kept up, your class-alert texts sent, and a monthly report showing exactly where you stand.</p></details><details class="qa"><summary>Who owns my Google listing, website and client list?</summary><p>You do. We're added as managers of your Google listing, and you stay the owner. Your domain stays in your name. Your website and client list are yours, and if you ever leave, we hand them over at no charge.</p></details><details class="qa"><summary>I already have a website person. Is that a problem?</summary><p>No. We can work alongside them, or take it over completely. Most owners hand it to us so there's one number to call.</p></details><details class="qa"><summary>Is there a contract?</summary><p>A simple one-page service agreement, month to month. No long-term commitment. Cancel any time with 30 days' notice.</p></details><details class="qa"><summary>Why is the setup fee waived?</summary><p>We're building our first group of founding clients. In exchange for the waived $1,500 setup, we ask for a testimonial once you see results, and permission to share your results as a case study. Referrals are always welcome but never required.</p></details><details class="qa"><summary>How does billing work?</summary><p>One flat charge of $497 a month, billed automatically on the same day each month, starting the day you sign. That's your founder price, regularly $997, locked in for as long as you stay. No per-text charges and no surprise add-ons.</p></details><details class="qa"><summary>What if we open a second studio, maybe in Stafford?</summary><p>A second location gets its own Google listing, its own scorecard and town pages for $297 a month more. Stafford is where the reviews and searches are, so it's a natural next step. We'll quote it when you're ready.</p></details><details class="qa"><summary>How will I know it's working?</summary><p>Every month you get a plain-English report: where you rank on the 13 searches in your scorecard, how many new reviews came in, your star rating, how many clients are on your text list, and what we did that month.</p></details></div>
+</div></section>
+<section class="band"><div class="inner">
+ <div class="cta">
+  <div style="display:grid;gap:12px"><span class="eyebrow">Still have a question?</span><h2>Ask Phyllena directly</h2><p>Text or call and you'll get a straight answer the same day.</p></div>
+  <div class="person"><b>Phyllena Parker, MBA</b><span>Founder, Phyllena Management LLC</span><span>704-741-3167</span><span>pparker@phyllenamanagement.com</span><a class="btn" href="/pilates-my-way/proposal.html">See the proposal</a></div>
+ </div>
+</div></section>
+<footer class="band"><div class="inner"><span>© 2026 Phyllena Management LLC · Concord, North Carolina</span><span>Be Seen + Be Trusted + Be Chosen = Booked Jobs</span></div></footer>
+</body></html>
