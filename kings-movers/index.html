@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Kings Movers Sample Page</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
+<style>
+/* Layout: the prospect's homepage (airy mint + sunshine, illustrated hero, quote card), then a navy "note from Phyllena" band with the money math, unlock and YES. */
+:root{
+  --bg:#FBFAF6; --surface:#FFFFFF; --ink:#14302C; --muted:#5C7470; --line:#E4ECE8;
+  --brand:#1E40AF; --brand-deep:#1E3A8A; --brand-ink:#FFFFFF; --mint:#DBEAFE; --mint-2:#BFDBFE; --sun:#F6B93B; --sun-soft:#FFF1D2; --blush:#FCE4DA;
+  --night:#0E1B38; --navy:#1F3A8A; --navy-chip:#2B4BA8; --rose:#C63F68; --on-night:#F4F6FB; --on-night-muted:#B9C2DA; --panel:#16244A;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --shadow:0 18px 40px -18px rgba(30,64,175,.35);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0D1715; --surface:#13221F; --ink:#E7F2EF; --muted:#9BB3AE; --line:#23393A;
+  --brand:#3CC5B1; --brand-deep:#2BA592; --brand-ink:#05201C; --mint:#16302B; --mint-2:#1D3F38; --sun:#F6B93B; --sun-soft:#3A2F15; --blush:#3A2622;
+  --night:#060C1A; --navy:#8EA6F0; --navy-chip:#2B4BA8; --rose:#E77598; --on-night:#F4F6FB; --on-night-muted:#AEB8D3; --panel:#101B36;
+  --shadow:0 18px 40px -18px rgba(0,0,0,.6); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0D1715; --surface:#13221F; --ink:#E7F2EF; --muted:#9BB3AE; --line:#23393A;
+  --brand:#3CC5B1; --brand-deep:#2BA592; --brand-ink:#05201C; --mint:#16302B; --mint-2:#1D3F38; --sun:#F6B93B; --sun-soft:#3A2F15; --blush:#3A2622;
+  --night:#060C1A; --navy:#8EA6F0; --navy-chip:#2B4BA8; --rose:#E77598; --on-night:#F4F6FB; --on-night-muted:#AEB8D3; --panel:#101B36;
+  --shadow:0 18px 40px -18px rgba(0,0,0,.6); color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+:root{--bg:#FBFAF7;--ink:#17222B;--muted:#5A6672;--line:#E5E8EC;--brand:#1E40AF;--brand-deep:#1E3A8A;--mint:#DBEAFE;--mint-2:#BFDBFE;--sun-soft:#FEF3C7;--blush:#F1F5F9;--shadow:0 18px 40px -18px rgba(30,64,175,.35)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1317;--surface:#161B21;--ink:#E9EEF2;--muted:#A3ADB8;--line:#27303A;--brand:#7AA2FF;--brand-deep:#5B8CFF;--brand-ink:#0B0F14;--mint:#202A3C;--mint-2:#2B3853;--sun-soft:#3A2F15;--blush:#2A2F38;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0F1317;--surface:#161B21;--ink:#E9EEF2;--muted:#A3ADB8;--line:#27303A;--brand:#7AA2FF;--brand-deep:#5B8CFF;--brand-ink:#0B0F14;--mint:#202A3C;--mint-2:#2B3853;--sun-soft:#3A2F15;--blush:#2A2F38;color-scheme:dark}
+.cicon{aspect-ratio:16/8;display:grid;place-items:center;position:relative;overflow:hidden;color:var(--brand-deep);background:radial-gradient(circle at 78% 22%,var(--sun-soft) 0 18%,transparent 19%),linear-gradient(135deg,var(--mint),var(--mint-2))}
+.cicon::after{content:"";position:absolute;inset:auto -10% -45% auto;width:60%;aspect-ratio:1;border-radius:50%;background:var(--brand);opacity:.08}
+.cicon svg{width:64px;height:64px;position:relative;z-index:1}
+.card:nth-child(2) .cicon{background:radial-gradient(circle at 20% 80%,var(--mint) 0 16%,transparent 17%),linear-gradient(135deg,var(--sun-soft),var(--mint))}
+.card:nth-child(3) .cicon{background:radial-gradient(circle at 80% 75%,var(--sun-soft) 0 15%,transparent 16%),linear-gradient(135deg,var(--blush),var(--mint))}
+.rng{display:flex;justify-content:space-between;color:var(--muted);font-size:.78rem;font-weight:700}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0;text-wrap:balance;font-weight:700;letter-spacing:-.01em}
+p{margin:0}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.sample{background:var(--sun);color:#2A1E00;font-size:.82rem;font-weight:800;text-align:center;padding-bottom:.45rem;margin-top:calc(-1 * env(safe-area-inset-top,0px));padding-top:calc(env(safe-area-inset-top,0px) + .45rem);padding-left:16px;padding-right:16px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--night)}
+.note-bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--night);color:var(--on-night)}
+.note-bar .wrap{display:flex;gap:.8rem;align-items:center;justify-content:space-between;flex-wrap:wrap;padding-block:.55rem}
+.note-bar span{font-size:.93rem;font-weight:600}
+.note-bar a{color:#fff;font-weight:800;background:var(--rose);padding:.42rem .95rem;border-radius:999px;text-decoration:none;white-space:nowrap;font-size:.9rem}
+
+/* ---------- prospect homepage ---------- */
+.top{background:radial-gradient(1200px 500px at 85% -10%,var(--mint) 0%,transparent 60%),radial-gradient(700px 400px at -10% 10%,var(--sun-soft) 0%,transparent 60%),var(--bg)}
+nav.biz .wrap{display:flex;justify-content:space-between;align-items:center;padding-block:1.1rem;gap:1rem;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:.6rem;font-family:var(--display);font-weight:700;font-size:1.35rem}
+.logo svg{width:38px;height:38px;flex:none}
+.navlinks{display:flex;gap:1.3rem;align-items:center;font-weight:600;font-size:.95rem;flex-wrap:wrap}
+.navlinks a{color:var(--muted);text-decoration:none}
+.navlinks .call{color:var(--brand-ink);background:var(--brand);padding:.5rem 1rem;border-radius:999px}
+@media (max-width:640px){.navlinks a:not(.call){display:none}}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:2.5rem;align-items:center;padding-block:2.2rem 3.5rem}
+@media (max-width:880px){.hero .wrap{grid-template-columns:1fr;gap:1.8rem}}
+.kicker{display:inline-flex;align-items:center;gap:.5rem;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:.35rem .85rem;font-size:.85rem;font-weight:700;color:var(--brand-deep);box-shadow:var(--shadow)}
+.kicker i{width:8px;height:8px;border-radius:50%;background:var(--brand);font-style:normal}
+.hero h1{font-size:clamp(2.3rem,5.6vw,3.7rem);margin-top:1rem}
+.hero h1 em{font-style:italic;color:var(--brand)}
+.hero .sub{color:var(--muted);font-size:1.12rem;margin-top:1rem;max-width:44ch}
+.hero .ctas{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.5rem}
+.btn{background:var(--brand);color:var(--brand-ink);border:0;border-radius:14px;padding:.85rem 1.25rem;font-weight:800;font-size:1rem;text-decoration:none;display:inline-block}
+.btn.light{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+.ticks{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;margin-top:1.4rem;font-size:.92rem;font-weight:600;color:var(--ink)}
+.ticks span::before{content:"✓";color:var(--brand);font-weight:800;margin-right:.4rem}
+.art{position:relative;border-radius:28px;background:linear-gradient(160deg,var(--mint-2),var(--mint));aspect-ratio:5/4;max-width:100%;overflow:hidden;box-shadow:var(--shadow)}
+.art svg{position:absolute;inset:0;width:100%;height:100%}
+.float{position:absolute;background:var(--surface);color:var(--ink);border-radius:14px;padding:.6rem .8rem;box-shadow:var(--shadow);font-size:.85rem;display:flex;align-items:center;gap:.55rem;max-width:70%}
+.float b{display:block;font-size:.95rem}
+.float small{color:var(--muted)}
+.float .dot{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;flex:none;font-weight:800}
+.f1{left:5%;bottom:7%}.f1 .dot{background:var(--sun-soft);color:#8A5A00}
+.f2{right:5%;top:7%}.f2 .dot{background:var(--mint);color:var(--brand-deep)}
+
+.band{padding-block:3.2rem}
+.band .wrap{display:flex;flex-direction:column;gap:1.6rem}
+.sec-head{display:flex;flex-direction:column;gap:.5rem;max-width:56ch}
+.eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--brand)}
+.sec-head h2{font-size:clamp(1.8rem,4vw,2.5rem)}
+.sec-head p{color:var(--muted)}
+
+.quote-row{display:grid;grid-template-columns:.9fr 1.1fr;gap:2rem;align-items:start}
+@media (max-width:880px){.quote-row{grid-template-columns:1fr}}
+.how{display:grid;gap:1rem}
+.how div{display:grid;grid-template-columns:2.6rem 1fr;gap:.9rem;align-items:start}
+.how b{width:2.6rem;height:2.6rem;border-radius:12px;background:var(--mint);color:var(--brand-deep);display:grid;place-items:center;font-family:var(--display);font-size:1.15rem}
+.how h3{font-size:1.15rem}
+.how p{color:var(--muted);font-size:.95rem}
+.quote{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:1.4rem;display:flex;flex-direction:column;gap:1rem;box-shadow:var(--shadow)}
+.quote h2{font-size:1.55rem}
+.field{display:flex;flex-direction:column;gap:.4rem}
+.field label{font-size:.83rem;font-weight:800;color:var(--muted);letter-spacing:.02em}
+.seg{display:flex;flex-wrap:wrap;gap:.4rem}
+.seg button{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:12px;padding:.5rem .85rem;font-weight:700;min-width:2.8rem}
+.seg button[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
+input[type=range]{width:100%;accent-color:var(--brand)}
+.result{background:linear-gradient(135deg,var(--mint),var(--sun-soft));border-radius:16px;padding:1rem 1.1rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:flex-end}
+.result small{color:var(--muted);font-weight:700;font-size:.8rem}
+.result b{display:block;font-family:var(--display);font-size:2.2rem;font-variant-numeric:tabular-nums;line-height:1.05}
+.result .hrs{font-size:1.4rem}
+.slots{display:flex;flex-wrap:wrap;gap:.4rem}
+.slots button{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:12px;padding:.5rem .8rem;font-size:.88rem;font-weight:700}
+.soon{display:inline-block;background:var(--sun);color:#2A1E00;font-size:.68rem;font-weight:800;border-radius:999px;padding:.05rem .45rem;margin-right:.4rem;vertical-align:1px}
+.slots button[aria-pressed="true"]{border-color:var(--brand);background:var(--mint)}
+.fine{font-size:.8rem;color:var(--muted)}
+.confirm{background:var(--mint);border-radius:12px;padding:.8rem 1rem;font-size:.92rem;font-weight:600}
+
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.1rem}
+@media (max-width:800px){.cards{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:1.4rem;display:flex;flex-direction:column;gap:.6rem;transition:transform .2s ease}
+.card:hover{transform:translateY(-3px)}
+.card .ic{width:52px;height:52px;border-radius:16px;display:grid;place-items:center}
+.card .ic svg{width:28px;height:28px}
+.card:nth-child(1) .ic{background:var(--mint)}
+.card:nth-child(2) .ic{background:var(--sun-soft)}
+.card:nth-child(3) .ic{background:var(--blush)}
+.card h3{font-size:1.3rem}
+.card p{color:var(--muted);font-size:.95rem}
+.card .price{font-weight:800;color:var(--brand-deep);margin-top:auto}
+.card ul{margin:0;padding:0;list-style:none;display:grid;gap:.25rem;font-size:.9rem}
+.card li::before{content:"•";color:var(--brand);font-weight:800;margin-right:.45rem}
+
+.trust{background:var(--surface);border-block:1px solid var(--line)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;padding-block:1.6rem}
+@media (max-width:800px){.trust .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.trust div{display:flex;flex-direction:column;gap:.1rem}
+.trust b{font-family:var(--display);font-size:1.7rem;color:var(--brand-deep)}
+.trust span{font-size:.88rem;color:var(--muted)}
+.trust small{font-size:.75rem;color:var(--muted);font-style:italic}
+
+.areas{display:flex;flex-wrap:wrap;gap:.5rem}
+.areas span{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:.4rem .9rem;font-weight:700;font-size:.9rem}
+.areas span.home{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.say{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.1rem}
+@media (max-width:800px){.say{grid-template-columns:1fr}}
+.say blockquote{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:1.3rem;display:flex;flex-direction:column;gap:.7rem}
+.say .stars{color:var(--sun);letter-spacing:.1em}
+.say p{font-family:var(--display);font-size:1.15rem;line-height:1.35}
+.say cite{font-style:normal;font-size:.85rem;color:var(--muted)}
+
+/* ---------- Phyllena note ---------- */
+.money{background:var(--night);color:var(--on-night);padding-block:3.5rem}
+.money .wrap{display:flex;flex-direction:column;gap:1.5rem;max-width:900px}
+.from{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--sun)}
+.money h2{font-size:clamp(2rem,5vw,3rem)}
+.money p.lede{color:var(--on-night-muted);max-width:62ch;font-size:1.08rem}
+.bignum{display:flex;flex-direction:column;gap:.25rem;background:var(--panel);border-radius:22px;padding:1.5rem 1.6rem}
+.bignum b{font-family:var(--display);font-size:clamp(3rem,10vw,4.8rem);color:var(--rose);font-variant-numeric:tabular-nums;line-height:1}
+.bignum span{color:var(--on-night-muted)}
+.punch{border-left:4px solid var(--rose);padding-left:1.1rem;font-size:1.2rem;max-width:60ch}
+.lock{position:relative;background:var(--panel);border-radius:22px;padding:1.4rem 1.5rem;overflow:hidden;min-height:330px}
+.breakdown{display:grid;gap:1rem;transition:filter .5s ease}
+.locked .breakdown{filter:blur(7px);user-select:none;pointer-events:none}
+.leak{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:.9rem}
+.leak:last-child{border-bottom:0;padding-bottom:0}
+.leak div{min-width:0;max-width:60ch}
+.leak h3{font-size:1.1rem;margin:0}
+.hot{color:var(--rose)}
+.gets{display:grid;gap:0;background:var(--panel);border-radius:18px;padding:.4rem 1.2rem}
+.tbody>*{min-width:0}
+.gets div{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:1rem;padding:.8rem 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.gets div:last-child{border-bottom:0}
+.gets span{min-width:0;font-weight:600}
+.gets b{font-family:var(--display);font-size:1.25rem;color:var(--sun);white-space:nowrap;font-variant-numeric:tabular-nums}
+.proof p{margin:0}
+.leak p{color:var(--on-night-muted);font-size:.93rem;font-variant-numeric:tabular-nums}
+.leak b{font-family:var(--display);font-size:1.4rem;font-variant-numeric:tabular-nums}
+.gate{position:absolute;inset:0;display:grid;place-items:center;padding:1rem;background:rgba(6,12,26,.35)}
+.gate form{background:var(--surface);color:var(--ink);border-radius:20px;padding:1.3rem;max-width:400px;width:100%;display:flex;flex-direction:column;gap:.7rem;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.gate h3{font-size:1.35rem}
+.gate input[type=text],.gate input[type=tel]{border:1px solid var(--line);border-radius:12px;padding:.7rem .8rem;font:inherit;background:var(--bg);color:var(--ink);width:100%;box-sizing:border-box}
+.gate .check{display:flex;gap:.5rem;align-items:flex-start;font-size:.8rem;color:var(--muted)}
+.gate .check input{margin-top:.2rem;accent-color:var(--rose)}
+.gate .err{color:var(--rose);font-size:.85rem;font-weight:700}
+.gate button{background:var(--rose);color:#fff;border:0;border-radius:14px;padding:.85rem;font-weight:800}
+.steps{display:grid;gap:.8rem;counter-reset:s;list-style:none;margin:0;padding:0}
+.steps li{counter-increment:s;display:grid;grid-template-columns:2.4rem 1fr;gap:.9rem;align-items:start}
+.steps li::before{content:counter(s);width:2.4rem;height:2.4rem;border-radius:12px;display:grid;place-items:center;background:var(--navy-chip);color:#fff;font-weight:800;font-family:var(--display)}
+.steps li div{min-width:0}
+.steps h3{font-size:1.15rem}
+.steps p{color:var(--on-night-muted);font-size:.95rem}
+.howit{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem}
+@media (max-width:560px){.howit{grid-template-columns:minmax(0,1fr)}}
+.ph{position:relative;display:flex;flex-direction:column;gap:.5rem;align-items:center;text-align:center}
+.ph p{font-weight:700;font-size:.92rem}
+.phn{position:absolute;top:-.5rem;left:-.2rem;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--rose);color:#fff;display:grid;place-items:center;font-weight:800;font-size:.85rem;z-index:1}
+.scr{width:100%;max-width:220px;min-height:150px;background:#FBFAF6;color:#14302C;border-radius:20px;border:6px solid #2A3557;padding:.8rem .7rem;display:flex;flex-direction:column;gap:.45rem;align-items:stretch;text-align:left;animation:pulse 6s infinite}
+.ph:nth-child(2) .scr{animation-delay:2s}.ph:nth-child(3) .scr{animation-delay:4s}
+@keyframes pulse{0%,30%{box-shadow:0 0 0 3px var(--sun)}34%,100%{box-shadow:0 0 0 0 transparent}}
+@media (prefers-reduced-motion:reduce){.scr{animation:none}}
+.scr small{font-size:.6rem;font-weight:800;letter-spacing:.08em;color:#5C7470}
+.scr b{font-family:var(--display);font-size:1.05rem}
+.scr .pill{background:#DBEAFE;border-radius:10px;padding:.4rem .55rem;font-weight:800;font-size:.85rem;color:#1E3A8A}
+.scr .soonp{background:#FFF1D2;color:#6B4A00}
+.scr .go{background:#1E40AF;color:#fff;text-align:center}
+.sms{background:#fff}
+.sms b{color:#C63F68}
+.sms span{font-size:.8rem;line-height:1.35}
+.row2{display:flex;gap:.4rem;margin-top:auto}
+.row2 i{flex:1;font-style:normal;text-align:center;font-weight:800;font-size:.8rem;border-radius:8px;padding:.35rem;background:#1E40AF;color:#fff}
+.row2 i+i{background:#E4ECE8;color:#14302C}
+.video{border:1px dashed rgba(255,255,255,.3);border-radius:18px;padding:1.4rem;text-align:center;color:var(--on-night-muted)}
+.yes{display:flex;flex-direction:column;gap:.8rem;align-items:flex-start;background:var(--panel);border-radius:22px;padding:1.5rem}
+.yes h3{font-size:1.6rem}
+.yes .row{display:flex;gap:.6rem;flex-wrap:wrap}
+.yes .big{background:var(--rose);color:#fff;border:0;border-radius:14px;padding:.95rem 1.5rem;font-weight:800;font-size:1.1rem}
+.yes .ghost{background:transparent;color:var(--on-night);border:1px solid rgba(255,255,255,.35);border-radius:14px;padding:.95rem 1.2rem;font-weight:700}
+.yes .said{color:var(--sun);font-weight:700}
+.price{font-variant-numeric:tabular-nums}
+.close{display:grid;gap:1rem}
+.cmp{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.8rem}
+.cmp div{background:var(--panel);border-radius:18px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.1rem}
+.cmp span{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--on-night-muted);font-weight:700}
+.cmp b{font-family:var(--display);font-size:2.4rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.cmp b.win{color:var(--sun)}
+.cmp em{font-style:normal;color:var(--on-night-muted);font-size:.95rem}
+.gap{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.8rem}
+.gap div{background:var(--panel);border-radius:18px;padding:1rem 1.2rem;display:flex;flex-direction:column}
+.gap span{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--on-night-muted);font-weight:700}
+.gap b{font-family:var(--display);font-size:2.6rem;line-height:1.1;font-variant-numeric:tabular-nums;color:var(--rose)}
+.gap b.win{color:var(--sun)}
+.gap em{font-style:normal;color:var(--on-night-muted);font-size:.95rem}
+.proof{display:flex;gap:1rem;align-items:flex-start;background:var(--panel);border-radius:18px;padding:1.1rem 1.3rem}
+.proof .avatar{flex:none;width:3rem;height:3rem;border-radius:50%;background:var(--rose);color:#fff;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:1.3rem}
+.proof div{min-width:0}
+.proof h3{font-size:1.2rem;margin-bottom:.3rem}
+.proof p{margin:0;color:var(--on-night-muted)}
+.promise{border:2px solid var(--sun);border-radius:18px;padding:1.1rem 1.3rem}
+.promise h3{color:var(--sun);font-size:1.2rem;margin-bottom:.3rem}
+.promise p{margin:0;font-size:1.1rem}
+.hero{position:relative;background:linear-gradient(90deg,var(--bg) 0%,var(--bg) 38%,color-mix(in srgb,var(--bg) 55%,transparent) 62%,transparent 100%),url(images/kings-movers-hero.jpg) center right/cover no-repeat}
+.hero .wrap{grid-template-columns:minmax(0,1fr) minmax(0,420px)!important;padding-block:3rem 3.5rem!important;align-items:center}
+@media (max-width:880px){.hero .wrap{grid-template-columns:minmax(0,1fr)!important}}
+.hero .quote{gap:.8rem;padding:1.2rem}
+@media (max-width:700px){.hero .sub,.hero .ctas,.hero .ticks{display:none}.hero .wrap{padding-block:1.6rem 2rem!important;gap:1.2rem!important}.hero h1{font-size:2.1rem}.sitebar .wrap{flex-wrap:nowrap}.sitebar span{font-size:.85rem}.back{white-space:nowrap}}
+@media (max-width:700px){.hero{background:linear-gradient(180deg,color-mix(in srgb,var(--bg) 70%,transparent),var(--bg) 70%),url(images/kings-movers-hero.jpg) center/cover no-repeat}}
+.card{padding:0!important;overflow:hidden}
+.cimg{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.card:nth-child(3) .cimg{object-position:left center}
+.cbody{display:flex;flex-direction:column;gap:.6rem;padding:1.2rem 1.3rem 1.4rem;flex:1}
+.sitebar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--night);color:var(--on-night)}
+.sitebar .wrap{display:flex;justify-content:space-between;align-items:center;gap:.8rem;flex-wrap:wrap;padding-block:.55rem}
+.sitebar span{font-weight:700;font-size:.93rem}
+.back{background:var(--sun);color:#2A1E00;border:0;border-radius:999px;padding:.45rem 1rem;font-weight:800;font-size:.9rem}
+.browser{border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 24px 50px -20px rgba(0,0,0,.6)}
+.chrome{display:flex;align-items:center;gap:.35rem;background:#E9EDF2;padding:.55rem .8rem}
+.chrome i{width:10px;height:10px;border-radius:50%;background:#C9D0DA}
+.chrome i:first-child{background:#F26B5B}.chrome i:nth-child(2){background:#F5B42A}.chrome i:nth-child(3){background:#3BC27A}
+.chrome span{margin-left:.6rem;background:#fff;border-radius:999px;padding:.15rem .8rem;font-size:.75rem;color:#5C6470;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.snip{position:relative;min-height:300px;background:linear-gradient(90deg,#FBFAF6 0%,#FBFAF6 35%,rgba(251,250,246,.55) 62%,rgba(251,250,246,0) 100%),url(images/kings-movers-hero.jpg) center right/cover;color:#14302C;padding:1rem 1.1rem 1.3rem}
+.snipnav{display:flex;justify-content:space-between;align-items:center;font-family:var(--display);font-size:1rem}
+.snipnav span{font-family:var(--body);font-size:.75rem;font-weight:800;background:#1E40AF;color:#fff;border-radius:999px;padding:.3rem .7rem}
+.sniptext{display:flex;flex-direction:column;align-items:flex-start;gap:.7rem;margin-top:1.6rem;max-width:62%}
+.sniptext .kicker{font-size:.7rem;padding:.25rem .65rem;background:#fff;color:#1E3A8A;border-color:#E4ECE8}
+.sniptext .kicker i{background:#1E40AF}
+.sniptext h3{font-size:clamp(1.4rem,5vw,2rem);line-height:1.05;color:#14302C}
+.sniptext h3 em{color:#1E40AF}
+.snipbtn{background:#1E40AF;color:#fff;font-weight:800;font-size:.85rem;border-radius:10px;padding:.55rem .9rem}
+.snipcard{position:absolute;right:1rem;bottom:1rem;background:#fff;border-radius:14px;padding:.6rem .8rem;box-shadow:0 14px 30px -12px rgba(0,0,0,.35);display:flex;flex-direction:column;line-height:1.2;color:#14302C}
+.snipcard small{font-size:.62rem;font-weight:800;color:#5C7470;letter-spacing:.08em}
+.snipcard b{font-family:var(--display);font-size:1.5rem}
+.snipcard span{font-size:.75rem;color:#5C7470}
+.snipcard em{font-style:normal;font-size:.75rem;font-weight:800;color:#1E40AF;margin-top:.2rem}
+@media (max-width:480px){.sniptext{max-width:100%}.snipcard{position:static;margin-top:1rem;align-self:flex-start;display:inline-flex}.snip{background:linear-gradient(180deg,rgba(251,250,246,.75),#FBFAF6 75%),url(images/kings-movers-hero.jpg) center/cover}}
+.snipticks{display:grid;gap:.35rem}
+.snipticks span::before{content:"✓";color:var(--sun);font-weight:800;margin-right:.5rem}
+.ghostbtn{background:transparent;color:var(--on-night);border:1px solid rgba(255,255,255,.35);border-radius:14px;padding:.85rem 1rem;font-weight:700}
+.lossline{font-family:var(--display);font-size:clamp(1.6rem,5vw,2.2rem);line-height:1.15;font-weight:700}
+.onlyone{display:flex;gap:.8rem;align-items:center;align-self:stretch;background:#D62839;color:#fff;border-radius:14px;padding:.85rem 1.1rem;font-size:1.12rem;font-weight:600;line-height:1.35;box-shadow:0 12px 30px -12px rgba(214,40,57,.7)}
+.onlyone svg{width:2.1rem;height:2.1rem;flex:none}
+.onlyone span{display:flex;flex-direction:column;gap:.2rem}
+.onlyone .ot{font-style:normal;display:block}
+.onlyone small{font-size:.82rem;font-weight:700;opacity:.92;display:flex;align-items:center;gap:.45rem}
+.live{width:.55rem;height:.55rem;border-radius:50%;background:#fff;animation:blink 1.4s infinite}
+@keyframes blink{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){.live{animation:none}}
+.onlyone b{font-weight:800}
+.fromrow{display:flex;align-items:center;gap:.8rem}
+.fromrow img{width:56px;height:56px;border-radius:50%;flex:none}
+.fromrow em{font-style:normal;color:var(--on-night-muted);letter-spacing:.06em;font-weight:700}
+.proof img.avatar{width:3.4rem;height:3.4rem;object-fit:cover}
+.asset{border:2px solid var(--sun);border-radius:16px;padding:1rem 1.1rem;line-height:1.5}
+.asset b{color:var(--sun);display:block;font-family:var(--display);font-size:1.15rem;margin-bottom:.25rem}
+.speed{font-size:1.15rem;line-height:1.45}
+.speed b{color:var(--sun)}
+.vs{display:grid;border-radius:16px;overflow:hidden;background:rgba(255,255,255,.05);font-size:.92rem}
+.vs>div{display:grid;grid-template-columns:1.1fr 1fr 1.1fr;gap:.6rem;padding:.7rem .9rem;border-bottom:1px solid rgba(255,255,255,.08);align-items:center}
+.vs>div:last-child{border-bottom:0}
+.vs>div>span{min-width:0}
+.vs>div>span:nth-child(2){color:var(--on-night-muted);text-decoration:line-through;text-decoration-color:rgba(214,40,57,.8)}
+.vs .you{color:#fff;font-weight:800}
+.vs .vh{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:800;background:rgba(255,255,255,.06)}
+.vs .vh span:nth-child(2){text-decoration:none}
+.vs .vh .you{color:var(--sun)}
+@media (max-width:480px){.vs{font-size:.84rem}.vs>div{padding:.6rem .7rem;gap:.45rem}}
+.trailnote{color:var(--on-night-muted);margin:-.4rem 0 0}
+.trail{display:grid;gap:.8rem}
+.tstep{scroll-margin-top:110px;background:var(--panel);border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.tstep.open{border-color:var(--sun)}
+.tq{all:unset;box-sizing:border-box;width:100%;display:flex;gap:.9rem;align-items:center;padding:1.1rem 1.2rem;cursor:pointer;font-family:var(--display);font-weight:800;font-size:1.2rem;line-height:1.25;color:var(--on-night)}
+.tq:focus-visible{outline:3px solid var(--sun);outline-offset:-3px}
+.tq::after{content:"+";margin-left:auto;font-size:1.6rem;color:var(--sun)}
+.tstep.open .tq::after{content:"\2212"}
+.tn{flex:none;width:2.2rem;height:2.2rem;border-radius:50%;display:grid;place-items:center;background:var(--rose);color:#fff;font-size:1rem}
+.tstep.done .tn{background:var(--sun);color:var(--night)}
+.tbody{display:grid;gap:1rem;padding:0 1.2rem 1.3rem}
+.tbody .lock,.tbody .gets,.tbody .cmp div,.tbody .gap div,.tbody .proof,.tbody .yes{background:rgba(255,255,255,.05)}
+.next{justify-self:stretch;background:var(--sun);color:var(--night);border:0;border-radius:14px;padding:.95rem 1rem;font:800 1.05rem var(--display);cursor:pointer}
+.next:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.faq{display:grid;gap:.6rem}
+.faq details{background:var(--panel);border-radius:14px;padding:.9rem 1.1rem}
+.faq summary{cursor:pointer;font-weight:700;font-family:var(--display)}
+.faq details p{color:var(--on-night-muted);margin:.5rem 0 0}
+.stack{width:100%;box-sizing:border-box;display:grid;background:rgba(255,255,255,.05);border-radius:14px;overflow:hidden}
+.stack>div{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.8rem;padding:.6rem .9rem;border-bottom:1px solid rgba(255,255,255,.08);align-items:baseline}
+.stack>div>span{min-width:0}
+.stack b{color:var(--sun);font-family:var(--display);white-space:nowrap}
+.stack .sh{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:800;color:var(--on-night-muted);background:rgba(255,255,255,.06)}
+.stack .st{border-bottom:0;font-weight:800;background:rgba(245,180,42,.12)}
+.stack .st b{white-space:normal;text-align:right}
+.yourprice{font-size:1.2rem;margin:0}
+.yourprice b{color:#fff;font-size:1.4rem}
+.upsell{display:flex;flex-direction:column;gap:.6rem;border:2px solid var(--sun);border-radius:16px;padding:1rem 1.1rem;width:100%;box-sizing:border-box}
+.upsell small{font-size:.7rem;letter-spacing:.1em;font-weight:800;color:var(--sun)}
+.upsell h4{font-family:var(--display);font-size:1.3rem;margin:0}
+.upsell p{margin:0}
+.upsell .deal{background:rgba(245,180,42,.15);border-radius:10px;padding:.6rem .8rem}
+.ready{display:flex;flex-direction:column;gap:.6rem;border-top:1px solid rgba(255,255,255,.15);padding-top:.9rem;width:100%}
+footer{background:var(--night);color:var(--on-night-muted);font-size:.85rem;padding-block:1.4rem;border-top:1px solid rgba(255,255,255,.08)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.missed{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.8rem}
+.missed>div{border-radius:16px;padding:1rem 1.1rem;min-width:0}
+.missed .now{background:#FCE4DA;color:#5A1A2C}
+.missed .fix{background:#DBEAFE;color:#152961}
+.missed small{display:block;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.35rem}
+.missed p{margin:0;font-weight:600}
+.missed .bub{margin:.6rem 0;background:#fff;color:#14302C;border-radius:14px 14px 14px 4px;padding:.7rem .85rem;font-size:.95rem;font-weight:500;box-shadow:0 6px 16px -10px rgba(0,0,0,.4)}
+.missed .call{display:flex;align-items:center;gap:.5rem;margin:.6rem 0;font-weight:800}
+.missed .call i{font-style:normal;background:#C63F68;color:#fff;border-radius:999px;padding:.2rem .6rem;font-size:.8rem}
+.missed .bub a{color:#1E3A8A;font-weight:800;overflow-wrap:anywhere}
+.trybook{display:inline-block;margin-top:.6rem;font-weight:800;color:#1E3A8A}
+.missedh{font-family:var(--display);font-size:1.3rem;font-weight:700;margin:0}
+/* Phyllena Management brand (phyllenamanagement.com): white, pink #C83266, navy #293751/#173663, Plus Jakarta Sans + Manrope */
+:root:root:root{--night:#FFFFFF;--panel:#F4F6FA;--on-night:#173663;--on-night-muted:#4E5B76;--navy-chip:#293751}
+.money,.note-bar,footer{--surface:#FFFFFF;--ink:#173663;--muted:#4E5B76;--line:#E5E8ED;--bg:#F4F6FA;color-scheme:light;--sun:#C83266;--rose:#C83266;--display:"Plus Jakarta Sans",system-ui,sans-serif}
+.money{font-size:1.05rem}
+.money h2{letter-spacing:-.02em}
+.money .leak,.money .gets div,.money .stack>div,.money .vs>div{border-bottom-color:#E5E8ED}
+.money .tstep{border:1px solid #E5E8ED;box-shadow:0 8px 22px -14px rgba(23,54,99,.3)}
+.money .tstep.open{border:2px solid #C83266}
+.money .tbody .lock,.money .tbody .gets,.money .tbody .cmp div,.money .tbody .gap div,.money .tbody .proof,.money .tbody .yes,.money .stack,.money .vs{background:#fff;border:1px solid #E5E8ED}
+.money .stack .sh,.money .vs .vh{background:#F4F6FA}
+.money .stack .st,.money .upsell .deal{background:rgba(200,50,102,.08)}
+.money .vs .you,.money .yourprice b{color:#173663}
+.money .yes .ghost,.money .ghostbtn,.money .video{border-color:#C9D0DC}
+.money .ready{border-top-color:#E5E8ED}
+.money .gate{background:rgba(255,255,255,.35)}
+.money .next{border-radius:999px;color:#fff}
+.money .next:focus-visible{outline-color:#293751}
+.money .browser{box-shadow:0 20px 40px -20px rgba(23,54,99,.4);border:1px solid #E5E8ED}
+.money .faq details{background:#fff;border:1px solid #E5E8ED}
+.note-bar,.sitebar{border-bottom:1px solid #E5E8ED}
+footer{border-top-color:#E5E8ED}
+.money .stack .st{grid-template-columns:1fr;gap:.2rem}
+.money .stack .st b{text-align:left}
+.back4{display:grid;gap:.1rem;background:#fff;border:1px solid #E5E8ED;border-radius:18px;padding:1.1rem 1.2rem}
+.back4 h3{font-size:1.15rem;margin-bottom:.4rem}
+.back4>div{display:grid;gap:.05rem;padding:.55rem 0;border-bottom:1px solid #E5E8ED}
+.back4>div b{color:#C83266;font-size:1.05rem}
+.back4>div span{color:#4E5B76}
+.nowork{margin:.7rem 0 0;background:#173663;color:#fff;border-radius:12px;padding:.8rem .95rem;line-height:1.45}
+.nowork em{font-style:normal;font-weight:800;color:#FFD3E1}
+.faq6{width:100%}
+.faqh{margin:0;font-weight:800;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:#4E5B76}
+</style>
+<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}[hidden]{display:none!important}</style>
+
+
+
+
+
+<section class="money" id="money"><div class="wrap">
+  <div class="fromrow"><img src="images/phyllena.png" alt="Phyllena Parker"><span class="from">A note from Phyllena Parker<br><em>Phyllena Management</em></span></div>
+  <h2>Kings, here's how you own Charlotte and beat every junk hauler around you.</h2>
+  <p class="onlyone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 1 21h22L12 2z" fill="#fff"/><path d="M12 9v5" stroke="#D62839" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="17.3" r="1.4" fill="#D62839"/></svg><span><em class="ot"><b>Only 1 junk hauler in Charlotte gets this.</b> Will it be you, or the junk hauler down the street?</em><small><i class="live"></i>Once it's taken, it's gone · page comes down Friday</small></span></p>
+  <p class="trailnote">Tap each question. It takes 2 minutes.</p>
+
+  <div class="trail">
+
+    <div class="tstep open" data-step="1">
+      <button class="tq" type="button" aria-expanded="true"><span class="tn">1</span><span>Want to see your new website?</span></button>
+      <div class="tbody">
+        <div class="browser">
+          <div class="chrome"><i></i><i></i><i></i><span>kingmovers.homes</span></div>
+          <div class="snip">
+            <div class="snipnav"><b>Kings Movers</b><span>Book a pickup</span></div>
+            <div class="sniptext">
+              <span class="kicker"><i></i>Same-day junk removal and moves in Charlotte</span>
+              <h3>Point at it. It's <em>gone</em>.</h3>
+              <span class="snipbtn">See my price</span>
+            </div>
+            <div class="snipcard"><small>YOUR PRICE</small><b>$350</b><span>Tomorrow 8 AM · half a truck</span><em>Booked ✓</em></div>
+          </div>
+        </div>
+        <div class="snipticks"><span>Customers see their price in 60 seconds</span><span>They book themselves, even at 10 PM</span><span>You get a Job Alert text</span></div>
+        <button class="ghostbtn" type="button" id="opensite">Look around my full website</button>
+        <button class="next" type="button" data-go="2">Next: see the money you're missing ↓</button>
+      </div>
+    </div>
+
+    <div class="tstep" data-step="2">
+      <button class="tq" type="button" aria-expanded="false"><span class="tn">2</span><span>Want to see the money you're missing?</span></button>
+      <div class="tbody" hidden>
+        <p class="lossline">You're losing about <span class="hot">$5,100</span> a month.</p>
+        <p class="missedh">The leak you feel every week: calls you can't pick up.</p>
+        <div class="missed">
+          <div class="now"><small>Right now</small><div class="call"><i>Missed call</i> (202) 308-9917</div><p>You&#x27;re carrying a couch down the stairs. They hang up and call the next guy with a truck. That job is gone.</p></div>
+          <div class="fix"><small>With the Booked Solid System</small><div class="bub">Hi, it&#x27;s Kings Movers. Sorry we missed you, we&#x27;re on a job. See your price and book in 30 seconds: <a href="kings-movers-book.html">kingmovers.homes/book</a> Or text YES and I'll call you right back.</div><p>They get this in 10 seconds. Many tap the link and book themselves. The rest text YES and wait for your call.</p><a class="trybook" href="kings-movers-book.html">Tap the link to see what they see →</a></div>
+        </div>
+        <div class="gap"><div><span>You</span><b>11</b><em>ratings on Marketplace</em></div><div><span>Top junk hauler near you</span><b class="win">65</b><em>ratings on Marketplace</em></div></div>
+        <p class="punch">Dozens of junk haulers posted near you this week. Be the one they call.</p>
+        <div class="lock locked" id="lock">
+          <div class="breakdown" id="breakdown">
+            <div class="leak"><h3>People looking for a junk hauler can't find you</h3><b>$4,500</b></div>
+            <div class="leak"><h3>Past customers and realtors never hear from you</h3><b>$600</b></div>
+            <div class="leak"><h3>Missed calls go to the next junk hauler</h3><b>+ more</b></div>
+          </div>
+          <div class="gate" id="gate">
+            <form id="unlock" novalidate>
+              <h3>See where your money goes</h3>
+              <input id="uname" type="text" placeholder="First name" autocomplete="given-name">
+              <input id="uphone" type="tel" placeholder="Mobile number" autocomplete="tel">
+              <label class="check"><input id="uok" type="checkbox"> <span>Yes, Phyllena Management can text me my report and follow-ups. Up to 6 texts. Msg and data rates may apply. Reply STOP anytime.</span></label>
+              <p class="err" id="uerr" hidden>Add your name, number, and tick the box.</p>
+              <button type="submit">Text me my full report</button>
+            </form>
+          </div>
+        </div>
+        <button class="next" type="button" data-go="3">Next: how do I get it back? ↓</button>
+      </div>
+    </div>
+
+    <div class="tstep" data-step="3">
+      <button class="tq" type="button" aria-expanded="false"><span class="tn">3</span><span>Want to see how your calendar fills itself?</span></button>
+      <div class="tbody" hidden>
+        <div class="gets">
+          <div><span>Your own website. Customers book themselves.</span><b>$3,000</b></div>
+          <div><span>Missed a call? They get a text back.</span><b>$300/mo</b></div>
+          <div><span>Reminder texts go out for you: time confirmed, the day before, and "on my way." Fewer no-shows and locked doors.</span><b>Included</b></div>
+          <div><span>Past customers and realtors get texts to book again.</span><b>$600/mo</b></div>
+          <div><span>Happy customers rate you.</span><b>$150/mo</b></div>
+          <div><span>Your own web address and email, like info@kingmovers.homes.</span><b>Included</b></div>
+        </div>
+        <div class="howit" aria-label="How a booking works">
+          <div class="ph"><span class="phn">1</span><div class="scr"><small>KINGS MOVERS</small><b>Half a truck · 2 heavy</b><div class="pill">Your price: $430</div></div><p>A customer sees their price</p></div>
+          <div class="ph"><span class="phn">2</span><div class="scr"><small>PICK A TIME</small><div class="pill soonp">Tomorrow 8 AM</div><div class="pill go">Book it ✓</div></div><p>They book themselves</p></div>
+          <div class="ph"><span class="phn">3</span><div class="scr sms"><small>TEXT · NOW</small><b>JOB ALERT</b><span>Tom · half truck · Tomorrow 8 AM · $430</span><div class="row2"><i>Confirm</i><i>Call</i></div></div><p>Your phone buzzes</p></div>
+        </div>
+        <button class="next" type="button" data-go="4">Next: is it worth it? ↓</button>
+      </div>
+    </div>
+
+    <div class="tstep" data-step="4">
+      <button class="tq" type="button" aria-expanded="false"><span class="tn">4</span><span>Is it worth it?</span></button>
+      <div class="tbody" hidden>
+        <div class="cmp"><div><span>You pay</span><b>$297</b><em>a month</em></div><div><span>You get back</span><b class="win">~$1,200</b><em>a month</em></div></div>
+        <div class="back4">
+          <h3>And what you get back besides money</h3>
+          <div><b>Your evenings</b><span>No more pricing in Messenger at dinner.</span></div>
+          <div><b>About 5 hours a month</b><span>Quotes, booking and reminders run themselves.</span></div>
+          <div><b>Your pride</b><span>You look like the real company you are.</span></div>
+          <p class="nowork"><b>It adds zero work.</b> One 15-minute form to start, then no app to learn and nothing to post. You keep hauling. The only thing it adds is <em>peace of mind</em>.</p>
+        </div>
+        <div class="proof">
+          <img class="avatar" src="images/phyllena.png" alt="Phyllena Parker">
+          <p>I'm Phyllena. I grew my own business past $1 million and run it on part-time hours. Now I do it for junk haulers like you.</p>
+        </div>
+        <div class="promise"><p><b>Our promise:</b> no jobs booked in 30 days? Month 2 is free.</p></div>
+        <button class="next" type="button" data-go="5">Next: why you'll beat them ↓</button>
+      </div>
+    </div>
+
+    <div class="tstep" data-step="5">
+      <button class="tq" type="button" aria-expanded="false"><span class="tn">5</span><span>Why will you beat every other junk hauler?</span></button>
+      <div class="tbody" hidden>
+        <p class="speed">Most junk haulers fight over price. <b>You'll win on speed.</b> The first junk hauler to answer gets the job, and yours answers in seconds, day or night.</p>
+        <div class="vs">
+          <div class="vh"><span></span><span>Other junk haulers</span><span class="you">You, with the Booked Solid System</span></div>
+          <div><span>Someone asks for a price at 10 PM</span><span>Waits till morning</span><span class="you">Price and booking on the spot</span></div>
+          <div><span>You miss a call</span><span>Calls the next junk hauler</span><span class="you">Gets a text back in seconds</span></div>
+          <div><span>Past customers</span><span>Forgotten</span><span class="you">Texted to book again</span></div>
+          <div><span>First look</span><span>Personal profile, phone pics</span><span class="you">Real website and business email</span></div>
+          <div><span>After the job</span><span>Nothing</span><span class="you">Asked to rate you, every time</span></div>
+          <div><span>Your customer list</span><span>Scattered in texts and DMs</span><span class="you">Every customer saved in one place</span></div>
+          <div><span>A slow week</span><span>Hope the phone rings</span><span class="you">Send one text, fill the week</span></div>
+          <div><span>One-time customers</span><span>Never come back</span><span class="you">Reminded at moving time and every spring cleanout</span></div>
+          <div><span>Giving a price</span><span>Back and forth in DMs</span><span class="you">Same fair price every time, from your rules</span></div>
+          <div><span>In Charlotte</span><span>Dozens of junk haulers posting</span><span class="you">Only you have this</span></div>
+        </div>
+        <div class="asset"><b>The part nobody else gives you: a customer list you own.</b> Names, addresses, what they paid, when they're due. It grows with every job, and it's the most valuable thing a hauling business has. Lose your phone and other junk haulers lose their customers. You won't.</div>
+        <button class="next" type="button" data-go="6">Next: let's go ↓</button>
+      </div>
+    </div>
+
+    <div class="tstep" data-step="6">
+      <button class="tq" type="button" aria-expanded="false"><span class="tn">6</span><span>Ready to own Charlotte?</span></button>
+      <div class="tbody" hidden>
+        <div class="yes" id="yes">
+          <h3>Your site is already built.</h3>
+          <div class="stack">
+            <div class="sh">Everything in the Booked Solid System</div>
+            <div><span>Your website with instant price and booking</span><b>$3,000</b></div>
+            <div><span>Missed-call text back</span><b>~$300/mo</b></div>
+            <div><span>Reminder texts: confirmed, day before, on my way</span><b>Included</b></div>
+            <div><span>Past customers and realtors texted to book again</span><b>~$600/mo</b></div>
+            <div><span>Review asks after every job</span><b>~$150/mo</b></div>
+            <div><span>Your customer list, organized and yours</span><b>Included</b></div>
+            <div><span>Your web address and business email</span><b>Included</b></div>
+            <div><span>Only junk hauler in Charlotte with this</span><b>Included</b></div>
+            <div class="st"><span>Total value</span><b>$3,000 + ~$1,200/mo</b></div>
+          </div>
+          <p class="yourprice">Founding client price: <b class="price">$197</b> your first month, then <b class="price">$297/mo</b> locked for a year. No setup fee. No contract.</p>
+          <div class="faq faq6">
+            <p class="faqh">Quick questions</p>
+            <details><summary>Contract?</summary><p>No. Stop anytime.</p></details>
+            <details><summary>How fast?</summary><p>Your website is live this week.</p></details>
+            <details><summary>What do I have to do?</summary><p>One 15-minute form. Then keep hauling.</p></details>
+            <details><summary>I'm not good with tech.</summary><p>You don't have to be. If you can read a text, you can run this.</p></details>
+            <details><summary>Do I keep my phone number?</summary><p>Yes. Same number, same customers. We just catch what you miss.</p></details>
+            <details><summary>Can I change my prices or days off?</summary><p>Anytime. Text us and it's done.</p></details>
+          </div>
+          <div class="row"><button class="big" id="yesbtn" type="button">Start now</button><button class="ghost" type="button" id="callbtn">I have a question</button></div>
+          <div class="upsell" id="said" hidden>
+            <small>AFTER CHECKOUT · YOU'RE IN, KINGS</small>
+            <h4>One more thing before you go.</h4>
+            <p>Your page found <b>$4,500 a month</b> from people nearby searching for a junk hauler who never find you. The Local Authority upgrade goes after those calls, working to get you into the first 3 names they see.</p>
+            <p class="deal">Upgrade today and your first month of it is the same <b>$297</b>. Then $497/mo. Only on this screen.</p>
+            <div class="row"><button class="big" id="upyes" type="button">Yes, upgrade me</button><button class="ghost" id="upno" type="button">No thanks</button></div>
+            <p class="said" id="upmsg" hidden></p>
+          </div>
+          <div class="ready" id="ready" hidden>
+            <p><b>If we answer it, are you ready to start?</b></p>
+            <div class="row"><button class="big" id="readyyes" type="button">Yes</button><button class="ghost" id="readyno" type="button">Not yet</button></div>
+            <p class="said" id="readymsg" hidden></p>
+          </div>
+          <p class="fine" style="color:var(--on-night-muted)">One junk hauler per neighborhood. This page comes down Friday.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div></section>
+
+<div id="site" hidden>
+<div class="sitebar"><div class="wrap"><span>This is your new website, Kings.</span><button type="button" class="back" data-back="1">↑ Back to your note</button></div></div>
+<div class="top">
+<nav class="biz"><div class="wrap">
+  <div class="logo">
+    <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="12" fill="var(--brand)"/><g transform="translate(8 8)" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h12v9H2zM14 10h4l3 3v3h-7z"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></g><circle cx="33" cy="7" r="3" fill="var(--sun)"/></svg>
+    Kings Movers
+  </div>
+  <div class="navlinks"><a href="#services">Services</a><a href="#quote">Get a price</a><a href="#areas">Areas</a><a class="call" href="#quote">Book a pickup</a></div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div>
+    <span class="kicker"><i></i>Same-day junk removal and moves in Charlotte</span>
+    <h1>Point at it. It's <em>gone</em> today.</h1>
+    <p class="sub">Old furniture, appliances, yard debris, cleanouts and moves across Charlotte. See your price in 60 seconds, pick a time, and we do all the heavy lifting.</p>
+    <div class="ctas"><a class="btn" href="#quote">See my price</a><a class="btn light" href="#services">See what's included</a></div>
+    <div class="ticks"><span>Licensed and insured</span><span>We do all the heavy lifting</span><span>Moves and junk removal</span><span>Same-day pickups</span></div>
+  </div>
+  <div class="quote" id="quote" aria-labelledby="qt">
+    <h2 id="qt">See your price</h2>
+    <div class="field"><label>How much stuff?</label>
+      <div class="seg" data-group="load"><button type="button" data-v="100" aria-pressed="false">A few items</button><button type="button" data-v="225" aria-pressed="false">¼ truck</button><button type="button" data-v="350" aria-pressed="true">½ truck</button><button type="button" data-v="475" aria-pressed="false">¾ truck</button><button type="button" data-v="600" aria-pressed="false">Full truck</button></div></div>
+    <div class="field"><label>Heavy items (fridge, hot tub, piano)</label>
+      <div class="seg" data-group="heavy"><button type="button" data-v="0" aria-pressed="false">None</button><button type="button" data-v="1" aria-pressed="false">1</button><button type="button" data-v="2" aria-pressed="true">2</button><button type="button" data-v="3" aria-pressed="false">3+</button></div></div>
+    <div class="field"><label>Is it upstairs?</label>
+      <div class="seg" data-group="stairs"><button type="button" data-v="0" aria-pressed="true">No</button><button type="button" data-v="1" aria-pressed="false">Yes</button></div></div>
+    <div class="result" aria-live="polite"><div><small id="plab"></small><b id="price"></b></div><div><small id="slab"></small><b id="hours" class="hrs"></b></div></div>
+    <div class="field"><label>Pick a time <span class="fine" style="font-weight:600">· only times Kings has open, starting today</span></label>
+      <div class="slots" id="slots"></div></div>
+    <button class="btn" id="book" type="button">Book my pickup</button>
+    <p class="confirm" id="confirm" hidden></p>
+    <p class="fine">Kings Movers confirms your pickup by text. Price confirmed when we see the pile, never higher than 10% without your OK.</p>
+  </div>
+</div></header>
+</div>
+
+<section class="trust" aria-label="At a glance"><div class="wrap">
+  <div><b>5.0★</b><span>from Charlotte customers</span></div>
+  <div><b>11</b><span>Marketplace ratings</span></div>
+  <div><b>60 sec</b><span>to see your price</span></div>
+  <div><b>Same day</b><span>pickups most weeks</span></div>
+</div></section>
+
+<section class="band" id="services" style="padding-top:0"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Services</span><h2>What we haul away</h2></div>
+  <div class="cards">
+    <div class="card"><img class="cimg" src="images/kings-movers-c1.jpg" alt="Furniture and appliances" loading="lazy"><div class="cbody"><h3>Furniture and appliances</h3><p>Couches, mattresses, fridges, washers. Out the door in minutes.</p><ul><li>Inside or curbside</li><li>We do all the carrying</li><li>Hauled away same day</li></ul><span class="price">from $100</span></div></div>
+    <div class="card"><img class="cimg" src="images/kings-movers-c2.jpg" alt="Cleanouts and yard debris" loading="lazy"><div class="cbody"><h3>Cleanouts and yard debris</h3><p>Garages, basements, estates, branches and old outdoor furniture.</p><ul><li>Whole rooms or whole homes</li><li>Swept clean after</li><li>Yard junk too</li></ul><span class="price">Free quote</span></div></div>
+    <div class="card"><img class="cimg" src="images/kings-movers-c3.jpg" alt="Moves and loading" loading="lazy"><div class="cbody"><h3>Moves and loading</h3><p>Furniture and household moves, plus loading and unloading your truck or POD.</p><ul><li>Across town or out of state</li><li>Padded and wrapped</li><li>Most jobs in 24 to 48 hours</li></ul><span class="price">Free quote</span></div></div>
+  </div>
+</div></section>
+
+<section class="band" style="padding-top:0"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Happy customers</span><h2>What Charlotte says</h2></div>
+  <div class="say">
+    <blockquote><span class="stars">★★★★★</span><p>Amazing service! Super quick loading and unloading. The guys were friendly, professional and went the extra mile, even with my 3rd floor walk-up.</p><cite>Customer review · Ema R.</cite></blockquote>
+    <blockquote><span class="stars">★★★★★</span><p>Our other mover cancelled last minute. Kings Movers stepped in and saved the day. Outstanding customer service.</p><cite>Customer review · Ben J.</cite></blockquote>
+    <blockquote><span class="stars">★★★★★</span><p>They showed up on time with a full crew. Heavy boxes, awkward furniture, done in about an hour.</p><cite>Customer review · John D.</cite></blockquote>
+  </div>
+</div></section>
+
+<section class="band" id="areas" style="padding-top:0"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Where we haul</span><h2>Home base: Charlotte</h2></div>
+  <div class="areas"><span class="home">Charlotte</span><span>University City</span><span>Huntersville</span><span>Mallard Creek</span><span>Derita</span><span>Concord</span></div>
+</div></section>
+
+<div class="wrap" style="padding-block:2rem;text-align:center"><button type="button" class="next" data-back="2" style="max-width:420px;width:100%">Next: see the money you're missing ↑</button></div>
+</div>
+
+<footer><div class="wrap">Built for Kings Movers by Phyllena Management, Concord, NC. Preview only.</div></footer>
+
+<script>
+(function(){
+  var state={load:350,heavy:2,stairs:0};
+  function f(n){return '$'+Math.round(n).toLocaleString('en-US')} function r50(n){return Math.round(n/50)*50} function rng(a,b){return f(r50(a))+'–'+f(r50(b))}
+  var CALC=function(s,z){var p=s.load+s.heavy*40+s.stairs*35; var t=s.load<=125?'Under 1 hour':(s.load<=350?'About 1 hour':'About 2 hours'); return {label:'YOUR PRICE',main:f(p),sideLabel:'ON SITE',side:t}};
+  var sz=document.getElementById('sz');
+  function calc(){
+    var z=sz?+sz.value:0; if(sz) document.getElementById('szv').textContent=z.toLocaleString('en-US');
+    var r=CALC(state,z), p=document.getElementById('price');
+    document.getElementById('plab').textContent=r.label; p.textContent=r.main; p.style.fontSize=r.main.length>9?'1.55rem':'';
+    document.getElementById('slab').textContent=r.sideLabel; document.getElementById('hours').textContent=r.side;
+    return r;
+  }
+  if(sz) sz.addEventListener('input',calc);
+  document.querySelectorAll('.seg').forEach(function(g){
+    g.addEventListener('click',function(e){
+      var b=e.target.closest('button'); if(!b) return;
+      g.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false')});
+      b.setAttribute('aria-pressed','true');
+      state[g.dataset.group]=+b.dataset.v; calc();
+    });
+  });
+  (function(){
+    var box=document.getElementById('slots'), d=new Date(), out=[], times=["8 AM", "1 PM"];
+    var days=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'], mons=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    for(var i=0;out.length<4&&i<14;i++){var x=new Date(d.getFullYear(),d.getMonth(),d.getDate()+i); if(x.getDay()===0) continue; if(i>1&&i%2===0) continue;
+      var lab=(i===0?'Today':i===1?'Tomorrow':days[x.getDay()]+' '+mons[x.getMonth()]+' '+x.getDate()); out.push(lab+', '+times[out.length%2]);}
+    box.innerHTML=out.map(function(t,i){return '<button type="button" aria-pressed="false">'+(i===0?'<span class="soon">Soonest</span>':'')+t+'</button>'}).join('');
+  })();
+  var slot=null;
+  document.getElementById('slots').addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b) return;
+    this.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false')});
+    b.setAttribute('aria-pressed','true'); slot=b.textContent.replace('Soonest','');
+  });
+  document.getElementById('book').addEventListener('click',function(){
+    var r=calc(), c=document.getElementById('confirm');
+    c.hidden=false;
+    c.textContent=slot?('Requested '+slot+' · '+r.main+'. Kings confirms by text shortly. (Kings just got a Job Alert.)'):'Pick a time first.';
+  });
+  calc();
+  document.getElementById('unlock').addEventListener('submit',function(e){
+    e.preventDefault();
+    var ok=document.getElementById('uname').value.trim()&&document.getElementById('uphone').value.trim()&&document.getElementById('uok').checked;
+    document.getElementById('uerr').hidden=!!ok;
+    if(!ok) return;
+    document.getElementById('lock').classList.remove('locked');
+    document.getElementById('gate').hidden=true;
+  });
+  document.querySelectorAll('.tstep').forEach(function(st){
+    var q=st.querySelector('.tq'), body=st.querySelector('.tbody');
+    q.addEventListener('click',function(){var o=body.hidden;body.hidden=!o;st.classList.toggle('open',o);q.setAttribute('aria-expanded',o?'true':'false')});
+  });
+  function openStep(n){var nx=document.querySelector('.tstep[data-step="'+n+'"]');nx.classList.add('open');nx.querySelector('.tbody').hidden=false;nx.querySelector('.tq').setAttribute('aria-expanded','true');return nx}
+  var site=document.getElementById('site'), sm=matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth';
+  document.getElementById('opensite').addEventListener('click',function(){site.hidden=false;site.scrollIntoView({behavior:sm,block:'start'})});
+  document.querySelectorAll('[data-back]').forEach(function(b){b.addEventListener('click',function(){
+    site.hidden=true;
+    if(b.dataset.back==='2'){var c=document.querySelector('.tstep[data-step="1"]');c.classList.add('done');c.classList.remove('open');c.querySelector('.tbody').hidden=true;c.querySelector('.tq').setAttribute('aria-expanded','false');openStep(2).scrollIntoView({behavior:sm,block:'start'})}
+    else{document.querySelector('.tstep[data-step="1"]').scrollIntoView({behavior:sm,block:'start'})}
+  })});
+  document.querySelectorAll('.next[data-go]').forEach(function(n){
+    n.addEventListener('click',function(){
+      var cur=n.closest('.tstep'), nx=document.querySelector('.tstep[data-step="'+n.dataset.go+'"]');
+      cur.classList.add('done'); cur.classList.remove('open'); cur.querySelector('.tbody').hidden=true; cur.querySelector('.tq').setAttribute('aria-expanded','false');
+      nx.classList.add('open'); nx.querySelector('.tbody').hidden=false; nx.querySelector('.tq').setAttribute('aria-expanded','true');
+      nx.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+    });
+  });
+  document.getElementById('yesbtn').addEventListener('click',function(){document.getElementById('said').hidden=false;document.getElementById('ready').hidden=true});
+  document.getElementById('callbtn').addEventListener('click',function(){document.getElementById('ready').hidden=false;document.getElementById('said').hidden=true});
+  document.getElementById('upyes').addEventListener('click',function(){var m=document.getElementById('upmsg');m.hidden=false;m.textContent='Upgraded. One click, no card re-entry. Welcome email is on its way.'});
+  document.getElementById('upno').addEventListener('click',function(){var m=document.getElementById('upmsg');m.hidden=false;m.textContent='No problem. Welcome email is on its way.'});
+  document.getElementById('readyyes').addEventListener('click',function(){var m=document.getElementById('readymsg');m.hidden=false;m.textContent='The real page opens Phyllena\'s calendar here.'});
+  document.getElementById('readyno').addEventListener('click',function(){var m=document.getElementById('readymsg');m.hidden=false;m.textContent='No problem. We\'ll check in before Friday.'});
+})();
+</script>
