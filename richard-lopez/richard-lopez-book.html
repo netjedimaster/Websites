@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Book Lopez Decks &amp; Remodeling</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Manrope:wght@500;600;700;800&display=swap">
+<style>
+/* Layout: one phone-width column, three taps then a time, nothing else on the page */
+:root{--bg:#FBFAF7;--surface:#fff;--ink:#17222B;--muted:#5A6672;--line:#E5E8EC;--brand:#9C4A1A;--deep:#783714;--mint:#F7E9DE;--sun:#F6B93B;
+  --display:"Fraunces",Georgia,serif;--body:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1317;--surface:#161B21;--ink:#E9EEF2;--muted:#A3ADB8;--line:#27303A;--mint:#392B22;--brand:#E0894F;--deep:#783714;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0F1317;--surface:#161B21;--ink:#E9EEF2;--muted:#A3ADB8;--line:#27303A;--mint:#392B22;--brand:#E0894F;--deep:#783714;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5}
+[hidden]{display:none!important}
+.sample{background:var(--sun);color:#2A1E00;font-size:.8rem;font-weight:800;text-align:center;padding:.45rem 16px;display:flex;gap:.6rem;justify-content:center;align-items:center;flex-wrap:wrap}
+.sample button{background:#2A1E00;color:#fff;border:0;border-radius:999px;padding:.2rem .7rem;font:700 .78rem var(--body);cursor:pointer}
+.wrap{max-width:460px;margin:0 auto;padding:1.2rem max(16px,env(safe-area-inset-left,0px)) 2.5rem max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:1.1rem}
+.top{display:flex;align-items:center;gap:.7rem}
+.logo{width:44px;height:44px;border-radius:12px;background:var(--brand);color:#fff;display:grid;place-items:center;font:700 1.3rem var(--display);flex:none}
+.top b{display:block;font-family:var(--display);font-size:1.15rem;line-height:1.2}
+.top span{color:var(--muted);font-size:.88rem}
+h1{font-family:var(--display);font-size:1.7rem;line-height:1.15;margin:0}
+.q{display:flex;flex-direction:column;gap:.45rem}
+.q label{font-weight:800;font-size:.95rem}
+.seg{display:grid;grid-template-columns:repeat(auto-fit,minmax(92px,1fr));gap:.4rem}
+.seg button,.slots button{min-height:48px;border:2px solid var(--line);background:var(--surface);color:var(--ink);border-radius:12px;font:700 1rem var(--body);cursor:pointer;padding:.4rem}
+.seg button[aria-pressed="true"],.slots button[aria-pressed="true"]{border-color:var(--brand);background:var(--mint)}
+button:focus-visible,input:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.price{background:var(--deep);color:#fff;border-radius:16px;padding:1rem 1.1rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.price small{display:block;font-size:.72rem;letter-spacing:.1em;font-weight:800;opacity:.8}
+.price b{font:700 2.2rem var(--display);line-height:1;font-variant-numeric:tabular-nums}
+.price .h{text-align:right}.price .h b{font-size:1.3rem}
+.slots{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.slots button{text-align:left;padding:.55rem .75rem;font-size:.95rem}
+.soon{display:inline-block;background:var(--sun);color:#2A1E00;font-size:.68rem;font-weight:800;border-radius:999px;padding:.05rem .45rem;margin-bottom:.15rem}
+input{width:100%;min-height:48px;border:2px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);font:600 1rem var(--body);padding:.6rem .8rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.go{min-height:56px;border:0;border-radius:14px;background:var(--brand);color:#fff;font:800 1.15rem var(--body);cursor:pointer}
+.fine{color:var(--muted);font-size:.85rem;margin:0;text-align:center}
+.err{color:#C63F68;font-weight:700;margin:0;text-align:center}
+.done{background:var(--mint);border-radius:16px;padding:1.3rem;text-align:center;display:flex;flex-direction:column;gap:.5rem}
+.done .ck{width:56px;height:56px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-size:1.8rem;margin:0 auto}
+.done h2{font-family:var(--display);margin:0;font-size:1.5rem}
+.done p{margin:0}
+.call{color:var(--deep);font-weight:800}
+.logo svg{width:26px;height:26px}
+input[type=range]{min-height:0;border:0;padding:0;accent-color:var(--brand)}
+.rng{display:flex;justify-content:space-between;color:var(--muted);font-size:.78rem;font-weight:700}
+.price .h b{font-size:1.05rem;font-family:var(--body);font-weight:800}
+</style></head><body>
+<div class="sample">PREVIEW · what a missed caller opens from the text <button type="button" onclick="history.length>1?history.back():location.href='index.html'">← Back</button></div>
+<main class="wrap">
+  <div class="top"><div class="logo"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18M3 16h18M5 12v8M19 12v8M12 12v8M6 8l6-4 6 4"/></svg></div><div><b>Lopez Decks &amp; Remodeling</b><span>Harrisburg · ★ 4.9 on Marketplace</span></div></div>
+
+  <div id="form" style="display:flex;flex-direction:column;gap:1.1rem">
+    <h1>Your price in 3 taps</h1>
+    <div class="q"><label>What&#x27;s the project?</label>
+      <div class="seg" data-group="job"><button type="button" data-v="0" aria-pressed="true">New deck</button><button type="button" data-v="1" aria-pressed="false">Rebuild or repair</button><button type="button" data-v="2" aria-pressed="false">Stain and seal</button></div></div>
+    <div class="q"><label>Material</label>
+      <div class="seg" data-group="mat"><button type="button" data-v="0" aria-pressed="true">Pressure-treated wood</button><button type="button" data-v="1" aria-pressed="false">Composite</button></div></div>
+    <div class="q"><label for="sz">About how big: <span id="szv">300</span> sq ft</label><input id="sz" type="range" min="100" max="800" step="25" value="300"><div class="rng"><span>100 sq ft</span><span>800 sq ft</span></div></div>
+    <div class="price" aria-live="polite"><div><small id="plab"></small><b id="price"></b></div><div class="h"><small id="slab"></small><b id="hours"></b></div></div>
+    <div class="q"><label>Pick a time</label><div class="slots" id="slots"></div></div>
+    <div class="two"><input id="nm" type="text" placeholder="First name" autocomplete="given-name"><input id="ph" type="tel" placeholder="Mobile" autocomplete="tel"></div>
+    <button class="go" id="go" type="button">Book my free design visit</button>
+    <p class="err" id="err" hidden></p>
+    <p class="fine">Richard confirms by text. Your exact price comes after the free quote visit. Questions? <span class="call">Text or call Your number</span></p>
+  </div>
+
+  <div class="done" id="done" hidden>
+    <div class="ck">✓</div>
+    <h2>You're booked in</h2>
+    <p id="sum"></p>
+    <p class="fine">Richard just got your request and will text you to confirm.</p>
+  </div>
+</main>
+<script>
+(function(){
+  var state={job:0,mat:0}, slot=null;
+  function f(n){return '$'+Math.round(n).toLocaleString('en-US')} function r50(n){return Math.round(n/50)*50} function rng(a,b){return f(r50(a))+'–'+f(r50(b))}
+  var CALC=function(s,z){if(s.job===2){return {label:'YOUR PRICE',main:rng(Math.max(2.5*z,450),Math.max(4.5*z,700)),sideLabel:'ABOUT',side:'1 to 2 days'}} var lo=s.mat?50:30, hi=s.mat?75:45; if(s.job===1){lo*=.6;hi*=.7} return {label:'TYPICAL RANGE',main:rng(lo*z,hi*z),sideLabel:'NEXT STEP',side:'Free design visit'}};
+  var sz=document.getElementById('sz');
+  function calc(){
+    var z=sz?+sz.value:0; if(sz) document.getElementById('szv').textContent=z.toLocaleString('en-US');
+    var r=CALC(state,z), p=document.getElementById('price');
+    document.getElementById('plab').textContent=r.label; p.textContent=r.main; p.style.fontSize=r.main.length>9?'1.5rem':'';
+    document.getElementById('slab').textContent=r.sideLabel; document.getElementById('hours').textContent=r.side;
+    return r;
+  }
+  if(sz) sz.addEventListener('input',calc);
+  document.querySelectorAll('.seg').forEach(function(g){g.addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b) return;
+    g.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false')});
+    b.setAttribute('aria-pressed','true'); state[g.dataset.group]=+b.dataset.v; calc();
+  })});
+  var box=document.getElementById('slots'), d=new Date(), out=[], times=["9 AM", "4 PM"];
+  var days=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  for(var i=1;out.length<4&&i<14;i++){var x=new Date(d.getFullYear(),d.getMonth(),d.getDate()+i); if(x.getDay()===0||(i>1&&i%2===0)) continue;
+    out.push((i===0?'Today':i===1?'Tomorrow':days[x.getDay()]+' '+(x.getMonth()+1)+'/'+x.getDate())+', '+times[out.length%2]);}
+  box.innerHTML=out.map(function(t,i){return '<button type="button" aria-pressed="'+(i===0)+'">'+(i===0?'<span class="soon">Soonest</span><br>':'')+t+'</button>'}).join('');
+  slot=out[0];
+  box.addEventListener('click',function(e){var b=e.target.closest('button'); if(!b) return;
+    box.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false')});
+    b.setAttribute('aria-pressed','true'); slot=b.textContent.replace('Soonest','');});
+  document.getElementById('go').addEventListener('click',function(){
+    var n=document.getElementById('nm').value.trim(), p=document.getElementById('ph').value.trim(), er=document.getElementById('err');
+    if(!n||p.replace(/\D/g,'').length<10){er.hidden=false;er.textContent='Add your first name and mobile number.';return}
+    var r=calc(); document.getElementById('form').hidden=true; document.getElementById('done').hidden=false;
+    document.getElementById('sum').textContent=n+', '+slot+'. '+r.main+(r.side?' · '+r.side:'')+'.';
+  });
+  calc();
+})();
+</script>
+</body></html>
