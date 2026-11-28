@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Kiques USA Local Authority Scorecard</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: matches phyllenamanagement.com. Light only, white top bar with logo, soft gradient hero with a floating score card, alternating light bands, rounded white cards with soft shadows, one navy gradient panel for the slogan equation. */
+:root{
+ color-scheme:light;
+ --night:#0E1B38; --navy:#1F3A8A; --bg:#F7F7FA; --surface:#FFFFFF; --ink:#111A2E; --muted:#5B6479; --line:#E4E6EE;
+ --rose:#C63F68; --rose-deep:#A92E55; --rose-soft:#FCEAF0; --tint:#EEF2FA; --star:#F5B42A; --gold-ink:#9A6A06; --gold-soft:#FDF3DC;
+ --good:#1F8A55; --good-soft:#E3F4EA; --purple:#5A3F86;
+ --display:"Plus Jakarta Sans","Segoe UI",system-ui,sans-serif; --body:"Manrope","Segoe UI",system-ui,-apple-system,sans-serif;
+ --r-lg:24px; --r-md:16px;
+ --shadow:0 1px 2px rgba(14,27,56,.06),0 12px 32px rgba(14,27,56,.08);
+}
+body{background:var(--bg);color:var(--ink);font:17px/1.65 var(--body)}
+.band{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.inner{max-width:1080px;margin:0 auto;padding-block:72px;display:grid;gap:28px}
+.white{background:var(--surface)} .tint{background:var(--tint)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;color:var(--ink)}
+h1{font-size:clamp(36px,6vw,64px);line-height:1.02;font-weight:800;letter-spacing:-.035em}
+h2{font-size:clamp(28px,4.2vw,44px);line-height:1.08;font-weight:800;letter-spacing:-.03em}
+h3{font-size:18px;font-weight:700;letter-spacing:-.01em}
+p{margin:0;max-width:62ch}
+.muted{color:var(--muted)}
+.grad{background:linear-gradient(90deg,var(--rose),var(--purple) 55%,var(--navy));-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{display:flex;align-items:center;gap:10px;font:700 13px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--rose)}
+.eyebrow::before{content:"";width:18px;height:2px;background:currentColor}
+.lede{font-size:19px;color:var(--muted)}
+/* top bar */
+.top{background:var(--surface);border-bottom:1px solid var(--line)}
+.top .inner{padding-block:16px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px}
+.logo{width:180px;height:auto;display:block}
+.chip{font:600 14px var(--body);padding:8px 16px;border-radius:99px;background:var(--rose);color:#fff;white-space:nowrap}
+.sample{background:var(--gold-soft);color:var(--gold-ink);border-bottom:1px solid #F3E1B5}
+.sample .inner{padding-block:10px;font-size:14px}
+/* hero */
+.hero{background:radial-gradient(60% 80% at 85% 20%,rgba(198,63,104,.10),transparent 70%),radial-gradient(50% 70% at 70% 90%,rgba(31,58,138,.10),transparent 70%),linear-gradient(180deg,#FBFBFD,var(--bg))}
+.heroGrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center}
+@media (max-width:820px){.heroGrid{grid-template-columns:1fr}}
+.badge{justify-self:start;display:inline-flex;align-items:center;gap:10px;font-size:14px;padding:7px 16px 7px 10px;border-radius:99px;background:var(--surface);border:1px solid var(--line);box-shadow:0 1px 2px rgba(14,27,56,.05)}
+.badge i{width:14px;height:14px;border-radius:50%;background:var(--rose-soft);display:grid;place-content:center}
+.badge i::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--rose)}
+.heroText{display:grid;gap:22px}
+.ticks{display:flex;flex-wrap:wrap;gap:10px 22px;margin:0;padding:0;list-style:none;font-size:15px;color:var(--muted)}
+.ticks li::before{content:"✓";color:var(--rose);font-weight:700;margin-right:8px}
+/* score card */
+.scoreCard{background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow);border:1px solid var(--line);padding:28px;display:grid;gap:20px;min-width:0}
+.scHead{display:flex;justify-content:space-between;align-items:center;gap:10px;font:700 13px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.scHead span:last-child{letter-spacing:0;text-transform:none;font-weight:600;color:var(--rose);background:var(--rose-soft);padding:4px 12px;border-radius:99px}
+.dialRow{display:grid;grid-template-columns:150px minmax(0,1fr);gap:22px;align-items:center}
+@media (max-width:420px){.dialRow{grid-template-columns:1fr}}
+.dial{position:relative;width:150px;aspect-ratio:1;max-width:100%}
+.dial svg{width:100%;height:100%;display:block}
+.dial .num{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
+.dial .num b{font:800 48px/1 var(--display);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.dial .num small{font-size:13px;color:var(--muted)}
+.subs{display:grid;gap:12px}
+.sub{display:grid;gap:5px}
+.sub .l{display:flex;justify-content:space-between;font:700 15px var(--display)}
+.sub .l span{font:600 14px var(--body);color:var(--muted);font-variant-numeric:tabular-nums}
+.bar{height:8px;border-radius:99px;background:var(--tint);overflow:hidden}
+.bar span{display:block;height:100%;border-radius:99px;background:var(--c)}
+.lost{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;background:var(--rose-soft);border-radius:var(--r-md);padding:14px 18px}
+.lost b{font:800 28px var(--display);color:var(--rose-deep);letter-spacing:-.02em}
+.lost span{font-size:14px;color:var(--rose-deep)}
+.scale{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;font-size:12px;color:var(--muted)}
+.scale div{padding:7px 8px;border-radius:10px;background:var(--bg);text-align:center;line-height:1.3}
+.scale div.on{background:var(--rose);color:#fff}
+.scale b{display:block;font:700 12px var(--display)}
+/* equation panel */
+.eq{border-radius:var(--r-lg);background:linear-gradient(120deg,#1F3A8A 0%,#2C3F95 45%,#5A3F86 100%);padding:32px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px;color:#fff;box-shadow:var(--shadow)}
+.eqb{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);border-radius:14px;padding:12px 20px;text-align:center;min-width:140px}
+.eqb b{display:block;font:800 22px var(--display);letter-spacing:-.02em}
+.eqb span{font-size:13px;color:#D3DBEE}
+.eqb.hot{background:var(--rose);border-color:var(--rose)}
+.eqb.hot span{color:#FFE3EC}
+.op{font:800 22px var(--display);color:#FF9DB8}
+/* section head */
+.shead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:18px}
+.shead > div{display:grid;gap:12px}
+.pts{display:grid;justify-items:end;gap:6px}
+.pts b{font:800 48px/1 var(--display);letter-spacing:-.04em;color:var(--c);font-variant-numeric:tabular-nums}
+.pts b small{font-size:20px;color:var(--muted);letter-spacing:0}
+.pts .bar{width:180px;background:var(--line)}
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:24px;display:grid;gap:10px;align-content:start;min-width:0}
+.q{font:700 16px var(--display)}
+.q::before{content:"🔍︎";margin-right:6px;filter:grayscale(1);opacity:.5}
+.top3{display:grid;gap:4px;margin:0;padding:0;list-style:none;font-size:14px;color:var(--muted)}
+.top3 li{display:flex;justify-content:space-between;gap:8px}
+.top3 li span:last-child{font-variant-numeric:tabular-nums;white-space:nowrap}
+.top3 li span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.flag{justify-self:start;font:700 12px var(--body);padding:4px 12px;border-radius:99px;background:var(--rose-soft);color:var(--rose-deep)}
+/* checklist */
+.checks{display:grid;margin:0;padding:6px 24px;list-style:none;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow)}
+.checks li{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:14px;padding:18px 0;border-bottom:1px solid var(--line);align-items:start}
+.checks li:last-child{border-bottom:0}
+.ic{width:28px;height:28px;border-radius:50%;display:grid;place-content:center;font:800 13px var(--body)}
+.fail .ic{background:var(--rose-soft);color:var(--rose)} .part .ic{background:var(--gold-soft);color:var(--gold-ink)} .pass .ic{background:var(--good-soft);color:var(--good)}
+.checks h3{font-size:16px}
+.checks p{font-size:15px;color:var(--muted)}
+.checks .p{font:700 14px var(--display);font-variant-numeric:tabular-nums;white-space:nowrap;padding:3px 12px;border-radius:99px;background:var(--bg);color:var(--muted)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+@media (max-width:820px){.two{grid-template-columns:1fr}}
+/* review bars */
+.rbars{display:grid;gap:10px;font-size:14px}
+.rb{display:grid;grid-template-columns:minmax(100px,170px) minmax(0,1fr) 40px;gap:10px;align-items:center}
+.rb .n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rb .t{height:10px;border-radius:99px;background:var(--tint);overflow:hidden}
+.rb .t span{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#3B57B0,var(--navy))}
+.rb.me .n{font-weight:700;color:var(--rose)} .rb.me .t span{background:var(--rose)}
+.rb .v{text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+/* table */
+.tw{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px}
+th,td{padding:14px 20px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:700 12px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:var(--bg)}
+tr:last-child td{border-bottom:0}
+.sc{font:700 15px var(--display);white-space:nowrap;font-variant-numeric:tabular-nums}
+/* money */
+.money{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.money .card b{font:800 40px/1.1 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.money .card.hot{background:linear-gradient(135deg,var(--rose),var(--rose-deep));border-color:transparent;color:#fff}
+.money .card.hot span{color:#FFE3EC}
+.money .card span{font-size:15px;color:var(--muted)}
+.chain{font-size:15px;color:var(--muted);background:var(--surface);border:1px dashed var(--line);border-radius:var(--r-md);padding:14px 18px;overflow-wrap:anywhere}
+.note{font-size:14px;color:var(--muted)}
+/* fixes */
+.fixes{display:grid;gap:14px;margin:0;padding:0;list-style:none;counter-reset:f}
+.fixes li{counter-increment:f;display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:18px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);box-shadow:var(--shadow);padding:18px 22px}
+.fixes li::before{content:counter(f);width:44px;height:44px;border-radius:12px;display:grid;place-content:center;font:800 18px var(--display);color:var(--navy);background:var(--tint)}
+.fixes p{font-size:15px;color:var(--muted)}
+.tag{font:700 12px var(--body);padding:5px 12px;border-radius:99px;white-space:nowrap;color:var(--c);background:var(--cs)}
+@media (max-width:560px){.fixes li{grid-template-columns:44px minmax(0,1fr)}.fixes .tag{grid-column:2;justify-self:start}}
+/* location map */
+.mapCard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);overflow:hidden;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}
+@media (max-width:760px){.mapCard{grid-template-columns:1fr}}
+.mapCard svg{display:block;width:100%;height:auto}
+.mapSide{padding:26px;display:grid;gap:16px;align-content:center}
+.mapSide p{font-size:15px;color:var(--muted)}
+.legend{display:grid;gap:10px;margin:0;padding:0;list-style:none;font-size:15px}
+.legend li{display:flex;align-items:center;gap:10px}
+.legend i{width:26px;height:26px;border-radius:50%;flex:none;display:grid;place-content:center;font:800 13px var(--body);font-style:normal}
+.osm{font-size:12px;color:var(--muted)}
+/* cta */
+.cta{background:linear-gradient(120deg,#1F3A8A 0%,#2C3F95 45%,#5A3F86 100%);border-radius:var(--r-lg);padding:40px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center;color:#fff;box-shadow:var(--shadow)}
+@media (max-width:720px){.cta{grid-template-columns:1fr;padding:28px}}
+.cta h2{color:#fff} .cta p{color:#D3DBEE}
+.cta .eyebrow{color:#FF9DB8}
+.person{background:#fff;color:var(--ink);border-radius:var(--r-md);padding:20px 24px;display:grid;gap:4px;font-size:15px;min-width:0}
+.person b{font:800 19px var(--display)}
+.person span{color:var(--muted)}
+.btn{justify-self:start;margin-top:8px;font:700 15px var(--body);background:var(--rose);color:#fff;padding:12px 22px;border-radius:99px;text-decoration:none;box-shadow:0 8px 20px rgba(198,63,104,.3)}
+.btn:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.method{font-size:14px;color:var(--muted)}
+footer .inner{padding-block:28px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:14px;color:var(--muted)}
+.flag.win{background:var(--good-soft);color:var(--good)}
+.top3 li.me{color:var(--rose);font-weight:700}
+.leaks{display:grid;gap:8px}
+.lk{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 18px;border-radius:var(--r-md);background:var(--bg);font-size:14px;color:var(--muted)}
+.lk b{font:800 20px var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+</style><style>.alarm{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.alarm div{background:var(--surface);border:1px solid #F3C9D6;border-left:4px solid var(--rose);border-radius:var(--r-md);padding:12px 14px;display:grid;gap:4px;align-content:start}.alarm b{font:800 22px/1.1 var(--display);color:var(--rose-deep)}.alarm span{font-size:14px;line-height:1.45;color:var(--muted);overflow-wrap:anywhere}.urgent{background:var(--rose-soft);border-radius:var(--r-md);padding:12px 16px;font-size:15px;color:var(--ink)}.urgent strong{color:var(--rose-deep)}@media (max-width:640px){.alarm{grid-template-columns:1fr}}
+.tabs{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(14,27,56,.05)}.tabs .inner{display:flex;gap:6px;padding-block:10px;overflow-x:auto}.tabs a{flex:0 0 auto;padding:9px 16px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none;color:var(--night);background:#EEF2FA}.tabs a.on{background:var(--rose);color:#fff}.tabs a.pr{margin-left:auto}@media print{.tabs{display:none}}
+</style>
+<style>.showup{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}@media (max-width:760px){.showup{grid-template-columns:1fr}}
+.su{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:22px;display:grid;gap:6px;align-content:start}
+.su b{font:800 40px/1 var(--display);letter-spacing:-.03em}.su b.bad{color:var(--rose-deep)}.su b.mid{color:var(--gold-ink)}
+.su p{font-size:15px;color:var(--muted)}
+.grid11{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);overflow:hidden;font-size:15px}
+.gh,.gr{display:grid;grid-template-columns:minmax(0,1.6fr) 90px minmax(0,1fr) minmax(0,1fr);gap:12px;padding:12px 20px;align-items:center;border-bottom:1px solid var(--line)}
+.gr:last-child{border-bottom:0}
+.gh{font:700 12px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:var(--bg)}
+.gr .v{font-variant-numeric:tabular-nums;font-weight:700}
+.gr i{font-style:normal;display:inline-grid;place-content:center;width:22px;height:22px;border-radius:50%;margin-right:8px;font:800 12px var(--body)}
+.gr i.x{background:var(--rose-soft);color:var(--rose)}.gr i.y{background:var(--good-soft);color:var(--good)}
+@media (max-width:640px){.gh{display:none}.gr{grid-template-columns:1fr auto;row-gap:4px}.gr span:first-child{font-weight:700}.gr span:nth-child(3),.gr span:nth-child(4){font-size:14px;color:var(--muted)}}
+.rb.ghost .n{font-style:italic;color:var(--muted)}.rb.ghost .t span{background:repeating-linear-gradient(45deg,#C9CFDF 0 6px,#E4E6EE 6px 12px)}
+</style>
+</head><body>
+<div class="band top"><div class="inner"><img class="logo" src="img/pm-logo.png" alt="Phyllena Management LLC" width="520" height="132"><span class="chip">Local Authority Scorecard · Online Store Edition</span></div></div>
+<nav class="tabs" aria-label="Kiques USA reports"><div class="inner"><a href="/kiques-usa/scorecard.html" class="on" aria-current="page">Scorecard</a><a href="/kiques-usa/">Website mock-ups</a><a href="/kiques-usa/faq.html" class="pr">FAQ</a><a href="/kiques-usa/proposal.html">Proposal</a></div></nav>
+
+<div class="band sample"><div class="inner"><p><strong>Prepared for Tabithia, Kiques USA.</strong> Built with the Local Authority Method, our proprietary 100-point audit of how Google sees your business, in its online store edition, from our November 28, 2026 check. Every finding was observed that day; dollar figures are estimates.</p></div></div>
+
+<header class="band hero"><div class="inner heroGrid">
+ <div class="heroText">
+  <span class="badge"><i></i>Prepared for Kiques USA · kiques.com · Fort Mill, SC</span>
+  <h1>About $21,078 a month walks past Kiques, <span class="grad">and Sneex is the one catching it.</span></h1>
+  <p class="lede">Americans search for sneaker heels about 23,600 times a month. On 9 of those buyer searches, checked across the whole U.S., kiques.com isn't in the top 30 once. Sneex, a sneaker heel that sells for $395 to $895, is in the top 3 on five of them and buys the top spot in Google Shopping.</p>
+  <div class="alarm">
+   <div><b>0 of 9</b><span>buyer searches where kiques.com shows up in Google's top 30 in the U.S.</span></div>
+   <div><b>Up to 18 days</b><span>U.S. orders ship from Australia: 1 to 3 business days to dispatch, then 3 to 15 in transit.</span></div>
+   <div><b>"Kiques" = tacos</b><span>Search the brand name in the U.S. and the whole first page is Kique's Kitchen, a Mexican restaurant in Georgia.</span></div>
+  </div>
+  <p class="urgent"><strong>Why now:</strong> sneaker heel searches peak in the fall. October hit 14,800 searches for "sneaker heels" alone, 50% above the yearly average, as women shop for holiday parties, weddings and concerts. Sneex is promising delivery by December 10. A Kiques order placed today from the U.S. may not arrive before Christmas. Fix delivery and visibility now and you're ready for wedding season in March, the next spike.</p>
+ </div>
+ <div class="scoreCard">
+  <div class="scHead"><span>Local Authority Score</span><span>Nov 28, 2026</span></div>
+  <div class="dialRow">
+   <div class="dial" role="img" aria-label="Score 40 out of 100"><svg viewBox="0 0 200 200" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C63F68"/><stop offset="1" stop-color="#5A3F86"/></linearGradient></defs><circle cx="100" cy="100" r="84" fill="none" stroke="#EEF2FA" stroke-width="18"/><circle cx="100" cy="100" r="84" fill="none" stroke="url(#g)" stroke-width="18" stroke-linecap="round" stroke-dasharray="211.1 527.8" transform="rotate(-90 100 100)"/></svg><div class="num"><b>40</b><small>out of 100</small></div></div>
+   <div class="subs">
+    <div class="sub" style="--c:var(--rose)"><div class="l">Be Seen<span>9 / 40</span></div><div class="bar"><span style="width:23%"></span></div></div>
+    <div class="sub" style="--c:var(--navy)"><div class="l">Be Trusted<span>18 / 35</span></div><div class="bar"><span style="width:51%"></span></div></div>
+    <div class="sub" style="--c:var(--star)"><div class="l">Be Chosen<span>13 / 25</span></div><div class="bar"><span style="width:52%"></span></div></div>
+   </div>
+  </div>
+  <div class="scale"><div><b>Invisible</b>0–39</div><div class="on"><b>Overlooked</b>40–59</div><div><b>Competitive</b>60–79</div><div><b>Local Authority</b>80–100</div></div>
+  <div class="leaks">
+   <div class="lk"><span>Leak #1 · Searches you're missing</span><b>$19,112.46</b></div>
+   <div class="lk"><span>Leak #2 · No automated review system</span><b>$701.87</b></div>
+   <div class="lk"><span>Leak #3 · No repeat sales system</span><b>$1,263.37</b></div>
+   <div class="lost"><span>Left on the table each month</span><b>$21,077.70</b></div>
+  </div>
+ </div>
+</div></header>
+
+<section class="band white"><div class="inner">
+ <div class="eq" aria-label="Be Seen plus Be Trusted plus Be Chosen equals pairs sold">
+  <div class="eqb"><b>Be Seen</b><span>You scored 9 of 40</span></div><span class="op">+</span>
+  <div class="eqb"><b>Be Trusted</b><span>You scored 18 of 35</span></div><span class="op">+</span>
+  <div class="eqb"><b>Be Chosen</b><span>You scored 13 of 25</span></div><span class="op">=</span>
+  <div class="eqb hot"><b>Pairs sold</b><span>Kiques on American feet</span></div>
+ </div>
+</div></section>
+
+<section class="band" style="--c:var(--rose)"><div class="inner">
+ <div class="shead"><div><span class="eyebrow">Be Seen</span><h2>Do you show up when American women shop?</h2><p class="muted">9 searches on Google, typed the way a woman looking for a heel she can actually wear would type them, checked across the whole U.S. Below are the first three results she sees and where Kiques lands.</p></div><div class="pts"><b>9<small> / 40</small></b><div class="bar"><span style="width:23%"></span></div></div></div>
+ <div class="showup">
+  <div class="su"><b class="bad">0 of 9</b><h3>kiques.com on buyer searches</h3><p>Not in the top 30 on any of them. The only search that finds you is "kiques sneaker heels," and a stranger can't type a name she's never heard.</p></div>
+  <div class="su"><b class="bad">0</b><h3>In Google Shopping</h3><p>We searched "sneaker heels" and even "kiques sneaker heels" in Google Shopping. No Kiques. Sneex, Michael Kors, Steve Madden and Temu fill the box.</p></div>
+  <div class="su"><b class="mid">1 of 1</b><h3>Your name plus the product</h3><p>"kiques sneaker heels" puts kiques.com at #1 and @kiquesusa at #3. Proof that people who already know you can find you.</p></div>
+ </div>
+ <div class="grid11" id="grid" role="table" aria-label="Where you show up on 9 buyer searches"></div>
+ <div class="cards" id="searches"></div>
+ <ul class="checks">
+  <li class="fail"><span class="ic">✕</span><div><h3>Show up on buyer searches</h3><p>0 of 9 in the top 30, and not in Google Shopping. Search "kiques" alone in the U.S. and every result is a restaurant. Only the name plus "sneaker heels" finds you.</p></div><span class="p">2 / 16</span></li>
+  <li class="pass"><span class="ic">✓</span><div><h3>Google can read your store</h3><p>A clean Shopify store with page titles, descriptions and product data on every shoe. One catch: it's one store for Australia and the U.S., so every page talks to both and none talks to American shoppers.</p></div><span class="p">6 / 8</span></li>
+  <li class="fail"><span class="ic">✕</span><div><h3>Free Google Shopping listings from your own store</h3><p>Google shows store products in its Shopping box for free once it has a U.S. product feed. We found no Kiques listing in the U.S. Shopping box on either search.</p></div><span class="p">0 / 6</span></li>
+  <li class="fail"><span class="ic">✕</span><div><h3>A page for each kind of buyer</h3><p>One collection page for everyone. Nothing for the line dancer, the bride's mom, the woman who stands at concerts or the one who wants comfortable heels for the office. "Comfortable heels" (18,100 a month) and "dance heels" (12,100) have no page to land on.</p></div><span class="p">0 / 6</span></li>
+  <li class="part"><span class="ic">!</span><div><h3>Marketplaces</h3><p>Dance Store in Australia carries Signature Black. Nothing in the U.S.: no Amazon, no Zappos, no U.S. boutique or dance shop listing we could find.</p></div><span class="p">1 / 4</span></li>
+ </ul>
+</div></section>
+
+<section class="band tint" style="--c:var(--navy)"><div class="inner">
+ <div class="shead"><div><span class="eyebrow">Be Trusted</span><h2>Do you look like the safe choice?</h2><p class="muted">Kiques has proof most brands would kill for: 78 reviews, every single one five stars, from women who say things like "more comfortable than any flats that I own." The problem is that Google can't see it, and almost none of it is new.</p></div><div class="pts"><b>18<small> / 35</small></b><div class="bar"><span style="width:51%"></span></div></div></div>
+ <div class="two">
+  <div class="card"><h3>Reviews a shopper sees next to the shoe on Google</h3><div class="rbars" id="bars"></div><p class="note">Counts as shown in Google Shopping on November 28, 2026. Your 78 reviews are real. Google just isn't showing them.</p></div>
+  <ul class="checks">
+   <li class="pass"><span class="ic">✓</span><div><h3>Reviews readable on your site</h3><p>78 written reviews on kiques.com, 100% five stars, with names and the style they bought. Exactly right.</p></div><span class="p">10 / 10</span></li>
+   <li class="part"><span class="ic">!</span><div><h3>Proof and credentials</h3><p>A strong founder story on the About page and a fresh Beauty Boost Charlotte feature on Tabithia from November 20. Neither one is on the store, and there's no "as seen in" or real-women photo row near the buy button.</p></div><span class="p">4 / 8</span></li>
+   <li class="fail"><span class="ic">✕</span><div><h3>Stars next to your name on Google</h3><p>None. The product pages don't send Google your rating, so search results show no stars. Sneex's The Icon shows 308 reviews right in the Shopping box.</p></div><span class="p">0 / 6</span></li>
+   <li class="fail"><span class="ic">✕</span><div><h3>New reviews, last 90 days</h3><p>One, from November 27. Before that, July 25. A store with 78 perfect reviews that adds about one a season looks quieter than it is.</p></div><span class="p">1 / 6</span></li>
+   <li class="part"><span class="ic">!</span><div><h3>Trust pages and matching claims</h3><p>Shipping, refund, contact, About and wholesale pages are all there. But they're written for Australia: U.S. orders go by Australia Post, change-of-mind returns go back to Australia at the buyer's cost, and the Kiques USA Facebook page has 0 reviews.</p></div><span class="p">3 / 5</span></li>
+  </ul>
+ </div>
+</div></section>
+
+<section class="band white" style="--c:var(--gold-ink)"><div class="inner">
+ <div class="shead"><div><span class="eyebrow">Be Chosen</span><h2>When they find you, is it easy to buy, and to buy again?</h2><p class="muted">A $270 heel is an impulse buy for some and a careful buy for most. She wants to know it fits, it'll arrive on time for the event, and she can send it back.</p></div><div class="pts"><b>13<small> / 25</small></b><div class="bar"><span style="width:52%"></span></div></div></div>
+ <ul class="checks">
+  <li class="part"><span class="ic">!</span><div><h3>Checkout on a phone</h3><p>Shopify checkout with Shop Pay and PayPal, prices in U.S. dollars. Smooth. But the U.S. delivery time, up to 18 business days, isn't shown until she digs into the shipping policy.</p></div><span class="p">6 / 8</span></li>
+  <li class="part"><span class="ic">!</span><div><h3>A clear offer</h3><p>Prices are clear. There's no U.S. reason to buy today: no U.S. shipping promise, no easy-exchange promise, no first-pair offer. The only U.S. offer we found is the 10% "BEAUTY" code in the Beauty Boost feature.</p></div><span class="p">2 / 5</span></li>
+  <li class="part"><span class="ic">!</span><div><h3>A way to stay in touch before they buy</h3><p>A "Subscribe to our emails" box in the footer. No text sign-up, no reason to join, and nothing that captures the woman who isn't ready to spend $270 today.</p></div><span class="p">2 / 4</span></li>
+  <li class="fail"><span class="ic">✕</span><div><h3>A reason to buy again</h3><p>Reviewers own 2, 3, even 8 pairs, and one wants "them in every colour." We saw no new-release list, no second-pair offer and no "your next color" follow-up.</p></div><span class="p">0 / 4</span></li>
+  <li class="part"><span class="ic">!</span><div><h3>A path for boutiques and dance groups</h3><p>A wholesale application page exists. It's written for any retailer anywhere, with no U.S. contact, no dance studio or line dance group offer, and no try-on event option.</p></div><span class="p">3 / 4</span></li>
+ </ul>
+</div></section>
+
+<section class="band tint"><div class="inner">
+ <div style="display:grid;gap:12px"><span class="eyebrow">Who shows up instead</span><h2>What they have that you don't</h2></div>
+ <div class="tw"><table>
+  <thead><tr><th>Brand</th><th>Price</th><th>Where we saw them</th><th>What they have that Kiques doesn't</th></tr></thead>
+  <tbody>
+   <tr><td><b>Sneex</b></td><td class="sc">$395 to $895</td><td>Top 3 on 5 of 9 searches, paid top spot in Shopping</td><td>U.S. delivery "by 12/10," 308 reviews showing on Google, Shopping ads, a name that is the category</td></tr>
+   <tr><td><b>Journee Collection</b></td><td class="sc">from $49.99</td><td>#2 on "heeled sneakers" and "high heel sneakers"</td><td>A page titled with the exact search, U.S. stock</td></tr>
+   <tr><td><b>Vivaia, Steffie's</b></td><td class="sc">$100 to $200</td><td>#2 and #3 on "heels that feel like sneakers"</td><td>A page built around comfort, magazine "tested" articles pointing to them</td></tr>
+   <tr><td><b>Burju, Bloch</b></td><td class="sc">$179 and up</td><td>#1 and #2 on "dance heels"</td><td>A dance page, dance studio partners</td></tr>
+   <tr style="background:var(--rose-soft)"><td><b>Kiques</b></td><td class="sc">$269.95 to $294.95</td><td>Not in the top 30 on any</td><td>Has the best reviews of all of them. Needs U.S. delivery, U.S. pages and Google to see it.</td></tr>
+  </tbody></table></div>
+</div></section>
+
+<section class="band"><div class="inner">
+ <div style="display:grid;gap:12px"><span class="eyebrow">Leak #1 · Searches you're missing</span><h2>About $19,112.46 a month goes to the heels that show up instead</h2><p class="muted">These are searches for the exact product you sell. We left out "comfortable heels" and "dance heels," 30,200 more a month, to keep this honest.</p></div>
+ <div class="money">
+  <div class="card"><b>23,600</b><span>U.S. searches a month for sneaker heels, heeled sneakers, high heel sneakers and their variations</span></div>
+  <div class="card"><b>70.8</b><span>pairs a month if Kiques earns 1 in 10 clicks and 3% of those buy</span></div>
+  <div class="card hot"><b>$19,112.46</b><span>a month, estimated</span></div>
+ </div>
+ <p class="chain">23,600 searches × 10% click on Kiques = 2,360 visits × 3% buy = 70.8 pairs × $269.95 = <b>$19,112.46 a month</b></p>
+ <p class="note">This one depends on fast U.S. delivery. Nobody pays $270 for a heel she needs Saturday if it takes three weeks to arrive.</p>
+</div></section>
+
+<section class="band tint"><div class="inner">
+ <div style="display:grid;gap:12px"><span class="eyebrow">Leak #2 · No automated review system</span><h2>78 perfect reviews that Google can't count</h2><p class="muted">Every order should end with a request for a review, sent by text and email a few days after delivery, and every review should send stars to Google. Right now reviews trickle in about once a season, and none show in search.</p></div>
+ <div class="money">
+  <div class="card"><b>26</b><span>orders a month today, our estimate from your review count</span></div>
+  <div class="card"><b>2.6</b><span>more pairs a month when shoppers see stars and fresh reviews</span></div>
+  <div class="card hot"><b>$701.87</b><span>a month, estimated</span></div>
+ </div>
+ <p class="chain">26 orders a month × 10% more buy when reviews are visible = 2.6 pairs × $269.95 = <b>$701.87 a month</b></p>
+</div></section>
+
+<section class="band white"><div class="inner">
+ <div style="display:grid;gap:12px"><span class="eyebrow">Leak #3 · No repeat sales system</span><h2>About $1,263.37 a month in second pairs never gets asked for</h2><p class="muted">Your buyers already come back on their own. Imagine what happens when you text them first.</p></div>
+ <div class="cards">
+  <div class="card"><h3>"I have purchased around 8 pairs."</h3><p class="muted">Lady Michelle</p></div>
+  <div class="card"><h3>"Now have brought a 2nd pair in the signature white."</h3><p class="muted">Crystal Kearney</p></div>
+  <div class="card"><h3>"I want them in every colour!!!!!"</h3><p class="muted">Sarah</p></div>
+ </div>
+ <div class="money">
+  <div class="card"><b>78</b><span>average U.S. list size in year one (13 sign-ups a month, 156 by year end)</span></div>
+  <div class="card"><b>4.68</b><span>second pairs a month from 2 texts a month</span></div>
+  <div class="card hot"><b>$1,263.37</b><span>a month, estimated</span></div>
+ </div>
+ <p class="chain">26 orders × 50% join the list = 13 a month, 156 by year end, average 78 × 2 texts a month × 3% buy = 4.68 pairs × $269.95 = <b>$1,263.37 a month</b></p>
+ <p class="note">New-release drops, "your next color," wedding season and holiday party reminders. Texts go only to people who check a separate box or reply JOIN.</p>
+</div></section>
+
+<section class="band tint"><div class="inner">
+ <div class="cta" style="grid-template-columns:1fr">
+  <div style="display:grid;gap:12px"><span class="eyebrow">The return on investment</span><h2>The Local Authority System is regularly $997 a month. Your founder price is $497.</h2>
+  <p>Break even: $497 ÷ $269.95 = 1.84, so 2 extra pairs a month cover it. Leaks #2 and #3 alone are worth $1,965.24 a month, about 4 times your money back before a single new search. All three leaks: $21,077.70 ÷ $497 = about 42 times.</p></div>
+ </div>
+</div></section>
+
+<section class="band"><div class="inner">
+ <h2>$19,112.46 + $701.87 + $1,263.37 = $21,077.70 a month, or $252,932.40 a year</h2>
+ <p class="muted">Estimates, not promises. Every number we assumed is listed below so you can swap in your real ones.</p>
+</div></section>
+
+<section class="band tint"><div class="inner">
+ <h2>The five fixes that move your score the most</h2>
+ <ol class="fixes">
+  <li><div><h3>Ship U.S. orders from the U.S.</h3><p>Keep a stock of the best sellers in Fort Mill. Delivery in days, U.S. exchanges, and "ships from South Carolina" right on the product page.</p></div><span class="tag" style="--c:var(--gold-ink);--cs:var(--gold-soft)">Be Chosen</span></li>
+  <li><div><h3>Open a U.S. store and put it in Google Shopping, free</h3><p>The Kiques USA store we mocked up, with a U.S. product feed so every style shows in the Shopping box.</p></div><span class="tag" style="--c:var(--rose);--cs:var(--rose-soft)">Be Seen</span></li>
+  <li><div><h3>Turn your 78 reviews into stars on Google, and keep them coming</h3><p>Send your rating to Google and ask every U.S. buyer for a review by text and email after delivery.</p></div><span class="tag" style="--c:var(--navy);--cs:var(--tint)">Be Trusted</span></li>
+  <li><div><h3>Build a page for each buyer</h3><p>Line dancers, weddings, concerts, the office, and "comfortable heels that feel like sneakers," plus a page for U.S. boutiques and dance groups.</p></div><span class="tag" style="--c:var(--rose);--cs:var(--rose-soft)">Be Seen</span></li>
+  <li><div><h3>Start a new-release and second-pair list</h3><p>Email and text sign-up with a reason to join, then drops, color reminders and try-on event invites.</p></div><span class="tag" style="--c:var(--gold-ink);--cs:var(--gold-soft)">Be Chosen</span></li>
+ </ol>
+ <p class="muted">Together these lift the score from 40 to about 76, near the top of Competitive, with rankings checked and reported every month.</p>
+</div></section>
+
+<section class="band white"><div class="inner">
+ <div style="display:grid;gap:12px"><span class="eyebrow">Assumptions</span><h2>Estimates, not promises.</h2></div>
+ <div class="tw"><table>
+  <thead><tr><th>Number</th><th>What we used</th><th>Where it came from</th></tr></thead>
+  <tbody>
+   <tr><td>Searches</td><td class="sc">23,600 a month</td><td>Google Ads U.S. monthly averages, Dec 2025 to Oct 2026, for sneaker heels, heeled sneakers, high heel sneakers, sneaker heels for women, high heel sneakers for women, sneaker pumps, stiletto sneakers, white and black sneaker heels, high top heels and heels that feel like sneakers</td></tr>
+   <tr><td>Average order</td><td class="sc">$269.95</td><td>Your lowest regular price on kiques.com (Signature, Tropiq, Electrika). Tote styles are $289.95 to $294.95, so this is low.</td></tr>
+   <tr><td>Click share</td><td class="sc">10%</td><td>Our standard estimate for a brand on page one</td></tr>
+   <tr><td>Buy rate</td><td class="sc">3%</td><td>Our standard online store estimate. Assumes U.S. delivery in days.</td></tr>
+   <tr><td>Orders today</td><td class="sc">26 a month</td><td>Our estimate: 78 reviews ÷ an assumed 5% review rate = about 1,560 orders over about 60 months since 2021. Swap in your real number.</td></tr>
+   <tr><td>Review lift</td><td class="sc">10%</td><td>Our standard estimate for visible stars and fresh reviews</td></tr>
+   <tr><td>List</td><td class="sc">50% join, 2 texts, 3% buy</td><td>Our standard repeat-sales estimate, built from zero U.S. subscribers</td></tr>
+  </tbody></table></div>
+ <p class="note">Rankings were checked on Google for the U.S. as a whole, top 30 results, and in Google Shopping, on November 28, 2026. Review counts and dates come from kiques.com and Google Shopping that day. Shipping and returns come from the kiques.com shipping policy.</p>
+</div></section>
+
+<section class="band white"><div class="inner">
+ <div class="cta">
+  <div style="display:grid;gap:12px"><span class="eyebrow">Next step</span><h2>See how we fix it</h2><p>Your proposal shows what we do, week by week, and what it costs. Or call and we'll walk you through these searches live in 15 minutes.</p></div>
+  <div class="person"><b>Phyllena Parker, MBA</b><span>Founder, Phyllena Management LLC</span><span>704-741-3167</span><a class="btn" href="/kiques-usa/proposal.html">See the proposal</a></div>
+ </div>
+ <div class="method" style="display:grid;gap:12px">
+  <h3>The Local Authority Method</h3>
+  <p>Our proprietary scoring system. It measures the three things that decide who gets the sale on Google, whether you're seen, trusted and chosen, and turns what we find into dollars you can check. This is the online store edition, built for brands that ship a product.</p>
+  <div class="tw"><table>
+   <thead><tr><th>Pillar</th><th>Points</th><th>What we check</th></tr></thead>
+   <tbody>
+    <tr><td>Be Seen</td><td class="sc">40</td><td>Show up on buyer searches (16), Google can read your store (8), free Shopping listings (6), a page for each kind of buyer (6), marketplaces (4)</td></tr>
+    <tr><td>Be Trusted</td><td class="sc">35</td><td>Reviews readable on your site (10), proof (8), stars on Google (6), new reviews in the last 90 days (6), trust pages (5)</td></tr>
+    <tr><td>Be Chosen</td><td class="sc">25</td><td>Checkout on a phone (8), a clear offer (5), stay-in-touch sign-up (4), reason to buy again (4), boutique and group path (4)</td></tr>
+   </tbody></table></div>
+ </div>
+</div></section>
+
+<footer class="band"><div class="inner"><span>© 2026 Phyllena Management LLC · Concord, North Carolina</span><span>Be Seen + Be Trusted + Be Chosen = Booked Jobs</span></div></footer>
+
+<script>
+const S=[["sneaker heels",9900,["Sneex","Amazon","Pinterest"]],["heeled sneakers",9900,["Amazon","Journee Collection","Nordstrom"]],["high heel sneakers",6600,["Amazon","Journee Collection","Nordstrom"]],["sneaker heels women",2900,["Sneex","Nordstrom","Amazon"]],["sneaker pumps",1300,["Wikipedia (a band)","Amazon","Sneex"]],["heels that feel like sneakers",110,["Sneex","Vivaia","Steffie's"]],["comfortable heels",18100,["Aerosoles","Reddit","Quora"]],["dance heels",12100,["Bloch","Burju Shoes","Hella Heels"]],["sneaker heels (Google Shopping)",9900,["Sneex (paid ad)","Michael Kors","Steve Madden"]]];
+document.getElementById("grid").innerHTML='<div class="gh" role="row"><span role="columnheader">Search</span><span role="columnheader">A month</span><span role="columnheader">kiques.com</span><span role="columnheader">#1 result</span></div>'+S.map(([q,v,t])=>`<div class="gr" role="row"><span role="cell">${q}</span><span role="cell" class="v">${v.toLocaleString()}</span><span role="cell"><i class="x">✕</i>Not in top 30</span><span role="cell">${t[0]}</span></div>`).join("");
+document.getElementById("searches").innerHTML=S.slice(0,6).map(([q,v,t])=>`<div class="card"><span class="q">${q}</span><ul class="top3">${t.map((n,i)=>`<li><span>${i+1}. ${n}</span></li>`).join("")}</ul><span class="flag">kiques.com: not in top 30 · ${v.toLocaleString()} a month</span></div>`).join("");
+const C=[["Steve Madden Mavis",399],["Sneex The Icon",308],["Sneex The Blake",74],["Kiques on Google",0,1],["Kiques, on your site only",78,2]];
+const m=399;
+document.getElementById("bars").innerHTML=C.map(([n,v,me])=>`<div class="rb${me==1?" me":""}${me==2?" ghost":""}"><span class="n" title="${n}">${n}</span><span class="t"><span style="width:${Math.max(2,v/m*100)}%"></span></span><span class="v">${v.toLocaleString()}</span></div>`).join("");
+</script>
+</body></html>

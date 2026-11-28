@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Kiques USA FAQ</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: matches phyllenamanagement.com. Light only, white top bar with logo, soft gradient hero with a floating score card, alternating light bands, rounded white cards with soft shadows, one navy gradient panel for the slogan equation. */
+:root{
+ color-scheme:light;
+ --night:#0E1B38; --navy:#1F3A8A; --bg:#F7F7FA; --surface:#FFFFFF; --ink:#111A2E; --muted:#5B6479; --line:#E4E6EE;
+ --rose:#C63F68; --rose-deep:#A92E55; --rose-soft:#FCEAF0; --tint:#EEF2FA; --star:#F5B42A; --gold-ink:#9A6A06; --gold-soft:#FDF3DC;
+ --good:#1F8A55; --good-soft:#E3F4EA; --purple:#5A3F86;
+ --display:"Plus Jakarta Sans","Segoe UI",system-ui,sans-serif; --body:"Manrope","Segoe UI",system-ui,-apple-system,sans-serif;
+ --r-lg:24px; --r-md:16px;
+ --shadow:0 1px 2px rgba(14,27,56,.06),0 12px 32px rgba(14,27,56,.08);
+}
+body{background:var(--bg);color:var(--ink);font:17px/1.65 var(--body)}
+.band{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.inner{max-width:1080px;margin:0 auto;padding-block:72px;display:grid;gap:28px}
+.white{background:var(--surface)} .tint{background:var(--tint)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;color:var(--ink)}
+h1{font-size:clamp(36px,6vw,64px);line-height:1.02;font-weight:800;letter-spacing:-.035em}
+h2{font-size:clamp(28px,4.2vw,44px);line-height:1.08;font-weight:800;letter-spacing:-.03em}
+h3{font-size:18px;font-weight:700;letter-spacing:-.01em}
+p{margin:0;max-width:62ch}
+.muted{color:var(--muted)}
+.grad{background:linear-gradient(90deg,var(--rose),var(--purple) 55%,var(--navy));-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{display:flex;align-items:center;gap:10px;font:700 13px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--rose)}
+.eyebrow::before{content:"";width:18px;height:2px;background:currentColor}
+.lede{font-size:19px;color:var(--muted)}
+/* top bar */
+.top{background:var(--surface);border-bottom:1px solid var(--line)}
+.top .inner{padding-block:16px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px}
+.logo{width:180px;height:auto;display:block}
+.chip{font:600 14px var(--body);padding:8px 16px;border-radius:99px;background:var(--rose);color:#fff;white-space:nowrap}
+.sample{background:var(--gold-soft);color:var(--gold-ink);border-bottom:1px solid #F3E1B5}
+.sample .inner{padding-block:10px;font-size:14px}
+/* hero */
+.hero{background:radial-gradient(60% 80% at 85% 20%,rgba(198,63,104,.10),transparent 70%),radial-gradient(50% 70% at 70% 90%,rgba(31,58,138,.10),transparent 70%),linear-gradient(180deg,#FBFBFD,var(--bg))}
+.heroGrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center}
+@media (max-width:820px){.heroGrid{grid-template-columns:1fr}}
+.badge{justify-self:start;display:inline-flex;align-items:center;gap:10px;font-size:14px;padding:7px 16px 7px 10px;border-radius:99px;background:var(--surface);border:1px solid var(--line);box-shadow:0 1px 2px rgba(14,27,56,.05)}
+.badge i{width:14px;height:14px;border-radius:50%;background:var(--rose-soft);display:grid;place-content:center}
+.badge i::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--rose)}
+.heroText{display:grid;gap:22px}
+.ticks{display:flex;flex-wrap:wrap;gap:10px 22px;margin:0;padding:0;list-style:none;font-size:15px;color:var(--muted)}
+.ticks li::before{content:"✓";color:var(--rose);font-weight:700;margin-right:8px}
+/* score card */
+.scoreCard{background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow);border:1px solid var(--line);padding:28px;display:grid;gap:20px;min-width:0}
+.scHead{display:flex;justify-content:space-between;align-items:center;gap:10px;font:700 13px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.scHead span:last-child{letter-spacing:0;text-transform:none;font-weight:600;color:var(--rose);background:var(--rose-soft);padding:4px 12px;border-radius:99px}
+.dialRow{display:grid;grid-template-columns:150px minmax(0,1fr);gap:22px;align-items:center}
+@media (max-width:420px){.dialRow{grid-template-columns:1fr}}
+.dial{position:relative;width:150px;aspect-ratio:1;max-width:100%}
+.dial svg{width:100%;height:100%;display:block}
+.dial .num{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
+.dial .num b{font:800 48px/1 var(--display);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.dial .num small{font-size:13px;color:var(--muted)}
+.subs{display:grid;gap:12px}
+.sub{display:grid;gap:5px}
+.sub .l{display:flex;justify-content:space-between;font:700 15px var(--display)}
+.sub .l span{font:600 14px var(--body);color:var(--muted);font-variant-numeric:tabular-nums}
+.bar{height:8px;border-radius:99px;background:var(--tint);overflow:hidden}
+.bar span{display:block;height:100%;border-radius:99px;background:var(--c)}
+.lost{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;background:var(--rose-soft);border-radius:var(--r-md);padding:14px 18px}
+.lost b{font:800 28px var(--display);color:var(--rose-deep);letter-spacing:-.02em}
+.lost span{font-size:14px;color:var(--rose-deep)}
+.scale{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;font-size:12px;color:var(--muted)}
+.scale div{padding:7px 8px;border-radius:10px;background:var(--bg);text-align:center;line-height:1.3}
+.scale div.on{background:var(--rose);color:#fff}
+.scale b{display:block;font:700 12px var(--display)}
+/* equation panel */
+.eq{border-radius:var(--r-lg);background:linear-gradient(120deg,#1F3A8A 0%,#2C3F95 45%,#5A3F86 100%);padding:32px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px;color:#fff;box-shadow:var(--shadow)}
+.eqb{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);border-radius:14px;padding:12px 20px;text-align:center;min-width:140px}
+.eqb b{display:block;font:800 22px var(--display);letter-spacing:-.02em}
+.eqb span{font-size:13px;color:#D3DBEE}
+.eqb.hot{background:var(--rose);border-color:var(--rose)}
+.eqb.hot span{color:#FFE3EC}
+.op{font:800 22px var(--display);color:#FF9DB8}
+/* section head */
+.shead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:18px}
+.shead > div{display:grid;gap:12px}
+.pts{display:grid;justify-items:end;gap:6px}
+.pts b{font:800 48px/1 var(--display);letter-spacing:-.04em;color:var(--c);font-variant-numeric:tabular-nums}
+.pts b small{font-size:20px;color:var(--muted);letter-spacing:0}
+.pts .bar{width:180px;background:var(--line)}
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:24px;display:grid;gap:10px;align-content:start;min-width:0}
+.q{font:700 16px var(--display)}
+.q::before{content:"🔍︎";margin-right:6px;filter:grayscale(1);opacity:.5}
+.top3{display:grid;gap:4px;margin:0;padding:0;list-style:none;font-size:14px;color:var(--muted)}
+.top3 li{display:flex;justify-content:space-between;gap:8px}
+.top3 li span:last-child{font-variant-numeric:tabular-nums;white-space:nowrap}
+.top3 li span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.flag{justify-self:start;font:700 12px var(--body);padding:4px 12px;border-radius:99px;background:var(--rose-soft);color:var(--rose-deep)}
+/* checklist */
+.checks{display:grid;margin:0;padding:6px 24px;list-style:none;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow)}
+.checks li{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:14px;padding:18px 0;border-bottom:1px solid var(--line);align-items:start}
+.checks li:last-child{border-bottom:0}
+.ic{width:28px;height:28px;border-radius:50%;display:grid;place-content:center;font:800 13px var(--body)}
+.fail .ic{background:var(--rose-soft);color:var(--rose)} .part .ic{background:var(--gold-soft);color:var(--gold-ink)} .pass .ic{background:var(--good-soft);color:var(--good)}
+.checks h3{font-size:16px}
+.checks p{font-size:15px;color:var(--muted)}
+.checks .p{font:700 14px var(--display);font-variant-numeric:tabular-nums;white-space:nowrap;padding:3px 12px;border-radius:99px;background:var(--bg);color:var(--muted)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+@media (max-width:820px){.two{grid-template-columns:1fr}}
+/* review bars */
+.rbars{display:grid;gap:10px;font-size:14px}
+.rb{display:grid;grid-template-columns:minmax(100px,170px) minmax(0,1fr) 40px;gap:10px;align-items:center}
+.rb .n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rb .t{height:10px;border-radius:99px;background:var(--tint);overflow:hidden}
+.rb .t span{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#3B57B0,var(--navy))}
+.rb.me .n{font-weight:700;color:var(--rose)} .rb.me .t span{background:var(--rose)}
+.rb .v{text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+/* table */
+.tw{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px}
+th,td{padding:14px 20px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:700 12px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:var(--bg)}
+tr:last-child td{border-bottom:0}
+.sc{font:700 15px var(--display);white-space:nowrap;font-variant-numeric:tabular-nums}
+/* money */
+.money{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.money .card b{font:800 40px/1.1 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.money .card.hot{background:linear-gradient(135deg,var(--rose),var(--rose-deep));border-color:transparent;color:#fff}
+.money .card.hot span{color:#FFE3EC}
+.money .card span{font-size:15px;color:var(--muted)}
+.chain{font-size:15px;color:var(--muted);background:var(--surface);border:1px dashed var(--line);border-radius:var(--r-md);padding:14px 18px;overflow-wrap:anywhere}
+.note{font-size:14px;color:var(--muted)}
+/* fixes */
+.fixes{display:grid;gap:14px;margin:0;padding:0;list-style:none;counter-reset:f}
+.fixes li{counter-increment:f;display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:18px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);box-shadow:var(--shadow);padding:18px 22px}
+.fixes li::before{content:counter(f);width:44px;height:44px;border-radius:12px;display:grid;place-content:center;font:800 18px var(--display);color:var(--navy);background:var(--tint)}
+.fixes p{font-size:15px;color:var(--muted)}
+.tag{font:700 12px var(--body);padding:5px 12px;border-radius:99px;white-space:nowrap;color:var(--c);background:var(--cs)}
+@media (max-width:560px){.fixes li{grid-template-columns:44px minmax(0,1fr)}.fixes .tag{grid-column:2;justify-self:start}}
+/* location map */
+.mapCard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);overflow:hidden;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}
+@media (max-width:760px){.mapCard{grid-template-columns:1fr}}
+.mapCard svg{display:block;width:100%;height:auto}
+.mapSide{padding:26px;display:grid;gap:16px;align-content:center}
+.mapSide p{font-size:15px;color:var(--muted)}
+.legend{display:grid;gap:10px;margin:0;padding:0;list-style:none;font-size:15px}
+.legend li{display:flex;align-items:center;gap:10px}
+.legend i{width:26px;height:26px;border-radius:50%;flex:none;display:grid;place-content:center;font:800 13px var(--body);font-style:normal}
+.osm{font-size:12px;color:var(--muted)}
+/* cta */
+.cta{background:linear-gradient(120deg,#1F3A8A 0%,#2C3F95 45%,#5A3F86 100%);border-radius:var(--r-lg);padding:40px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center;color:#fff;box-shadow:var(--shadow)}
+@media (max-width:720px){.cta{grid-template-columns:1fr;padding:28px}}
+.cta h2{color:#fff} .cta p{color:#D3DBEE}
+.cta .eyebrow{color:#FF9DB8}
+.person{background:#fff;color:var(--ink);border-radius:var(--r-md);padding:20px 24px;display:grid;gap:4px;font-size:15px;min-width:0}
+.person b{font:800 19px var(--display)}
+.person span{color:var(--muted)}
+.btn{justify-self:start;margin-top:8px;font:700 15px var(--body);background:var(--rose);color:#fff;padding:12px 22px;border-radius:99px;text-decoration:none;box-shadow:0 8px 20px rgba(198,63,104,.3)}
+.btn:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.method{font-size:14px;color:var(--muted)}
+footer .inner{padding-block:28px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:14px;color:var(--muted)}
+.flag.win{background:var(--good-soft);color:var(--good)}
+.top3 li.me{color:var(--rose);font-weight:700}
+.leaks{display:grid;gap:8px}
+.lk{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 18px;border-radius:var(--r-md);background:var(--bg);font-size:14px;color:var(--muted)}
+.lk b{font:800 20px var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+</style><style>.alarm{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.alarm div{background:var(--surface);border:1px solid #F3C9D6;border-left:4px solid var(--rose);border-radius:var(--r-md);padding:12px 14px;display:grid;gap:4px;align-content:start}.alarm b{font:800 22px/1.1 var(--display);color:var(--rose-deep)}.alarm span{font-size:14px;line-height:1.45;color:var(--muted);overflow-wrap:anywhere}.urgent{background:var(--rose-soft);border-radius:var(--r-md);padding:12px 16px;font-size:15px;color:var(--ink)}.urgent strong{color:var(--rose-deep)}@media (max-width:640px){.alarm{grid-template-columns:1fr}}
+.tabs{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(14,27,56,.05)}.tabs .inner{display:flex;gap:6px;padding-block:10px;overflow-x:auto}.tabs a{flex:0 0 auto;padding:9px 16px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none;color:var(--night);background:#EEF2FA}.tabs a.on{background:var(--rose);color:#fff}.tabs a.pr{margin-left:auto}@media print{.tabs{display:none}}
+</style>
+<style>.showup{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}@media (max-width:760px){.showup{grid-template-columns:1fr}}
+.su{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:22px;display:grid;gap:6px;align-content:start}
+.su b{font:800 40px/1 var(--display);letter-spacing:-.03em}.su b.bad{color:var(--rose-deep)}.su b.mid{color:var(--gold-ink)}
+.su p{font-size:15px;color:var(--muted)}
+.grid11{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);overflow:hidden;font-size:15px}
+.gh,.gr{display:grid;grid-template-columns:minmax(0,1.6fr) 90px minmax(0,1fr) minmax(0,1fr);gap:12px;padding:12px 20px;align-items:center;border-bottom:1px solid var(--line)}
+.gr:last-child{border-bottom:0}
+.gh{font:700 12px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:var(--bg)}
+.gr .v{font-variant-numeric:tabular-nums;font-weight:700}
+.gr i{font-style:normal;display:inline-grid;place-content:center;width:22px;height:22px;border-radius:50%;margin-right:8px;font:800 12px var(--body)}
+.gr i.x{background:var(--rose-soft);color:var(--rose)}.gr i.y{background:var(--good-soft);color:var(--good)}
+@media (max-width:640px){.gh{display:none}.gr{grid-template-columns:1fr auto;row-gap:4px}.gr span:first-child{font-weight:700}.gr span:nth-child(3),.gr span:nth-child(4){font-size:14px;color:var(--muted)}}
+.rb.ghost .n{font-style:italic;color:var(--muted)}.rb.ghost .t span{background:repeating-linear-gradient(45deg,#C9CFDF 0 6px,#E4E6EE 6px 12px)}
+</style>
+<style>
+details.qa{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);box-shadow:var(--shadow);padding:18px 22px}
+details.qa summary{font:700 17px var(--display);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+details.qa summary::after{content:"+";color:var(--rose);font-size:22px;line-height:1}
+details.qa[open] summary::after{content:"−"}
+details.qa p{margin-top:10px;color:var(--muted);font-size:16px}
+.qas{display:grid;gap:12px}
+</style>
+</head><body>
+<div class="band top"><div class="inner"><img class="logo" src="img/pm-logo.png" alt="Phyllena Management LLC" width="520" height="132"><span class="chip">Kiques USA · FAQ</span></div></div>
+<nav class="tabs" aria-label="Kiques USA reports"><div class="inner"><a href="/kiques-usa/scorecard.html">Scorecard</a><a href="/kiques-usa/">Website mock-ups</a><a href="/kiques-usa/faq.html" class="pr on" aria-current="page">FAQ</a><a href="/kiques-usa/proposal.html">Proposal</a></div></nav>
+
+<header class="band hero"><div class="inner" style="padding-block:56px">
+ <span class="eyebrow">Questions, answered</span>
+ <h1 style="font-size:clamp(32px,5vw,52px)">Everything you'd ask before you say yes.</h1>
+</div></header>
+
+<section class="band white"><div class="inner qas">
+ <details class="qa" open><summary>What happens next?</summary><p>Reply YES to Phyllena or book a 15-minute call. We send a short agreement and a setup checklist, get access to your Shopify store, and start week one. You keep running Kiques USA; we run the Google side.</p></details>
+ <details class="qa"><summary>How long does setup take?</summary><p>2 to 4 weeks. The U.S. store, Google Shopping feed and review stars go first, usually inside two weeks. Buyer pages and the sign-up list follow.</p></details>
+ <details class="qa"><summary>When will I see results?</summary><p>Google Shopping listings can start showing within days of the feed being approved. Regular search rankings build over 60 to 120 days. You'll get a ranking report every month so you can watch it move.</p></details>
+ <details class="qa"><summary>Do I need U.S. stock?</summary><p>We strongly recommend it. Today a U.S. order can take up to 18 business days from Australia. Keeping your best sellers in Fort Mill turns that into days, and that's what makes a $270 heel an easy yes. We'll help you pick the starting sizes and styles from your sales.</p></details>
+ <details class="qa"><summary>Are there outside costs?</summary><p>Your Shopify plan, any Google Shopping ads you choose to run (optional, and you set the budget), and text message fees once texting is turned on, usually a few dollars a month at your size. We'll tell you before anything costs money.</p></details>
+ <details class="qa"><summary>How much of my time does this take?</summary><p>About an hour in week one for logins and a quick call, then a few minutes a month to look at your report. You keep doing what you're great at: meeting women and getting Kiques on their feet.</p></details>
+ <details class="qa"><summary>Who gets texted?</summary><p>Only people who say yes. Buyers and shoppers check a separate box or reply JOIN. Before any text goes out we register your number with the carriers, which the law requires.</p></details>
+ <details class="qa"><summary>Can you delete bad reviews?</summary><p>No one can delete honest reviews, and you don't need to: all 78 of yours are five stars. Every new review gets watched and answered, and we never offer discounts in exchange for reviews, because Google and the FTC don't allow it.</p></details>
+ <details class="qa"><summary>Does this follow Google's rules?</summary><p>Yes. Real product data, real reviews, real pages. No tricks that put your store at risk.</p></details>
+ <details class="qa"><summary>Do you guarantee rankings?</summary><p>No honest company can. We guarantee the work, the monthly report, and that you'll always see exactly where you stand.</p></details>
+ <details class="qa"><summary>Who owns the store and the list?</summary><p>You do. The store, the product feed, the reviews and every customer on the list belong to Kiques USA.</p></details>
+ <details class="qa"><summary>Is there a long contract?</summary><p>Month to month. Your $497 founder price stays locked in for as long as you stay.</p></details>
+ <details class="qa"><summary>What about Kaitee and the Australian store?</summary><p>Nothing changes for Australia. We build the U.S. side with the same products, photos and prices, and we're happy to share every report with Kaitee.</p></details>
+ <details class="qa"><summary>Why is setup waived?</summary><p>Setup is normally $1,500. We waive it for founding clients in exchange for a testimonial, a case study once results are in, and an introduction or two if you're happy.</p></details>
+ <details class="qa"><summary>What do the monthly reports show?</summary><p>Where Kiques ranks on each buyer search, Shopping clicks, new reviews, list sign-ups and orders from Google, in plain English.</p></details>
+</div></section>
+
+<section class="band"><div class="inner">
+ <div class="cta">
+  <div style="display:grid;gap:12px"><span class="eyebrow">Ready?</span><h2>Let's put Kiques in front of American women.</h2><p>Reply YES to Phyllena, or call for a 15-minute walkthrough.</p></div>
+  <div class="person"><b>Phyllena Parker, MBA</b><span>Founder, Phyllena Management LLC</span><span>704-741-3167</span><a class="btn" href="/kiques-usa/proposal.html">See the proposal</a></div>
+ </div>
+</div></section>
+<footer class="band"><div class="inner"><span>© 2026 Phyllena Management LLC · Concord, North Carolina</span><span>Be Seen + Be Trusted + Be Chosen = Booked Jobs</span></div></footer>
+</body></html>
